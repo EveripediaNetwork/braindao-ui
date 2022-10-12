@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik';
-import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
+import { component$ } from "@builder.io/qwik";
+import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
@@ -10,7 +10,7 @@ export const RouterHead = component$(() => {
 
   return (
     <>
-      <title>{head.title}</title>
+      <title>{head.title || "Braindao"}</title>
 
       <link rel="canonical" href={loc.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,13 +19,13 @@ export const RouterHead = component$(() => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
 
-      <meta property="og:site_name" content="Qwik" />
-      <meta name="twitter:site" content="@QwikDev" />
-      <meta name="twitter:title" content="Qwik" />
+      <meta property="og:site_name" content="Braindao" />
+      <meta name="twitter:site" content="@everipedia" />
+      <meta name="twitter:title" content="IQ.Wiki" />
 
       {head.meta.map((m) => (
         <meta {...m} />
