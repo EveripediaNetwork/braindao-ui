@@ -1,14 +1,14 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { BraindaoLogo } from "../icons/BraindaoLogo";
-import { ArrowDropDownIcon } from "../icons/remix-icons/ArrowDropDown";
-import { GlobeIcon } from "../icons/remix-icons/Globe";
+import { BraindaoLogo } from "../svgs/BraindaoLogo";
+import { ArrowDropDownIcon } from "../svgs/icons/ArrowDropDown";
+import { GlobeIcon } from "../svgs/icons/Globe";
 
 export const Navbar = component$(() => {
   return (
     <header class="flex justify-between items-center p-5">
-      <h1 class="flex gap-2 items-center text-lg font-bold">
-        <BraindaoLogo /> Braindao
+      <h1 class="flex gap-2 items-center text-lg font-medium">
+        <BraindaoLogo /> BrainDAO
       </h1>
       <nav class="flex gap-6 text-md">
         <Link href="/">Home</Link>
