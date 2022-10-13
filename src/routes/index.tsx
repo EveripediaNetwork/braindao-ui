@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Hero } from "~/components/layout/Home/Hero";
+import { Hero } from "~/components/Home/Hero";
 
 export default component$(() => (
   <div>
