@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { HeroBackground } from "~/components/svgs/HeroBackground";
+import { HeroScrollToContent } from "../svgs/HeroScrollToContent";
 
 export const Hero = component$(() => {
   return (
@@ -14,12 +15,16 @@ export const Hero = component$(() => {
         >
           BrainDAO{" "}
         </span>
-        and builders of Everipedia.
+        and builders of IQ.Wiki.
       </h1>
       <p class="p-4 md:p-8 rounded-md md:rounded-none max-w-md bg-white/25 backdrop-blur-md  ml-auto">
         IQ.Wiki's mission is to bring the world's knowledge on-chain through the
         IQ token.
       </p>
+      <div class="flex flex-col justify-center items-center gap-3 text-pink-400 text-lg">
+        <p>Get to know us</p>
+        <HeroScrollToContent />
+      </div>
     </div>
   );
 });

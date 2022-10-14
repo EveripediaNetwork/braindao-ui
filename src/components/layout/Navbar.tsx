@@ -1,8 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { BraindaoLogo } from "../svgs/BraindaoLogo";
-import { ArrowDropDownIcon } from "../svgs/icons/ArrowDropDown";
-import { GlobeIcon } from "../svgs/icons/Globe";
+import { ArrowDropDownIcon } from "../icons/ArrowDropDown";
+import { GlobeIcon } from "../icons/Globe";
 import { MobileHambuger } from "./MobileHamburger";
 
 export const Navbar = component$(() => {

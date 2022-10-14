@@ -1,5 +1,5 @@
 import { component$, useStore } from "@builder.io/qwik";
-import { HamburgerIcon } from "../svgs/icons/HamburgerIcon";
+import { HamburgerIcon } from "../icons/HamburgerIcon";
 
 export const MobileHambuger = component$(() => {
   const store = useStore({ isOpen: false });
