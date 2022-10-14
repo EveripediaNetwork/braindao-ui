@@ -6,7 +6,7 @@ export const Hero = component$(() => {
   return (
     <>
       <div class="flex flex-col items-center justify-between pt-12 p-5">
-        <h1 class="text-5xl md:text-7xl lg:text-[115px] leading-snug font-medium">
+        <h1 class="text-[15vw] sm:text-[90px] lg:text-[115px] leading-none font-medium">
           Meet the Humans of{" "}
           <span
             class="bg-gradient-to-r bg-clip-text text-transparent 
