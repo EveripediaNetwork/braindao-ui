@@ -30,7 +30,7 @@ export const Hero = component$(() => {
 
       <div class="absolute w-screen h-screen top-0 left-0">
         <div class="relative w-full h-full overflow-hidden">
-          <div class="absolute rounded-full h-[60vw] w-[60vw] top-1/4 left-1/2 bg-gradient-radial from-pink-400/30 via-transparent to-transparent" />
+          <div class="absolute rounded-full h-[900px] w-[900px] top-[70vh] left-1/2  md:top-1/4 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 bg-gradient-radial from-pink-400/30 via-transparent to-transparent" />
         </div>
       </div>
     </>
