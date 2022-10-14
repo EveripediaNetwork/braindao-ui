@@ -3,7 +3,7 @@ import { HeroBackground } from "~/components/svgs/HeroBackground";
 
 export const Hero = component$(() => {
   return (
-    <div className="flex items-center justify-center mt-12 p-5 relative">
+    <div className="flex flex-col items-center justify-between pt-12 p-5 relative h-[calc(100vh-80px)]">
       <HeroBackground className="fixed top-1/3 -z-[1]" />
       <h1 class="text-5xl md:text-7xl lg:text-8xl leading-snug font-medium">
         Meet the Humans of{" "}
@@ -16,6 +16,10 @@ export const Hero = component$(() => {
         </span>
         and builders of Everipedia.
       </h1>
+      <p class="p-8 max-w-md bg-white/25 backdrop-blur-md  ml-auto">
+        IQ.Wiki's mission is to bring the world's knowledge on-chain through the
+        IQ token.
+      </p>
     </div>
   );
 });
