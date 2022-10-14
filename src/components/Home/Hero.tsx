@@ -15,7 +15,7 @@ export const Hero = component$(() => {
           >
             BrainDAO{" "}
           </span>
-          and builders of IQ.Wiki.
+          and Builders of IQ.Wiki.
         </h1>
         <div class="flex flex-col gap-[10vh] w-full">
           <p class="ml-auto p-4 md:p-8 text-lg text-center rounded-md md:rounded-none max-w-md bg-white/10 backdrop-blur-md">
