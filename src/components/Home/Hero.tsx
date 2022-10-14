@@ -16,7 +16,7 @@ export const Hero = component$(() => {
         </span>
         and builders of Everipedia.
       </h1>
-      <p class="p-8 max-w-md bg-white/25 backdrop-blur-md  ml-auto">
+      <p class="p-4 md:p-8 rounded-md md:rounded-none max-w-md bg-white/25 backdrop-blur-md  ml-auto">
         IQ.Wiki's mission is to bring the world's knowledge on-chain through the
         IQ token.
       </p>
