@@ -1,4 +1,4 @@
-export const ourStory = [
+export const ourStoryData = [
   {
     year: 2022,
     content:

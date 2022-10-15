@@ -1,14 +1,14 @@
 import { component$, useStore } from "@builder.io/qwik";
-import { ourStory } from "~/data/our-story";
+import { ourStoryData } from "~/data/our-story";
 import { BgGradient } from "../shared/BgGradient";
 
 export const OurStory = component$(() => {
-  const storyStore = useStore(ourStory[1]);
+  const storyStore = useStore(ourStoryData[1]);
   return (
     <div class="relative overflow-hidden md:overflow-visible  flex flex-col justify-center items-center py-20">
       <h2 class="text-5xl font-bold">Our Story</h2>
       <nav class="flex items-center gap-4 md:gap-10 mt-10 children:text-xl">
-        {ourStory.map((story) => (
+        {ourStoryData.map((story) => (
           <button
             class={
               storyStore.year === story.year ? "!text-3xl text-pink-500" : ""
