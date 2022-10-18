@@ -6,7 +6,7 @@ export const OurStory = component$(() => {
   const storyStore = useStore(ourStoryData[1]);
   return (
     <div class="relative overflow-hidden md:overflow-visible  flex flex-col justify-center items-center py-20">
-      <h2 class="text-5xl font-bold">Our Story</h2>
+      <h2 class="text-4xl xl:text-6xl font-bold">Our Story</h2>
       <nav class="flex items-center gap-4 md:gap-10 mt-10 children:text-xl">
         {ourStoryData.map((story) => (
           <button
