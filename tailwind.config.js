@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      bebas_neue: ["Bebas Neue", "cursive"],
+    },
     extend: {
       animation: {
         text: "text 4s ease infinite",

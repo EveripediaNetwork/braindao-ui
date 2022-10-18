@@ -18,7 +18,7 @@ export const OurValuesCloud = component$(
 );
 
 export const OurValues = component$(() => (
-  <div class="relative p-5 overflow-hidden md:overflow-visible flex flex-col justify-center items-center placeholder-teal-200 pb-20 xl:p-40 max-w-6xl mx-auto">
+  <div class="relative p-5 overflow-hidden md:overflow-visible flex flex-col justify-center items-center placeholder-teal-200 pb-20 max-w-6xl mx-auto">
     <h2 class="text-4xl xl:text-6xl font-bold">Our Values</h2>
     <div class="flex flex-col justify-center items-stretch mt-10 w-full">
       {ourValuesData.map((value, i) => (

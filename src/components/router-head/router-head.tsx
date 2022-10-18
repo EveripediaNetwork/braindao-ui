@@ -22,6 +22,10 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+        rel="stylesheet"
+      />
 
       <meta property="og:site_name" content="Braindao" />
       <meta name="twitter:site" content="@everipedia" />
