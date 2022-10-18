@@ -22,7 +22,7 @@ export const OurStory = component$(() => {
           </button>
         ))}
       </nav>
-      <BgGradient className="left-0 top-40" />
+      <BgGradient className="left-0 top-52" />
       <div class="mt-10 mx-5 max-w-4xl text-center bg-white/10 p-5 md:p-16 border-[1px] border-white/10 backdrop-blur-md">
         {storyStore.content}
       </div>
