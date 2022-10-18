@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { ContactUs } from "~/components/Home/ContactUs";
 import { Hero } from "~/components/Home/Hero";
 import { OurStory } from "~/components/Home/OurStory";
 import { OurValues } from "~/components/Home/OurValues";
@@ -13,5 +14,6 @@ export default component$(() => (
     <div class="border-b-[1px] border-white/20" />
     <WhoAreWe />
     <TheTeam />
+    <ContactUs />
   </div>
 ));
