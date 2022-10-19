@@ -53,6 +53,15 @@ export const TeamMemberCard = component$(
     useWatch$(({ track }) => {
       const active = track(() => store.active);
       const isMemberActive = track(() => isActive.value);
+
+      if (cardFront.value) {
+        if (isMemberActive) {
+          cardFront.value.style.pointerEvents = "none";
+        } else {
+          cardFront.value.style.pointerEvents = "auto";
+        }
+      }
+
       if (
         isMemberActive &&
         active != member.name &&
