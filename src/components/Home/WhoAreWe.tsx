@@ -8,63 +8,42 @@ export const WhoAreWe = component$(() => {
   const headingRef = useSignal<HTMLHeadingElement>();
   const sectionRef = useSignal<HTMLHeadingElement>();
   const descRef = useSignal<HTMLParagraphElement>();
-  const borderRef = useSignal<HTMLDivElement>();
 
   useClientEffect$(() => {
-    if (
-      headingRef.value &&
-      descRef.value &&
-      sectionRef.value &&
-      borderRef.value
-    ) {
-      gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-      // ANIMATIONS FOR SECTION HEADING
-      gsap.fromTo(
-        headingRef.value,
-        { color: "white", y: 20, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: sectionRef.value,
-            start: "top 75%",
-          },
-        }
-      );
+    // ANIMATIONS FOR SECTION HEADING
+    gsap.fromTo(
+      headingRef.value!,
+      { color: "white", y: 20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: sectionRef.value,
+          start: "top 75%",
+        },
+      }
+    );
 
-      // ANIMATIONS FOR SECTION DESCRIPTION
-      gsap.fromTo(
-        descRef.value,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          color: "white",
-          scrollTrigger: {
-            trigger: sectionRef.value,
-            start: "top 75%",
-          },
-        }
-      );
-
-      // ANIMATIONS FOR BORDER
-      gsap.fromTo(
-        borderRef.value,
-        { x: "-100%", display: "block" },
-        {
-          x: 0,
-          duration: 1,
-          scrollTrigger: sectionRef.value,
-        }
-      );
-    }
+    // ANIMATIONS FOR SECTION DESCRIPTION
+    gsap.fromTo(
+      descRef.value!,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        color: "white",
+        scrollTrigger: {
+          trigger: sectionRef.value,
+          start: "top 75%",
+        },
+      }
+    );
   });
 
   return (
-    <div class="overflow-hidden">
-      <div ref={borderRef} class="hidden">
-        <Border />
-      </div>
+    <>
+      <Border />
       <div
         ref={sectionRef}
         class="flex flex-col text-center md:flex-row md:text-left relative justify-between items-center md:items-start gap-10  md:my-44 px-5"
@@ -93,6 +72,6 @@ export const WhoAreWe = component$(() => {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 });
