@@ -7,7 +7,7 @@ import { MobileHambuger } from "./MobileHamburger";
 
 export const Navbar = component$(() => {
   return (
-    <header class="flex justify-between items-center p-5">
+    <header class="flex sticky top-0 backdrop-blur-xl bg-[#121212]/60 z-50 -mx-7 px-14 justify-between items-center p-3">
       <h1 class="flex gap-2 items-center text-lg font-medium">
         <BraindaoLogo /> BrainDAO
       </h1>
