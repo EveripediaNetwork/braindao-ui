@@ -1,13 +1,31 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useClientEffect$, useSignal } from "@builder.io/qwik";
 import { HeroBackground } from "~/components/svgs/HeroBackground";
 import { BgGradient } from "../shared/BgGradient";
 import { HeroScrollToContent } from "../svgs/HeroScrollToContent";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 export const Hero = component$(() => {
+  const heroRef = useSignal<HTMLDivElement>();
+  const heroTextRef = useSignal<HTMLDivElement>();
+  const heroDescRef = useSignal<HTMLDivElement>();
+  useClientEffect$(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
+
+    if (!heroTextRef.value || !heroDescRef.value) return;
+  });
   return (
     <>
-      <div class="flex flex-col items-center justify-between pt-12 p-5">
-        <h1 class="text-[15vw] sm:text-[90px] lg:text-[115px] leading-none font-medium">
+      <div
+        ref={heroRef}
+        class="flex flex-col items-center justify-between pt-12 p-5"
+      >
+        <h1
+          ref={heroTextRef}
+          class="text-[15vw] sm:text-[90px] lg:text-[115px] leading-none font-medium"
+        >
           Meet the Humans of{" "}
           <span
             class="bg-gradient-to-r bg-clip-text text-transparent 
@@ -19,7 +37,7 @@ export const Hero = component$(() => {
           and Builders of IQ.Wiki.
         </h1>
         <HeroBackground className="-mt-64 -z-10 w-screen h-[100vw] max-h-[56rem] max-w-4xl" />
-        <div class="flex flex-col gap-[10vh] w-full">
+        <div ref={heroDescRef} class="flex flex-col gap-[10vh] w-full">
           <div class="relative -mt-10 md:-mt-32">
             <BgGradient />
             <p class="ml-auto p-4 md:p-8 text-md lg:text-lg text-center rounded-md md:rounded-none max-w-md bg-white/10 backdrop-blur-md">
