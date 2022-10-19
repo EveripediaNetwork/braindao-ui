@@ -54,14 +54,14 @@ export const TeamMemberCard = component$(
         {/* BACK OF THE CARD */}
         <div
           ref={cardBack}
-          class="hidden bg-[#121212]/95 absolute top-0 left-0 w-full h-full z-3 flex-col p-4"
+          class="hidden bg-[#121212]/95 absolute top-0 left-0 w-full h-full z-3 flex-col "
         >
-          <div class="relative">
+          <div class="relative p-4">
             <button
               onClick$={() => {
                 isOpen.value = false;
               }}
-              class="absolute grid place-items-center h-8 w-8 right-0"
+              class="absolute grid place-items-center h-8 w-8 top-0 right-0"
             >
               <CloseIcon className="fill-white" />
             </button>
@@ -101,7 +101,6 @@ export const TeamMemberSocialIcon = component$(
             <BrainIcon className="w-5 h-5" />
           </a>
         );
-
       default:
         return <></>;
     }
