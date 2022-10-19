@@ -34,6 +34,18 @@ export const TeamMemberCard = component$(
         transformPerspective: 1000,
       });
       gsap.set(cardBack.value!, { rotationY: -180 });
+
+      gsap.fromTo(
+        card.value!,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          delay: 0.5,
+          scrollTrigger: card.value!,
+        }
+      );
     });
 
     const unFlipCard = $(() => {
