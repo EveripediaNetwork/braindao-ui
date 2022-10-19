@@ -5,18 +5,23 @@ import { BgGradient } from "../shared/BgGradient";
 import { Border } from "../shared/Border";
 
 export const WhoAreWe = component$(() => {
-  const textRef = useSignal<HTMLHeadingElement>();
+  const headingRef = useSignal<HTMLHeadingElement>();
   const sectionRef = useSignal<HTMLHeadingElement>();
   const descRef = useSignal<HTMLParagraphElement>();
   const borderRef = useSignal<HTMLDivElement>();
 
   useClientEffect$(() => {
-    if (textRef.value && descRef.value && sectionRef.value && borderRef.value) {
+    if (
+      headingRef.value &&
+      descRef.value &&
+      sectionRef.value &&
+      borderRef.value
+    ) {
       gsap.registerPlugin(ScrollTrigger);
 
       // ANIMATIONS FOR SECTION HEADING
       gsap.fromTo(
-        textRef.value,
+        headingRef.value,
         { color: "white", y: 20, opacity: 0 },
         {
           y: 0,
@@ -65,7 +70,7 @@ export const WhoAreWe = component$(() => {
         class="flex flex-col text-center md:flex-row md:text-left relative justify-between items-center md:items-start gap-10  md:my-44 px-5"
       >
         <h1
-          ref={textRef}
+          ref={headingRef}
           class="text-transparent flex-1 text-4xl xl:text-6xl font-medium"
         >
           Who are we
