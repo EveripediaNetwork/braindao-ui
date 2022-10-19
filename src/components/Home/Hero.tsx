@@ -13,8 +13,6 @@ export const Hero = component$(() => {
   useClientEffect$(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
-
-    if (!heroTextRef.value || !heroDescRef.value) return;
   });
   return (
     <>

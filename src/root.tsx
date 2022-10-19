@@ -19,6 +19,16 @@ export default component$(() => {
     <QwikCity>
       <head>
         <meta charSet="utf-8" />
+        <script
+          defer
+          src="https://unpkg.com/custom-cursor@latest/dist/cursor.min.js"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={`
+            document.addEventListener('DOMContentLoaded', () => {
+              new window['Cursor']({})
+            })`}
+        />
         <RouterHead />
       </head>
       <body lang="en">
