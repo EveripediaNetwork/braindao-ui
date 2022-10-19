@@ -29,7 +29,19 @@ export const RouterHead = component$(() => {
 
       <meta property="og:site_name" content="Braindao" />
       <meta name="twitter:site" content="@everipedia" />
-      <meta name="twitter:title" content="IQ.Wiki" />
+      <meta
+        name="twitter:title"
+        content="Meet the Humans of BrainDAO and Builders of IQ.Wiki"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:image"
+        content="https://braindao.org/images/og-image.png"
+      />
+      <meta
+        name="twitter:description"
+        content="IQ.Wiki's mission is to bring the world's knowledge on-chain through the IQ token."
+      />
 
       {head.meta.map((m) => (
         <meta {...m} />
