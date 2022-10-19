@@ -39,19 +39,15 @@ export const TeamMemberCard = component$(
     const unFlipCard = $(() => {
       gsap
         .timeline()
-        .to(cardFront.value!, { duration: 1, rotationY: 0 })
-        .to(cardBack.value!, { duration: 1, rotationY: -180 }, 0)
-        .to(card.value!, { z: 0 }, 0.5)
-        .to(card.value!, { z: 50 }, 0);
+        .to(cardFront.value!, { rotationY: 0 })
+        .to(cardBack.value!, { rotationY: -180 }, 0);
     });
 
     const flipCard = $(() => {
       gsap
         .timeline()
-        .to(cardFront.value!, { duration: 1, rotationY: 180 })
-        .to(cardBack.value!, { duration: 1, rotationY: 0 }, 0)
-        .to(card.value!, { z: 50 }, 0)
-        .to(card.value!, { z: 0 }, 0.5);
+        .to(cardFront.value!, { rotationY: 180 })
+        .to(cardBack.value!, { rotationY: 0 }, 0);
     });
 
     useWatch$(({ track }) => {
@@ -109,7 +105,7 @@ export const TeamMemberCard = component$(
                 isActive.value = false;
                 unFlipCard();
               }}
-              class="absolute grid place-items-center h-8 w-8 top-0 right-0"
+              class="absolute grid place-items-center h-8 w-8 top-0 right-0 z-20"
             >
               <CloseIcon className="fill-white" />
             </button>
