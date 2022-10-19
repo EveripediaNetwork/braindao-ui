@@ -26,16 +26,28 @@ export const OurStory = component$(() => {
     ) {
       gsap.registerPlugin(ScrollTrigger);
 
-      // ANIMATIONS FOR SECTION HEADING AND TAB NAV
-      [headingRef.value, tabsRef.value].forEach((element, i) => {
+      // ANIMATIONS FOR HEADING CONTENT
+      gsap.fromTo(
+        headingRef.value!,
+        { color: "white", y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: sectionRef.value,
+            start: "top 75%",
+          },
+        }
+      );
+
+      // ANIMATIONS FOR CONTENT AND TAB NAV
+      [contentRef.value, tabsRef.value].forEach((element) => {
         gsap.fromTo(
           element,
-          { color: "white", y: 20, opacity: 0 },
+          { opacity: 0 },
           {
-            y: 0,
             opacity: 1,
-            duration: i + 0.8,
-            delay: i * 0.2,
+            duration: 1,
             scrollTrigger: {
               trigger: sectionRef.value,
               start: "top 50%",
@@ -43,20 +55,6 @@ export const OurStory = component$(() => {
           }
         );
       });
-
-      // ANIMATIONS FOR TAB CONTENT
-      gsap.fromTo(
-        contentRef.value,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: sectionRef.value,
-            start: "top 50%",
-          },
-        }
-      );
     }
   });
 
@@ -65,10 +63,7 @@ export const OurStory = component$(() => {
       ref={sectionRef}
       class="relative overflow-hidden md:overflow-visible  flex flex-col justify-center items-center py-20"
     >
-      <h2
-        ref={headingRef}
-        class="text-4xl text-transparent xl:text-6xl font-bold"
-      >
+      <h2 ref={headingRef} class="text-4xl xl:text-6xl font-bold">
         Our Story
       </h2>
       <nav ref={tabsRef} class="flex items-center gap-6 md:gap-10 mt-10">

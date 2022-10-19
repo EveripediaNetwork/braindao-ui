@@ -15,7 +15,7 @@ export const WhoAreWe = component$(() => {
     // ANIMATIONS FOR SECTION HEADING
     gsap.fromTo(
       headingRef.value!,
-      { color: "white", y: 20, opacity: 0 },
+      { visibility: "visible", y: 20, opacity: 0 },
       {
         y: 0,
         opacity: 1,
@@ -32,7 +32,7 @@ export const WhoAreWe = component$(() => {
       { opacity: 0 },
       {
         opacity: 1,
-        color: "white",
+        visibility: "visible",
         scrollTrigger: {
           trigger: sectionRef.value,
           start: "top 75%",
@@ -46,18 +46,18 @@ export const WhoAreWe = component$(() => {
       <Border />
       <div
         ref={sectionRef}
-        class="flex flex-col text-center md:flex-row md:text-left relative justify-between items-center md:items-start gap-10  md:my-44 px-5"
+        class="flex flex-col text-center md:flex-row md:text-left relative justify-between items-center md:items-start gap-10 my-24 md:my-44 px-5"
       >
         <h1
           ref={headingRef}
-          class="text-transparent flex-1 text-4xl xl:text-6xl font-medium"
+          class="invisible flex-1 text-4xl xl:text-6xl font-medium"
         >
           Who are we
         </h1>
         <BgGradient className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         <div
           ref={descRef}
-          class="flex-1 text-transparent flex flex-col max-w-lg xl:text-lg gap-4"
+          class="flex-1 invisible flex flex-col max-w-lg xl:text-lg gap-4"
         >
           <p>
             A tight- knit group of professionals from all over the world with

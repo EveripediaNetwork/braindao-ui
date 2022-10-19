@@ -1,4 +1,10 @@
-import { component$, useStore } from "@builder.io/qwik";
+import {
+  component$,
+  useClientEffect$,
+  useSignal,
+  useStore,
+} from "@builder.io/qwik";
+import gsap from "gsap";
 import { Border } from "~/components/shared/Border";
 import {
   BraindaoTeam,
@@ -9,13 +15,33 @@ import {
 import { TeamMemberCard } from "./TeamMemberCard";
 
 export const TheTeam = component$(() => {
+  const headingRef = useSignal<HTMLHeadingElement>();
+  const sectionRef = useSignal<HTMLDivElement>();
   const store = useStore({
     active: false,
   });
+
+  useClientEffect$(() => {
+    gsap.fromTo(
+      headingRef.value!,
+      { visibility: "visible", y: 20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: sectionRef.value,
+          start: "top 75%",
+        },
+      }
+    );
+  });
   return (
-    <div class="xl:mb-80">
+    <div ref={sectionRef} class="xl:mb-80">
       <div class="p-5 max-w-6xl mx-auto">
-        <h2 class="text-4xl xl:text-6xl font-bold text-center mb-16">
+        <h2
+          ref={headingRef}
+          class="text-4xl xl:text-6xl font-bold text-center mb-16"
+        >
           The Team
         </h2>
 
