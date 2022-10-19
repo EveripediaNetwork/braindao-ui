@@ -39,11 +39,14 @@ export const TeamMemberCard = component$(
         card.value!,
         { opacity: 0, y: 50 },
         {
+          visibility: "visible",
           opacity: 1,
           y: 0,
-          duration: 2,
-          delay: 0.5,
-          scrollTrigger: card.value!,
+          duration: 1,
+          scrollTrigger: {
+            trigger: card.value!,
+            start: "top 80%",
+          },
         }
       );
     });
@@ -56,7 +59,6 @@ export const TeamMemberCard = component$(
     });
 
     const flipCard = $(() => {
-      gsap.set(cardBack.value!, { display: "block" });
       gsap
         .timeline()
         .to(cardFront.value!, { rotationY: 180 })
@@ -92,7 +94,7 @@ export const TeamMemberCard = component$(
     return (
       <div
         ref={card}
-        class="relative w-[250px] h-[360px] children:w-[250px] children:h-[360px]"
+        class="invisible relative w-[250px] h-[360px] children:w-[250px] children:h-[360px]"
       >
         {/* FRONT OF THE CARD */}
         <div ref={cardFront} class="absolute">
@@ -121,10 +123,7 @@ export const TeamMemberCard = component$(
         </div>
 
         {/* BACK OF THE CARD */}
-        <div
-          ref={cardBack}
-          class="hidden absolute backface-hidden bg-[#121212]/95"
-        >
+        <div ref={cardBack} class="absolute backface-hidden bg-[#121212]/95">
           <div class="relative p-4">
             <button
               onClick$={() => {

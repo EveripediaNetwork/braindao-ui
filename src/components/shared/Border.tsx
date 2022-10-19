@@ -13,8 +13,10 @@ export const Border = component$((p: { className?: string }) => {
       {
         x: 0,
         duration: 0.5,
-        scrollTrigger: borderRef.value,
-        delay: 1,
+        scrollTrigger: {
+          trigger: borderRef.value!,
+          start: "top 80%",
+        },
       }
     );
   });
