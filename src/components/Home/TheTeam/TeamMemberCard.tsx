@@ -1,4 +1,11 @@
-import { component$, useClientEffect$, useSignal } from "@builder.io/qwik";
+import {
+  $,
+  component$,
+  useClientEffect$,
+  useSignal,
+  useStore,
+  useWatch$,
+} from "@builder.io/qwik";
 import gsap from "gsap";
 import { BrainIcon } from "~/components/icons/Brain";
 import { CloseIcon } from "~/components/icons/Close";
@@ -8,28 +15,60 @@ import { TwitterIcon } from "~/components/icons/Twitter";
 import { TeamMember } from "~/data/the-team";
 
 export const TeamMemberCard = component$(
-  ({ member }: { member: TeamMember }) => {
+  ({
+    member,
+    store,
+  }: {
+    member: TeamMember;
+    store: { active: boolean | string };
+  }) => {
     const card = useSignal<HTMLDivElement>();
     const cardFront = useSignal<HTMLDivElement>();
     const cardBack = useSignal<HTMLDivElement>();
-    const openBtn = useSignal<HTMLDivElement>();
-    const closeBtn = useSignal<HTMLDivElement>();
+
+    const isActive = useStore({ value: false });
 
     useClientEffect$(() => {
-      if (!card.value || !cardFront.value || !cardBack.value) return;
-      gsap.set(card.value, {
+      gsap.set(card.value!, {
         transformStyle: "preserve-3d",
         transformPerspective: 1000,
       });
-      gsap.set(cardBack.value, { rotationY: -180 });
-      const tl = gsap
-        .timeline({ paused: true })
-        .to(cardFront.value, { duration: 1, rotationY: 180 })
-        .to(cardBack.value, { duration: 1, rotationY: 0 }, 0)
-        .to(card.value, { z: 50 }, 0)
-        .to(card.value, { z: 0 }, 0.5);
-      openBtn.value?.addEventListener("click", () => tl.play());
-      closeBtn.value?.addEventListener("click", () => tl.reverse());
+      gsap.set(cardBack.value!, { rotationY: -180 });
+    });
+
+    const unFlipCard = $(() => {
+      gsap
+        .timeline()
+        .to(cardFront.value!, { duration: 1, rotationY: 0 })
+        .to(cardBack.value!, { duration: 1, rotationY: -180 }, 0)
+        .to(card.value!, { z: 0 }, 0.5)
+        .to(card.value!, { z: 50 }, 0);
+    });
+
+    const flipCard = $(() => {
+      gsap
+        .timeline()
+        .to(cardFront.value!, { duration: 1, rotationY: 180 })
+        .to(cardBack.value!, { duration: 1, rotationY: 0 }, 0)
+        .to(card.value!, { z: 50 }, 0)
+        .to(card.value!, { z: 0 }, 0.5);
+    });
+
+    useWatch$(({ track }) => {
+      const active = track(() => store.active);
+      const isMemberActive = track(() => isActive.value);
+      if (
+        isMemberActive &&
+        active != member.name &&
+        cardFront.value &&
+        cardBack.value
+      ) {
+        if (card.value && cardFront.value && cardBack.value) {
+          console.log(`CAUGHT CARD ${member.name} OPEN BUT NOT ACTIVE`);
+          unFlipCard();
+          isActive.value = false;
+        }
+      }
     });
 
     return (
@@ -41,7 +80,11 @@ export const TeamMemberCard = component$(
         <div ref={cardFront} class="absolute">
           <div class="flex relative flex-col items-center text-center">
             <button
-              ref={openBtn}
+              onClick$={() => {
+                store.active = member.name;
+                isActive.value = true;
+                flipCard();
+              }}
               class="absolute grid place-items-center bg-black h-8 w-8 right-0"
             >
               <PlusIcon className="fill-white" />
@@ -61,7 +104,11 @@ export const TeamMemberCard = component$(
         <div ref={cardBack} class="absolute backface-hidden bg-[#121212]/95">
           <div class="relative p-4">
             <button
-              ref={closeBtn}
+              onClick$={() => {
+                store.active = false;
+                isActive.value = false;
+                unFlipCard();
+              }}
               class="absolute grid place-items-center h-8 w-8 top-0 right-0"
             >
               <CloseIcon className="fill-white" />
