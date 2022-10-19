@@ -37,7 +37,7 @@ export const Hero = component$(() => {
         <HeroBackground className="-mt-64 -z-10 w-screen h-[100vw] max-h-[56rem] max-w-4xl" />
         <div ref={heroDescRef} class="flex flex-col gap-[10vh] w-full">
           <div class="relative -mt-10 md:-mt-32">
-            <BgGradient />
+            <BgGradient className="right-0 -top-36" />
             <p class="ml-auto p-4 md:p-8 text-md lg:text-lg text-center rounded-md md:rounded-none max-w-md bg-white/10 backdrop-blur-md">
               IQ.Wiki's mission is to bring the world's knowledge on-chain
               through the IQ token.
