@@ -26,9 +26,14 @@ module.exports = {
     },
     extend: {
       animation: {
+        border: "border 4s ease infinite",
         text: "text 4s ease infinite",
       },
       keyframes: {
+        border: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
         text: {
           "0%, 100%": {
             "background-size": "200% 200%",

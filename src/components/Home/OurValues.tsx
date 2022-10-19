@@ -3,13 +3,9 @@ import { ourValuesData } from "~/data/our-values";
 import { CloudTail } from "../svgs/CloudTail";
 
 export const OurValuesCloud = component$(
-  ({ content, title, i }: { content: string; title: string; i: number }) => (
-    <div
-      class={`p-[3px] bg-gradient-to-bl from-pink-500 to-teal-900 w-full md:w-1/2 rounded-[100%] ${
-        i % 2 == 0 ? "mr-left" : "ml-auto"
-      } `}
-    >
-      <div class="flex flex-col items-center justify-center bg-[#121212] text-center p-10 md:p-20 rounded-[100%]">
+  ({ content, title }: { content: string; title: string }) => (
+    <div class="p-[2px] rounded-[100%] animate-border bg-white from-teal-500 via-pink-500 to-purple-500 bg-[length:400%_400%] transition bg-gradient-to-r hover:shadow-lg focus:outline-none focus:ring">
+      <div class="flex flex-col bg-[#121212] p-10 md:p-20 rounded-[100%] items-center justify-center text-center">
         <h2 class="text-3xl mb-4">{title}</h2>
         <p class="text-sm">{content}</p>
       </div>
@@ -36,7 +32,9 @@ export const OurValues = component$(() => (
               />
             </div>
           )}
-          <OurValuesCloud {...value} i={i} />
+          <div class={`${i % 2 == 0 ? "mr-left" : "ml-auto"} w-full md:w-1/2`}>
+            <OurValuesCloud {...value} />
+          </div>
         </>
       ))}
     </div>
