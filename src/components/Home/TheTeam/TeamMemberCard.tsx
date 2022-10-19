@@ -56,6 +56,7 @@ export const TeamMemberCard = component$(
     });
 
     const flipCard = $(() => {
+      gsap.set(cardBack.value!, { display: "block" });
       gsap
         .timeline()
         .to(cardFront.value!, { rotationY: 180 })
@@ -109,6 +110,8 @@ export const TeamMemberCard = component$(
             <img
               class="object-cover -z-10 w-[250px] h-[300px]"
               src={member.image}
+              width="250"
+              height="300"
             />
             <h3 class="uppercase font-bebas_neue -mt-4 text-4xl">
               {member.name}
@@ -118,7 +121,10 @@ export const TeamMemberCard = component$(
         </div>
 
         {/* BACK OF THE CARD */}
-        <div ref={cardBack} class="absolute backface-hidden bg-[#121212]/95">
+        <div
+          ref={cardBack}
+          class="hidden absolute backface-hidden bg-[#121212]/95"
+        >
           <div class="relative p-4">
             <button
               onClick$={() => {
