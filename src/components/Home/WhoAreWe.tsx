@@ -13,6 +13,8 @@ export const WhoAreWe = component$(() => {
   useClientEffect$(() => {
     if (textRef.value && descRef.value && sectionRef.value && borderRef.value) {
       gsap.registerPlugin(ScrollTrigger);
+
+      // ANIMATIONS FOR SECTION HEADING
       gsap.fromTo(
         textRef.value,
         { color: "white", y: 20, opacity: 0 },
@@ -25,6 +27,8 @@ export const WhoAreWe = component$(() => {
           },
         }
       );
+
+      // ANIMATIONS FOR SECTION DESCRIPTION
       gsap.fromTo(
         descRef.value,
         { opacity: 0 },
@@ -37,6 +41,8 @@ export const WhoAreWe = component$(() => {
           },
         }
       );
+
+      // ANIMATIONS FOR BORDER
       gsap.fromTo(
         borderRef.value,
         { x: "-100%", display: "block" },
