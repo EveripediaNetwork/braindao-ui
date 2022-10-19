@@ -142,6 +142,105 @@ export const CoreTeamData = [
     },
   },
 ];
+export const BraindaoTeam = [
+  {
+    image: "/images/team/drebrake.png",
+    name: "Bakare Damilare",
+    title: "Frontend/Blockchain Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/srujan.png",
+    name: "Srujan Gurram",
+    title: "Frontend Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/mabel.png",
+    name: "Ajayi Feyikemi",
+    title: "UX Designer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/abraham.png",
+    name: "ABRAHAM A.",
+    title: "Frontend Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/gabrial.png",
+    name: "Gabriel moraes",
+    title: "UX Designer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/james.png",
+    name: "James akpan",
+    title: "Frontend Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/steve.png",
+    name: "Ogbaje stephen",
+    title: "Technical Product Manager",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+
+  {
+    image: "/images/team/paola.png",
+    name: "Paola Martz",
+    title: "Artist/Graphics Designer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/ashaka.png",
+    name: "Ashaka Egerega",
+    title: "Backend Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/oleanji.png",
+    name: "Adebayo Olamilekan",
+    title: "Blockchain Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/lope.png",
+    name: "Adebisin tolulope",
+    title: "Frontend Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+  {
+    image: "/images/team/dewalz.png",
+    name: "adeniyi adewale",
+    title: "Frontend Developer",
+    about:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    socials: {},
+  },
+];
 
 type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[]
   ? ElementType
