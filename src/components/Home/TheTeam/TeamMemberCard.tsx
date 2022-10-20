@@ -123,7 +123,7 @@ export const TeamMemberCard = component$(
         </div>
 
         {/* BACK OF THE CARD */}
-        <div ref={cardBack} class="absolute backface-hidden bg-[#121212]/95">
+        <div ref={cardBack} class="absolute backface-hidden bg-[#191919]/95">
           <div class="relative p-4">
             <button
               onClick$={() => {
@@ -135,10 +135,10 @@ export const TeamMemberCard = component$(
             >
               <CloseIcon className="fill-white" />
             </button>
-            <h3 class="text-xl font-bold mt-4">{member.name}</h3>
+            <h3 class="text-lg font-bold mt-4">{member.name}</h3>
             <p class="mb-4 text-xs">{member.title}</p>
-            <p class="text-sm">{member.about}</p>
-            <div class="flex items-center mt-4 gap-3 children:bg-gradient-radial-at-tr children:rounded-md children:from-white/10 children:to-transparent children:p-2 children:border-white/10 children:border-[1px]">
+            <p class="text-xs leading-5">{member.about}</p>
+            <div class="flex items-center mt-4 gap-3 children:bg-gradient-radial-at-tr children:rounded-md children:from-white/20 children:to-transparent children:p-2 children:border-white/20 children:border-[1px]">
               {Object.entries(member.socials).map((social) => (
                 <TeamMemberSocialIcon social={social[0]} link={social[1]} />
               ))}
@@ -168,7 +168,7 @@ export const TeamMemberSocialIcon = component$(
       case "iqWiki":
         return (
           <a href={link} target="_blank">
-            <BrainIcon className="w-5 h-5 fill-white" />
+            <BrainIcon className="w-5 h-5" />
           </a>
         );
       default:
