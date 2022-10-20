@@ -138,7 +138,7 @@ export const TeamMemberCard = component$(
             <h3 class="text-xl font-bold mt-4">{member.name}</h3>
             <p class="mb-4 text-xs">{member.title}</p>
             <p class="text-sm">{member.about}</p>
-            <div class="flex items-center mt-4 gap-3 fill-white children:bg-gradient-radial-at-tr children:rounded-md children:from-white/10 children:to-transparent children:p-2 children:border-white/10 children:border-[1px]">
+            <div class="flex items-center mt-4 gap-3 children:bg-gradient-radial-at-tr children:rounded-md children:from-white/10 children:to-transparent children:p-2 children:border-white/10 children:border-[1px]">
               {Object.entries(member.socials).map((social) => (
                 <TeamMemberSocialIcon social={social[0]} link={social[1]} />
               ))}
@@ -156,19 +156,19 @@ export const TeamMemberSocialIcon = component$(
       case "twitter":
         return (
           <a href={link} target="_blank">
-            <TwitterIcon className="w-5 h-5" />
+            <TwitterIcon className="w-5 h-5 fill-white" />
           </a>
         );
       case "linkedin":
         return (
           <a href={link} target="_blank">
-            <LinkedInIcon className="w-5 h-5" />
+            <LinkedInIcon className="w-5 h-5 fill-white" />
           </a>
         );
       case "iqWiki":
         return (
           <a href={link} target="_blank">
-            <BrainIcon className="w-5 h-5" />
+            <BrainIcon className="w-5 h-5 fill-white" />
           </a>
         );
       default:
