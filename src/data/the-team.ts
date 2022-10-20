@@ -147,7 +147,10 @@ export const BraindaoTeam = [
     title: "UX Designer",
     about:
       "Ajayi Feyikemi Mabel is a UX Designer based in Nigeria. Graduated with a degree in Biochemistry but has been dedicated to designing functional, accessible and human-centred digital experiences in the past few years and is now bringing this passion into the Web 3 space.",
-    socials: {},
+    socials: {
+      twitter: "https://twitter.com/simplypheyie",
+      linkedin: "https://www.linkedin.com/in/feyikemi/",
+    },
   },
   {
     image: "/images/team/james.png",
