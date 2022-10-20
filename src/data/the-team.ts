@@ -109,17 +109,6 @@ export const CoreTeamData = [
     },
   },
   {
-    image: "/images/team/justin-moore.png",
-    name: "Justin Moore",
-    title: "Senior Software Engineer",
-    about:
-      "Justin Moore is an experienced software architect and full-stack developer with over a decade of experience. In June 2021, he joined the IQ.wiki team as a Senior Software Engineer.",
-    socials: {
-      iqWiki: "https://iq.wiki/wiki/justin-moore",
-      linkedin: "https://www.linkedin.com/in/justin-moore-83b31758/",
-    },
-  },
-  {
     image: "/images/team/justin.png",
     name: "Justin Castillo",
     title: "Fullstack Blockchain Developer",
@@ -129,16 +118,6 @@ export const CoreTeamData = [
       iqWiki: "https://iq.wiki/wiki/justin-castillo",
       twitter: "https://twitter.com/_JustinCast",
       linkedin: "https://www.linkedin.com/in/jacv/",
-    },
-  },
-  {
-    image: "/images/team/richard.png",
-    name: "Richard Gee",
-    title: "Full Stack Software Engineer",
-    about:
-      "Richard Gee has worked on several smart contract and NFT related projects for IQ.wiki. He was previously an algorithmic trader and prior to that, he was a Vice President at JP Morgan working in Fixed Income Attribution. ",
-    socials: {
-      iqWiki: "https://iq.wiki/wiki/richard-gee",
     },
   },
 ];
@@ -162,22 +141,6 @@ export const BraindaoTeam = [
   {
     image: "/images/team/mabel.png",
     name: "Ajayi Feyikemi",
-    title: "UX Designer",
-    about:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    socials: {},
-  },
-  {
-    image: "/images/team/abraham.png",
-    name: "ABRAHAM A.",
-    title: "Frontend Developer",
-    about:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    socials: {},
-  },
-  {
-    image: "/images/team/gabrial.png",
-    name: "Gabriel moraes",
     title: "UX Designer",
     about:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
