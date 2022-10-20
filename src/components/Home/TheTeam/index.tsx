@@ -5,7 +5,6 @@ import {
   useStore,
 } from "@builder.io/qwik";
 import gsap from "gsap";
-import { Border } from "~/components/shared/Border";
 import {
   BraindaoTeam,
   CoreTeamData,
@@ -80,8 +79,6 @@ export const TheTeam = component$(() => {
           ))}
         </div>
       </div>
-
-      <Border className="max-w-6xl mx-auto my-20" />
 
       {/* BRAINDAO TEAM */}
       <div class="p-5 max-w-6xl flex justify-center mx-auto">
