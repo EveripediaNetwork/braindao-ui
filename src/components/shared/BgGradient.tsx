@@ -6,13 +6,12 @@ export const BgGradient = component$(
     const gradientRef = useSignal<HTMLDivElement>();
     useClientEffect$(() => {
       gsap.set("body", { overflowX: "hidden" });
-      gsap.timeline({ repeat: -1 }).to(gradientRef.value!, {
-        x: "random(-100, 100, 50)",
-        y: "random(-100, 100, 50)",
-        duration: 2,
-        ease: "none",
+      gsap.to(gradientRef.value!, {
+        rotation: 360,
+        duration: 20,
         repeat: -1,
-        repeatRefresh: true,
+        ease: "none",
+        transformOrigin: "120px 120px",
       });
     });
     return (
