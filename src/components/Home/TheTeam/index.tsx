@@ -36,7 +36,7 @@ export const TheTeam = component$(() => {
   });
 
   return (
-    <div ref={sectionRef} class="xl:mb-80">
+    <div ref={sectionRef} class=" mt-20 xl:mb-80">
       <div class="p-5 max-w-6xl mx-auto">
         <h2
           ref={headingRef}
