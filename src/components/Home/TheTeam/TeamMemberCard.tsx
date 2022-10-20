@@ -19,7 +19,7 @@ export const TeamMemberCard = component$(
     member,
     store,
   }: {
-    member: TeamMember;
+    member: Exclude<TeamMember, null>;
     store: { active: boolean | string };
   }) => {
     const card = useSignal<HTMLDivElement>();

@@ -34,6 +34,7 @@ export const TheTeam = component$(() => {
       }
     );
   });
+
   return (
     <div ref={sectionRef} class="xl:mb-80">
       <div class="p-5 max-w-6xl mx-auto">
@@ -84,16 +85,27 @@ export const TheTeam = component$(() => {
       <div class="p-5 max-w-6xl flex justify-center mx-auto">
         {/* VISIBLE FROM xl */}
         <div class="hidden xl:inline-grid grid-cols-4 gap-8">
-          {BraindaoTeam.map((member, i) => (
-            <div class={i % 2 ? "translate-y-52" : ""}>
-              <TeamMemberCard member={member as TeamMember} store={store} />
-            </div>
-          ))}
+          {BraindaoTeam.map((member, i) => {
+            if (!member) {
+              return <div class="invisible w-[250px] h-[360px]" />;
+            }
+            return (
+              <div class={i % 2 ? "translate-y-52" : ""}>
+                <TeamMemberCard
+                  member={member as Exclude<TeamMember, null>}
+                  store={store}
+                />
+              </div>
+            );
+          })}
         </div>
         {/* VISIBLE UNDER xl */}
         <div class="inline-grid xl:hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BraindaoTeam.map((member) => (
-            <TeamMemberCard member={member as TeamMember} store={store} />
+          {BraindaoTeam.filter((_) => !!_).map((member) => (
+            <TeamMemberCard
+              member={member as Exclude<TeamMember, null>}
+              store={store}
+            />
           ))}
         </div>
       </div>

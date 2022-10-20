@@ -195,6 +195,7 @@ export const BraindaoTeam = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     socials: {},
   },
+  null,
   {
     image: "/images/team/dewalz.png",
     name: "adeniyi adewale",
@@ -209,4 +210,4 @@ type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[]
   ? ElementType
   : never;
 
-export type TeamMember = ArrElement<typeof CoreTeamData>;
+export type TeamMember = ArrElement<typeof BraindaoTeam | typeof CoreTeamData>;
