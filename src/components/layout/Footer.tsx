@@ -3,7 +3,6 @@ import { CopyRightIcon } from "../icons/CopyRight";
 import { DiscordIcon } from "../icons/Discord";
 import { OpenSeaIcon } from "../icons/OpenSea";
 import { TwitterIcon } from "../icons/Twitter";
-import { Border } from "../shared/Border";
 
 export const Footer = component$(() => {
   return (
@@ -15,7 +14,7 @@ export const Footer = component$(() => {
         <a href="#">Privacy Policy</a>
         <a href="#">Terms and Conditions</a>
       </nav>
-      <Border />
+      <div class="border-b-[1px] border-white/20" />
       <nav class="fill-white flex justify-center gap-8">
         <TwitterIcon />
         <DiscordIcon />
