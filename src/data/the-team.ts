@@ -135,15 +135,18 @@ export const BraindaoTeam = [
     name: "Srujan Gurram",
     title: "Frontend Developer",
     about:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    socials: {},
+      "Srujan Gurram is a software engineer from India with experience in building various web applications. He is extremely quick learner and has worked on several projects focusing on user experience, including the development of the IQ.wiki platform. He is currently perusing his Degree in Information Technology.",
+    socials: {
+      twitter: "https://twitter.com/urban_lobster",
+      linkedin: "https://www.linkedin.com/in/srujangurram/",
+    },
   },
   {
     image: "/images/team/mabel.png",
     name: "Ajayi Feyikemi",
     title: "UX Designer",
     about:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Ajayi Feyikemi Mabel is a UX Designer based in Nigeria. Graduated with a degree in Biochemistry but has been dedicated to designing functional, accessible and human-centred digital experiences in the past few years and is now bringing this passion into the Web 3 space.",
     socials: {},
   },
   {
@@ -156,7 +159,7 @@ export const BraindaoTeam = [
   },
   {
     image: "/images/team/steve.png",
-    name: "Ogbaje stephen",
+    name: "Ogbaje Stephen",
     title: "Technical Product Manager",
     about:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -166,9 +169,9 @@ export const BraindaoTeam = [
   {
     image: "/images/team/paola.png",
     name: "Paola Martz",
-    title: "Artist/Graphics Designer",
+    title: "Visual Artist/Graphics Designer",
     about:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Paola Martínez is a Mexican visual artist who works in the graphic design department for IQ.wiki. She has experience in the development of NFT illustrations and character design.",
     socials: {},
   },
   {
@@ -198,8 +201,8 @@ export const BraindaoTeam = [
   null,
   {
     image: "/images/team/dewalz.png",
-    name: "adeniyi adewale",
-    title: "Frontend Developer",
+    name: "Adeniyi Adewale",
+    title: "UX Design Intern",
     about:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     socials: {},
