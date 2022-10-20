@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  @apply bg-[#121212] text-white;
+}
+
+/* 
+[data-cursor] {
+  @apply w-10 h-10 rounded-full z-[999];
+}
+
+[data-cursor="0"] {
+  @apply bg-gradient-radial-at-tl from-pink-500/90 to-blue-500/90 backdrop-blur-lg;
+}
+
+[data-cursor="1"] {
+  background: #eee;
+} */

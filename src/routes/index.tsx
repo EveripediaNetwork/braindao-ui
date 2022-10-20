@@ -1,10 +1,18 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { ContactUs } from "~/components/Home/ContactUs";
+import { Hero } from "~/components/Home/Hero";
+import { OurStory } from "~/components/Home/OurStory";
+import { OurValues } from "~/components/Home/OurValues";
+import { TheTeam } from "~/components/Home/TheTeam";
+import { WhoAreWe } from "~/components/Home/WhoAreWe";
 
-export default component$(() => {
-  return <h1 class="underline">Hello world 🚀</h1>;
-});
-
-export const head: DocumentHead = {
-  title: "Braindao",
-};
+export default component$(() => (
+  <div>
+    <Hero />
+    <OurStory />
+    <OurValues />
+    <WhoAreWe />
+    <TheTeam />
+    <ContactUs />
+  </div>
+));

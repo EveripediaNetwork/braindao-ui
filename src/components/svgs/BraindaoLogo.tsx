@@ -1,4 +1,6 @@
-<svg
+export const BraindaoLogo = () => {
+  return (
+    <svg
       width="44"
       height="38"
       viewBox="0 0 44 38"
@@ -91,3 +93,5 @@
         </clipPath>
       </defs>
     </svg>
+  );
+};
