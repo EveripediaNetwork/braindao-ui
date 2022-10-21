@@ -1,9 +1,7 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
 import { BraindaoLogo } from "../svgs/BraindaoLogo";
-import { ArrowDropDownIcon } from "../icons/ArrowDropDown";
-import { GlobeIcon } from "../icons/Globe";
 import { HamburgerIcon } from "../icons/HamburgerIcon";
+import { RightArrowIcon } from "../icons/RightArrow";
 
 export const Navbar = component$(() => {
   const mobileNav = useSignal<HTMLDivElement>();
@@ -14,14 +12,18 @@ export const Navbar = component$(() => {
           <BraindaoLogo /> BrainDAO
         </h1>
         <nav class="hidden md:flex gap-6 text-md">
-          <Link href="/">Home</Link>
-          <a href="https://iq.wiki">IQ.Wiki</a>
-          <a href="#">Brainies</a>
-          <a href="#">IQ Dashboard</a>
+          <a href="#values">Values</a>
+          <a href="#who're-we">Who're We</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <div class="hidden md:flex items-center gap-2 fill-white text-sm">
-          <GlobeIcon /> English, USA <ArrowDropDownIcon />
-        </div>
+        <a
+          href="https://iq.braindao.org"
+          target="_blank"
+          class="hidden md:block bg-pink-500 px-5 py-1 rounded-md"
+        >
+          IQ Dashboard
+        </a>
         <button
           class="fill-white md:hidden"
           onClick$={() => {
@@ -35,16 +37,26 @@ export const Navbar = component$(() => {
       <div ref={mobileNav} class="hidden md:hidden">
         <ul class="flex flex-col divide-y-[1px] max-w-xl mx-auto divide-white/25 p-5 text-lg children:p-3">
           <li>
-            <a href="#">Home</a>
+            <a href="#values">Values</a>
           </li>
           <li>
-            <a href="#">IQ.Wiki</a>
+            <a href="#who're-we">Who're We</a>
           </li>
           <li>
-            <a href="#">Brainies</a>
+            <a href="#team">Team</a>
           </li>
           <li>
-            <a href="#">IQ Dashboard</a>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a
+              href="https://iq.braindao.org"
+              target="_blank"
+              class="flex justify-between"
+            >
+              <span>IQ Dashboard</span>
+              <RightArrowIcon className="fill-white" />
+            </a>
           </li>
         </ul>
       </div>

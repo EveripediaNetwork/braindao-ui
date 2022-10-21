@@ -3,7 +3,7 @@ import { SwooshLine } from "../svgs/SwooshLine";
 
 export const ContactUs = component$(() => (
   <div class="flex flex-col md:flex-row text-center md:text-left gap-6 px-5 my-40 items-center">
-    <div class="flex-[2]">
+    <div id="contact" class="flex-[2] scroll-mt-24">
       <h2 class="text-3xl lg:text-6xl font-medium">
         We would love to hear from you, Get in touch with us!
       </h2>

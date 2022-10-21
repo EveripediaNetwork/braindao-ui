@@ -6,6 +6,10 @@
   font-family: "Raleway", sans-serif;
 }
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
   @apply bg-[#121212] text-white;
 }
