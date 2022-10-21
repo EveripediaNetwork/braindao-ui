@@ -7,17 +7,18 @@ export const BgGradient = component$(
     useClientEffect$(() => {
       gsap.set("body", { overflowX: "hidden" });
       gsap.to(gradientRef.value!, {
-        rotation: 360,
-        duration: 20,
         repeat: -1,
-        ease: "none",
-        transformOrigin: "120px 120px",
+        duration: 2,
+        x: "random(-100%, 100%)",
+        y: "random(-100%, 100%)",
+        z: "random(-100%, 100%)",
+        repeatRefresh: true,
       });
     });
     return (
       <div
         ref={gradientRef}
-        class={`absolute pointer-events-none rounded-full h-[350px] w-[350px] bg-gradient-radial-at-tl from-[#4b7acb]/20 to-[#cc4c7f]/20 blur-[120px] ${className}`}
+        class={`absolute -z-10 pointer-events-none rounded-full h-[350px] w-[350px] bg-gradient-radial-at-tl from-[#cc4c7f]/40 via-[#8c63a5]/40 to-[#4b7acb]/10 blur-[120px] ${className}`}
       />
     );
   }
