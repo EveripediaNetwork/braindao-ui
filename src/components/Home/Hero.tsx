@@ -5,6 +5,7 @@ import { HeroScrollToContent } from "../svgs/HeroScrollToContent";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import SplitType from "split-type";
 
 export const Hero = component$(() => {
   const heroRef = useSignal<HTMLDivElement>();
@@ -13,6 +14,14 @@ export const Hero = component$(() => {
   useClientEffect$(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
+    const text = new SplitType(heroTextRef.value!, { types: "words, chars" });
+    gsap.set(heroTextRef.value!, { visibility: "visible" });
+    gsap.from(text.chars, {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      stagger: 0.05,
+    });
   });
   return (
     <>
@@ -22,7 +31,7 @@ export const Hero = component$(() => {
       >
         <h1
           ref={heroTextRef}
-          class="text-[15vw] sm:text-[90px] lg:text-[115px] leading-none font-medium"
+          class="text-[15vw] invisible sm:text-[90px] lg:text-[115px] leading-none font-medium"
         >
           Meet the Humans of{" "}
           <span
@@ -30,7 +39,7 @@ export const Hero = component$(() => {
             from-white via-pink-500 to-yellow-500
             animate-text"
           >
-            BrainDAO{" "}
+            BrainDAO{" ‎ "}
           </span>
           and Builders of IQ.Wiki.
         </h1>
