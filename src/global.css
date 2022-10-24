@@ -9,6 +9,9 @@
 body {
   @apply bg-[#121212] text-white;
 }
+.braindao-hero-text-char {
+  transform: none !important;
+}
 
 /* 
 [data-cursor] {

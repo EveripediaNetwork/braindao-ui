@@ -14,14 +14,24 @@ export const Hero = component$(() => {
   useClientEffect$(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollToPlugin);
-    const text = new SplitType(heroTextRef.value!, { types: "words, chars" });
-    gsap.set(heroTextRef.value!, { visibility: "visible" });
-    gsap.from(text.chars, {
-      opacity: 0,
-      y: 20,
-      duration: 0.5,
-      stagger: 0.05,
+    const text = new SplitType(heroTextRef.value!, {
+      types: "words, chars",
+      charClass: "braindao-hero-text-char",
     });
+    gsap.set(heroTextRef.value!, { visibility: "visible" });
+    gsap
+      .timeline()
+      .from(text.chars, {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        stagger: 0.05,
+        transform: "none",
+      })
+      .call(() => {
+        (document.getElementById("HeroSpan") as HTMLSpanElement).style.color =
+          "transparent";
+      });
   });
   return (
     <>
@@ -35,11 +45,12 @@ export const Hero = component$(() => {
         >
           Meet the Humans of{" "}
           <span
-            class="bg-gradient-to-r bg-clip-text text-transparent 
+            id="HeroSpan"
+            class="bg-gradient-to-r bg-clip-text  
             from-white via-pink-500 to-yellow-500
             animate-text"
           >
-            BrainDAO{" ‎ "}
+            BrainDAO {" ‎ "}
           </span>
           and Builders of IQ.Wiki.
         </h1>
