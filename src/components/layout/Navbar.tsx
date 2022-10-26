@@ -1,12 +1,12 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import { BraindaoLogo } from "../svgs/BraindaoLogo";
 import { HamburgerIcon } from "../icons/HamburgerIcon";
 import { RightArrowIcon } from "../icons/RightArrow";
+import { BraindaoLogo } from "../svgs/BraindaoLogo";
 
 export const Navbar = component$(() => {
   const mobileNav = useSignal<HTMLDivElement>();
   return (
-    <header class="flex flex-col sticky top-0 backdrop-blur-xl bg-[#121212]/60 z-50 lg:-mx-7 lg:px-14 p-3">
+    <header class="flex flex-col backdrop-blur-xl bg-[#121212]/60 z-50 lg:-mx-7 lg:px-14 p-3">
       <div class="flex justify-between items-center w-full">
         <h1 class="flex gap-2 items-center text-lg font-medium">
           <BraindaoLogo /> BrainDAO
