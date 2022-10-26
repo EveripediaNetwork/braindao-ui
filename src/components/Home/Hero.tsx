@@ -1,11 +1,10 @@
 import { component$, useClientEffect$, useSignal } from "@builder.io/qwik";
-import { HeroBackground } from "~/components/svgs/HeroBackground";
 import { BgGradient } from "../shared/BgGradient";
-import { HeroScrollToContent } from "../svgs/HeroScrollToContent";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import SplitType from "split-type";
+import { HeroBackground } from "../svgs/HeroBackground";
 
 export const Hero = component$(() => {
   const heroRef = useSignal<HTMLDivElement>();
@@ -62,10 +61,6 @@ export const Hero = component$(() => {
               IQ.Wiki's mission is to bring the world's knowledge on-chain
               through the IQ token.
             </p>
-          </div>
-          <div class="flex flex-col justify-center items-center gap-3 text-pink-400 text-lg">
-            <p>Get to know us</p>
-            <HeroScrollToContent />
           </div>
         </div>
       </div>
