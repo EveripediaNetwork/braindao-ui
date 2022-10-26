@@ -46,7 +46,8 @@ export const WhoAreWe = component$(() => {
       <Border />
       <div
         ref={sectionRef}
-        class="flex flex-col text-center md:flex-row md:text-left relative justify-between items-center md:items-start gap-10 my-24 md:my-40 px-5"
+        id="who're-we"
+        class="flex flex-col scroll-mt-72 text-center md:flex-row md:text-left relative justify-between items-center md:items-start gap-10 my-24 md:my-40 px-5"
       >
         <h1
           ref={headingRef}
