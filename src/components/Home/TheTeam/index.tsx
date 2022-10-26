@@ -36,11 +36,12 @@ export const TheTeam = component$(() => {
   });
 
   return (
-    <div ref={sectionRef} class=" mt-20 xl:mb-80">
+    <div ref={sectionRef} class="mt-20 xl:mb-80">
       <div class="p-5 max-w-6xl mx-auto">
         <h2
           ref={headingRef}
-          class="text-4xl xl:text-6xl font-bold text-center mb-16"
+          id="team"
+          class="text-4xl scroll-mt-24 xl:text-6xl font-bold text-center mb-16"
         >
           The Team
         </h2>
