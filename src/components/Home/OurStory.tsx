@@ -83,7 +83,10 @@ export const OurStory = component$(() => {
           </button>
         ))}
       </nav>
-      <BgGradient className="left-0 !top-32" />
+      <BgGradient
+        path="M128.837 36.2528C269.601 36.2522 522.473 -20.5913 607.973 10.0854C650.855 20.7151 808 62.5 808 155.5C808 231.252 620.675 296.532 577.705 299.036C382.18 310.428 492.44 217.1 207.354 217.1C-77.7313 217.1 -31.0914 36.2535 128.837 36.2528Z"
+        className="left-0"
+      />
       <div
         ref={contentRef}
         class="mt-10 mx-5 max-w-4xl text-center bg-white/10 p-5 md:p-16 border-[1px] border-white/10 backdrop-blur-md"

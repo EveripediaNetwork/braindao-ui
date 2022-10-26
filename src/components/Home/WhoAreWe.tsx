@@ -54,7 +54,7 @@ export const WhoAreWe = component$(() => {
         >
           Who are we
         </h1>
-        <BgGradient className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <BgGradient className="-bottom-[60%] " />
         <div
           ref={descRef}
           class="flex-1 invisible flex flex-col max-w-lg xl:text-lg gap-4"
