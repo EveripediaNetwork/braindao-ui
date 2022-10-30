@@ -5,8 +5,8 @@ import { TwitterIcon } from "../icons/Twitter";
 import { HeroBackground } from "../svgs/HeroBackground";
 
 export const Hero = component$(() => (
-  <div class="flex flex-col items-center justify-center relative overflow-y-hidden h-[calc(100vh-65px)] pt-[12vh] px-[5vw] xl:px-5">
-    <div class="flex flex-col justify-start mx-auto items-start gap-5 md:gap-10 w-full  max-w-7xl mr-auto">
+  <div class="flex flex-col items-center justify-center relative overflow-y-hidden h-[calc(100vh-65px)] px-[5vw] xl:px-5">
+    <div class="flex flex-col justify-start mx-auto items-start gap-5 md:gap-10 w-full  max-w-7xl mr-auto xl:-translate-y-10">
       <h1 class="text-[clamp(30px,9vw,60px)] xl:text-[70px] !leading-tight font-bold font-montserrat">
         BrainDAO invests in the future of knowledge with IQ.Wiki
       </h1>
@@ -23,7 +23,7 @@ export const Hero = component$(() => (
         Launch IQ Dashboard
       </a>
     </div>
-    <div class="ml-auto mt-auto mb-5">
+    <div class="absolute bottom-5 right-5">
       <div class="flex items-center mt-4 gap-3 children:bg-gradient-radial-at-tr children:rounded-md children:from-white/20 children:to-transparent children:p-2 children:border-white/20 children:border-[1px]">
         <a href="https://twitter.com/Everipedia" target="_blank">
           <TwitterIcon className="w-5 h-5 fill-white" />
