@@ -1,10 +1,13 @@
 import { component$ } from "@builder.io/qwik";
+import { BrainIcon } from "../icons/Brain";
+import { DiscordIcon } from "../icons/Discord";
+import { TwitterIcon } from "../icons/Twitter";
 import { HeroBackground } from "../svgs/HeroBackground";
 
 export const Hero = component$(() => (
-  <div class="flex flex-col items-center justify-center relative overflow-y-hidden h-[calc(100vh-65px)]">
-    <div class="flex flex-col justify-start items-start gap-6 w-full p-[5vw] max-w-7xl xl:p-5 mr-auto">
-      <h1 class="text-[clamp(30px,9vw,60px)] xl:text-7xl !leading-tight font-bold font-montserrat">
+  <div class="flex flex-col items-center justify-center relative overflow-y-hidden h-[calc(100vh-65px)] pt-[12vh] px-[5vw] xl:px-5">
+    <div class="flex flex-col justify-start mx-auto items-start gap-5 md:gap-10 w-full  max-w-7xl mr-auto">
+      <h1 class="text-[clamp(30px,9vw,60px)] xl:text-[70px] !leading-tight font-bold font-montserrat">
         BrainDAO invests in the future of knowledge with IQ.Wiki
       </h1>
       <p class="text-[clamp(16px,4vw,40px)] md:text-xl lg:text-3xl">
@@ -19,6 +22,19 @@ export const Hero = component$(() => (
       >
         Launch IQ Dashboard
       </a>
+    </div>
+    <div class="ml-auto mt-auto mb-5">
+      <div class="flex items-center mt-4 gap-3 children:bg-gradient-radial-at-tr children:rounded-md children:from-white/20 children:to-transparent children:p-2 children:border-white/20 children:border-[1px]">
+        <a href="#" target="_blank">
+          <TwitterIcon className="w-5 h-5 fill-white" />
+        </a>
+        <a href="https://iq.wiki" target="_blank">
+          <BrainIcon className="w-5 h-5" />
+        </a>
+        <a href="https://iq.wiki" target="_blank">
+          <DiscordIcon className="w-5 h-5 fill-white" />
+        </a>
+      </div>
     </div>
     <HeroBackground className="absolute lg:mt-10 -z-10 w-[100%] h-[95vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[70rem] max-w-4xl" />
   </div>
