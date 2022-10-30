@@ -11,17 +11,17 @@ export const Navbar = component$(() => {
         <h1 class="flex gap-2 items-center text-lg font-medium">
           <BraindaoLogo /> BrainDAO
         </h1>
-        <nav class="hidden md:flex gap-6 text-md">
-          <a href="https://iq.wiki">IQ Wiki</a>
+        <nav class="hidden md:flex gap-20 text-sm">
+          <a href="https://iq.wiki">IQ WIKI</a>
           <a href="https://learn.everipedia.org/iq/">Learn</a>
           <a href="https://iq.wiki/blog">Blog</a>
         </nav>
         <a
           href="https://iq.braindao.org"
           target="_blank"
-          class="hidden md:block bg-pink-500 px-5 py-1 rounded-md"
+          class="hidden md:block bg-pink-500 text-sm px-5 py-2 rounded-md"
         >
-          IQ Dashboard
+          Launch IQ Dashboard
         </a>
         <button
           class="fill-white md:hidden"
@@ -36,7 +36,7 @@ export const Navbar = component$(() => {
       <div ref={mobileNav} class="hidden md:hidden">
         <ul class="flex flex-col divide-y-[1px] max-w-xl mx-auto divide-white/25 p-5 text-lg children:p-3">
           <li>
-            <a href="https://iq.wiki">IQ Wiki</a>
+            <a href="https://iq.wiki">IQ WIKI</a>
           </li>
           <li>
             <a href="https://learn.everipedia.org/iq/">Learn</a>
