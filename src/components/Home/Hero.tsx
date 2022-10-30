@@ -25,13 +25,13 @@ export const Hero = component$(() => (
     </div>
     <div class="ml-auto mt-auto mb-5">
       <div class="flex items-center mt-4 gap-3 children:bg-gradient-radial-at-tr children:rounded-md children:from-white/20 children:to-transparent children:p-2 children:border-white/20 children:border-[1px]">
-        <a href="#" target="_blank">
+        <a href="https://twitter.com/Everipedia" target="_blank">
           <TwitterIcon className="w-5 h-5 fill-white" />
         </a>
         <a href="https://iq.wiki" target="_blank">
           <BrainIcon className="w-5 h-5" />
         </a>
-        <a href="https://iq.wiki" target="_blank">
+        <a href="https://discord.gg/uvJ63SuxHQ" target="_blank">
           <DiscordIcon className="w-5 h-5 fill-white" />
         </a>
       </div>
