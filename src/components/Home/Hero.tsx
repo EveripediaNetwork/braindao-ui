@@ -8,12 +8,10 @@ export const Hero = component$(() => (
   <div class="flex flex-col items-center justify-center relative overflow-y-hidden h-[calc(100vh-65px)] px-[5vw] xl:px-5">
     <div class="flex text-center md:text-left items-center md:items-start flex-col justify-start mx-auto gap-5 md:gap-10 w-full  max-w-7xl mr-auto -translate-y-10">
       <h1 class="text-[clamp(30px,9vw,60px)] xl:text-[70px] !leading-tight font-bold">
-        BrainDAO invests in the future of knowledge with IQ.Wiki
+        Building a smarter future through the IQ token.
       </h1>
       <p class="text-[clamp(16px,4vw,40px)] md:text-xl lg:text-3xl">
-        Our vision is to create an ecosystem of knowledge around the IQ token
-        which creates value through dapps, DeFi, and NFTs. The IQ token powers
-        IQ.wiki the world’s largest crypto encyclopedia and HiIQ staking.
+        Join the mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.
       </p>
       <a
         href="https://iq.braindao.org"
@@ -25,13 +23,13 @@ export const Hero = component$(() => (
     </div>
     <div class="absolute bottom-5 right-5">
       <div class="flex items-center mt-4 gap-3 children:bg-gradient-radial-at-tr children:rounded-md children:from-white/20 children:to-transparent children:p-2 children:border-white/20 children:border-[1px]">
-        <a href="https://twitter.com/Everipedia" target="_blank">
+        <a href="https://twitter.com/Everipedia" target="_blank" rel="nofollow">
           <TwitterIcon className="w-5 h-5 fill-white" />
         </a>
-        <a href="https://iq.wiki" target="_blank">
+        <a href="https://iq.wiki/wiki/braindao" target="_blank">
           <BrainIcon className="w-5 h-5" />
         </a>
-        <a href="https://discord.gg/uvJ63SuxHQ" target="_blank">
+        <a href="https://discord.gg/uvJ63SuxHQ" target="_blank" rel="nofollow">
           <DiscordIcon className="w-5 h-5 fill-white" />
         </a>
       </div>
