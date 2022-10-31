@@ -31,20 +31,44 @@ export const RouterHead = component$(() => {
         rel="stylesheet"
       />
 
-      <meta property="og:site_name" content="Braindao" />
-      <meta name="twitter:site" content="@everipedia" />
+      {/* <!-- HTML Meta Tags --> */}
+      <title>BrainDAO invests in the future of knowledge with IQ.Wiki</title>
+      <meta
+        name="description"
+        content="Our vision is to create an ecosystem of knowledge around the IQ token which creates value through dapps, DeFi, and NFTs. The IQ token powers IQ.wiki the world’s largest crypto encyclopedia and HiIQ staking"
+      />
+
+      {/* <!-- Facebook Meta Tags --> */}
+      <meta property="og:url" content="https://braindao.org" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="BrainDAO invests in the future of knowledge with IQ.Wiki"
+      />
+      <meta
+        property="og:description"
+        content="Our vision is to create an ecosystem of knowledge around the IQ token which creates value through dapps, DeFi, and NFTs. The IQ token powers IQ.wiki the world’s largest crypto encyclopedia and HiIQ staking"
+      />
+      <meta
+        property="og:image"
+        content="https://braindao.org/images/og-image.png"
+      />
+
+      {/* <!-- Twitter Meta Tags --> */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="braindao.org" />
+      <meta property="twitter:url" content="https://braindao.org" />
       <meta
         name="twitter:title"
-        content="Meet the Humans of BrainDAO and Builders of IQ.Wiki"
-      />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:image"
-        content="https://braindao.org/images/og-image.png"
+        content="BrainDAO invests in the future of knowledge with IQ.Wiki"
       />
       <meta
         name="twitter:description"
-        content="IQ.Wiki's mission is to bring the world's knowledge on-chain through the IQ token."
+        content="Our vision is to create an ecosystem of knowledge around the IQ token which creates value through dapps, DeFi, and NFTs. The IQ token powers IQ.wiki the world’s largest crypto encyclopedia and HiIQ staking"
+      />
+      <meta
+        name="twitter:image"
+        content="https://braindao.org/images/og-image.png"
       />
 
       {head.meta.map((m) => (
