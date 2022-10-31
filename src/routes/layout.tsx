@@ -1,5 +1,4 @@
 import { component$, Slot } from "@builder.io/qwik";
-import { Footer } from "~/components/layout/Footer";
 import { Navbar } from "~/components/layout/Navbar";
 
 export default component$(() => {
@@ -9,7 +8,6 @@ export default component$(() => {
       <main>
         <Slot />
       </main>
-      <Footer />
     </div>
   );
 });
