@@ -10,7 +10,7 @@ export const RouterHead = component$(() => {
 
   return (
     <>
-      <title>BrainDAO - Building a smarter future through the IQ token.</title>
+      <title>BrainDAO - Building a more intelligent future through the IQ token.</title>
 
       <link rel="canonical" href={loc.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,7 +42,7 @@ export const RouterHead = component$(() => {
       <meta property="og:type" content="website" />
       <meta
         property="og:title"
-        content="BrainDAO - Building a smarter future through the IQ token."
+        content="BrainDAO - Building a more intelligent future through the IQ token."
       />
       <meta
         property="og:description"
@@ -59,7 +59,7 @@ export const RouterHead = component$(() => {
       <meta property="twitter:url" content="https://braindao.org" />
       <meta
         name="twitter:title"
-        content="BrainDAO - Building a smarter future through the IQ token."
+        content="BrainDAO - Building a more intelligent future through the IQ token."
       />
       <meta
         name="twitter:description"
