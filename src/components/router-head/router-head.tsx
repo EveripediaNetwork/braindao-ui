@@ -34,7 +34,7 @@ export const RouterHead = component$(() => {
       {/* <!-- HTML Meta Tags --> */}
       <meta
         name="description"
-        content="Join the mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem."
+        content="Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem."
       />
 
       {/* <!-- Facebook Meta Tags --> */}
@@ -46,7 +46,7 @@ export const RouterHead = component$(() => {
       />
       <meta
         property="og:description"
-        content="Join the mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem."
+        content="Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem."
       />
       <meta
         property="og:image"
@@ -63,7 +63,7 @@ export const RouterHead = component$(() => {
       />
       <meta
         name="twitter:description"
-        content="Join the mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem."
+        content="Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem."
       />
       <meta
         name="twitter:image"
