@@ -11,7 +11,7 @@ export const Hero = component$(() => (
         Building a smarter future through the IQ token.
       </h1>
       <p class="text-[clamp(16px,4vw,40px)] md:text-xl lg:text-3xl">
-        Join the mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.
+        Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.
       </p>
       <a
         href="https://iq.braindao.org"
