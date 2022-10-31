@@ -19,7 +19,7 @@ export const Navbar = component$(() => {
         <a
           href="https://iq.braindao.org"
           target="_blank"
-          class="hidden md:block bg-pink-500 text-sm px-5 py-2 rounded-md"
+          class="hidden md:block bg-pink-500 text-sm px-5 py-2 rounded-md  hover:bg-white hover:text-black transition-all ease-in-out duration-300"
         >
           Launch IQ Dashboard
         </a>
