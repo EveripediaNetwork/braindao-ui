@@ -23,7 +23,6 @@ module.exports = {
   theme: {
     fontFamily: {
       bebas_neue: ["Bebas Neue", "cursive"],
-      montserrat: ["Montserrat", "sans-serif"],
     },
     extend: {
       animation: {
