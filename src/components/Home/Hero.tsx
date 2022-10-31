@@ -8,7 +8,7 @@ export const Hero = component$(() => (
   <div class="flex flex-col items-center justify-center relative overflow-y-hidden h-[calc(100vh-65px)] px-[5vw] xl:px-5">
     <div class="flex text-center md:text-left items-center md:items-start flex-col justify-start mx-auto gap-5 md:gap-10 w-full  max-w-7xl mr-auto -translate-y-10">
       <h1 class="text-[clamp(30px,9vw,60px)] xl:text-[70px] !leading-tight font-bold">
-        Building a smarter future through the IQ token.
+        Building a more intelligent future through the IQ token.
       </h1>
       <p class="text-[clamp(16px,4vw,40px)] md:text-xl lg:text-3xl">
         Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.
