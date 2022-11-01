@@ -20,13 +20,14 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTKXQGKHV6"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-RTKXQGKHV6');
-        </script>
+        <script 
+          dangerouslySetInnerHTML={`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RTKXQGKHV6');
+          `}
+        />
         <script
           defer
           src="https://unpkg.com/custom-cursor@latest/dist/cursor.min.js"
