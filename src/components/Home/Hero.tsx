@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik';
-import { BrainIcon } from '../icons/Brain';
 import { DiscordIcon } from '../icons/Discord';
 import { TwitterIcon } from '../icons/Twitter';
 import { HeroBackground } from '../svgs/HeroBackground';
@@ -28,7 +27,11 @@ export const Hero = component$(() => (
           <TwitterIcon className='w-5 h-5 fill-white' />
         </a>
         <a href='https://iq.wiki/wiki/braindao' target='_blank'>
-          <BrainIcon className='w-5 h-5' />
+          <img
+            className='w-5 h-5'
+            src='/images/braindao-logo.png'
+            alt='BrainDAO logo'
+          />
         </a>
         <a href='https://discord.gg/uvJ63SuxHQ' target='_blank' rel='nofollow'>
           <DiscordIcon className='w-5 h-5 fill-white' />
