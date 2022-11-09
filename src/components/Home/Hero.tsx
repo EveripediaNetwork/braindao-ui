@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
-import { BrainIcon } from '../icons/Brain';
 import { DiscordIcon } from '../icons/Discord';
+import { BrainIcon } from '../icons/Brain';
 import { TwitterIcon } from '../icons/Twitter';
 import { HeroBackground } from '../svgs/HeroBackground';
 
