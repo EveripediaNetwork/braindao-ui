@@ -28,7 +28,7 @@ export const Hero = component$(() => (
           <TwitterIcon className='w-5 h-5 fill-white' />
         </a>
         <a href='https://iq.wiki/wiki/braindao' target='_blank'>
-          <BrainIcon className='w-5 h-5 fill-white' />
+          <BrainIcon className='w-5 h-5' />
         </a>
         <a href='https://discord.gg/uvJ63SuxHQ' target='_blank' rel='nofollow'>
           <DiscordIcon className='w-5 h-5 fill-white' />

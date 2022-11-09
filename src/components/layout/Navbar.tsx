@@ -17,6 +17,9 @@ export const Navbar = component$(() => {
           <a target='_blank' href='https://iq.wiki'>
             IQ WIKI
           </a>
+          <a target='_blank' href='https://oraqles.com'>
+            IQ OraQles
+          </a>
           <a target='_blank' href='https://learn.everipedia.org/iq/'>
             Learn
           </a>
@@ -45,6 +48,9 @@ export const Navbar = component$(() => {
         <ul class='flex flex-col divide-y-[1px] max-w-xl mx-auto divide-white/25 p-5 text-lg children:p-3'>
           <li>
             <a href='https://iq.wiki'>IQ WIKI</a>
+          </li>
+          <li>
+            <a href='https://oraqles.com'>IQ OraQles</a>
           </li>
           <li>
             <a href='https://learn.everipedia.org/iq/'>Learn</a>
