@@ -1,6 +1,7 @@
 import { component$, useSignal } from '@builder.io/qwik';
 import { HamburgerIcon } from '../icons/HamburgerIcon';
 import { RightArrowIcon } from '../icons/RightArrow';
+import { BraindaoLogoDark } from '../svgs/BraindaoLogoDark';
 
 export const Navbar = component$(() => {
   const mobileNav = useSignal<HTMLDivElement>();
@@ -8,12 +9,9 @@ export const Navbar = component$(() => {
     <header class='flex flex-col backdrop-blur-xl bg-[#121212]/60 z-50 lg:-mx-7 lg:px-14 p-3'>
       <div class='flex justify-between items-center w-full'>
         <h1 class='flex gap-2 items-center text-lg font-medium'>
-          <img
-            class='w-10 h-10'
-            src='/images/braindao-logo.png'
-            alt='BrainDAO logo'
-          />{' '}
-          BrainDAO
+          <a href='/'>
+            <BraindaoLogoDark />
+          </a>
         </h1>
         <nav class='hidden md:flex gap-20 text-sm'>
           <a target='_blank' href='https://iq.wiki'>
