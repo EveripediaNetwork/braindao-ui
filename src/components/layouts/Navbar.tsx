@@ -34,7 +34,7 @@ const Navbar = () => {
         >
           Launch IQ Dashboard
         </a>
-        <NavBarButton/>
+        <NavBarButton />
       </div>
       <div id="mobile_nav_items" className="hidden md:hidden">
         <ul className="flex flex-col divide-y-[1px] max-w-xl mx-auto divide-white/25 p-5 text-lg children:p-3">
