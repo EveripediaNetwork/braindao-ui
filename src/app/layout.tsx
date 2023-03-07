@@ -1,4 +1,3 @@
-"use client";
 import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -7,6 +6,7 @@ export const metadata: Metadata = {
   title: "BrainDAO - Building a more intelligent future through the IQ token.",
   description:
     "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
+  viewport: "",
   openGraph: {
     title:
       "BrainDAO - Building a more intelligent future through the IQ token.",

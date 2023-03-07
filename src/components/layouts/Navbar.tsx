@@ -1,10 +1,10 @@
-import React, { MutableRefObject, useRef } from "react";
+import React from "react";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
 import { HamburgerIcon } from "../icons/HamburgerIcon";
 import { RightArrowIcon } from "../icons/RightArrow";
+import NavBarButton from "./NavBarButton";
 
 const Navbar = () => {
-  const mobileNav: MutableRefObject<HTMLDivElement | null> = useRef(null);
   return (
     <header className="flex flex-col backdrop-blur-xl bg-[#121212]/60 z-50 lg:-mx-7 lg:px-14 p-3">
       <div className="flex justify-between items-center w-full">
@@ -34,17 +34,9 @@ const Navbar = () => {
         >
           Launch IQ Dashboard
         </a>
-        <button
-          className="fill-white md:hidden"
-          onClick={() => {
-            mobileNav.current?.classList.toggle("hidden");
-            mobileNav.current?.classList.toggle("block");
-          }}
-        >
-          <HamburgerIcon />
-        </button>
+        <NavBarButton/>
       </div>
-      <div ref={mobileNav} className="hidden md:hidden">
+      <div id="mobile_nav_items" className="hidden md:hidden">
         <ul className="flex flex-col divide-y-[1px] max-w-xl mx-auto divide-white/25 p-5 text-lg children:p-3">
           <li>
             <a href="https://iq.wiki">IQ WIKI</a>
