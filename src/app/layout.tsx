@@ -21,16 +21,16 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
+    //@ts-ignore
     card: "summary_large_image",
-    domain: "braindao.org",
     url: "https://braindao.org",
     title:
       "BrainDAO - Building a more intelligent future through the IQ token.",
     description:
       "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
-    images: {
-      url: "https://braindao.org/images/og-image.png",
-    },
+    images: [
+      "https://braindao.org/images/og-image.png",
+    ],
   },
 };
 
