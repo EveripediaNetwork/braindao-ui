@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-[#121212] text-white;
+  }
+  .braindao-hero-text-char {
+    transform: none !important;
+  }

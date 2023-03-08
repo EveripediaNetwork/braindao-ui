@@ -5,7 +5,7 @@ export const OpenSeaIcon = (p: { className?: string }) => (
     viewBox="0 0 24 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class={p.className}
+    className={p.className}
   >
     <g clip-path="url(#clip0_9772_73834)">
       <path

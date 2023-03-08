@@ -5,7 +5,7 @@ export const HeroBackground = (p: { className: string }) => (
     viewBox="0 0 885 869"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class={p.className}
+    className={p.className}
   >
     <path
       opacity="0.93"
