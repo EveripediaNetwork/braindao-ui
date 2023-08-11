@@ -1,8 +1,8 @@
 import React from "react";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
-import { HamburgerIcon } from "../icons/HamburgerIcon";
 import { RightArrowIcon } from "../icons/RightArrow";
 import NavBarButton from "./NavBarButton";
+import { navLinks } from "@/data/Nav";
 
 const Navbar = () => {
   return (
@@ -14,21 +14,11 @@ const Navbar = () => {
           </a>
         </h1>
         <nav className="hidden md:flex gap-20 text-sm">
-          <a target="_blank" href="https://iq.wiki">
-            IQ WIKI
-          </a>
-          <a target="_blank" href="https://iqgpt.com/">
-            IQ GPT
-          </a>
-          <a target="_blank" href="https://oraqles.com">
-            IQ OraQles
-          </a>
-          <a target="_blank" href="https://learn.everipedia.org/iq/">
-            Learn
-          </a>
-          <a target="_blank" href="https://iq.wiki/blog">
-            Blog
-          </a>
+          {navLinks.map((link) => (
+            <a target="_blank" href={link.href} key={link.href}>
+              {link.title}
+            </a>
+          ))}
         </nav>
         <a
           href="https://iq.braindao.org"
@@ -41,18 +31,13 @@ const Navbar = () => {
       </div>
       <div id="mobile_nav_items" className="hidden md:hidden">
         <ul className="flex flex-col divide-y-[1px] max-w-xl mx-auto divide-white/25 p-5 text-lg children:p-3">
-          <li>
-            <a href="https://iq.wiki">IQ WIKI</a>
-          </li>
-          <li>
-            <a href="https://oraqles.com">IQ OraQles</a>
-          </li>
-          <li>
-            <a href="https://learn.everipedia.org/iq/">Learn</a>
-          </li>
-          <li>
-            <a href="https://iq.wiki/blog">Blog</a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a target="_blank" href={link.href}>
+                {link.title}
+              </a>
+            </li>
+          ))}
           <li>
             <a
               href="https://iq.braindao.org"
