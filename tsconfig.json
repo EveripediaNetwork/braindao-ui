@@ -34,8 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "/Applications/XAMPP/xamppfiles/htdocs/projects/Next/braindao-ui/.next/types/**/*.ts",
-    "/Users/mac/braindao/braindao-ui/.next/types/**/*.ts"
+    "/Applications/XAMPP/xamppfiles/htdocs/projects/Next/braindao-ui/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
