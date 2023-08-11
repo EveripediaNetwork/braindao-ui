@@ -17,6 +17,9 @@ const Navbar = () => {
           <a target="_blank" href="https://iq.wiki">
             IQ WIKI
           </a>
+          <a target="_blank" href="https://iqgpt.com/">
+            IQ GPT
+          </a>
           <a target="_blank" href="https://oraqles.com">
             IQ OraQles
           </a>
