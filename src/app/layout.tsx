@@ -17,18 +17,19 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://braindao.org/images/og-image.png",
+        alt: "BrainDAO - Building a more intelligent future through the IQ token.",
       },
     ],
   },
   twitter: {
-    //@ts-ignore
     card: "summary_large_image",
-    url: "https://braindao.org",
     title:
       "BrainDAO - Building a more intelligent future through the IQ token.",
     description:
       "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
     images: ["https://braindao.org/images/og-image.png"],
+    site: "@Everipedia",
+    creator: "@Everipedia",
   },
 };
 
@@ -42,7 +43,7 @@ export default function RootLayout({
       <head>
         <link rel="canonical" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
