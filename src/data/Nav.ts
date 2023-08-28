@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    title: "IQ WIKI",
+    title: "IQ.wiki",
     href: "https://iq.wiki",
   },
   {
