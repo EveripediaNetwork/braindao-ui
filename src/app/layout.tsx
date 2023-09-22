@@ -51,10 +51,6 @@ export default function RootLayout({
 					href='https://fonts.gstatic.com'
 					crossOrigin=''
 				/>
-				<link
-					href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'
-					rel='stylesheet'
-				/>
 			</head>
 			<body>
 				<div className='container mx-auto overflow-x-hidden'>
