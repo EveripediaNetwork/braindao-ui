@@ -19,9 +19,26 @@ const backfaceVisibility = plugin(function ({ addUtilities }) {
 });
 
 module.exports = {
+	darkMode: 'class',
 	content: ['./src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			colors: {
+				whiteAlpha: {
+					50: '#ffffff0a',
+					100: '#ffffff0f',
+					200: '#ffffff14',
+					300: '#ffffff29',
+					400: '#ffffff3d',
+					500: '#ffffff5C',
+					600: '#ffffff7a',
+					700: '#ffffffa3',
+					800: '#ffffffcc',
+					900: '#ffffffeb',
+				},
+				gray600: '#4A5568',
+				gray800: '#1A202C',
+			},
 			animation: {
 				border: 'border 4s ease infinite',
 				text: 'text 4s ease infinite',
