@@ -79,6 +79,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				'hero-image': "url('/hero-bg.png')",
+				'about-us': "url('/aboutus.png')",
 				coingecko: "url('/coingecko.svg')",
 				eth: "url('/eth.svg')",
 				graph: "url('/graph.svg')",
