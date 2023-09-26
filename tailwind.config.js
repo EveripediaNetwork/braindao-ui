@@ -36,6 +36,9 @@ module.exports = {
 					800: '#ffffffcc',
 					900: '#ffffffeb',
 				},
+				blackAlpha: {
+					50: '#0000000a',
+				},
 				brand: {
 					50: '#ffe5f1',
 					100: '#ffcce4',
@@ -49,7 +52,9 @@ module.exports = {
 					800: '#ff1a88',
 					900: '#5d1738',
 				},
+				gray200: '#E2E8F0',
 				gray600: '#4A5568',
+				gray700: '#2D3748',
 				gray800: '#1A202C',
 			},
 			animation: {
@@ -73,25 +78,22 @@ module.exports = {
 				},
 			},
 			backgroundImage: {
-				'gradient-radial':
-					'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
-				'gradient-radial-at-t':
-					'radial-gradient(ellipse at top, var(--tw-gradient-stops))',
-				'gradient-radial-at-b':
-					'radial-gradient(ellipse at bottom, var(--tw-gradient-stops))',
-				'gradient-radial-at-l':
-					'radial-gradient(ellipse at left, var(--tw-gradient-stops))',
-				'gradient-radial-at-r':
-					'radial-gradient(ellipse at right, var(--tw-gradient-stops))',
-				'gradient-radial-at-tl':
-					'radial-gradient(ellipse at top left, var(--tw-gradient-stops))',
-				'gradient-radial-at-tr':
-					'radial-gradient(ellipse at top right, var(--tw-gradient-stops))',
-				'gradient-radial-at-bl':
-					'radial-gradient(ellipse at bottom left, var(--tw-gradient-stops))',
-				'gradient-radial-at-br':
-					'radial-gradient(ellipse at bottom right, var(--tw-gradient-stops))',
 				'hero-image': "url('/hero-bg.png')",
+				coingecko: "url('/coingecko.svg')",
+				eth: "url('/eth.svg')",
+				graph: "url('/graph.svg')",
+				magic: "url('/magic.svg')",
+				'magic-white': "url('/magic-white.svg')",
+				'wiki-image': "url('/iqwiki-widget.png')",
+				'wiki-widget-dark': "url('/iqwiki-widget-dark.png')",
+				'wiki-homepage': "url('/iqwiki-homepage.png')",
+				'wiki-homepage-dark': "url('/iqwiki-homepage-dark.png')",
+				'iqgpt-mockup': "url('/iq-gpt-mockup.png')",
+				'iqgpt-mockup-dark': "url('/iq-gpt-mockup-dark.png')",
+				'iq-dashboard-mockup': "url('/iq-dashboard-mockup.png')",
+				'iq-dashboard-mockup-dark': "url('/iq-dashboard-mockup-dark.png')",
+				'wiki-rank': "url('/iqwiki-rank.png')",
+				'wiki-rank-dark': "url('/iqwiki-rank-dark.png')",
 			},
 		},
 	},
