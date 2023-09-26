@@ -17,9 +17,9 @@ const ThemeSwitcher = dynamic(
 
 const Navbar = () => {
 	return (
-		<div className='bg-[#121212] text-whiteAlpha-900'>
+		<div className='bg-black text-whiteAlpha-900'>
 			<div className='max-w-[1536px] mx-auto'>
-				<header className=' flex flex-col backdrop-blur-xl bg-[#121212]/60 z-50 lg:-mx-7 lg:px-14 p-3'>
+				<header className=' flex flex-col z-50 lg:-mx-7 lg:px-14 p-3'>
 					<div className='flex justify-between items-center w-full'>
 						<h1 className='flex gap-2 items-center text-lg font-medium'>
 							<a href='/'>
