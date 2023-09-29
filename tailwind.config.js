@@ -95,7 +95,7 @@ module.exports = {
 				'wiki-homepage': "url('/images/iqwiki-homepage.png')",
 				'wiki-homepage-dark': "url('/images/iqwiki-homepage-dark.png')",
 				'iqgpt-mockup': "url('/images/iq-gpt-mockup.png')",
-				'iqgpt-mockup-dark': "url('/images/iq-gpt-mockup-dark.png')",
+				'iqgpt-mockup-dark': "url('/images/iq-gpt-mockup-dark-2.png')",
 				'iq-dashboard-mockup': "url('/images/iq-dashboard-mockup.png')",
 				'iq-dashboard-mockup-dark':
 					"url('/images/iq-dashboard-mockup-dark.png')",
