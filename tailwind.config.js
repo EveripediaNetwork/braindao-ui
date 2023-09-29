@@ -79,6 +79,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				'hero-image': "url('/images/hero-bg.png')",
+				braindao: "url('/images/braindao.png')",
 				'about-us': "url('/images/aboutus.png')",
 				coingecko: "url('/svgs/coingecko.svg')",
 				eth: "url('/svgs/eth.svg')",
