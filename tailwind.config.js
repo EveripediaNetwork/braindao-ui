@@ -60,6 +60,8 @@ module.exports = {
 			animation: {
 				border: 'border 4s ease infinite',
 				text: 'text 4s ease infinite',
+				'fade-in': 'fadeIn 2s ease-in-out',
+				'slide-up': 'slideUp 2s ease-in-out',
 			},
 			keyframes: {
 				border: {
@@ -76,10 +78,18 @@ module.exports = {
 						'background-position': 'right center',
 					},
 				},
+				fadeIn: {
+					'0%': { opacity: '0.3' },
+					'100%': { opacity: '1' },
+				},
+				slideUp: {
+					'0%': { transform: 'translateY(100px)', opacity: '0' },
+					'100%': { transform: 'translateY(0px)', opacity: '1' },
+				},
 			},
 			backgroundImage: {
-				'hero-image': "url('/images/hero-bg.png')",
 				braindao: "url('/images/braindao.png')",
+				'braindao-sm': "url('/images/braindao-sm.png')",
 				'about-us': "url('/images/aboutus.png')",
 				coingecko: "url('/svgs/coingecko.svg')",
 				eth: "url('/svgs/eth.svg')",
