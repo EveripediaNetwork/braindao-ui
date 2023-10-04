@@ -89,8 +89,8 @@ module.exports = {
 			},
 			backgroundImage: {
 				braindao: "url('/images/braindao.png')",
-				brainie: "url('/images/brainie.png')",
-				hero: "url('/images/bg.png')",
+				brainie: "url('/images/brain.png')",
+				hero: "url('/images/hero-bg.png')",
 				'braindao-sm': "url('/images/braindao-sm.png')",
 				'about-us': "url('/images/aboutus.png')",
 				coingecko: "url('/svgs/coingecko.svg')",
