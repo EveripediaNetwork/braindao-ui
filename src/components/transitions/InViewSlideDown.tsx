@@ -9,7 +9,7 @@ export type TInViewAnimate = {
 	className?: string;
 	delay?: number;
 };
-const InViewAnimateBottom: React.FC<TInViewAnimate> = ({
+const InViewAnimateSlideDown: React.FC<TInViewAnimate> = ({
 	children,
 	className,
 	delay,
@@ -20,28 +20,25 @@ const InViewAnimateBottom: React.FC<TInViewAnimate> = ({
 	useEffect(() => {
 		if (inView) {
 			animation.start({
-				y: 0,
-				opacity: 1,
+				y: '30vh',
 				transition: {
-					type: 'tween',
-					duration: 1,
+					duration: 2,
 					delay: delay ? delay : 0.1,
 				},
 			});
 		}
 		if (!inView) {
 			animation.start({
-				y: '10vw',
-				opacity: 0.5,
+				y: '0',
 			});
 		}
 	}, [animation, delay, inView]);
 
 	return (
-		<div ref={ref} className={`overflow-hidden ${className}`}>
-			<motion.div animate={animation}>{children}</motion.div>
-		</div>
+		<motion.div animate={animation} ref={ref} className={`${className}`}>
+			{children}
+		</motion.div>
 	);
 };
 
-export default InViewAnimateBottom;
+export default InViewAnimateSlideDown;
