@@ -1,6 +1,9 @@
 import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
+import { montserrat } from "./font";
+import ClientProviders from "@/components/layouts/theme/ThemeProvider";
+import Footer from "@/components/layouts/Footer";
 
 export const metadata: Metadata = {
   title: "BrainDAO - Building a more intelligent future through the IQ token.",
@@ -39,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <head>
         <link rel="canonical" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,24 +53,14 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body>
-        <div className="container mx-auto overflow-x-hidden">
-          <Navbar />
-          {children}
-        </div>
+      <body className="">
+        <ClientProviders>
+          <div className="overflow-x-hidden">
+            {children}
+            <Footer />
+          </div>
+        </ClientProviders>
       </body>
     </html>
   );

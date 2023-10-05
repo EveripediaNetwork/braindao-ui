@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import { HamburgerIcon } from "../icons/HamburgerIcon";
+import { RiMenuLine } from "react-icons/ri";
 
 const NavBarButton = () => {
   return (
     <button
-      className="fill-white md:hidden"
+      className="fill-white border border-whiteAlpha-400 p-1 rounded-[6px] lg:hidden"
       onClick={() => {
         const mobileNav = document.getElementById(
           "mobile_nav_items"
@@ -14,7 +14,7 @@ const NavBarButton = () => {
         mobileNav.classList.toggle("block");
       }}
     >
-      <HamburgerIcon />
+      <RiMenuLine size={24} />
     </button>
   );
 };
