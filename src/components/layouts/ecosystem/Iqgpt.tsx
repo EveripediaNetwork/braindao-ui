@@ -61,7 +61,7 @@ const Iqgpt = () => {
 	return (
 		<div
 			id='iq-gpt'
-			className='max-w-[1536px] px-4 sm:px-10 xl:px-[120px] mx-auto flex flex-col gap-10 xl:gap-16 py-[48px] sm:py-[80px] xl:py-24 relative'
+			className='max-w-[1536px] px-4 sm:px-10 xl:px-[120px] mx-auto flex flex-col gap-10 xl:gap-16 py-[48px] sm:py-[80px] 2xl:py-24 relative'
 		>
 			<TokenBrief
 				title='IQ GPT'
@@ -100,7 +100,7 @@ const Iqgpt = () => {
 					<div className='w-full relative h-[280px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[900px] 2xl:h-[1117px]'>
 						{imageUrl && <Image src={imageUrl} alt='' fill sizes='100vw' />}
 						<InViewAnimateGrow
-							delay={3.0}
+							delay={2.5}
 							className='dark:bg-iqgpt-widget-3-dark bg-iqgpt-widget-3 w-[81px] h-[134px] sm:w-[250px] lg:w-[300px] 2xl:w-[350px] sm:h-[380px] lg:h-[430px] 2xl:h-[480px] bg-cover bg-no-repeat absolute -bottom-8 sm:-bottom-[110px] 2xl:-bottom-[100px] right-1'
 						>
 							<div></div>

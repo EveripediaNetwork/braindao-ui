@@ -116,6 +116,8 @@ module.exports = {
 				'iqgpt-widget-3-dark': "url('/images/iqgpt-widget-3.png')",
 				'iqgpt-widget-3': "url('/images/iqgpt-widget-2-light.png')",
 				'iq-dashboard-mockup': "url('/images/iq-dashboard-mockup.png')",
+				locked: "url('/images/locked.png')",
+				raffles: "url('/images/raffles.png')",
 				'iq-dashboard-mockup-dark':
 					"url('/images/iq-dashboard-mockup-dark.png')",
 				'wiki-rank': "url('/images/iqwiki-rank.png')",
