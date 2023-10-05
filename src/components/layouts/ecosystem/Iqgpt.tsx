@@ -53,7 +53,7 @@ const Iqgpt = () => {
 	}, [theme]);
 	let imageUrl;
 	if (appTheme === 'light') {
-		imageUrl = '/images/iq-gpt-mockup.png';
+		imageUrl = '/images/iqgpt-main.png';
 	}
 	if (appTheme === 'dark') {
 		imageUrl = '/images/iqgpt-main-dark.png';
@@ -96,28 +96,28 @@ const Iqgpt = () => {
 				/>
 			</div>
 			<div className='px-11'>
-				<div className=' bg-gray700 px-3 sm:px-8 xl:px-12 pt-3 pb-[35px] sm:pt-6 sm:pb-[70px] xl:pt-10 xl:pb-[100px] w-full rounded-lg sm:rounded-[32px] relative'>
+				<div className='bg-gray100 dark:bg-gray700 px-3 border border-gray200 dark:border-whiteAlpha-400 sm:px-8 xl:px-12 pt-3 pb-[35px] sm:pt-6 sm:pb-[70px] xl:pt-10 xl:pb-[100px] w-full rounded-lg sm:rounded-[32px] relative'>
 					<div className='w-full relative h-[280px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[900px] 2xl:h-[1117px]'>
 						{imageUrl && <Image src={imageUrl} alt='' fill sizes='100vw' />}
 						<InViewAnimateGrow
 							delay={3.0}
-							className='dark:bg-iqgpt-widget-3-dark w-[81px] h-[134px] sm:w-[250px] lg:w-[300px] 2xl:w-[350px] sm:h-[380px] lg:h-[430px] 2xl:h-[480px] bg-cover bg-no-repeat absolute -bottom-8 sm:-bottom-[100px] right-1'
+							className='dark:bg-iqgpt-widget-3-dark bg-iqgpt-widget-3 w-[81px] h-[134px] sm:w-[250px] lg:w-[300px] 2xl:w-[350px] sm:h-[380px] lg:h-[430px] 2xl:h-[480px] bg-cover bg-no-repeat absolute -bottom-8 sm:-bottom-[110px] 2xl:-bottom-[100px] right-1'
 						>
 							<div></div>
 						</InViewAnimateGrow>
 					</div>
-					<InViewAnimateGrow className='dark:bg-iqgpt-widget-dark w-[100px] h-[200px] sm:w-[250px] lg:w-[320px] xl:w-[360px] 2xl:w-[500px] sm:h-[450px] lg:h-[580px] xl:h-[600px] 2xl:h-[820px] bg-contain sm:bg-cover bg-no-repeat absolute -bottom-0 -left-4 sm:-left-14 xl:-left-32 2xl:-left-40'>
+					<InViewAnimateGrow className='bg-iqgpt-widget dark:bg-iqgpt-widget-dark w-[100px] h-[200px] sm:w-[250px] lg:w-[320px] xl:w-[360px] 2xl:w-[500px] sm:h-[450px] lg:h-[580px] xl:h-[620px] 2xl:h-[820px] bg-contain sm:bg-cover bg-no-repeat absolute -bottom-0 -left-4 sm:-left-14 xl:-left-32 2xl:-left-40'>
 						<div></div>
 					</InViewAnimateGrow>
 					<InViewAnimateGrow
 						delay={2.0}
-						className='dark:bg-iqgpt-widget-2-dark w-[85px] h-[94px] sm:w-[250px] lg:w-[300px] 2xl:w-[360px] sm:h-[280px] lg:h-[320px] 2xl:h-[380px] bg-cover bg-no-repeat absolute top-10 sm:top-20 lg:top-40 -right-4 sm:-right-8 xl:-right-20'
+						className='bg-iqgpt-widget-2 dark:bg-iqgpt-widget-2-dark w-[85px] h-[94px] sm:w-[250px] lg:w-[300px] 2xl:w-[360px] sm:h-[280px] lg:h-[320px] 2xl:h-[380px] bg-cover bg-no-repeat absolute top-10 sm:top-20 lg:top-40 -right-4 sm:-right-8 xl:-right-20'
 					>
 						<div></div>
 					</InViewAnimateGrow>
 				</div>
 			</div>
-			<div className='h-[174px] w-full absolute bg-gradient-linear bg-cover left-0 -bottom-2 sm:bottom-8'></div>
+			<div className='h-[174px] w-full absolute bg-gradient-linear-light dark:bg-gradient-linear bg-cover left-0 -bottom-2 sm:bottom-8'></div>
 		</div>
 	);
 };
