@@ -108,11 +108,16 @@ module.exports = {
 				'wiki-homepage-dark': "url('/images/iqwiki-homepage-dark.png')",
 				'iqgpt-mockup': "url('/images/iq-gpt-mockup.png')",
 				'iqgpt-mockup-dark': "url('/images/iq-gpt-mockup-dark-2.png')",
+				'iqgpt-widget-dark': "url('/images/iqgpt-widget.png')",
+				'iqgpt-widget-2-dark': "url('/images/iqgpt-widget-2.png')",
+				'iqgpt-widget-3-dark': "url('/images/iqgpt-widget-3.png')",
 				'iq-dashboard-mockup': "url('/images/iq-dashboard-mockup.png')",
 				'iq-dashboard-mockup-dark':
 					"url('/images/iq-dashboard-mockup-dark.png')",
 				'wiki-rank': "url('/images/iqwiki-rank.png')",
 				'wiki-rank-dark': "url('/images/iqwiki-rank-dark.png')",
+				'gradient-linear':
+					'linear-gradient(360deg, #1A202C 46.49%, rgba(26, 32, 44, 0.00) 86.97%)',
 			},
 		},
 	},
