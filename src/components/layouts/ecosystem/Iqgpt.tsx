@@ -81,22 +81,22 @@ const Iqgpt = () => {
 					icon={<RiQuestionAnswerLine />}
 					title='AI generated answers'
 					description='Get AI generated answers to all your crypto questions.'
-					delay={1.0}
+					delay={0.8}
 				/>
 				<FeatureList
 					icon={<RiNewspaperLine />}
 					title='Update on news and trends'
 					description='Equip yourself with AI powered market analysis from real time market data, news and trends.'
-					delay={1.2}
+					delay={1.0}
 				/>
 				<FeatureList
 					icon={<RiPlug2Line />}
 					title='Pluggins'
 					description='Access to different plugins to select data sources for your enquires.'
-					delay={1.4}
+					delay={1.2}
 				/>
 			</div>
-			<InViewAnimateBottom delay={0.8}>
+			<InViewAnimateBottom delay={0.6}>
 				<div className='w-full relative h-[280px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]'>
 					{imageUrl && <Image src={imageUrl} alt='' fill sizes='100vw' />}
 				</div>
