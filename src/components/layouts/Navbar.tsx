@@ -1,20 +1,9 @@
 import React from 'react';
 import { BraindaoLogoDark } from '../svgs/BraindaoLogoDark';
-import { RightArrowIcon } from '../icons/RightArrow';
 import NavBarButton from './NavBarButton';
 import { navLinks } from '@/data/Nav';
 import { raleway } from '@/app/font';
-import dynamic from 'next/dynamic';
-import { CgSpinner } from 'react-icons/cg';
 import { RiCloseFill } from 'react-icons/ri';
-
-const ThemeSwitcher = dynamic(
-	() => import('@/components/layouts/theme/ThemeSwitcher'),
-	{
-		ssr: false,
-		loading: () => <CgSpinner size={36} className='animate-spin' />,
-	}
-);
 
 const Navbar = () => {
 	return (
@@ -47,7 +36,6 @@ const Navbar = () => {
 							>
 								Launch Dashboard
 							</a>
-							{/* <ThemeSwitcher /> */}
 							<NavBarButton />
 						</div>
 					</div>
@@ -64,7 +52,6 @@ const Navbar = () => {
 											'mobile_nav_items'
 										) as HTMLDivElement;
 										mobileNav.classList.toggle('hidden');
-										// mobileNav.classList.toggle('block');
 									}}
 								>
 									<RiCloseFill size={24} />
