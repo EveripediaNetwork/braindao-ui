@@ -72,7 +72,7 @@ export const TokenBrief = ({
 const Iqtoken = () => {
 	return (
 		<div id='iq-token' className='bg-gray800 text-whiteAlpha-900'>
-			<div className='max-w-[1536px] px-4 md:px-10 xl:px-[120px] mx-auto py-[48px] sm:py-[80px] xl:py-24'>
+			<div className='max-w-[1536px] px-4 md:px-10 xl:px-24 2xl:px-[120px] mx-auto py-[48px] sm:py-[80px] xl:py-24'>
 				<TokenBrief
 					title='The IQ Token'
 					description="The IQ token is a cryptocurrency that powers a knowledge ecosystem

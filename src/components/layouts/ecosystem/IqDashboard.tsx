@@ -6,7 +6,7 @@ import { StatsPointers, TokenBrief } from '../Iqtoken';
 const IqDashboard = () => {
 	return (
 		<div className='max-w-[1536px] mx-auto flex flex-col gap-10 xl:gap-16 pt-[48px] sm:pt-[80px] 2xl:pt-24'>
-			<div className='px-10 xl:px-[120px]'>
+			<div className='px-4 sm:px-10 xl:px-24 2xl:px-[120px]'>
 				<TokenBrief
 					title='IQ Dashboard'
 					description='Using the IQ Dashboard, you can stake your tokens, facilitate cross-blockchain bridging, vote on governance proposals, and engage in many other activities within the blockchain ecosystem.'
