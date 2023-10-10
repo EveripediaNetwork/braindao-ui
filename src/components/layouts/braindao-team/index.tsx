@@ -61,6 +61,7 @@ const TeamCard = ({
 		</InViewAnimateBottom>
 	);
 };
+
 const BraindaoTeam = () => {
 	return (
 		<div className='bg-gray800 text-whiteAlpha-900'>
