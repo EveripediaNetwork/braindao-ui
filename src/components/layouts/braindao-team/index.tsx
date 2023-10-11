@@ -91,7 +91,7 @@ const BraindaoTeam = () => {
         </div>
         <div className="flex flex-col gap-5 sm:gap-16 mt-8 md:mt-14">
           <span className="p-2 lg:p-5 text-brand-500 dark:text-brand-800 font-semibold text-2xl sm:text-4xl border-b border-whiteAlpha-400 dark:border-[#E2E8F0]">
-            Editors
+            Content Team
           </span>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 sm:gap-y-16 gap-x-4">
             {editors.map((item) => (
