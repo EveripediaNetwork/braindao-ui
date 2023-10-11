@@ -1,9 +1,6 @@
 "use client";
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import InViewAnimateLeft from "@/components/transitions/InViewAnimateLeft";
-import InViewAnimateRight from "@/components/transitions/InViewAnimateRight";
-import InViewAnimateGrow from "@/components/transitions/InViewAnimationGrow";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -27,20 +24,17 @@ export const FeatureList = ({
   delay?: number;
 }) => {
   return (
-    <InViewAnimateRight
-      delay={delay}
-      className="flex flex-1 flex-col gap-4 items-start"
-    >
-      <div className="w-12 h-12 rounded-full flex justify-center text-xl text-brand-500 dark:text-brand-800 items-center border-8 border-brand-50 dark:border-brand-200 bg-brand-100 dark:bg-brand-400">
+    <InViewAnimateBottom className="flex flex-1 flex-col gap-4 items-start">
+      <div className="w-12 h-12 rounded-full flex justify-center text-xl text-brand-800 dark:text-brand-500 items-center border-8 border-brand-200 dark:border-brand-50 bg-brand-400 dark:bg-brand-100">
         {icon}
       </div>
       <div className="">
-        <h4 className="text-gray800 dark:text-whiteAlpha-900 font-semibold text-lg md:text-xl mb-1">
+        <h4 className="text-whiteAlpha-900 dark:text-gray800 font-semibold text-lg md:text-xl mb-1">
           {title}
         </h4>
         <p className="text-sm lg:text-base">{description}</p>
       </div>
-    </InViewAnimateRight>
+    </InViewAnimateBottom>
   );
 };
 
@@ -52,12 +46,13 @@ const Iqgpt = () => {
     setAppTheme(theme || "");
   }, [theme]);
   let imageUrl;
-  if (appTheme === "light") {
+  if (appTheme === "dark") {
     imageUrl = "/images/iq-gpt-mockup.png";
   }
-  if (appTheme === "dark") {
+  if (appTheme === "light") {
     imageUrl = "/images/iq-gpt-mockup-dark-2.png";
   }
+
   return (
     <div
       id="iq-gpt"
@@ -65,7 +60,8 @@ const Iqgpt = () => {
     >
       <TokenBrief
         title="IQ GPT"
-        description="IQ GPT is an extension of IQ wiki's decentralized framework, integrating crypto-focused AI models that utilize diverse data sources to bolster capabilities, offering insights into intricate terms, live market trends, and breaking news.IQ GPT is powered by the IQ token, enabling IQ holders to participate in governance and get access to additional features."
+        description={`IQ GPT is an extension of IQ.wiki's decentralized framework, integrating crypto-focused AI models that utilize diverse data sources to bolster capabilities, offering insights into intricate terms, live market trends, and breaking news.`}
+        description2={`IQ GPT is powered by the IQ token, enabling IQ holders to participate in governance and get access to additional features.`}
         action="https://iqgpt.com"
         buttonText="Explore IQ GPT"
       />
@@ -73,34 +69,33 @@ const Iqgpt = () => {
         <FeatureList
           icon={<RiDatabaseLine />}
           title="Access to real-time data"
-          description="Access to real-time price data, trading volumes, market
-                capitalization."
+          description="Access to real-time price data, trading volumes, and market capitalization."
         />
         <FeatureList
           icon={<RiQuestionAnswerLine />}
-          title="AI generated answers"
-          description="Get AI generated answers to all your crypto questions."
-          delay={1.0}
+          title="AI-generated answers"
+          description="Receive AI-generated answers to all your crypto questions."
+          delay={0.8}
         />
         <FeatureList
           icon={<RiNewspaperLine />}
           title="Update on news and trends"
-          description="Equip yourself with AI powered market analysis from real time market data, news and trends."
-          delay={1.2}
+          description="Equip yourself with AI-powered market analysis using real-time market data, news, and trends."
+          delay={1.0}
         />
         <FeatureList
           icon={<RiPlug2Line />}
-          title="Pluggins"
-          description="Access to different plugins to select data sources for your enquires."
-          delay={1.4}
+          title="Plugins"
+          description="Access various plugins to select data sources for your inquiries."
+          delay={1.2}
         />
       </div>
-      <InViewAnimateBottom delay={1.0}>
+      <InViewAnimateBottom>
         <div className="w-full relative h-[280px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
           {imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
         </div>
       </InViewAnimateBottom>
-      <div className="h-[174px] w-full absolute bg-gradient-linear-light dark:bg-gradient-linear bg-cover left-0 -bottom-2 sm:bottom-8"></div>
+      <div className="h-[174px] w-full absolute bg-gradient-linear dark:bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-8"></div>
     </div>
   );
 };

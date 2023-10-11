@@ -1,7 +1,7 @@
 "use client";
 
 import { useAnimation, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export type TInViewAnimate = {
@@ -16,26 +16,27 @@ const InViewAnimateBottom: React.FC<TInViewAnimate> = ({
 }) => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !hasAnimated) {
+      setHasAnimated(true);
       animation.start({
         y: 0,
         opacity: 1,
         transition: {
           type: "tween",
-          duration: 1,
-          delay: delay ? delay : 0.6,
+          duration: 1.2,
         },
       });
     }
-    if (!inView) {
+    if (!inView && !hasAnimated) {
       animation.start({
         y: "10vw",
         opacity: 0.5,
       });
     }
-  }, [animation, delay, inView]);
+  }, [animation, delay, inView, hasAnimated]);
 
   return (
     <div ref={ref} className={`overflow-hidden ${className}`}>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useAnimation, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { TInViewAnimate } from "./InViewAnimateBottom";
 
@@ -12,26 +12,28 @@ const InViewAnimateLeft: React.FC<TInViewAnimate> = ({
 }) => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !hasAnimated) {
+      setHasAnimated(true);
       animation.start({
         x: 0,
-        opacity: 1,
+        opacity: 1.0,
         transition: {
           type: "tween",
-          duration: 1,
-          delay: delay ? delay : 0.1,
+          duration: 0.8,
+          delay: delay ? delay : 0.2,
         },
       });
     }
-    if (!inView) {
+    if (!inView && !hasAnimated) {
       animation.start({
         x: "-10vw",
         opacity: 0.5,
       });
     }
-  }, [animation, delay, inView]);
+  }, [animation, delay, inView, hasAnimated]);
 
   return (
     <motion.div ref={ref} animate={animation} className={`${className}`}>

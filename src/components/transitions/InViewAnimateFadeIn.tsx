@@ -1,7 +1,7 @@
 "use client";
 
 import { useAnimation, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export type TInViewAnimate = {
@@ -16,9 +16,11 @@ const InViewAnimateFadeIn: React.FC<TInViewAnimate> = ({
 }) => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !hasAnimated) {
+      setHasAnimated(true);
       animation.start({
         opacity: 1,
         transition: {
@@ -28,12 +30,12 @@ const InViewAnimateFadeIn: React.FC<TInViewAnimate> = ({
         },
       });
     }
-    if (!inView) {
+    if (!inView && !hasAnimated) {
       animation.start({
         opacity: 0,
       });
     }
-  }, [inView, animation, delay]);
+  }, [inView, animation, delay, hasAnimated]);
 
   return (
     <motion.div ref={ref} animate={animation} className={`${className}`}>
