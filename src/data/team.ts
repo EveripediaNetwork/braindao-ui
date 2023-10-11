@@ -142,7 +142,7 @@ export const editors = [
   {
     delay: 1.4,
     name: "Zainab Balogun",
-    role: "Editor",
+    role: "Executive Editor",
     src: "/images/team/zainab.png",
     linkedlnLink: "https://www.linkedin.com/in/zainab-balogun",
     twitterLink: "http://www.twitter.com/zayne_ovaa_",
@@ -150,7 +150,7 @@ export const editors = [
   {
     delay: 1.8,
     name: "Yena Sim",
-    role: "Editor",
+    role: "Executive Editor",
     src: "/images/team/yena.png",
     linkedlnLink: "https://www.linkedin.com/in/yena-sim-754011234/",
     twitterLink: "https://twitter.com/sky3lo",
@@ -158,7 +158,7 @@ export const editors = [
   {
     delay: 2.2,
     name: "Jaewon Cho",
-    role: "Editor",
+    role: "Executive Editor",
     src: "/images/team/jaewon.png",
     linkedlnLink: "",
     twitterLink: "https://twitter.com/CHOJAEWON44907",
@@ -166,7 +166,7 @@ export const editors = [
   {
     delay: 2.6,
     name: "Semilore Kilaso",
-    role: "Editor",
+    role: "Executive Editor",
     src: "/images/team/semilore.png",
     linkedlnLink: "https://www.linkedin.com/in/semilore-kilaso/",
     twitterLink: "",
@@ -174,7 +174,7 @@ export const editors = [
   {
     delay: 3.0,
     name: "Karishma Priyadarshini",
-    role: "Editor",
+    role: "Executive Editor",
     src: "/images/team/karishma.png",
     linkedlnLink: "https://in.linkedin.com/in/karishma-priyadarshini-5866b622b",
     twitterLink: "https://twitter.com/KarishmaPr25843",
@@ -182,7 +182,7 @@ export const editors = [
   {
     delay: 3.4,
     name: "Elizabeth Hunvio",
-    role: "Editor",
+    role: "Executive Editor",
     src: "/images/team/elizabeth.png",
     linkedlnLink: "https://www.linkedin.com/in/elizabeth-hunvio-76b764119",
     twitterLink: "https://twitter.com/MLizzbert?t=nn3CZUmCY-tYcZ0wpedzow&s=09",
@@ -190,7 +190,7 @@ export const editors = [
   {
     delay: 3.8,
     name: "YeonWoo Seo",
-    role: "Editor",
+    role: "Executive Editor",
     src: "/images/team/seo.png",
     linkedlnLink: "",
     twitterLink: "https://x.com/syw0243?s=20",
