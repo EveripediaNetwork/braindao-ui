@@ -1,4 +1,3 @@
-import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { montserrat } from "./font";

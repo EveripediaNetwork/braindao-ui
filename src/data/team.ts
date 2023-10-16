@@ -1,6 +1,5 @@
 export const productTeam = [
   {
-    delay: 0.4,
     name: "Navin Vethanayagam",
     role: "Chief Brain",
     src: "/images/team/navin-2.png",
@@ -8,7 +7,6 @@ export const productTeam = [
     twitterLink: "",
   },
   {
-    delay: 0.8,
     name: "Cesar Rodriguez",
     role: "Chief Technology Officer",
     src: "/images/team/kesar.png",
@@ -16,7 +14,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/kesarito",
   },
   {
-    delay: 1.2,
     name: "Andy Cho",
     role: "Director of Business Development",
     src: "/images/team/cho-new.png",
@@ -32,7 +29,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/simplypheyie",
   },
   {
-    delay: 1.8,
     name: "Sidharth Kapoor",
     role: "Software Engineer",
     src: "/images/team/sid-new.png",
@@ -40,7 +36,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/coding_sid",
   },
   {
-    delay: 2.2,
     name: "Stephen Annozie Ogbaje",
     role: "Technical Product Manager",
     src: "/images/team/steve.png",
@@ -48,7 +43,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/iamsirsteve",
   },
   {
-    delay: 2.6,
     name: "Paola Martínez Calderón",
     role: "Visual Artist / Illustrator",
     src: "/images/team/paola.png",
@@ -56,7 +50,6 @@ export const productTeam = [
     twitterLink: "http://twitter.com/fassadesatz",
   },
   {
-    delay: 3.0,
     name: "Aliu Salaudeen",
     role: "Software Engineer",
     src: "/images/team/aliu-new.png",
@@ -64,7 +57,6 @@ export const productTeam = [
     twitterLink: "https://x.com/_Aliu_Salaudeen?t=qZkUDgshSf2qnPdeI6QnyQ&s=09",
   },
   {
-    delay: 3.2,
     name: "Yaswanth Battu",
     role: "AI Engineer",
     src: "/images/team/yaswanth.png",
@@ -72,7 +64,6 @@ export const productTeam = [
     twitterLink: "http://x.com/s_1_n_t_h____",
   },
   {
-    delay: 3.6,
     name: "Adewale Adeniyi",
     role: "Product Design Intern",
     src: "/images/team/wale.png",
@@ -80,7 +71,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/ProficientWale",
   },
   {
-    delay: 4.0,
     name: "Adebesin Tolulope",
     role: "Software Engineer",
     src: "/images/team/lope.png",
@@ -88,7 +78,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/I_am_Lope",
   },
   {
-    delay: 4.4,
     name: "Srujan Gurram",
     role: "Full-Stack Engineer",
     src: "/images/team/srujan.png",
@@ -96,7 +85,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/urban_lobster",
   },
   {
-    delay: 4.8,
     name: "Ashaka Egerega",
     role: "Backend Engineer",
     src: "/images/team/asaka.png",
@@ -104,15 +92,13 @@ export const productTeam = [
     twitterLink: "https://twitter.com/shaqzee_",
   },
   {
-    delay: 5.0,
-    name: "Yadheedya Indugubili",
+    name: "Yadheedhya Indugubili",
     role: "AI Engineer",
     src: "/images/team/yadeeyah.png",
     linkedlnLink: "https://www.linkedin.com/in/yadheedhya/",
     twitterLink: "https://twitter.com/yadheedhya",
   },
   {
-    delay: 5.4,
     name: "Tolulope Malomo",
     role: "Software Engineer",
     src: "/images/team/tolu.png",
@@ -120,7 +106,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/tolulopemalomo",
   },
   {
-    delay: 5.8,
     name: "Oluwateniayomi Adeniyi",
     role: "Backend Engineer Intern",
     src: "/images/team/teni.png",
@@ -132,7 +117,6 @@ export const productTeam = [
 
 export const editors = [
   {
-    delay: 1.0,
     name: "Violeta Ziborova",
     role: "Content Manager",
     src: "/images/team/violeta.png",
@@ -140,7 +124,6 @@ export const editors = [
     twitterLink: "https://twitter.com/vzbrv",
   },
   {
-    delay: 1.4,
     name: "Zainab Balogun",
     role: "Executive Editor",
     src: "/images/team/zainab.png",
@@ -148,7 +131,6 @@ export const editors = [
     twitterLink: "http://www.twitter.com/zayne_ovaa_",
   },
   {
-    delay: 1.8,
     name: "Yena Sim",
     role: "Executive Editor",
     src: "/images/team/yena.png",
@@ -156,7 +138,6 @@ export const editors = [
     twitterLink: "https://twitter.com/sky3lo",
   },
   {
-    delay: 2.2,
     name: "Jaewon Cho",
     role: "Executive Editor",
     src: "/images/team/jaewon.png",
@@ -164,7 +145,6 @@ export const editors = [
     twitterLink: "https://twitter.com/CHOJAEWON44907",
   },
   {
-    delay: 2.6,
     name: "Semilore Kilaso",
     role: "Executive Editor",
     src: "/images/team/semilore.png",
@@ -172,7 +152,6 @@ export const editors = [
     twitterLink: "",
   },
   {
-    delay: 3.0,
     name: "Karishma Priyadarshini",
     role: "Executive Editor",
     src: "/images/team/karishma.png",
@@ -180,7 +159,6 @@ export const editors = [
     twitterLink: "https://twitter.com/KarishmaPr25843",
   },
   {
-    delay: 3.4,
     name: "Elizabeth Hunvio",
     role: "Executive Editor",
     src: "/images/team/elizabeth.png",
@@ -188,7 +166,6 @@ export const editors = [
     twitterLink: "https://twitter.com/MLizzbert?t=nn3CZUmCY-tYcZ0wpedzow&s=09",
   },
   {
-    delay: 3.8,
     name: "YeonWoo Seo",
     role: "Executive Editor",
     src: "/images/team/seo.png",

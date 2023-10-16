@@ -47,7 +47,7 @@ const Iqgpt = () => {
   }, [theme]);
   let imageUrl;
   if (appTheme === "dark") {
-    imageUrl = "/images/iq-gpt-mockup.png";
+    imageUrl = "/images/iqgpt-mockup.png";
   }
   if (appTheme === "light") {
     imageUrl = "/images/iq-gpt-mockup-dark-2.png";

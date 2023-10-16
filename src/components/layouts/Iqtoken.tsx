@@ -1,5 +1,8 @@
+"use client";
+
+import { useTheme } from "next-themes";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
 import InViewAnimateSlideDown from "../transitions/InViewSlideDown";
 import InViewAnimateSlideUp from "../transitions/inViewSlideUp";
@@ -79,6 +82,20 @@ export const TokenBrief = ({
 };
 
 const Iqtoken = () => {
+  const { theme } = useTheme();
+  const [appTheme, setAppTheme] = useState("");
+
+  useEffect(() => {
+    setAppTheme(theme || "");
+  }, [theme]);
+  let imageUrl;
+  if (appTheme === "dark") {
+    imageUrl = "/images/aboutus.png";
+  }
+  if (appTheme === "light") {
+    imageUrl = "/images/aboutus-dark.png";
+  }
+
   return (
     <div
       id="iq-token"
@@ -99,13 +116,15 @@ const Iqtoken = () => {
         <div className="flex flex-col-reverse lg:flex-row items-start mt-16">
           <div className="lg:flex-1 w-full overflow-hidden">
             <div className="w-full md:w-[80%] xl:w-full h-[300px] sm:h-[450px] lg:h-[380px] xl:h-[500px] relative">
-              <Image
-                src={"/images/aboutus.png"}
-                alt=""
-                fill
-                sizes="(max-width:960px) 80vw, 50vw"
-                className="object-contain"
-              />
+              {imageUrl && (
+                <Image
+                  src={imageUrl}
+                  alt=""
+                  fill
+                  sizes="(max-width:960px) 80vw, 50vw"
+                  className="object-contain"
+                />
+              )}
               <div className="absolute top-0 w-full left-0 h-full flex flex-col">
                 <InViewAnimateSlideUp className="flex-1 overflow-hidden w-full h-full bg-gray800 dark:bg-[#F9FAFB]">
                   <div className=""></div>

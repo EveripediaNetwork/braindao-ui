@@ -19,8 +19,8 @@ const Hero = () => {
         <div className="relative bg-black/40">
           <div className="max-w-[1536px] mx-auto">
             <Navbar />
-            <div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden h-[calc(40vh-65px)] md:h-[calc(60vh-65px)] lg:h-[calc(80vh-65px)]">
-              <div className="flex text-center md:text-left items-center md:items-start flex-col justify-start mx-auto gap-1 sm:gap-5 w-full  max-w-6xl">
+            <div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden h-[calc(40vh-65px)] md:h-[calc(60vh-65px)] lg:h-[calc(70vh-65px)]">
+              <div className="flex text-center md:text-left items-center md:items-start flex-col justify-start mx-auto gap-1 sm:gap-5 w-full px-4 sm:px-0 max-w-6xl">
                 <InViewAnimateBottom>
                   <h1
                     className={`text-2xl sm:text-4xl md:text-5xl animate-fade-in xl:text-[60px] 2xl:text-[70px] !leading-tight text-center font-bold ${space_grotesk.className}`}
@@ -29,7 +29,7 @@ const Hero = () => {
                   </h1>
                 </InViewAnimateBottom>
                 <InViewAnimateBottom className="mx-auto">
-                  <p className="md:text-lg max-w-[513px] lg:max-w-2xl text-center mx-auto lg:text-xl">
+                  <p className="text-sm sm:text-lg max-w-[513px] lg:max-w-2xl text-center mx-auto lg:text-xl">
                     Join our mission to expand the scope of human knowledge with
                     BrainDAO, the governing DAO powering the IQ ecosystem.
                   </p>

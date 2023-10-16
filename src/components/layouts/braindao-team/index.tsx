@@ -77,7 +77,6 @@ const BraindaoTeam = () => {
             {productTeam.map((team, idx) => {
               return (
                 <TeamCard
-                  delay={team.delay}
                   src={team.src}
                   name={team.name}
                   role={team.role}
@@ -96,7 +95,6 @@ const BraindaoTeam = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 sm:gap-y-16 gap-x-4">
             {editors.map((item) => (
               <TeamCard
-                delay={item.delay}
                 key={item.name}
                 src={item.src}
                 name={item.name}
