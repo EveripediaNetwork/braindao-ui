@@ -1,29 +1,29 @@
-'use client'
+"use client";
 
-import InViewAnimateBottom from '@/components/transitions/InViewAnimateBottom'
-import InViewAnimateSlideUp from '@/components/transitions/inViewSlideUp'
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import { TokenBrief } from '../Iqtoken'
+import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
+import InViewAnimateSlideUp from "@/components/transitions/inViewSlideUp";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import { TokenBrief } from "../Iqtoken";
 
 const Iqwiki = () => {
-  const { theme } = useTheme()
-  const [appTheme, setAppTheme] = useState('')
+  const { theme } = useTheme();
+  const [appTheme, setAppTheme] = useState("");
 
   useEffect(() => {
-    setAppTheme(theme || '')
-  }, [theme])
-  let imageUrl, imageUrl2, imageUrl3
-  if (appTheme === 'dark') {
-    imageUrl = '/images/iqwiki-widget-new.png'
-    imageUrl2 = '/images/iqwiki-rank.png'
-    imageUrl3 = '/images/iqwiki-homepage.png'
+    setAppTheme(theme || "");
+  }, [theme]);
+  let imageUrl, imageUrl2, imageUrl3;
+  if (appTheme === "dark") {
+    imageUrl = "/images/iqwiki-widget-new.png";
+    imageUrl2 = "/images/iqwiki-rank.png";
+    imageUrl3 = "/images/iqwiki-homepage.png";
   }
-  if (appTheme === 'light') {
-    imageUrl = '/images/iqwiki-widget-new-dark.png'
-    imageUrl2 = '/images/iqwiki-rank-dark.png'
-    imageUrl3 = '/images/iqwiki-homepage-dark.png'
+  if (appTheme === "light") {
+    imageUrl = "/images/iqwiki-widget-new-dark.png";
+    imageUrl2 = "/images/iqwiki-rank-dark.png";
+    imageUrl3 = "/images/iqwiki-homepage-dark.png";
   }
 
   return (
@@ -38,7 +38,7 @@ const Iqwiki = () => {
         <div className="col-span-1 pb-3 sm:pb-0 pl-3 pt-4 lg:pl-6 lg:pt-8">
           <p className="max-w-[390px] text-sm xl:text-xl text-whiteAlpha-800 dark:text-gray600">
             Explore a diverse range of wikis designed to guide you through the
-            realms of{' '}
+            realms of{" "}
             <span className="font-semibold">
               cryptocurrency and blockchain.
             </span>
@@ -96,7 +96,7 @@ const Iqwiki = () => {
         </div>
       </InViewAnimateBottom>
     </div>
-  )
-}
+  );
+};
 
-export default Iqwiki
+export default Iqwiki;

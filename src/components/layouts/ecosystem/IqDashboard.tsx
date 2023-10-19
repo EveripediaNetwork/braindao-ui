@@ -1,24 +1,24 @@
-'use client'
+"use client";
 
-import InViewAnimateBottom from '@/components/transitions/InViewAnimateBottom'
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-import { StatsPointers, TokenBrief } from '../Iqtoken'
+import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import { StatsPointers, TokenBrief } from "../Iqtoken";
 
 const IqDashboard = () => {
-  const { theme } = useTheme()
-  const [appTheme, setAppTheme] = useState('')
+  const { theme } = useTheme();
+  const [appTheme, setAppTheme] = useState("");
 
   useEffect(() => {
-    setAppTheme(theme || '')
-  }, [theme])
-  let imageUrl
-  if (appTheme === 'light') {
-    imageUrl = '/images/iq-dashboard-dark.png'
+    setAppTheme(theme || "");
+  }, [theme]);
+  let imageUrl;
+  if (appTheme === "light") {
+    imageUrl = "/images/iq-dashboard-dark.png";
   }
-  if (appTheme === 'dark') {
-    imageUrl = '/images/iq-dashboard.png'
+  if (appTheme === "dark") {
+    imageUrl = "/images/iq-dashboard.png";
   }
   return (
     <div className="max-w-[1536px] mx-auto flex flex-col gap-10 xl:gap-16 pt-[48px] sm:pt-[80px] 2xl:pt-24">
@@ -63,7 +63,7 @@ const IqDashboard = () => {
         </div>
       </InViewAnimateBottom>
     </div>
-  )
-}
+  );
+};
 
-export default IqDashboard
+export default IqDashboard;

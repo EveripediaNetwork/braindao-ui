@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const Footer = () => {
   return (
     <div className="pt-16 pb-12 bg-brand-200 dark:bg-brand-50">
       <div className="p-8 flex flex-col items-center gap-5 border-b border-blackAlpha-50">
-        <Image src={'/svgs/brainie.svg'} alt="" width={40} height={34} />
+        <Image src={"/svgs/brainie.svg"} alt="" width={40} height={34} />
         <div className="flex flex-col items-center gap-4">
           <h2 className="dark:text-brand-500 text-brand-800 text-xl md:text-2xl xl:text-3xl font-bold text-center">
             Stay up to date every month with our newsletter
@@ -15,7 +15,7 @@ const Footer = () => {
             email newsletter.
           </p>
           <a
-            href={'https://www.getdrip.com/forms/505929689/submissions/new'}
+            href={"https://www.getdrip.com/forms/505929689/submissions/new"}
             target="_blank"
             className="flex justify-center w-[210px] text-white bg-brand-800 dark:bg-brand-500 py-3 rounded-md hover:bg-brand-700 transition-all ease-in-out duration-300"
           >
@@ -29,7 +29,7 @@ const Footer = () => {
         </small>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

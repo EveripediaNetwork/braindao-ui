@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import { useErc20 } from '@/hooks/useEr20'
-import { useLockOverview } from '@/hooks/useLockOverview'
-import { useTheme } from 'next-themes'
-import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
-import InViewAnimateBottom from '../transitions/InViewAnimateBottom'
-import InViewAnimateSlideDown from '../transitions/InViewSlideDown'
-import InViewAnimateSlideUp from '../transitions/inViewSlideUp'
-import { fetchPriceChange, numFormatter } from '../utils/stats-utils'
+import { useErc20 } from "@/hooks/useEr20";
+import { useLockOverview } from "@/hooks/useLockOverview";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
+import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
+import InViewAnimateSlideDown from "../transitions/InViewSlideDown";
+import InViewAnimateSlideUp from "../transitions/inViewSlideUp";
+import { fetchPriceChange, numFormatter } from "../utils/stats-utils";
 
 export const StatsPointers = ({
   title,
@@ -16,10 +16,10 @@ export const StatsPointers = ({
   className,
   headerSize,
 }: {
-  title: string
-  content: string
-  className?: string
-  headerSize?: string
+  title: string;
+  content: string;
+  className?: string;
+  headerSize?: string;
 }) => {
   return (
     <InViewAnimateBottom className="flex-1">
@@ -27,17 +27,17 @@ export const StatsPointers = ({
         <div className={`flex flex-col ${className}`}>
           <h4
             className={`text-whiteAlpha-900 dark:text-gray800 font-semibold ${
-              headerSize ? headerSize : 'text-2xl xl:text-3xl'
+              headerSize ? headerSize : "text-2xl xl:text-3xl"
             }`}
           >
             {title}
           </h4>
-          <span className={headerSize ? '' : 'xl:text-lg'}>{content}</span>
+          <span className={headerSize ? "" : "xl:text-lg"}>{content}</span>
         </div>
       </div>
     </InViewAnimateBottom>
-  )
-}
+  );
+};
 
 export const TokenBrief = ({
   title,
@@ -46,11 +46,11 @@ export const TokenBrief = ({
   buttonText,
   action,
 }: {
-  title: string
-  description: string
-  description2?: string
-  buttonText: string
-  action: string
+  title: string;
+  description: string;
+  description2?: string;
+  buttonText: string;
+  action: string;
 }) => {
   return (
     <div className="flex items-start flex-col xl:flex-row xl:gap-[186px]">
@@ -81,37 +81,37 @@ export const TokenBrief = ({
         </InViewAnimateBottom>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Iqtoken = () => {
-  const { theme } = useTheme()
-  const [appTheme, setAppTheme] = useState('')
-  const { tvl } = useErc20()
-  const { totalHiiqSupply } = useLockOverview()
-  const isFetchedData = useRef(false)
+  const { theme } = useTheme();
+  const [appTheme, setAppTheme] = useState("");
+  const { tvl } = useErc20();
+  const { totalHiiqSupply } = useLockOverview();
+  const isFetchedData = useRef(false);
   const [marketData, setMarketData] = useState<{ [x: string]: any } | null>(
-    null,
-  )
+    null
+  );
 
   useEffect(() => {
-    setAppTheme(theme || '')
+    setAppTheme(theme || "");
     if (!isFetchedData.current) {
-      isFetchedData.current = true
-      const res2 = fetchPriceChange()
+      isFetchedData.current = true;
+      const res2 = fetchPriceChange();
 
       Promise.resolve(res2).then((data) => {
-        setMarketData(data)
-        console.log(data)
-      })
+        setMarketData(data);
+        console.log(data);
+      });
     }
-  }, [theme])
-  let imageUrl
-  if (appTheme === 'dark') {
-    imageUrl = '/images/aboutus.png'
+  }, [theme]);
+  let imageUrl;
+  if (appTheme === "dark") {
+    imageUrl = "/images/aboutus.png";
   }
-  if (appTheme === 'light') {
-    imageUrl = '/images/aboutus-dark.png'
+  if (appTheme === "light") {
+    imageUrl = "/images/aboutus-dark.png";
   }
 
   return (
@@ -172,13 +172,13 @@ const Iqtoken = () => {
                 <div className="flex justify-between">
                   <StatsPointers
                     title={`${numFormatter(
-                      marketData?.circulatingSupply || '',
+                      marketData?.circulatingSupply || ""
                     )} IQ`}
                     content="Circulating supply"
                     className="h-[80px] xl:h-[95px] justify-between"
                   />
                   <StatsPointers
-                    title={`$${numFormatter(marketData?.marketCap || '')}`}
+                    title={`$${numFormatter(marketData?.marketCap || "")}`}
                     content="Market cap"
                     className="h-[80px] xl:h-[95px] justify-between"
                   />
@@ -201,7 +201,7 @@ const Iqtoken = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Iqtoken
+export default Iqtoken;

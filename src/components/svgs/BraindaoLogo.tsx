@@ -93,5 +93,5 @@ export const BraindaoLogo = () => {
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};

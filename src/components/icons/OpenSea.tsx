@@ -28,4 +28,4 @@ export const OpenSeaIcon = (p: { className?: string }) => (
       </clipPath>
     </defs>
   </svg>
-)
+);

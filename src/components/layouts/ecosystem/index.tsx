@@ -1,7 +1,7 @@
-import React from 'react'
-import IqDashboard from './IqDashboard'
-import Iqgpt from './Iqgpt'
-import Iqwiki from './Iqwiki'
+import React from "react";
+import IqDashboard from "./IqDashboard";
+import Iqgpt from "./Iqgpt";
+import Iqwiki from "./Iqwiki";
 
 const Ecosystem = () => {
   return (
@@ -15,7 +15,7 @@ const Ecosystem = () => {
       <Iqgpt />
       <IqDashboard />
     </div>
-  )
-}
+  );
+};
 
-export default Ecosystem
+export default Ecosystem;
