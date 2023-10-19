@@ -1,17 +1,17 @@
-import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import InViewAnimateFadeIn from "@/components/transitions/InViewAnimateFadeIn";
-import { editors, productTeam } from "@/data/team";
-import Image, { ImageProps } from "next/image";
-import React from "react";
+import InViewAnimateBottom from '@/components/transitions/InViewAnimateBottom'
+import InViewAnimateFadeIn from '@/components/transitions/InViewAnimateFadeIn'
+import { editors, productTeam } from '@/data/team'
+import Image, { ImageProps } from 'next/image'
+import React from 'react'
 
 type TTeam = {
-  src?: ImageProps["src"];
-  name?: string;
-  role?: string;
-  twitterLink?: string;
-  linkedlnLink?: string;
-  delay?: number;
-};
+  src?: ImageProps['src']
+  name?: string
+  role?: string
+  twitterLink?: string
+  linkedlnLink?: string
+  delay?: number
+}
 const TeamCard = ({
   src,
   name,
@@ -24,16 +24,16 @@ const TeamCard = ({
     <InViewAnimateBottom className="mx-auto w-full max-w-[358px] md:max-w-[328px]">
       <div className="border bg-gray700 dark:bg-white border-whiteAlpha-400 dark:border-gray200 rounded-xl px-4 py-5">
         <div className="rounded-md relative h-[373px] md:h-[318px] w-full lg:h-[300px] xl:h-[300px] 2xl:h-[324px] overflow-hidden hover:scale-105 ease-in-out duration-300">
-          <Image src={src || ""} alt="" fill sizes="50vw" />
+          <Image src={src || ''} alt="" fill sizes="50vw" />
           <div className="absolute top-0 left-0 h-full w-full bg-transparent px-5 pb-5 flex flex-col justify-end">
             <div className="bg-gray700 dark:bg-white relative rounded-[4px] py-2 px-1 flex flex-col gap-2 items-center w-full">
               <div className="rounded-full h-4 w-4 bg-brand-800 dark:bg-brand-500 absolute -top-2"></div>
               <div className="flex flex-col items-center">
                 <h4 className="text-whiteAlpha-900 dark:text-gray800 text-sm font-semibold">
-                  {name || ""}
+                  {name || ''}
                 </h4>
                 <p className="text-brand-800 dark:text-brand-500 text-center font-medium text-xs">
-                  {role || ""}
+                  {role || ''}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -59,8 +59,8 @@ const TeamCard = ({
         </div>
       </div>
     </InViewAnimateBottom>
-  );
-};
+  )
+}
 
 const BraindaoTeam = () => {
   return (
@@ -84,7 +84,7 @@ const BraindaoTeam = () => {
                   linkedlnLink={team.linkedlnLink}
                   twitterLink={team.twitterLink}
                 />
-              );
+              )
             })}
           </div>
         </div>
@@ -107,7 +107,7 @@ const BraindaoTeam = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BraindaoTeam;
+export default BraindaoTeam

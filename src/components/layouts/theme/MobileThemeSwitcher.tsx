@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import { useTheme } from "next-themes";
-import { RiMoonFill, RiSunFill } from "react-icons/ri";
+import { useTheme } from 'next-themes'
+import { RiMoonFill, RiSunFill } from 'react-icons/ri'
 
 const MobileThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
 
-  const isDarkTheme = theme === "dark";
+  const isDarkTheme = theme === 'dark'
 
   const handleThemeToggle = () => {
     if (isDarkTheme) {
-      setTheme("light");
+      setTheme('light')
     } else {
-      setTheme("dark");
+      setTheme('dark')
     }
-  };
+  }
   return (
     <li className="py-4 px-5 lg:hidden">
       <div className="flex sm:px-3 justify-between items-center">
@@ -30,7 +30,7 @@ const MobileThemeSwitcher = () => {
         </span>
       </div>
     </li>
-  );
-};
+  )
+}
 
-export default MobileThemeSwitcher;
+export default MobileThemeSwitcher

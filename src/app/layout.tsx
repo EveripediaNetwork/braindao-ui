@@ -1,44 +1,44 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { montserrat } from "./font";
-import ClientProviders from "@/components/layouts/theme/ThemeProvider";
-import Footer from "@/components/layouts/Footer";
+import './globals.css'
+import type { Metadata } from 'next'
+import { montserrat } from './font'
+import ClientProviders from '@/components/layouts/theme/ThemeProvider'
+import Footer from '@/components/layouts/Footer'
 
 export const metadata: Metadata = {
-  title: "BrainDAO - Building a more intelligent future through the IQ token.",
+  title: 'BrainDAO - Building a more intelligent future through the IQ token.',
   description:
-    "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
-  viewport: "",
+    'Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.',
+  viewport: '',
   openGraph: {
     title:
-      "BrainDAO - Building a more intelligent future through the IQ token.",
-    url: "https://braindao.org",
-    type: "website",
+      'BrainDAO - Building a more intelligent future through the IQ token.',
+    url: 'https://braindao.org',
+    type: 'website',
     description:
-      "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
+      'Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.',
     images: [
       {
-        url: "https://braindao.org/images/og-image.png",
-        alt: "BrainDAO - Building a more intelligent future through the IQ token.",
+        url: 'https://braindao.org/images/og-image.png',
+        alt: 'BrainDAO - Building a more intelligent future through the IQ token.',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title:
-      "BrainDAO - Building a more intelligent future through the IQ token.",
+      'BrainDAO - Building a more intelligent future through the IQ token.',
     description:
-      "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
-    images: ["https://braindao.org/images/og-image.png"],
-    site: "@Everipedia",
-    creator: "@Everipedia",
+      'Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.',
+    images: ['https://braindao.org/images/og-image.png'],
+    site: '@Everipedia',
+    creator: '@Everipedia',
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" className={montserrat.className}>
@@ -62,5 +62,5 @@ export default function RootLayout({
         </ClientProviders>
       </body>
     </html>
-  );
+  )
 }

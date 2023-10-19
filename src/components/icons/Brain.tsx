@@ -81,4 +81,4 @@ export const BrainIcon = (p: { className?: string }) => (
       fill="#F0F0F0"
     ></path>
   </svg>
-);
+)

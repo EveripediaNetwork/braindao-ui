@@ -1,8 +1,8 @@
-import { space_grotesk } from "@/app/font";
-import React from "react";
-import { RiArrowDownDoubleLine } from "react-icons/ri";
-import Navbar from "./Navbar";
-import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
+import { space_grotesk } from '@/app/font'
+import React from 'react'
+import { RiArrowDownDoubleLine } from 'react-icons/ri'
+import Navbar from './Navbar'
+import InViewAnimateBottom from '../transitions/InViewAnimateBottom'
 
 const Hero = () => {
   return (
@@ -34,7 +34,7 @@ const Hero = () => {
                     BrainDAO, the governing DAO powering the IQ ecosystem.
                   </p>
                 </InViewAnimateBottom>
-                <a href={"#iq-token"} className="mt-4 mx-auto animate-bounce">
+                <a href={'#iq-token'} className="mt-4 mx-auto animate-bounce">
                   <RiArrowDownDoubleLine size={24} />
                 </a>
               </div>
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

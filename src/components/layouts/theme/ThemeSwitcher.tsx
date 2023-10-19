@@ -1,20 +1,20 @@
-"use client";
+'use client'
 
-import { useTheme } from "next-themes";
-import { RiMoonFill, RiSunFill } from "react-icons/ri";
+import { useTheme } from 'next-themes'
+import { RiMoonFill, RiSunFill } from 'react-icons/ri'
 
 const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
 
-  const isDarkTheme = theme === "dark";
+  const isDarkTheme = theme === 'dark'
 
   const handleThemeToggle = () => {
     if (isDarkTheme) {
-      setTheme("light");
+      setTheme('light')
     } else {
-      setTheme("dark");
+      setTheme('dark')
     }
-  };
+  }
 
   return (
     <button
@@ -25,7 +25,7 @@ const ThemeSwitcher = () => {
     >
       {isDarkTheme ? <RiMoonFill size={24} /> : <RiSunFill size={24} />}
     </button>
-  );
-};
+  )
+}
 
-export default ThemeSwitcher;
+export default ThemeSwitcher

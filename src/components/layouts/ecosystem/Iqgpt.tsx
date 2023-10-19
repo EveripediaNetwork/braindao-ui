@@ -1,16 +1,16 @@
-"use client";
+'use client'
 
-import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import InViewAnimateBottom from '@/components/transitions/InViewAnimateBottom'
+import { useTheme } from 'next-themes'
+import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 import {
   RiDatabaseLine,
   RiNewspaperLine,
   RiPlug2Line,
   RiQuestionAnswerLine,
-} from "react-icons/ri";
-import { TokenBrief } from "../Iqtoken";
+} from 'react-icons/ri'
+import { TokenBrief } from '../Iqtoken'
 
 export const FeatureList = ({
   title,
@@ -18,10 +18,10 @@ export const FeatureList = ({
   icon,
   delay,
 }: {
-  title: string;
-  description: string;
-  icon: JSX.Element;
-  delay?: number;
+  title: string
+  description: string
+  icon: JSX.Element
+  delay?: number
 }) => {
   return (
     <InViewAnimateBottom className="flex flex-1 flex-col gap-4 items-start">
@@ -35,22 +35,22 @@ export const FeatureList = ({
         <p className="text-sm lg:text-base">{description}</p>
       </div>
     </InViewAnimateBottom>
-  );
-};
+  )
+}
 
 const Iqgpt = () => {
-  const { theme } = useTheme();
-  const [appTheme, setAppTheme] = useState("");
+  const { theme } = useTheme()
+  const [appTheme, setAppTheme] = useState('')
 
   useEffect(() => {
-    setAppTheme(theme || "");
-  }, [theme]);
-  let imageUrl;
-  if (appTheme === "dark") {
-    imageUrl = "/images/gpt-mockup.png";
+    setAppTheme(theme || '')
+  }, [theme])
+  let imageUrl
+  if (appTheme === 'dark') {
+    imageUrl = '/images/gpt-mockup.png'
   }
-  if (appTheme === "light") {
-    imageUrl = "/images/gpt-mockup-dark.png";
+  if (appTheme === 'light') {
+    imageUrl = '/images/gpt-mockup-dark.png'
   }
 
   return (
@@ -97,7 +97,7 @@ const Iqgpt = () => {
       </InViewAnimateBottom>
       <div className="h-[174px] w-full absolute bg-gradient-linear dark:bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-8"></div>
     </div>
-  );
-};
+  )
+}
 
-export default Iqgpt;
+export default Iqgpt

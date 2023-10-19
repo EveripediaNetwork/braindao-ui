@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import React from "react";
-import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
-import NavBarButton from "./NavBarButton";
-import { navLinks } from "@/data/Nav";
-import { raleway } from "@/app/font";
-import { RiCloseFill } from "react-icons/ri";
-import dynamic from "next/dynamic";
-import { CgSpinner } from "react-icons/cg";
-import MobileThemeSwitcher from "./theme/MobileThemeSwitcher";
+import React from 'react'
+import { BraindaoLogoDark } from '../svgs/BraindaoLogoDark'
+import NavBarButton from './NavBarButton'
+import { navLinks } from '@/data/Nav'
+import { raleway } from '@/app/font'
+import { RiCloseFill } from 'react-icons/ri'
+import dynamic from 'next/dynamic'
+import { CgSpinner } from 'react-icons/cg'
+import MobileThemeSwitcher from './theme/MobileThemeSwitcher'
 
 const ThemeSwitcher = dynamic(
-  () => import("@/components/layouts/theme/ThemeSwitcher"),
+  () => import('@/components/layouts/theme/ThemeSwitcher'),
   {
     ssr: false,
     loading: () => <CgSpinner size={36} className="animate-spin" />,
-  }
-);
+  },
+)
 
 const Navbar = () => {
   return (
@@ -63,9 +63,9 @@ const Navbar = () => {
                   className="text-whiteAlpha-900 px-5 py-2"
                   onClick={() => {
                     const mobileNav = document.getElementById(
-                      "mobile_nav_items"
-                    ) as HTMLDivElement;
-                    mobileNav.classList.toggle("hidden");
+                      'mobile_nav_items',
+                    ) as HTMLDivElement
+                    mobileNav.classList.toggle('hidden')
                   }}
                 >
                   <RiCloseFill
@@ -98,7 +98,7 @@ const Navbar = () => {
         </header>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
