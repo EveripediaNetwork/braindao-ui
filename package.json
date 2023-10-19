@@ -33,7 +33,7 @@
     "react-intersection-observer": "^9.5.2",
     "three": "^0.157.0",
     "typescript": "4.9.5",
-    "viem": "^1.16.6",
+    "viem": "1.2.5",
     "wagmi": "^1.4.4"
   },
   "devDependencies": {
