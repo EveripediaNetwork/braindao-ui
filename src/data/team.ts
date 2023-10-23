@@ -168,7 +168,7 @@ export const editors = [
   {
     name: "YeonWoo Seo",
     role: "Editor",
-    src: "/images/team/seo.png",
+    src: "/images/team/yeonwoo.png",
     linkedlnLink: "",
     twitterLink: "https://x.com/syw0243?s=20",
   },

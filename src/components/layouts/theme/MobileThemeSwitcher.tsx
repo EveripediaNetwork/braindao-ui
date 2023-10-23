@@ -24,9 +24,9 @@ const MobileThemeSwitcher = () => {
         </div>
         <span
           onClick={handleThemeToggle}
-          className="mr-0 w-10 h-5 dark:bg-blue-500 rounded-full flex items-center px-1 bg-gray-300"
+          className="mr-0 w-10 h-5 bg-blue-500 rounded-full flex items-center px-1 dark:bg-gray-300"
         >
-          <span className="w-3 h-3 rounded-full bg-white block transition-all duration-300 ease-in-out dark:translate-x-5 translate-x-0"></span>
+          <span className="w-3 h-3 rounded-full bg-white block transition-all duration-300 ease-in-out translate-x-5 dark:translate-x-0"></span>
         </span>
       </div>
     </li>

@@ -112,7 +112,6 @@ const Iqtoken = () => {
   if (appTheme === "dark") {
     imageUrl = "/images/aboutus-dark.png";
   }
-  console.log(appTheme);
 
   return (
     <div

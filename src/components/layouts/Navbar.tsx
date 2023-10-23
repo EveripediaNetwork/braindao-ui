@@ -55,9 +55,9 @@ const Navbar = () => {
           </div>
           <div
             id="mobile_nav_items"
-            className="hidden absolute left-0 bg-gray800 dark:bg-[#F9FAFB] w-full top-0 h-[60vh] z-10"
+            className="hidden absolute left-0 dark:bg-gray800 bg-[#F9FAFB] w-full top-0 h-[60vh] z-10"
           >
-            <ul className="flex flex-col divide-y-[1px] text-whiteAlpha-800 dark:text-gray600 w-full divide-whiteAlpha-200">
+            <ul className="flex flex-col divide-y-[1px] dark:text-whiteAlpha-800 text-gray600 w-full dark:divide-whiteAlpha-200">
               <div className="flex justify-end sm:px-3 py-2">
                 <button
                   className="text-whiteAlpha-900 px-5 py-2"
@@ -70,7 +70,7 @@ const Navbar = () => {
                 >
                   <RiCloseFill
                     size={24}
-                    className="text-whiteAlpha-900 dark:text-gray600 "
+                    className="dark:text-whiteAlpha-900 text-gray600 "
                   />
                 </button>
               </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
                 <a
                   href="https://iq.braindao.org"
                   target="_blank"
-                  className={`flex flex-1 justify-center text-whiteAlpha-900 bg-brand-800 dark:bg-brand-500 hover:bg-brand-700 md:w-[184px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300 ${raleway.className}`}
+                  className={`flex flex-1 justify-center text-whiteAlpha-900 dark:bg-brand-800 bg-brand-500 hover:bg-brand-700 md:w-[184px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300 ${raleway.className}`}
                 >
                   <span>Launch Dashboard</span>
                 </a>
