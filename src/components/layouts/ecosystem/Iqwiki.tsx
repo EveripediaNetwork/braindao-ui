@@ -17,12 +17,12 @@ const Iqwiki = () => {
   let imageUrl, imageUrl2, imageUrl3;
   if (appTheme === "light") {
     imageUrl = "/images/iqwiki-widget-new.png";
-    imageUrl2 = "/images/iqwiki-rank.png";
+    imageUrl2 = "/images/wiki-rank.png";
     imageUrl3 = "/images/iqwiki-homepage.png";
   }
   if (appTheme === "dark") {
     imageUrl = "/images/iqwiki-widget-new-dark.png";
-    imageUrl2 = "/images/iqwiki-rank-dark.png";
+    imageUrl2 = "/images/wiki-rank-dark.png";
     imageUrl3 = "/images/iqwiki-homepage-dark.png";
   }
 

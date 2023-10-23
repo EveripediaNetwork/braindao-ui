@@ -15,10 +15,10 @@ const IqDashboard = () => {
   }, [theme]);
   let imageUrl;
   if (appTheme === "dark") {
-    imageUrl = "/images/iq-dashboard-dark.png";
+    imageUrl = "/images/dashboard-dark.png";
   }
   if (appTheme === "light") {
-    imageUrl = "/images/iq-dashboard.png";
+    imageUrl = "/images/dashboard.png";
   }
   return (
     <div className="max-w-[1536px] mx-auto flex flex-col gap-10 xl:gap-16 pt-[48px] sm:pt-[80px] 2xl:pt-24">
