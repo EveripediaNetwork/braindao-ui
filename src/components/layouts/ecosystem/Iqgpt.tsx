@@ -65,7 +65,7 @@ const Iqgpt = () => {
         action="https://iqgpt.com"
         buttonText="Explore IQ GPT"
       />
-      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-2 2xl:gap-12 py-2">
+      <div className="grid min-[500px]:grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-4 2xl:gap-12 py-2">
         <FeatureList
           icon={<RiDatabaseLine />}
           title="Access to real-time data"
@@ -91,11 +91,11 @@ const Iqgpt = () => {
         />
       </div>
       <InViewAnimateBottom>
-        <div className="w-full relative h-[280px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
+        <div className="w-full relative h-[280px] min-[500px]:h-[450px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
           {imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
         </div>
       </InViewAnimateBottom>
-      <div className="h-[174px] w-full absolute dark:bg-gradient-linear bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-8"></div>
+      <div className="h-[174px] w-full absolute dark:bg-gradient-linear bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-0"></div>
     </div>
   );
 };

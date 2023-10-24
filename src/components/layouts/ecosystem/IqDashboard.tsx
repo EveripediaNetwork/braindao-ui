@@ -58,7 +58,7 @@ const IqDashboard = () => {
         </div>
       </div>
       <InViewAnimateBottom>
-        <div className="w-full relative h-[300px] sm:h-[500px] md:h-[600px] xl:h-[887px]">
+        <div className="w-full relative h-[300px] min-[500px]:h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px] xl:h-[887px]">
           {imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
         </div>
       </InViewAnimateBottom>

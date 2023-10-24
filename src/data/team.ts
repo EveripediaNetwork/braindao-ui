@@ -31,7 +31,7 @@ export const productTeam = [
   {
     name: "Sidharth Kapoor",
     role: "Software Engineer",
-    src: "/images/team/sid-new.png",
+    src: "/images/team/sid.png",
     linkedlnLink: "https://www.linkedin.com/in/SidharthK2",
     twitterLink: "https://twitter.com/coding_sid",
   },
