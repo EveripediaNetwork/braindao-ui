@@ -47,10 +47,10 @@ const Iqgpt = () => {
   }, [theme]);
   let imageUrl;
   if (appTheme === "light") {
-    imageUrl = "/images/gpt-mockup.png";
+    imageUrl = "/images/iq-gpt.png";
   }
   if (appTheme === "dark") {
-    imageUrl = "/images/gpt-mockup-dark.png";
+    imageUrl = "/images/iq-gpt-dark.png";
   }
 
   return (
@@ -91,7 +91,7 @@ const Iqgpt = () => {
         />
       </div>
       <InViewAnimateBottom>
-        <div className="w-full relative h-[280px] min-[500px]:h-[450px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
+        <div className="w-full relative h-[320px] min-[500px]:h-[450px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
           {imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
         </div>
       </InViewAnimateBottom>
