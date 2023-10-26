@@ -23,7 +23,7 @@ const ThemeSwitcher = () => {
       onClick={handleThemeToggle}
       aria-label="Theme Switcher"
     >
-      {isDarkTheme ? <RiMoonFill size={24} /> : <RiSunFill size={24} />}
+      {isDarkTheme ? <RiSunFill size={24} /> : <RiMoonFill size={24} />}
     </button>
   );
 };

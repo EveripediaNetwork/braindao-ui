@@ -2,11 +2,18 @@
 
 import { PropsWithChildren } from "react";
 import { ThemeProvider } from "next-themes";
+import { createConfig, WagmiConfig } from "wagmi";
+import { publicClient } from "@/config/wagmi";
+
+const client = createConfig({
+  autoConnect: true,
+  publicClient,
+});
 
 const ClientProviders = ({ children }: PropsWithChildren) => {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
-      {children}
+    <ThemeProvider attribute="class" defaultTheme="dark">
+      <WagmiConfig config={client}>{children}</WagmiConfig>
     </ThemeProvider>
   );
 };

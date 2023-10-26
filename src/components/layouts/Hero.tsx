@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="relative bg-black/40">
           <div className="max-w-[1536px] mx-auto">
             <Navbar />
-            <div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden h-[calc(40vh-65px)] md:h-[calc(60vh-65px)] lg:h-[calc(70vh-65px)]">
+            <div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden h-[calc(40vh-65px)] md:h-[calc(60vh-65px)] lg:h-[calc(60vh-65px)]">
               <div className="flex text-center md:text-left items-center md:items-start flex-col justify-start mx-auto gap-1 sm:gap-5 w-full px-4 sm:px-0 max-w-6xl">
                 <InViewAnimateBottom>
                   <h1

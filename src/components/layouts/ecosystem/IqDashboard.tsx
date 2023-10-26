@@ -14,11 +14,11 @@ const IqDashboard = () => {
     setAppTheme(theme || "");
   }, [theme]);
   let imageUrl;
-  if (appTheme === "light") {
-    imageUrl = "/images/dashboard-new.png";
-  }
   if (appTheme === "dark") {
-    imageUrl = "/images/dashboard-light.png";
+    imageUrl = "/images/dashboard-dark.png";
+  }
+  if (appTheme === "light") {
+    imageUrl = "/images/dashboard.png";
   }
   return (
     <div className="max-w-[1536px] mx-auto flex flex-col gap-10 xl:gap-16 pt-[48px] sm:pt-[80px] 2xl:pt-24">
@@ -58,7 +58,7 @@ const IqDashboard = () => {
         </div>
       </div>
       <InViewAnimateBottom>
-        <div className="w-full relative h-[300px] sm:h-[500px] md:h-[600px] xl:h-[887px]">
+        <div className="w-full relative h-[250px] min-[500px]:h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px] xl:h-[887px]">
           {imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
         </div>
       </InViewAnimateBottom>

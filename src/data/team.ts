@@ -3,8 +3,8 @@ export const productTeam = [
     name: "Navin Vethanayagam",
     role: "Chief Brain",
     src: "/images/team/navin-2.png",
-    linkedlnLink: "",
-    twitterLink: "",
+    linkedlnLink: "https://www.linkedin.com/in/navinveth/",
+    twitterLink: "https://twitter.com/NavV96",
   },
   {
     name: "Cesar Rodriguez",
@@ -31,14 +31,14 @@ export const productTeam = [
   {
     name: "Sidharth Kapoor",
     role: "Software Engineer",
-    src: "/images/team/sid-new.png",
+    src: "/images/team/sid.png",
     linkedlnLink: "https://www.linkedin.com/in/SidharthK2",
     twitterLink: "https://twitter.com/coding_sid",
   },
   {
     name: "Stephen Annozie Ogbaje",
     role: "Technical Product Manager",
-    src: "/images/team/steve.png",
+    src: "/images/team/sir-steve.png",
     linkedlnLink: "https://www.linkedin.com/in/stephen-ogbaje/",
     twitterLink: "https://twitter.com/iamsirsteve",
   },
@@ -52,7 +52,7 @@ export const productTeam = [
   {
     name: "Aliu Salaudeen",
     role: "Software Engineer",
-    src: "/images/team/aliu-new.png",
+    src: "/images/team/new-aliu.png",
     linkedlnLink: "https://www.linkedin.com/in/aliu-salaudeen",
     twitterLink: "https://x.com/_Aliu_Salaudeen?t=qZkUDgshSf2qnPdeI6QnyQ&s=09",
   },
@@ -80,7 +80,7 @@ export const productTeam = [
   {
     name: "Srujan Gurram",
     role: "Full-Stack Engineer",
-    src: "/images/team/srujan.png",
+    src: "/images/team/srujan-new.png",
     linkedlnLink: "https://linkedin.com/in/srujangurram",
     twitterLink: "https://twitter.com/urban_lobster",
   },
@@ -168,7 +168,7 @@ export const editors = [
   {
     name: "YeonWoo Seo",
     role: "Executive Editor",
-    src: "/images/team/seo.png",
+    src: "/images/team/yeonwoo.png",
     linkedlnLink: "",
     twitterLink: "https://x.com/syw0243?s=20",
   },

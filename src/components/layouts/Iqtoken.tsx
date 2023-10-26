@@ -1,11 +1,14 @@
 "use client";
 
+import { useErc20 } from "@/hooks/useEr20";
+import { useLockOverview } from "@/hooks/useLockOverview";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
 import InViewAnimateSlideDown from "../transitions/InViewSlideDown";
 import InViewAnimateSlideUp from "../transitions/inViewSlideUp";
+import { fetchPriceChange, numFormatter } from "../utils/stats-utils";
 
 export const StatsPointers = ({
   title,
@@ -23,7 +26,7 @@ export const StatsPointers = ({
       <div className="border-l-2 border-pink-500 pl-4">
         <div className={`flex flex-col ${className}`}>
           <h4
-            className={`text-whiteAlpha-900 dark:text-gray800 font-semibold ${
+            className={`dark:text-whiteAlpha-900 text-gray800 font-semibold ${
               headerSize ? headerSize : "text-2xl xl:text-3xl"
             }`}
           >
@@ -52,17 +55,17 @@ export const TokenBrief = ({
   return (
     <div className="flex items-start flex-col xl:flex-row xl:gap-[186px]">
       <InViewAnimateBottom>
-        <h3 className="font-semibold text-whiteAlpha-900 dark:text-gray800 text-2xl sm:text-3xl xl:text-4xl">
+        <h3 className="font-semibold dark:text-whiteAlpha-900 text-gray800 text-2xl sm:text-3xl xl:text-4xl">
           {title}
         </h3>
       </InViewAnimateBottom>
       <div className="flex-1 mt-2 xl:mt-0">
         <InViewAnimateBottom>
-          <p className="xl:text-lg text-whiteAlpha-800 dark:text-gray600">
+          <p className="xl:text-lg dark:text-whiteAlpha-800 text-gray600">
             {description}
           </p>
           {description2 && (
-            <p className="xl:text-lg text-whiteAlpha-800 dark:text-gray600">
+            <p className="xl:text-lg dark:text-whiteAlpha-800 text-gray600">
               {description2}
             </p>
           )}
@@ -71,7 +74,7 @@ export const TokenBrief = ({
           <a
             href={action}
             target="_blank"
-            className="flex justify-center w-[200px] xl:w-[256px] text-white/90 bg-brand-800 dark:bg-brand-500 py-3 xl:py-4 mt-4 xl:mt-8 rounded-md hover:bg-brand-700 transition-all ease-in-out duration-300"
+            className="flex justify-center w-[200px] xl:w-[256px] text-white/90 dark:bg-brand-800 bg-brand-500 py-3 xl:py-4 mt-4 xl:mt-8 rounded-md hover:bg-brand-700 transition-all ease-in-out duration-300"
           >
             {buttonText}
           </a>
@@ -84,22 +87,36 @@ export const TokenBrief = ({
 const Iqtoken = () => {
   const { theme } = useTheme();
   const [appTheme, setAppTheme] = useState("");
+  const { tvl } = useErc20();
+  const { totalHiiqSupply } = useLockOverview();
+  const isFetchedData = useRef(false);
+  const [marketData, setMarketData] = useState<{ [x: string]: any } | null>(
+    null
+  );
 
   useEffect(() => {
     setAppTheme(theme || "");
+    if (!isFetchedData.current) {
+      isFetchedData.current = true;
+      const res2 = fetchPriceChange();
+
+      Promise.resolve(res2).then((data) => {
+        setMarketData(data);
+      });
+    }
   }, [theme]);
   let imageUrl;
-  if (appTheme === "dark") {
+  if (appTheme === "light") {
     imageUrl = "/images/aboutus.png";
   }
-  if (appTheme === "light") {
+  if (appTheme === "dark") {
     imageUrl = "/images/aboutus-dark.png";
   }
 
   return (
     <div
       id="iq-token"
-      className="bg-gray800 dark:bg-[#F9FAFB] text-whiteAlpha-900 dark:text-gray600"
+      className="dark:bg-gray800 bg-[#F9FAFB] dark:text-whiteAlpha-900 text-gray600"
     >
       <div className="max-w-[1536px] px-4 md:px-10 xl:px-24 2xl:px-[120px] mx-auto py-[48px] sm:py-[80px] xl:py-24">
         <TokenBrief
@@ -126,10 +143,10 @@ const Iqtoken = () => {
                 />
               )}
               <div className="absolute top-0 w-full left-0 h-full flex flex-col">
-                <InViewAnimateSlideUp className="flex-1 overflow-hidden w-full h-full bg-gray800 dark:bg-[#F9FAFB]">
+                <InViewAnimateSlideUp className="flex-1 overflow-hidden w-full h-full dark:bg-gray800 bg-[#F9FAFB]">
                   <div className=""></div>
                 </InViewAnimateSlideUp>
-                <InViewAnimateSlideDown className="flex-1 bg-gray800 dark:bg-[#F9FAFB] w-full h-full overflow-hidden">
+                <InViewAnimateSlideDown className="flex-1 dark:bg-gray800 bg-[#F9FAFB] w-full h-full overflow-hidden">
                   <div></div>
                 </InViewAnimateSlideDown>
               </div>
@@ -137,12 +154,12 @@ const Iqtoken = () => {
           </div>
           <div className="flex-1">
             <InViewAnimateBottom>
-              <h3 className="text-whiteAlpha-900 dark:text-gray800 text-3xl xl:text-4xl font-semibold">
+              <h3 className="dark:text-whiteAlpha-900 text-gray800 text-3xl xl:text-4xl font-semibold">
                 HiIQ
               </h3>
             </InViewAnimateBottom>
             <InViewAnimateBottom>
-              <p className="text-sm xl:text-lg text-whiteAlpha-800 dark:text-gray600 mt-4">
+              <p className="text-sm xl:text-lg dark:text-whiteAlpha-800 text-gray600 mt-4">
                 HiIQ, launched to incentivize long-term engagement and
                 governance participation, allows users to lock up IQ tokens,
                 increasing HiIQ balance for voting power and earning IQ token
@@ -153,24 +170,26 @@ const Iqtoken = () => {
               <div className="flex flex-col gap-10 xl:gap-12">
                 <div className="flex justify-between">
                   <StatsPointers
-                    title="16B IQ"
+                    title={`${numFormatter(
+                      marketData?.circulatingSupply || ""
+                    )} IQ`}
                     content="Circulating supply"
                     className="h-[80px] xl:h-[95px] justify-between"
                   />
                   <StatsPointers
-                    title="$71M"
+                    title={`$${numFormatter(marketData?.marketCap || "")}`}
                     content="Market cap"
                     className="h-[80px] xl:h-[95px] justify-between"
                   />
                 </div>
                 <div className="flex justify-between">
                   <StatsPointers
-                    title="$4M+"
+                    title={`$${numFormatter(tvl)}+`}
                     content="Total HiIQ"
                     className="h-[80px] xl:h-[95px] justify-between"
                   />
                   <StatsPointers
-                    title="IB IQ+"
+                    title={`${numFormatter(totalHiiqSupply)} IQ+`}
                     content="Total volume locked"
                     className="h-[80px] xl:h-[95px] justify-between"
                   />

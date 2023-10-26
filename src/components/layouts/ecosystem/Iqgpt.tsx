@@ -25,11 +25,11 @@ export const FeatureList = ({
 }) => {
   return (
     <InViewAnimateBottom className="flex flex-1 flex-col gap-4 items-start">
-      <div className="w-12 h-12 rounded-full flex justify-center text-xl text-brand-800 dark:text-brand-500 items-center border-8 border-brand-200 dark:border-brand-50 bg-brand-400 dark:bg-brand-100">
+      <div className="w-12 h-12 rounded-full flex justify-center text-xl dark:text-brand-800 text-brand-500 items-center border-8 dark:border-brand-200 border-brand-50 dark:bg-brand-400 bg-brand-100">
         {icon}
       </div>
       <div className="">
-        <h4 className="text-whiteAlpha-900 dark:text-gray800 font-semibold text-lg md:text-xl mb-1">
+        <h4 className="dark:text-whiteAlpha-900 text-gray800 font-semibold text-lg md:text-xl mb-1">
           {title}
         </h4>
         <p className="text-sm lg:text-base">{description}</p>
@@ -46,11 +46,11 @@ const Iqgpt = () => {
     setAppTheme(theme || "");
   }, [theme]);
   let imageUrl;
-  if (appTheme === "dark") {
-    imageUrl = "/images/iqgpt-mockup.png";
-  }
   if (appTheme === "light") {
-    imageUrl = "/images/iq-gpt-mockup-dark-2.png";
+    imageUrl = "/images/iq-gpt.png";
+  }
+  if (appTheme === "dark") {
+    imageUrl = "/images/iq-gpt-dark.png";
   }
 
   return (
@@ -65,7 +65,7 @@ const Iqgpt = () => {
         action="https://iqgpt.com"
         buttonText="Explore IQ GPT"
       />
-      <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-2 2xl:gap-12 py-2">
+      <div className="grid min-[500px]:grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-4 2xl:gap-12 py-2">
         <FeatureList
           icon={<RiDatabaseLine />}
           title="Access to real-time data"
@@ -91,11 +91,11 @@ const Iqgpt = () => {
         />
       </div>
       <InViewAnimateBottom>
-        <div className="w-full relative h-[280px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
+        <div className="w-full relative h-[320px] min-[500px]:h-[450px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
           {imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
         </div>
       </InViewAnimateBottom>
-      <div className="h-[174px] w-full absolute bg-gradient-linear dark:bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-8"></div>
+      <div className="h-[174px] w-full absolute dark:bg-gradient-linear bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-0"></div>
     </div>
   );
 };
