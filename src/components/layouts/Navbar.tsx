@@ -29,7 +29,7 @@ const Navbar = () => {
                 <BraindaoLogoDark />
               </a>
             </h1>
-            <nav className="hidden lg:flex gap-10 xl:gap-20 text-sm lg:text-base">
+            <nav className="hidden lg:flex gap-8 xl:gap-20 text-sm lg:text-base">
               {navLinks.map((link) => (
                 <a
                   target={link.target}
