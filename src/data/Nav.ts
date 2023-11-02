@@ -15,6 +15,11 @@ export const navLinks = [
     target: "_blank",
   },
   {
+    title: "IQ.social",
+    href: "https://iq.social/",
+    target: "_blank",
+  },
+  {
     title: "Learn",
     href: "https://learn.everipedia.org/iq",
     target: "_blank",
