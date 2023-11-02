@@ -42,21 +42,21 @@ const TeamCard = ({
                     <a
                       href={twitterLink}
                       target="_blank"
-                      className="w-4 h-4 bg-no-repeat bg-contain dark:bg-twitter-dark bg-twitter"
+                      className="w-5 md:w-4 h-5 md:h-4 bg-no-repeat bg-contain dark:bg-twitter-dark bg-twitter"
                     />
                   )}
                   {wikiLink && (
                     <a
                       href={wikiLink}
                       target="_blank"
-                      className="w-4 h-3 bg-no-repeat bg-contain dark:bg-everipedia-dark bg-everipedia"
+                      className="w-6 md:w-5 h-4 md:h-4 bg-no-repeat bg-contain dark:bg-everipedia-dark bg-everipedia"
                     />
                   )}
                   {linkedlnLink && (
                     <a
                       href={linkedlnLink}
                       target="_blank"
-                      className="w-4 h-4 bg-no-repeat bg-contain dark:bg-linkedln-dark bg-linkedln"
+                      className="w-5 md:w-4 h-5 md:h-4 bg-no-repeat bg-contain dark:bg-linkedln-dark bg-linkedln"
                     />
                   )}
                 </div>
