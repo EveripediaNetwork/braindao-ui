@@ -10,7 +10,7 @@ type TTeam = {
   role?: string;
   twitterLink?: string;
   linkedlnLink?: string;
-  delay?: number;
+  wikiLink?: string;
 };
 const TeamCard = ({
   src,
@@ -18,7 +18,7 @@ const TeamCard = ({
   role,
   twitterLink,
   linkedlnLink,
-  delay,
+  wikiLink,
 }: TTeam) => {
   return (
     <InViewAnimateBottom className="mx-auto w-full max-w-[358px] md:max-w-[328px]">
@@ -37,19 +37,26 @@ const TeamCard = ({
                 </p>
               </div>
               <div className="flex justify-center">
-                <div className="flex gap-2">
+                <div className="flex gap-2 items-center">
                   {twitterLink && (
                     <a
                       href={twitterLink}
                       target="_blank"
-                      className="w-4 h-4 bg-no-repeat bg-contain dark:bg-twitter-dark bg-twitter"
+                      className="w-5 md:w-4 h-5 md:h-4 bg-no-repeat bg-contain dark:bg-twitter-dark bg-twitter"
+                    />
+                  )}
+                  {wikiLink && (
+                    <a
+                      href={wikiLink}
+                      target="_blank"
+                      className="w-6 md:w-5 h-4 md:h-4 bg-no-repeat bg-contain dark:bg-everipedia-dark bg-everipedia"
                     />
                   )}
                   {linkedlnLink && (
                     <a
                       href={linkedlnLink}
                       target="_blank"
-                      className="w-4 h-4 bg-no-repeat bg-contain dark:bg-linkedln-dark bg-linkedln"
+                      className="w-5 md:w-4 h-5 md:h-4 bg-no-repeat bg-contain dark:bg-linkedln-dark bg-linkedln"
                     />
                   )}
                 </div>
@@ -83,6 +90,7 @@ const BraindaoTeam = () => {
                   key={team.name}
                   linkedlnLink={team.linkedlnLink}
                   twitterLink={team.twitterLink}
+                  wikiLink={team.wikiLink}
                 />
               );
             })}
@@ -101,6 +109,7 @@ const BraindaoTeam = () => {
                 role={item.role}
                 linkedlnLink={item.linkedlnLink}
                 twitterLink={item.twitterLink}
+                wikiLink={item.wikiLink}
               />
             ))}
           </div>
