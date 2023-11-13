@@ -1,7 +1,7 @@
 export const productTeam = [
   {
     name: "Navin Vethanayagam",
-    role: "Chief Brain",
+    role: "Galaxy Brain",
     src: "/images/team/navin-2.png",
     linkedlnLink: "https://www.linkedin.com/in/navinveth/",
     twitterLink: "https://twitter.com/NavV96",
