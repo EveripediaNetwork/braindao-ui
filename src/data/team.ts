@@ -9,7 +9,7 @@ export const productTeam = [
   },
   {
     name: "Cesar Rodriguez",
-    role: "Chief Technology Officer",
+    role: "Chief Tinkerer Officer",
     src: "/images/team/kesar.png",
     linkedlnLink: "https://www.linkedin.com/in/kesarito/",
     twitterLink: "https://twitter.com/kesarito",
