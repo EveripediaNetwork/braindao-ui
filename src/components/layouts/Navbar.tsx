@@ -55,7 +55,7 @@ const Navbar = () => {
           </div>
           <div
             id="mobile_nav_items"
-            className="hidden absolute left-0 dark:bg-gray800 bg-[#F9FAFB] w-full top-0 h-[60vh] z-10"
+            className="hidden fixed left-0 dark:bg-gray800 bg-[#F9FAFB] w-full top-0 h-screen sm:h-[60vh] z-10"
           >
             <ul className="flex flex-col divide-y-[1px] dark:text-whiteAlpha-800 text-gray600 w-full dark:divide-whiteAlpha-200">
               <div className="flex justify-end sm:px-3 py-2">

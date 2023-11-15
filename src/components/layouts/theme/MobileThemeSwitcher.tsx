@@ -19,8 +19,8 @@ const MobileThemeSwitcher = () => {
     <li className="py-4 px-5 lg:hidden">
       <div className="flex sm:px-3 justify-between items-center">
         <div className="flex items-center gap-2">
-          <RiMoonFill size={24} />
-          <span className="flex items-center gap-2">Dark Mode</span>
+          <RiSunFill size={24} />
+          <span className="flex items-center gap-2">Light Mode</span>
         </div>
         <span
           onClick={handleThemeToggle}
