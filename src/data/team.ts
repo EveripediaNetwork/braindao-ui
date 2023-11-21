@@ -17,7 +17,7 @@ export const productTeam = [
   },
   {
     name: "Andy Cho",
-    role: "Director of Business Development",
+    role: "BrainMaxi",
     src: "/images/team/cho-new.png",
     linkedlnLink: "https://www.linkedin.com/in/andycho-ep/",
     twitterLink: "https://twitter.com/ETHuncho",
@@ -132,7 +132,7 @@ export const productTeam = [
 export const editors = [
   {
     name: "Violeta Ziborova",
-    role: "Content Manager",
+    role: "Content Guru",
     src: "/images/team/violeta.png",
     linkedlnLink: "https://www.linkedin.com/in/violettaziborova/",
     twitterLink: "https://twitter.com/vzbrv",
