@@ -9,6 +9,7 @@ import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
 import InViewAnimateSlideDown from "../transitions/InViewSlideDown";
 import InViewAnimateSlideUp from "../transitions/inViewSlideUp";
 import { fetchPriceChange, numFormatter } from "../utils/stats-utils";
+import { motion } from "framer-motion";
 
 export const StatsPointers = ({
   title,
@@ -132,7 +133,7 @@ const Iqtoken = () => {
         />
         <div className="flex flex-col-reverse lg:flex-row items-start mt-16">
           <div className="lg:flex-1 w-full overflow-hidden">
-            <div className="w-full md:w-[80%] xl:w-full h-[300px] sm:h-[450px] lg:h-[380px] xl:h-[500px] relative">
+            <InViewAnimateBottom className="w-full md:w-[80%] xl:w-full h-[300px] sm:h-[450px] lg:h-[380px] xl:h-[500px] relative">
               {imageUrl && (
                 <Image
                   src={imageUrl}
@@ -142,15 +143,7 @@ const Iqtoken = () => {
                   className="object-contain"
                 />
               )}
-              <div className="absolute top-0 w-full left-0 h-full flex flex-col">
-                <InViewAnimateSlideUp className="flex-1 overflow-hidden w-full h-full dark:bg-gray800 bg-[#F9FAFB]">
-                  <div className=""></div>
-                </InViewAnimateSlideUp>
-                <InViewAnimateSlideDown className="flex-1 dark:bg-gray800 bg-[#F9FAFB] w-full h-full overflow-hidden">
-                  <div></div>
-                </InViewAnimateSlideDown>
-              </div>
-            </div>
+            </InViewAnimateBottom>
           </div>
           <div className="flex-1">
             <InViewAnimateBottom>

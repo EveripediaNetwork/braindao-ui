@@ -128,6 +128,10 @@ module.exports = {
 					'linear-gradient(360deg, #1A202C 46.49%, rgba(26, 32, 44, 0.00) 86.97%)',
 				'gradient-linear-light':
 					'linear-gradient(3deg, #F9FAFB 46.15%, rgba(255, 255, 255, 0.00) 97.82%)',
+				'video-gradient':
+					'linear-gradient(0deg, #000206 42%, rgba(0, 2, 6, 0.00) 97%)',
+				'video-gradient-top':
+					'linear-gradient(180deg, #000206 42%, rgba(0, 2, 6, 0.00) 97%)',
 			},
 		},
 	},

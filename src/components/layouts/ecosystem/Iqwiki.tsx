@@ -54,9 +54,6 @@ const Iqwiki = () => {
                 sizes="(max-width:500px) 100vw, 50vw"
               />
             )}
-            <InViewAnimateSlideUp className="absolute top-1 left-0 w-full h-4/5 z-10 dark:bg-gray700 bg-white">
-              <div></div>
-            </InViewAnimateSlideUp>
           </div>
         </div>
       </div>

@@ -22,26 +22,32 @@ const InViewAnimateBottom: React.FC<TInViewAnimate> = ({
     if (inView && !hasAnimated) {
       setHasAnimated(true);
       animation.start({
-        y: 0,
+        // y: 0,
         opacity: 1,
         transition: {
           type: "tween",
-          duration: 1.2,
+          duration: 1.5,
         },
       });
     }
     if (!inView && !hasAnimated) {
       animation.start({
-        y: "10vw",
-        opacity: 0.5,
+        // y: '100px',
+        opacity: 0,
       });
     }
   }, [animation, delay, inView, hasAnimated]);
 
   return (
-    <div ref={ref} className={`overflow-hidden ${className}`}>
-      <motion.div animate={animation}>{children}</motion.div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.5 }}
+      className={className}
+    >
+      {children}
+    </motion.div>
   );
 };
 

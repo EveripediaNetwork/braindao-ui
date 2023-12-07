@@ -21,9 +21,9 @@ const TeamCard = ({
   wikiLink,
 }: TTeam) => {
   return (
-    <InViewAnimateBottom className="mx-auto w-full max-w-[358px] md:max-w-[328px]">
+    <InViewAnimateBottom className="mx-auto w-full sm:max-w-[351px] md:max-w-[328px]">
       <div className="border dark:bg-gray700 bg-white dark:border-whiteAlpha-400 border-gray200 rounded-xl px-4 py-5">
-        <div className="rounded-md relative h-[373px] md:h-[318px] w-full lg:h-[300px] xl:h-[300px] 2xl:h-[324px] overflow-hidden hover:scale-105 ease-in-out duration-300">
+        <div className="rounded-md relative h-[410px] sm:h-[373px] md:h-[318px] w-full lg:h-[300px] xl:h-[300px] 2xl:h-[324px] overflow-hidden hover:scale-105 ease-in-out duration-300">
           <Image src={src || ""} alt="" fill sizes="50vw" />
           <div className="absolute top-0 left-0 h-full w-full bg-transparent px-5 pb-5 flex flex-col justify-end">
             <div className="dark:bg-gray700 bg-white relative rounded-[4px] py-2 px-1 flex flex-col gap-2 items-center w-full">
