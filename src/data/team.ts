@@ -63,14 +63,6 @@ export const productTeam = [
     wikiLink: "https://iq.wiki/wiki/aliu-salaudeen",
   },
   {
-    name: "Yaswanth Battu",
-    role: "AI Engineer",
-    src: "/images/team/yaswanth.png",
-    linkedlnLink: "http://linkedin.com/in/b-v-s-y",
-    twitterLink: "http://x.com/s_1_n_t_h____",
-    wikiLink: "https://iq.wiki/wiki/yaswanth-battu",
-  },
-  {
     name: "Adewale Adeniyi",
     role: "Product Design Intern",
     src: "/images/team/wale.png",
