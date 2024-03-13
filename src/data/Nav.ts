@@ -19,7 +19,7 @@ export const navLinks = [
     href: "https://iqcode.ai",
     target: "_blank",
   },
-  
+
   {
     title: "IQ.social",
     href: "https://iq.social/",

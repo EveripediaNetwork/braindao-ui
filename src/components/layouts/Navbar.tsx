@@ -62,19 +62,14 @@ const Navbar = () => {
             id="mobile_nav_items"
             className="hidden fixed left-0 dark:bg-gray800 bg-[#F9FAFB] w-full top-0 h-screen sm:h-[80vh] z-10"
           >
-            
             <ul className="flex flex-col divide-y-[1px] dark:text-whiteAlpha-800 text-gray600 w-full dark:divide-whiteAlpha-200">
               <div className="flex justify-between sm:px-3 py-2">
                 <div className="px-2 py-2">
                   <a href="/">
-                    {isDarkTheme ? (
-                      <BraindaoLogoDark />
-                    ): (
-                      <BraindaoLogoWhite/>
-                    )}
+                    {isDarkTheme ? <BraindaoLogoDark /> : <BraindaoLogoWhite />}
                   </a>
                 </div>
-               
+
                 <button
                   className="text-whiteAlpha-900 px-5 py-2"
                   onClick={() => {
