@@ -2,6 +2,7 @@
 
 import React from "react";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
+import { BraindaoLogoWhite } from "../svgs/BrainLogoWhite";
 import NavBarButton from "./NavBarButton";
 import { navLinks } from "@/data/Nav";
 import { raleway } from "@/app/font";
@@ -9,6 +10,7 @@ import { RiCloseFill } from "react-icons/ri";
 import dynamic from "next/dynamic";
 import { CgSpinner } from "react-icons/cg";
 import MobileThemeSwitcher from "./theme/MobileThemeSwitcher";
+import { useTheme } from "next-themes";
 
 const ThemeSwitcher = dynamic(
   () => import("@/components/layouts/theme/ThemeSwitcher"),
@@ -19,6 +21,9 @@ const ThemeSwitcher = dynamic(
 );
 
 const Navbar = () => {
+  const { theme } = useTheme();
+
+  const isDarkTheme = theme === "dark";
   return (
     <div className="bg-transparent text-whiteAlpha-900">
       <div className="max-w-[1536px] mx-auto">
@@ -55,10 +60,21 @@ const Navbar = () => {
           </div>
           <div
             id="mobile_nav_items"
-            className="hidden fixed left-0 dark:bg-gray800 bg-[#F9FAFB] w-full top-0 h-screen sm:h-[60vh] z-10"
+            className="hidden fixed left-0 dark:bg-gray800 bg-[#F9FAFB] w-full top-0 h-screen sm:h-[80vh] z-10"
           >
+            
             <ul className="flex flex-col divide-y-[1px] dark:text-whiteAlpha-800 text-gray600 w-full dark:divide-whiteAlpha-200">
-              <div className="flex justify-end sm:px-3 py-2">
+              <div className="flex justify-between sm:px-3 py-2">
+                <div className="px-2 py-2">
+                  <a href="/">
+                    {isDarkTheme ? (
+                      <BraindaoLogoDark />
+                    ): (
+                      <BraindaoLogoWhite/>
+                    )}
+                  </a>
+                </div>
+               
                 <button
                   className="text-whiteAlpha-900 px-5 py-2"
                   onClick={() => {
