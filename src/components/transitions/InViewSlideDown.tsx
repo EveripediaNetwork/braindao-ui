@@ -1,7 +1,8 @@
 "use client";
 
-import { useAnimation, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import type React from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export type TInViewAnimate = {
@@ -25,7 +26,7 @@ const InViewAnimateSlideDown: React.FC<TInViewAnimate> = ({
         y: "30vh",
         transition: {
           duration: 1.5,
-          delay: delay ? delay : 0.2,
+          delay: delay ?? 0.2,
         },
       });
     }

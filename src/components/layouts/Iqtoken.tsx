@@ -2,6 +2,7 @@
 
 import { useErc20 } from "@/hooks/useEr20";
 import { useLockOverview } from "@/hooks/useLockOverview";
+import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
@@ -9,7 +10,6 @@ import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
 import InViewAnimateSlideDown from "../transitions/InViewSlideDown";
 import InViewAnimateSlideUp from "../transitions/inViewSlideUp";
 import { fetchPriceChange, numFormatter } from "../utils/stats-utils";
-import { motion } from "framer-motion";
 
 export const StatsPointers = ({
   title,
@@ -76,6 +76,7 @@ export const TokenBrief = ({
             href={action}
             target="_blank"
             className="flex justify-center w-[200px] xl:w-[256px] text-white/90 dark:bg-brand-800 bg-brand-500 py-3 xl:py-4 mt-4 xl:mt-8 rounded-md hover:bg-brand-700 transition-all ease-in-out duration-300"
+            rel="noreferrer"
           >
             {buttonText}
           </a>

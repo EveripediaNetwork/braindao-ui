@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
   viewport: "",
+  metadataBase: new URL("https://braindao.org"),
   openGraph: {
     title:
       "BrainDAO - Building a more intelligent future through the IQ token.",
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" className={montserrat.className}>
       <head>

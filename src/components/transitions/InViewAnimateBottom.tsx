@@ -1,7 +1,8 @@
 "use client";
 
-import { useAnimation, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import type React from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export type TInViewAnimate = {

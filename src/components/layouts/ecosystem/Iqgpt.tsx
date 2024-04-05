@@ -43,9 +43,9 @@ const Iqgpt = () => {
   const [appTheme, setAppTheme] = useState("");
 
   useEffect(() => {
-    setAppTheme(theme || "");
+    setAppTheme(theme ?? "");
   }, [theme]);
-  let imageUrl;
+  let imageUrl: string | undefined;
   if (appTheme === "light") {
     imageUrl = "/images/iq-gpt.png";
   }
@@ -61,7 +61,9 @@ const Iqgpt = () => {
       <TokenBrief
         title="IQ GPT"
         description={`IQ GPT is an extension of IQ.wiki's decentralized framework, integrating crypto-focused AI models that utilize diverse data sources to bolster capabilities, offering insights into intricate terms, live market trends, and breaking news.`}
-        description2={`IQ GPT is powered by the IQ token, enabling IQ holders to participate in governance and get access to additional features.`}
+        description2={
+          "IQ GPT is powered by the IQ token, enabling IQ holders to participate in governance and get access to additional features."
+        }
         action="https://iqgpt.com"
         buttonText="Explore IQ GPT"
       />
@@ -95,7 +97,7 @@ const Iqgpt = () => {
           {imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
         </div>
       </InViewAnimateBottom>
-      <div className="h-[174px] w-full absolute dark:bg-gradient-linear bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-0"></div>
+      <div className="h-[174px] w-full absolute dark:bg-gradient-linear bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-0" />
     </div>
   );
 };

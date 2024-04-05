@@ -2,6 +2,8 @@ import React from "react";
 import IqDashboard from "./IqDashboard";
 import Iqgpt from "./Iqgpt";
 import Iqwiki from "./Iqwiki";
+import Iqcode from "./iqcode";
+import Iqsocial from "./iqsocial";
 
 const Ecosystem = () => {
   return (
@@ -14,6 +16,8 @@ const Ecosystem = () => {
       </div>
       <Iqgpt />
       <IqDashboard />
+      <Iqsocial />
+      <Iqcode />
     </div>
   );
 };
