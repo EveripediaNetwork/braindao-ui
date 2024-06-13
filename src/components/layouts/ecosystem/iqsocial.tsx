@@ -78,11 +78,11 @@ const Iqsocial = () => {
           <div>
             <div className="border border-gray-200 dark:border-white/40 pb-6 bg-white rounded-3xl dark:bg-gray-700">
               <Image
-                // here
                 src={getImageUrl(appTheme, "iq-social", 2)}
                 alt="IQ.social Illustration"
                 width={590}
                 height={340}
+                className="rounded-t-3xl"
               />
               <p className="text-gray-600 dark:text-white/70 pl-10 font-semibold text-xs xl:text-lg pr-5 md:pr-0">
                 Share your curated crypto news with the community by submitting
