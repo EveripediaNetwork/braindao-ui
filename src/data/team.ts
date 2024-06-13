@@ -127,7 +127,7 @@ export const productTeam = [
   },
   {
     name: "Rodrigo Martinez",
-    role: "Frontend Engineer",
+    role: "AI Engineer",
     src: "/images/team/rodrigo.png",
     linkedlnLink: "https://www.linkedin.com/in/brunneis",
     twitterLink: "https://twitter.com/brunn3is",
@@ -144,7 +144,7 @@ export const productTeam = [
 
   {
     name: "Daniel Barcenas",
-    role: "Frontend Engineer",
+    role: "AI Engineer",
     src: "/images/team/daniel.png",
     linkedlnLink: "https://www.linkedin.com/in/danielbrdz",
   },
