@@ -143,7 +143,7 @@ export const productTeam = [
   },
 
   {
-    name: "Daniel Barcenas",
+    name: "Daniel Bárcenas",
     role: "AI Engineer",
     src: "/images/team/daniel.png",
     linkedlnLink: "https://www.linkedin.com/in/danielbrdz",

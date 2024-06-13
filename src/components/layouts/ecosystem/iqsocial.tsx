@@ -17,7 +17,7 @@ export const getImageUrl = (
   if (num !== undefined) {
     imageUrl += `-${num}`;
   }
-  imageUrl += ".png";
+  imageUrl += ".webp";
   return imageUrl;
 };
 
@@ -70,7 +70,7 @@ const Iqsocial = () => {
       <InViewAnimateBottom>
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-5">
           <Image
-            src={getImageUrl(appTheme, "iq-social")}
+            src={getImageUrl(appTheme, "iq-social", 1)}
             alt="IQ.social Illustration"
             width={750}
             height={490}
@@ -78,7 +78,8 @@ const Iqsocial = () => {
           <div>
             <div className="border border-gray-200 dark:border-white/40 pb-6 bg-white rounded-3xl dark:bg-gray-700">
               <Image
-                src={getImageUrl(appTheme, "iq-social", 1)}
+                // here
+                src={getImageUrl(appTheme, "iq-social", 2)}
                 alt="IQ.social Illustration"
                 width={590}
                 height={340}
@@ -92,7 +93,7 @@ const Iqsocial = () => {
         </div>
         <div className="border border-gray-200 dark:border-white/40 mt-2.5 bg-white rounded-3xl dark:bg-gray-700 px-10 grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-5">
           <Image
-            src={getImageUrl(appTheme, "iq-social", 2)}
+            src={getImageUrl(appTheme, "iq-social", 3)}
             alt="IQ.social Illustration"
             width={560}
             height={200}
