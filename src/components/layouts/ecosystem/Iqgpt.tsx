@@ -47,10 +47,10 @@ const Iqgpt = () => {
   }, [theme]);
   let imageUrl: string | undefined;
   if (appTheme === "light") {
-    imageUrl = "/images/iq-gpt.png";
+    imageUrl = "/images/iqgpt-light.webp";
   }
   if (appTheme === "dark") {
-    imageUrl = "/images/iq-gpt-dark.png";
+    imageUrl = "/images/iqgpt-dark.webp";
   }
 
   return (
