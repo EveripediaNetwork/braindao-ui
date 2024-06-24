@@ -1,16 +1,16 @@
 "use client";
 
-import React from "react";
-import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
-import { BraindaoLogoWhite } from "../svgs/BrainLogoWhite";
-import NavBarButton from "./NavBarButton";
-import { navLinks } from "@/data/Nav";
 import { raleway } from "@/app/font";
-import { RiCloseFill } from "react-icons/ri";
-import dynamic from "next/dynamic";
-import { CgSpinner } from "react-icons/cg";
-import MobileThemeSwitcher from "./theme/MobileThemeSwitcher";
+import { navLinks } from "@/data/Nav";
 import { useTheme } from "next-themes";
+import dynamic from "next/dynamic";
+import React from "react";
+import { CgSpinner } from "react-icons/cg";
+import { RiCloseFill } from "react-icons/ri";
+import { BraindaoLogoWhite } from "../svgs/BrainLogoWhite";
+import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
+import NavBarButton from "./NavBarButton";
+import MobileThemeSwitcher from "./theme/MobileThemeSwitcher";
 
 const ThemeSwitcher = dynamic(
   () => import("@/components/layouts/theme/ThemeSwitcher"),
@@ -34,7 +34,7 @@ const Navbar = () => {
                 <BraindaoLogoDark />
               </a>
             </h1>
-            <nav className="hidden lg:flex gap-8 xl:gap-20 text-sm lg:text-base">
+            <nav className="hidden lg:flex gap-8 xl:gap-6 text-sm lg:text-base">
               {navLinks.map((link) => (
                 <a
                   target={link.target}
@@ -50,7 +50,8 @@ const Navbar = () => {
               <a
                 href="https://iq.braindao.org"
                 target="_blank"
-                className={`hidden md:flex justify-center bg-brand-700 hover:bg-brand-700 md:w-[194px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300`}
+                className="hidden md:flex justify-center bg-brand-700 hover:bg-brand-700 md:w-[194px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300"
+                rel="noreferrer"
               >
                 Launch Dashboard
               </a>
@@ -71,6 +72,7 @@ const Navbar = () => {
                 </div>
 
                 <button
+                  type="button"
                   className="text-whiteAlpha-900 px-5 py-2"
                   onClick={() => {
                     const mobileNav = document.getElementById(
@@ -100,6 +102,7 @@ const Navbar = () => {
                   href="https://iq.braindao.org"
                   target="_blank"
                   className={`flex flex-1 justify-center text-whiteAlpha-900 dark:bg-brand-800 bg-brand-500 hover:bg-brand-700 md:w-[184px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300 ${raleway.className}`}
+                  rel="noreferrer"
                 >
                   <span>Launch Dashboard</span>
                 </a>

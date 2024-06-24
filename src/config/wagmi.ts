@@ -1,10 +1,8 @@
-import { WalletConnectConnector } from "@wagmi/core/connectors/walletConnect";
-import { MetaMaskConnector } from "@wagmi/core/connectors/metaMask";
-import { mainnet } from "wagmi";
 import { configureChains } from "@wagmi/core";
-import { goerli } from "wagmi/chains";
 import { alchemyProvider } from "@wagmi/core/providers/alchemy";
 import { publicProvider } from "@wagmi/core/providers/public";
+import { mainnet } from "wagmi";
+import { goerli } from "wagmi/chains";
 
 import config from "./index";
 

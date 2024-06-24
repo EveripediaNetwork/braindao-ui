@@ -1,8 +1,8 @@
 import "./globals.css";
+import ClientProviders from "@/components/layouts/ClientProviders";
+import Footer from "@/components/layouts/Footer";
 import type { Metadata } from "next";
 import { montserrat } from "./font";
-import ClientProviders from "@/components/layouts/theme/ThemeProvider";
-import Footer from "@/components/layouts/Footer";
 
 export const metadata: Metadata = {
   title: "BrainDAO - Building a more intelligent future through the IQ token.",
@@ -54,7 +54,7 @@ export default function RootLayout({
           crossOrigin=""
         />
       </head>
-      <body className="">
+      <body>
         <ClientProviders>
           <div className="overflow-x-hidden">
             {children}
