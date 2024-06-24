@@ -8,10 +8,6 @@ if (typeof window !== "undefined") {
   posthog.init(config.posthogApiKey, {
     api_host: "/ingest",
     ui_host: "https://us.posthog.com",
-    autocapture: {
-      dom_event_allowlist: ["click"],
-      element_allowlist: ["button", "a"],
-    },
   });
 }
 
