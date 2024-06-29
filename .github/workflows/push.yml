@@ -13,7 +13,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7 
+          version: 7 # or whatever version you prefer
 
       - name: Check out code
         uses: actions/checkout@v3
@@ -33,6 +33,15 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+
+      - name: Generate pnpm-lock.yaml if it doesn't exist
+        run: |
+          if [ ! -f pnpm-lock.yaml ]; then
+            echo "pnpm-lock.yaml not found. Generating it..."
+            pnpm install --lockfile-only
+          else
+            echo "pnpm-lock.yaml found. Proceeding with installation..."
+          fi
 
       - name: Installing dependencies
         run: pnpm install --frozen-lockfile
