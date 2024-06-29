@@ -1,8 +1,7 @@
-import { configureChains } from "@wagmi/core";
-import { alchemyProvider } from "@wagmi/core/providers/alchemy";
-import { publicProvider } from "@wagmi/core/providers/public";
-import { mainnet } from "wagmi";
+import { configureChains, mainnet } from "wagmi";
 import { goerli } from "wagmi/chains";
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
 
 import config from "./index";
 
