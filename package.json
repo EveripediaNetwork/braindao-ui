@@ -12,7 +12,8 @@
 		"prepare": "husky install",
 		"test": "echo \"Next-app tests\"",
 		"env:prod": "vercel env pull --environment=Production",
-		"env:dev": "vercel env pull --environment=Development"
+		"env:dev": "vercel env pull --environment=Development",
+		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.6",
