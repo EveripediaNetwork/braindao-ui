@@ -24,14 +24,6 @@ export const productTeam = [
     wikiLink: "https://iq.wiki/wiki/andy-cho",
   },
   {
-    name: "Dazzle Lee",
-    role: "Director of Marketing",
-    src: "/images/team/dazzle.png",
-    linkedlnLink: "https://www.linkedin.com/in/andycho-ep/",
-    twitterLink: "https://twitter.com/ETHuncho",
-    wikiLink: "https://iq.wiki/wiki/andy-cho",
-  },
-  {
     name: "Ajayi Feyikemi Mabel",
     role: "Lead Product Designer",
     src: "/images/team/mabel.png",
@@ -180,14 +172,6 @@ export const editors = [
     linkedlnLink: "https://www.linkedin.com/in/zainab-balogun",
     twitterLink: "http://www.twitter.com/zayne_ovaa_",
     wikiLink: "https://iq.wiki/wiki/zainab-balogun",
-  },
-  {
-    name: "Yena Sim",
-    role: "Executive Editor",
-    src: "/images/team/yena.png",
-    linkedlnLink: "https://www.linkedin.com/in/yena-sim-754011234/",
-    twitterLink: "https://twitter.com/sky3lo",
-    wikiLink: "https://iq.wiki/wiki/yena-sim",
   },
   {
     name: "Jaewon Cho",
