@@ -1,15 +1,10 @@
 "use client";
 
-import { useErc20 } from "@/hooks/useEr20";
-import { useLockOverview } from "@/hooks/useLockOverview";
-import { motion } from "framer-motion";
+import { numFormatter } from "@/modules/helpers/numFormatter";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
-import InViewAnimateSlideDown from "../transitions/InViewSlideDown";
-import InViewAnimateSlideUp from "../transitions/inViewSlideUp";
-import { fetchPriceChange, numFormatter } from "../utils/stats-utils";
 
 export const StatsPointers = ({
   title,
@@ -28,7 +23,7 @@ export const StatsPointers = ({
         <div className={`flex flex-col ${className}`}>
           <h4
             className={`dark:text-whiteAlpha-900 text-gray800 font-semibold ${
-              headerSize ? headerSize : "text-2xl xl:text-3xl"
+              headerSize || "text-2xl xl:text-3xl"
             }`}
           >
             {title}
@@ -86,28 +81,24 @@ export const TokenBrief = ({
   );
 };
 
-const Iqtoken = () => {
+const Iqtoken = ({
+  marketData,
+  tvl,
+  totalHiiqSupply,
+}: {
+  totalHiiqSupply: number;
+  tvl: number;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  marketData: { [x: string]: any } | null;
+}) => {
   const { theme } = useTheme();
   const [appTheme, setAppTheme] = useState("");
-  const { tvl } = useErc20();
-  const { totalHiiqSupply } = useLockOverview();
-  const isFetchedData = useRef(false);
-  const [marketData, setMarketData] = useState<{ [x: string]: any } | null>(
-    null
-  );
 
   useEffect(() => {
-    setAppTheme(theme || "");
-    if (!isFetchedData.current) {
-      isFetchedData.current = true;
-      const res2 = fetchPriceChange();
-
-      Promise.resolve(res2).then((data) => {
-        setMarketData(data);
-      });
-    }
+    setAppTheme(theme ?? "");
   }, [theme]);
-  let imageUrl;
+
+  let imageUrl: string | undefined = undefined;
   if (appTheme === "light") {
     imageUrl = "/images/aboutus.png";
   }

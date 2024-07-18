@@ -1,7 +1,6 @@
 "use client";
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import InViewAnimateSlideUp from "@/components/transitions/inViewSlideUp";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -12,9 +11,12 @@ const Iqwiki = () => {
   const [appTheme, setAppTheme] = useState("");
 
   useEffect(() => {
-    setAppTheme(theme || "");
+    setAppTheme(theme ?? "");
   }, [theme]);
-  let imageUrl, imageUrl2, imageUrl3;
+  let imageUrl: string | undefined = undefined;
+
+  let imageUrl2: string | undefined = undefined;
+  let imageUrl3: string | undefined = undefined;
   if (appTheme === "light") {
     imageUrl = "/images/iqwiki-widget-new.png";
     imageUrl2 = "/images/wiki-rank.png";
