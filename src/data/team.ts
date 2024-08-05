@@ -126,13 +126,6 @@ export const productTeam = [
     twitterLink: "https://twitter.com/dcolddev",
     wikiLink: "https://iq.wiki/wiki/oluwateniayomi-adeniyin",
   },
-
-  {
-    name: "Daniel Bárcenas",
-    role: "AI Engineer",
-    src: "/images/team/daniel.png",
-    linkedlnLink: "https://www.linkedin.com/in/danielbrdz",
-  },
   {
     name: "Damola Olutoke",
     role: "Software Engineer",
