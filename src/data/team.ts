@@ -40,13 +40,6 @@ export const productTeam = [
     wikiLink: "https://iq.wiki/wiki/stephen-annozie-ogbaje",
   },
   {
-    name: "YeonWoo Seo",
-    role: "Business Development",
-    src: "/images/team/yeonwoo.png",
-    wikiLink: "https://iq.wiki/wiki/yeonwoo-seo",
-    twitterLink: "https://x.com/syw0243?s=20",
-  },
-  {
     name: "Ashaka Egerega",
     role: "Backend Engineer",
     src: "/images/team/asaka.png",
