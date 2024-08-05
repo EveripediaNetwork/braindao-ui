@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 . "$(dirname "$0")/common.sh"
 
-yarn build
-yarn test
+pnpm build
+pnpm test
