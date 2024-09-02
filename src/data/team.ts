@@ -140,13 +140,6 @@ export const productTeam = [
     linkedlnLink: "https://www.linkedin.com/in/kelechi-okeke",
     twitterLink: "https://twitter.com/reyokeke",
   },
-  {
-    name: "Hafedh Hichri",
-    role: "AI Engineer",
-    src: "/images/team/hafedh.webp",
-    linkedlnLink: "https://www.linkedin.com/in/hafedh-hichri",
-    twitterLink: "https://twitter.com/not_so_lain",
-  },
 ];
 
 export const editors = [
