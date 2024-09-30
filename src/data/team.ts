@@ -50,7 +50,7 @@ export const productTeam = [
   {
     name: "Srujan Gurram",
     role: "Full-Stack Engineer",
-    src: "/images/team/srujan-new.png",
+    src: "/images/team/srujan.png",
     linkedlnLink: "https://linkedin.com/in/srujangurram",
     twitterLink: "https://twitter.com/urban_lobster",
     wikiLink: "https://iq.wiki/wiki/srujan-gurram",
