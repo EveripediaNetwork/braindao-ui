@@ -15,14 +15,8 @@ export const navLinks = [
     target: "_blank",
   },
   {
-    title: "IQ Code",
-    href: "https://iqcode.ai",
-    target: "_blank",
-  },
-
-  {
-    title: "IQ.social",
-    href: "https://iq.social/",
+    title: "IQ AI",
+    href: "https://iqai.io",
     target: "_blank",
   },
   {
