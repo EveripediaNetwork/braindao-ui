@@ -11,7 +11,7 @@ export const navLinks = [
   },
   {
     title: "IQ Treasury",
-    href: "https://iq.braindao.org/dashboard/treasury",
+    href: "https://iq.iqai.com/dashboard/treasury",
     target: "_blank",
   },
   {

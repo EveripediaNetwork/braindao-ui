@@ -48,7 +48,7 @@ const Navbar = () => {
             </nav>
             <div className="flex gap-2 items-center">
               <a
-                href="https://iq.braindao.org"
+                href="https://iq.iqai.com"
                 target="_blank"
                 className="hidden md:flex justify-center bg-brand-700 hover:bg-brand-700 md:w-[194px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300"
                 rel="noreferrer"
@@ -99,7 +99,7 @@ const Navbar = () => {
               <MobileThemeSwitcher />
               <li className="pt-3 px-5 md:hidden">
                 <a
-                  href="https://iq.braindao.org"
+                  href="https://iq.iqai.com"
                   target="_blank"
                   className={`flex flex-1 justify-center text-whiteAlpha-900 dark:bg-brand-800 bg-brand-500 hover:bg-brand-700 md:w-[184px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300 ${raleway.className}`}
                   rel="noreferrer"

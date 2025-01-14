@@ -26,7 +26,7 @@ const IqDashboard = () => {
         <TokenBrief
           title="IQ Dashboard"
           description="Using the IQ Dashboard, you can stake your tokens, facilitate cross-blockchain bridging, vote on governance proposals, and engage in many other activities within the blockchain ecosystem."
-          action="https://iq.braindao.org/dashboard"
+          action="https://iq.iqai.com/dashboard"
           buttonText="Explore IQ Dashboard"
         />
         <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-6 py-3 mt-16 w-full">
