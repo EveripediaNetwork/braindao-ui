@@ -17,7 +17,7 @@ export const productTeam = [
   },
   {
     name: "Andy Cho",
-    role: "BrainMaxi",
+    role: "Chief Operating Officer",
     src: "/images/team/cho-new.png",
     linkedlnLink: "https://www.linkedin.com/in/andycho-ep/",
     twitterLink: "https://twitter.com/ETHuncho",
@@ -64,13 +64,6 @@ export const productTeam = [
     wikiLink: "https://iq.wiki/wiki/adebesin-tolulope",
   },
   {
-    name: "Paola Martínez Calderón",
-    role: "Visual Artist / Illustrator",
-    src: "/images/team/paola.png",
-    wikiLink: "https://iq.wiki/wiki/paola-martinez-calderon",
-    twitterLink: "http://twitter.com/fassadesatz",
-  },
-  {
     name: "Aliu Salaudeen",
     role: "Software Engineer",
     src: "/images/team/new-aliu.png",
@@ -85,14 +78,6 @@ export const productTeam = [
     linkedlnLink: "https://ng.linkedin.com/in/tolulopemalomo",
     twitterLink: "https://twitter.com/tolulopemalomo",
     wikiLink: "https://iq.wiki/wiki/tolulope-malomo",
-  },
-  {
-    name: "Yadheedhya Indugubilli",
-    role: "AI Engineer",
-    src: "/images/team/yadeeyah.png",
-    linkedlnLink: "https://www.linkedin.com/in/yadheedhya/",
-    twitterLink: "https://twitter.com/yadheedhya",
-    wikiLink: "https://iq.wiki/wiki/yadheedhya-indugubilli",
   },
   {
     name: "Adewale Adeniyi",
@@ -140,6 +125,27 @@ export const productTeam = [
     linkedlnLink: "https://www.linkedin.com/in/kelechi-okeke",
     twitterLink: "https://twitter.com/reyokeke",
   },
+  {
+    name: "Jaewon Cho",
+    role: "Product Manager",
+    src: "/images/team/jaewon.png",
+    twitterLink: "https://twitter.com/CHOJAEWON44907",
+    wikiLink: "https://iq.wiki/wiki/jaewon-cho",
+  },
+  {
+    name: "Marvel Nwachukwu",
+    role: "Software Engineer",
+    src: "/images/team/marvel.webp",
+    linkedlnLink: "https://www.linkedin.com/in/marvel-codes/",
+    twitterLink: "https://x.com/marvel_codes",
+  },
+  {
+    name: "Gurram Prudhvi Suraaj",
+    role: "Software Engineer",
+    src: "/images/team/gurram.webp",
+    twitterLink: "https://x.com/PrudhviSuraaj",
+    linkedlnLink: "https://www.linkedin.com/in/prudhvi-suraaj-461155227/",
+  },
 ];
 
 export const editors = [
@@ -160,13 +166,6 @@ export const editors = [
     wikiLink: "https://iq.wiki/wiki/zainab-balogun",
   },
   {
-    name: "Jaewon Cho",
-    role: "Executive Editor",
-    src: "/images/team/jaewon.png",
-    twitterLink: "https://twitter.com/CHOJAEWON44907",
-    wikiLink: "https://iq.wiki/wiki/jaewon-cho",
-  },
-  {
     name: "Jalen Durham",
     role: "Executive Editor",
     src: "/images/team/jalen.png",
@@ -181,7 +180,7 @@ export const editors = [
   },
   {
     name: "Tara Wickart",
-    role: "Executive Editor",
+    role: "Business Development Manager",
     src: "/images/team/tara.png",
     twitterLink: "https://x.com/WckTara9990",
     linkedlnLink:
