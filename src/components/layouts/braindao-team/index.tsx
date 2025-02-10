@@ -1,8 +1,6 @@
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import InViewAnimateFadeIn from "@/components/transitions/InViewAnimateFadeIn";
-import { editors, productTeam } from "@/data/team";
+import { braindaoTeam } from "@/data/team";
 import Image, { type ImageProps } from "next/image";
-import React from "react";
 
 type TTeam = {
   src?: ImageProps["src"];
@@ -94,11 +92,8 @@ const BraindaoTeam = () => {
           Humans of BrainDAO
         </h2>
         <div className="flex flex-col gap-5 sm:gap-16 mt-10 md:mt-14">
-          <span className="p-2 lg:p-5 dark:text-brand-500 text-brand-800 font-semibold text-2xl sm:text-4xl border-b dark:border-whiteAlpha-400 border-[#E2E8F0]">
-            Product Team
-          </span>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 sm:gap-y-10 2xl:gap-y-16 gap-x-8 lg:gap-x-4">
-            {productTeam.map((team, idx) => {
+            {braindaoTeam.map((team, idx) => {
               return (
                 <TeamCard
                   src={team.src}
@@ -111,24 +106,6 @@ const BraindaoTeam = () => {
                 />
               );
             })}
-          </div>
-        </div>
-        <div className="flex flex-col gap-5 sm:gap-16 mt-8 md:mt-14">
-          <span className="p-2 lg:p-5 dark:text-brand-500 text-brand-800 font-semibold text-2xl sm:text-4xl border-b dark:border-whiteAlpha-400 border-[#E2E8F0]">
-            Content Team
-          </span>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 sm:gap-y-16 gap-x-4">
-            {editors.map((item) => (
-              <TeamCard
-                key={item.name}
-                src={item.src}
-                name={item.name}
-                role={item.role}
-                linkedlnLink={item.linkedlnLink}
-                twitterLink={item.twitterLink}
-                wikiLink={item.wikiLink}
-              />
-            ))}
           </div>
         </div>
       </div>
