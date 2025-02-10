@@ -1,4 +1,4 @@
-export const productTeam = [
+export const braindaoTeam = [
   {
     name: "Navin Vethanayagam",
     role: "Galaxy Brain",
@@ -22,6 +22,14 @@ export const productTeam = [
     linkedlnLink: "https://www.linkedin.com/in/andycho-ep/",
     twitterLink: "https://twitter.com/ETHuncho",
     wikiLink: "https://iq.wiki/wiki/andy-cho",
+  },
+  {
+    name: "Violeta Ziborova",
+    role: "Content Guru",
+    src: "/images/team/violeta.png",
+    linkedlnLink: "https://www.linkedin.com/in/violettaziborova/",
+    twitterLink: "https://twitter.com/vzbrv",
+    wikiLink: "https://iq.wiki/wiki/violetta-ziborova",
   },
   {
     name: "Ajayi Feyikemi Mabel",
@@ -70,14 +78,6 @@ export const productTeam = [
     linkedlnLink: "https://www.linkedin.com/in/aliu-salaudeen",
     twitterLink: "https://x.com/_Aliu_Salaudeen?t=qZkUDgshSf2qnPdeI6QnyQ&s=09",
     wikiLink: "https://iq.wiki/wiki/aliu-salaudeen",
-  },
-  {
-    name: "Tolulope Malomo",
-    role: "Software Engineer",
-    src: "/images/team/tolu.png",
-    linkedlnLink: "https://ng.linkedin.com/in/tolulopemalomo",
-    twitterLink: "https://twitter.com/tolulopemalomo",
-    wikiLink: "https://iq.wiki/wiki/tolulope-malomo",
   },
   {
     name: "Adewale Adeniyi",
@@ -146,16 +146,13 @@ export const productTeam = [
     twitterLink: "https://x.com/PrudhviSuraaj",
     linkedlnLink: "https://www.linkedin.com/in/prudhvi-suraaj-461155227/",
   },
-];
-
-export const editors = [
   {
-    name: "Violeta Ziborova",
-    role: "Content Guru",
-    src: "/images/team/violeta.png",
-    linkedlnLink: "https://www.linkedin.com/in/violettaziborova/",
-    twitterLink: "https://twitter.com/vzbrv",
-    wikiLink: "https://iq.wiki/wiki/violetta-ziborova",
+    name: "Tara Wickart",
+    role: "Business Development Manager",
+    src: "/images/team/tara.png",
+    twitterLink: "https://x.com/WckTara9990",
+    linkedlnLink:
+      "https://www.linkedin.com/in/tara-victoria-wickart-6553a6234/",
   },
   {
     name: "Zainab Balogun",
@@ -177,13 +174,5 @@ export const editors = [
     src: "/images/team/lucas.png",
     twitterLink: "https://x.com/devmaxflip",
     linkedlnLink: "https://www.linkedin.com/in/devmaxflip/",
-  },
-  {
-    name: "Tara Wickart",
-    role: "Business Development Manager",
-    src: "/images/team/tara.png",
-    twitterLink: "https://x.com/WckTara9990",
-    linkedlnLink:
-      "https://www.linkedin.com/in/tara-victoria-wickart-6553a6234/",
   },
 ];
