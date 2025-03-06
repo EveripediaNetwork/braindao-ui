@@ -6,7 +6,7 @@ export const navLinks = [
 	},
 	{
 		title: "AIDEN",
-		href: "#iq-gpt",
+		href: "#aiden",
 		target: "",
 	},
 	{
