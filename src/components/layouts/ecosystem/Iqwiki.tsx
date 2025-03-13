@@ -18,14 +18,14 @@ const Iqwiki = () => {
   let imageUrl2: string | undefined = undefined;
   let imageUrl3: string | undefined = undefined;
   if (appTheme === "light") {
-    imageUrl = "/images/iqwiki-widget-new.png";
-    imageUrl2 = "/images/wiki-rank.png";
-    imageUrl3 = "/images/wiki-homepage.png";
+    imageUrl = "/images/iqwiki-widget-new.webp";
+    imageUrl2 = "/images/wiki-rank.webp";
+    imageUrl3 = "/images/wiki-homepage.webp";
   }
   if (appTheme === "dark") {
-    imageUrl = "/images/iqwiki-widget-new-dark.png";
-    imageUrl2 = "/images/wiki-rank-dark.png";
-    imageUrl3 = "/images/wiki-homepage-dark.png";
+    imageUrl = "/images/iqwiki-widget-new-dark.webp";
+    imageUrl2 = "/images/wiki-rank-dark.webp";
+    imageUrl3 = "/images/wiki-homepage-dark.webp";
   }
 
   return (

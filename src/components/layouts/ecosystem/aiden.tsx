@@ -38,7 +38,7 @@ export const FeatureList = ({
   );
 };
 
-const Iqgpt = () => {
+const Aiden = () => {
   const { theme } = useTheme();
   const [appTheme, setAppTheme] = useState("");
 
@@ -47,25 +47,25 @@ const Iqgpt = () => {
   }, [theme]);
   let imageUrl: string | undefined;
   if (appTheme === "light") {
-    imageUrl = "/images/iqgpt-light.webp";
+    imageUrl = "/images/aiden-lt.webp";
   }
   if (appTheme === "dark") {
-    imageUrl = "/images/iqgpt-dark.webp";
+    imageUrl = "/images/aiden-dk.webp";
   }
 
   return (
     <div
-      id="iq-gpt"
+      id="aiden"
       className="max-w-[1536px] px-4 sm:px-10 xl:px-[120px] mx-auto flex flex-col gap-10 xl:gap-16 pt-[48px] sm:pt-[80px] 2xl:pt-24 relative"
     >
       <TokenBrief
-        title="IQ GPT"
-        description={`IQ GPT is an extension of IQ.wiki's decentralized framework, integrating crypto-focused AI models that utilize diverse data sources to bolster capabilities, offering insights into intricate terms, live market trends, and breaking news.`}
+        title="AIDEN"
+        description={`AIDEN is an extension of IQ.wiki's decentralized framework, integrating crypto-focused AI models that utilize diverse data sources to bolster capabilities, offering insights into intricate terms, live market trends, and breaking news.`}
         description2={
-          "IQ GPT is powered by the IQ token, enabling IQ holders to participate in governance and get access to additional features."
+          "AIDEN is powered by the IQ token, enabling IQ holders to participate in governance and get access to additional features."
         }
         action="https://iqgpt.com"
-        buttonText="Explore IQ GPT"
+        buttonText="Explore AIDEN"
       />
       <div className="grid min-[500px]:grid-cols-2 sm:grid-cols-2 xl:grid-cols-4 gap-4 2xl:gap-12 py-2">
         <FeatureList
@@ -102,4 +102,4 @@ const Iqgpt = () => {
   );
 };
 
-export default Iqgpt;
+export default Aiden;
