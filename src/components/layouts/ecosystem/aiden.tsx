@@ -1,9 +1,9 @@
 "use client";
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import { useTheme } from "next-themes";
+import useThemeImage from "@/hooks/useThemeImage";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
 	RiDatabaseLine,
 	RiNewspaperLine,
@@ -39,19 +39,10 @@ export const FeatureList = ({
 };
 
 const Aiden = () => {
-	const { theme } = useTheme();
-	const [appTheme, setAppTheme] = useState("");
-
-	useEffect(() => {
-		setAppTheme(theme ?? "");
-	}, [theme]);
-	let imageUrl: string | undefined;
-	if (appTheme === "light") {
-		imageUrl = "/images/aiden-lt.webp";
-	}
-	if (appTheme === "dark") {
-		imageUrl = "/images/aiden-dk.webp";
-	}
+	const imageUrl = useThemeImage(
+		"/images/aiden-lt.webp",
+		"/images/aiden-dk.webp",
+	);
 
 	return (
 		<div
@@ -94,7 +85,9 @@ const Aiden = () => {
 			</div>
 			<InViewAnimateBottom>
 				<div className="w-full relative h-[320px] min-[500px]:h-[450px] sm:h-[600px] md:h-[650px] lg:h-[850px] xl:h-[1000px] 2xl:h-[1117px]">
-					{imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
+					{imageUrl && (
+						<Image src={imageUrl} alt="" fill sizes="100vw" priority />
+					)}
 				</div>
 			</InViewAnimateBottom>
 			<div className="h-[174px] w-full absolute dark:bg-gradient-linear bg-gradient-linear-light bg-cover left-0 -bottom-2 sm:bottom-0" />
