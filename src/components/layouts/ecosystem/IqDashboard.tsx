@@ -1,7 +1,7 @@
 "use client";
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import useThemeImage from "@/modules/helpers/useThemeImage";
+import useThemeImage from "@/hooks/useThemeImage";
 import Image from "next/image";
 import React from "react";
 import { StatsPointers, TokenBrief } from "../Iqtoken";

@@ -1,7 +1,7 @@
 "use client";
 
+import useThemeImage from "@/hooks/useThemeImage";
 import { numFormatter } from "@/modules/helpers/numFormatter";
-import useThemeImage from "@/modules/helpers/useThemeImage";
 import Image from "next/image";
 import React from "react";
 import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
@@ -89,7 +89,10 @@ const Iqtoken = ({
 	totalHiiqSupply: number;
 	tvl: number;
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	marketData: { [x: string]: any } | null;
+	marketData: {
+		circulatingSupply: number;
+		marketCap: number;
+	} | null;
 }) => {
 	const imageUrl = useThemeImage(
 		"/images/aboutus.png",
@@ -146,13 +149,13 @@ const Iqtoken = ({
 								<div className="flex justify-between">
 									<StatsPointers
 										title={`${numFormatter(
-											marketData?.circulatingSupply || "",
+											marketData?.circulatingSupply || 0,
 										)} IQ`}
 										content="Circulating supply"
 										className="h-[80px] xl:h-[95px] justify-between"
 									/>
 									<StatsPointers
-										title={`$${numFormatter(marketData?.marketCap || "")}`}
+										title={`$${numFormatter(marketData?.marketCap || 0)}`}
 										content="Market cap"
 										className="h-[80px] xl:h-[95px] justify-between"
 									/>
