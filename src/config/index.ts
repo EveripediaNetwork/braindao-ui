@@ -8,7 +8,6 @@ const config = {
 	alchemyApiKey: String(process.env.NEXT_PUBLIC_ALCHEMY_API_KEY),
 	alchemyChain: process.env.NEXT_PUBLIC_ALCHEMY_CHAIN || "goerli",
 	chainId: process.env.NEXT_PUBLIC_CHAIN_ID || "5",
-	cmcApiKey: process.env.NEXT_PUBLIC_CMC_API_KEY || "",
 	walletConnectProjectId:
 		process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID ||
 		"e6567b95-7acb-4954-8673-76d34981e18f",
