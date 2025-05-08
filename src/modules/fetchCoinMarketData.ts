@@ -1,21 +1,23 @@
 import config from "@/config";
 
+const CACHE_TIME = 60 * 60 * 24;
 export const formatNumber = new Intl.NumberFormat("en", {
 	notation: "compact",
 }).format;
 
 export const fetchCoinMarketData = async (tokenName = "IQ") => {
-	const CACHE_TIME = 60 * 60 * 24;
+	const proxyUrl = new URL(config.iqGatewayUrl);
+	const targetUrl = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${tokenName}`;
+
+	proxyUrl.searchParams.append("url", targetUrl);
+	proxyUrl.searchParams.append("cacheDuration", CACHE_TIME.toString());
+
 	try {
-		const response = await fetch(
-			`https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${tokenName}`,
-			{
-				headers: {
-					"X-CMC_PRO_API_KEY": config.cmcApiKey,
-				},
-				next: { revalidate: CACHE_TIME },
+		const response = await fetch(proxyUrl.href, {
+			headers: {
+				"x-api-key": config.iqGatewayKey,
 			},
-		);
+		});
 
 		if (!response.ok) {
 			throw new Error("Network response was not ok");
