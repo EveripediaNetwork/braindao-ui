@@ -5,9 +5,10 @@ export const formatNumber = new Intl.NumberFormat("en", {
 	notation: "compact",
 }).format;
 
-export const fetchCoinMarketData = async (tokenName = "IQ") => {
+export const fetchCoinMarketData = async () => {
 	const proxyUrl = new URL(config.iqGatewayUrl);
-	const targetUrl = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=${tokenName}`;
+	const targetUrl =
+		"https://pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=everipedia";
 
 	proxyUrl.searchParams.append("url", targetUrl);
 	proxyUrl.searchParams.append("cacheDuration", CACHE_TIME.toString());
@@ -24,10 +25,10 @@ export const fetchCoinMarketData = async (tokenName = "IQ") => {
 		}
 
 		const data = await response.json();
-		const tokenDetails = data.data[tokenName];
+		const tokenDetails = data[0];
 		const circulatingSupply = tokenDetails.circulating_supply;
-		const marketCap = tokenDetails.quote.USD.market_cap;
-		const volume = tokenDetails.quote.USD.volume_24h;
+		const marketCap = tokenDetails.market_cap;
+		const volume = tokenDetails.total_volume;
 
 		return {
 			circulatingSupply,
