@@ -102,15 +102,7 @@ export const braindaoTeam = [
     linkedlnLink: "https://www.linkedin.com/in/brunneis",
     twitterLink: "https://twitter.com/brunn3is",
   },
-  {
-    name: "Oluwateniayomi Adeniyi",
-    role: "Backend Engineer Intern",
-    src: "/images/team/teni.png",
-    linkedlnLink:
-      "https://www.linkedin.com/in/oluwateniayomi-adeniyi-524490241",
-    twitterLink: "https://twitter.com/dcolddev",
-    wikiLink: "https://iq.wiki/wiki/oluwateniayomi-adeniyin",
-  },
+
   {
     name: "Damola Olutoke",
     role: "Software Engineer",
