@@ -24,7 +24,7 @@ const Iqwiki = () => {
 		<div id="iq-wiki">
 			<TokenBrief
 				title="IQ.wiki"
-				description="IQ.wiki, the world's largest blockchain and cryptocurrency encyclopedia, is a Polygon-based platform, featuring thousands of pages, that uses IPFS for data storage and on-chain edits. IQ token stakers govern the platform, which offers a gasless experience for contributors and utilizes OpenAI's GPT-3 for article summarization."
+				description="IQ.wiki, the world's largest blockchain and cryptocurrency encyclopedia, is a Polygon-based platform, featuring thousands of pages, that uses IPFS for data storage and on-chain edits. IQ token stakers govern the platform, which offers a gasless experience for contributors and utilizes Sophia Agent for article summarization."
 				action="https://iq.wiki"
 				buttonText="Explore IQ.wiki"
 			/>
