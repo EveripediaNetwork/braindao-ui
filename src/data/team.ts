@@ -95,14 +95,7 @@ export const braindaoTeam = [
     twitterLink: "https://twitter.com/coding_sid",
     wikiLink: "https://iq.wiki/wiki/sidharth-kapoor",
   },
-  {
-    name: "Rodrigo Martinez",
-    role: "AI Engineer",
-    src: "/images/team/rodrigo.png",
-    linkedlnLink: "https://www.linkedin.com/in/brunneis",
-    twitterLink: "https://twitter.com/brunn3is",
-  },
-
+  
   {
     name: "Damola Olutoke",
     role: "Software Engineer",
