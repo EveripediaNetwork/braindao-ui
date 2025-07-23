@@ -1,6 +1,6 @@
 import { satoshi } from "@/app/font";
+import { cn } from "@/lib/utils";
 import React from "react";
-import { RiArrowDownDoubleLine } from "react-icons/ri";
 import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
 import Navbar from "./Navbar";
 
@@ -18,15 +18,18 @@ const Hero = () => {
 			<div className="relative z-20">
 				<div className="max-w-[1536px] mx-auto">
 					<Navbar />
-					<div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden h-[calc(40vh-65px)] md:h-[calc(60vh-65px)] lg:h-[calc(60vh-65px)]">
+					<div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden min-h-[calc(40vh-65px)] md:min-h-[calc(60vh-65px)] lg:min-h-[calc(60vh-65px)] pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-16 xl:pb-20">
 						<div className="flex text-center md:text-left items-center flex-col justify-start mx-auto gap-1 sm:gap-5 w-full px-4 sm:px-0 max-w-6xl">
 							<InViewAnimateBottom>
-								<h1 className="text-2xl font-medium text-white sm:text-4xl md:text-5xl animate-fade-in xl:text-[60px] 2xl:text-[70px] !leading-tight text-center">
-									<span className={satoshi.className}>
-										Building A More Intelligent Future Through the{" "}
+								<h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium text-white animate-fade-in !leading-tight text-center">
+									<span className={cn(satoshi.className, "block")}>
+										Building A More
 									</span>
-									<span className={`${satoshi.className} italic text-primary`}>
-										IQ Token.
+									<span className={cn(satoshi.className, "block")}>
+										Intelligent Future Through
+									</span>
+									<span className={cn(satoshi.className, "block")}>
+										the <span className="italic text-primary">IQ Token.</span>
 									</span>
 								</h1>
 								<div className="absolute bottom-4 left-0 right-0 h-1/2 opacity-80">
@@ -38,7 +41,7 @@ const Hero = () => {
 								</div>
 							</InViewAnimateBottom>
 							<InViewAnimateBottom>
-								<p className="text-sm sm:text-lg max-w-[513px] lg:max-w-2xl text-center mx-auto lg:text-xl text-white">
+								<p className="text-sm sm:text-lg max-w-[513px] lg:max-w-2xl text-center mx-auto lg:text-xl text-white mt-2">
 									Join our mission to expand the scope of human knowledge with
 									BrainDAO, the governing DAO powering the IQ ecosystem.
 								</p>
