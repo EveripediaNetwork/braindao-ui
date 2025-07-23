@@ -1,30 +1,35 @@
 import Hero from "@/components/layouts/Hero";
 import Iqtoken from "@/components/layouts/Iqtoken";
-import BraindaoTeam from "@/components/layouts/braindao-team";
 import Ecosystem from "@/components/layouts/ecosystem";
+import Iqwiki from "@/components/layouts/ecosystem/Iqwiki";
 import { fetchCoinMarketData } from "@/modules/fetchCoinMarketData";
 import { getLockOverview } from "@/modules/getLockOverview";
 import { getTvl } from "@/modules/getTVL";
+import { getIqStats, getSophiaStats } from "./_actions";
+import { IQStats } from "./_components/iq-stat";
 
 export default async function Home() {
-  const [tvl, marketData, lockOverview] = await Promise.all([
-    getTvl(),
-    fetchCoinMarketData(),
-    getLockOverview(),
-  ]);
+	const [tvl, marketData, lockOverview, iqStatsData, sophiaStats] =
+		await Promise.all([
+			getTvl(),
+			fetchCoinMarketData(),
+			getLockOverview(),
+			getIqStats(),
+			getSophiaStats(),
+		]);
 
-  const { totalHiiqSupply } = lockOverview;
+	const { totalHiiqSupply } = lockOverview;
 
-  return (
-    <div className="">
-      <Hero />
-      <Iqtoken
-        tvl={tvl}
-        totalHiiqSupply={totalHiiqSupply}
-        marketData={marketData}
-      />
-      <Ecosystem />
-      <BraindaoTeam />
-    </div>
-  );
+	return (
+		<div className="bg-black min-h-screen">
+			<Hero />
+			<IQStats iqStatsData={iqStatsData} sophiaStats={sophiaStats} />
+			<Iqtoken
+				tvl={tvl}
+				totalHiiqSupply={totalHiiqSupply}
+				marketData={marketData}
+			/>
+			<Ecosystem />
+		</div>
+	);
 }
