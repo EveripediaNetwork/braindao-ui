@@ -3,12 +3,15 @@ import config from "@/config";
 export const HEX_BASE = 16;
 export const WEI_TO_ETHER_DIVISOR = 10e17;
 
-interface AlchemyParams {
-	method: string;
-	params: (string | number | boolean)[];
+interface EthCallParams {
+	from?: string;
+	to: string;
+	data: string;
 }
 
-export const alchemyFetch = async (method: string, params: AlchemyParams[]) => {
+type RPCParams = [EthCallParams, string] | unknown[];
+
+export const alchemyFetch = async (method: string, params: RPCParams) => {
 	const response = await fetch(
 		`https://eth-mainnet.alchemyapi.io/v2/${config.alchemyApiKey}`,
 		{
