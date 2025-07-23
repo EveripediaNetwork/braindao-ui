@@ -2,8 +2,6 @@
 
 import { TokenBrief } from "@/app/_components/token-brief";
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-
-import Image from "next/image";
 import React from "react";
 import {
 	RiDatabaseLine,
@@ -16,7 +14,6 @@ export const FeatureList = ({
 	title,
 	description,
 	icon,
-	delay,
 }: {
 	title: string;
 	description: string;

@@ -2,6 +2,7 @@
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { satoshi } from "../font";
 
 export const TokenBrief = ({
@@ -22,7 +23,10 @@ export const TokenBrief = ({
 			<div className="xl:w-[400px] xl:flex-shrink-0">
 				<InViewAnimateBottom>
 					<h3
-						className={`${satoshi.className} font-semibold text-foreground text-2xl sm:text-3xl xl:text-4xl`}
+						className={cn(
+							satoshi.className,
+							"font-semibold text-foreground text-2xl sm:text-3xl xl:text-4xl",
+						)}
 					>
 						{title}
 					</h3>

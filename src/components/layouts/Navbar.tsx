@@ -2,11 +2,9 @@
 
 import { raleway } from "@/app/font";
 import { appLinks, navLinks } from "@/data/Nav";
+import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
-import { useTheme } from "next-themes";
-import dynamic from "next/dynamic";
 import React from "react";
-import { CgSpinner } from "react-icons/cg";
 import { RiCloseFill } from "react-icons/ri";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
 import { Button } from "../ui/button";
@@ -120,7 +118,10 @@ const Navbar = () => {
 								<a
 									href="https://iq.iqai.com"
 									target="_blank"
-									className={`flex flex-1 justify-center text-whiteAlpha-900 dark:bg-brand-800 bg-brand-500 hover:bg-brand-700 md:w-[184px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300 ${raleway.className}`}
+									className={cn(
+										"flex flex-1 justify-center text-whiteAlpha-900 dark:bg-brand-800 bg-brand-500 hover:bg-brand-700 md:w-[184px] text-sm lg:text-base px-5 py-2 rounded-md transition-all ease-in-out duration-300",
+										raleway.className,
+									)}
 									rel="noreferrer"
 								>
 									<span>Launch Dashboard</span>

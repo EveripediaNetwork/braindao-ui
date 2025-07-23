@@ -1,4 +1,5 @@
 import { satoshi } from "@/app/font";
+import { cn } from "@/lib/utils";
 import React from "react";
 import Blog from "./IQBlog";
 import IqDashboard from "./IqDashboard";
@@ -12,7 +13,10 @@ const Ecosystem = () => {
 		<div className="bg-black text-muted-foreground">
 			<div>
 				<h2
-					className={`${satoshi.className} text-center text-4xl xl:text-5xl text-white font-bold pt-[48px] sm:pt-[80px] xl:pt-24 pb-[24px] sm:pb-[40px] xl:pb-12`}
+					className={cn(
+						satoshi.className,
+						"text-center text-4xl xl:text-5xl text-white font-bold pt-[48px] sm:pt-[80px] xl:pt-24 pb-[24px] sm:pb-[40px] xl:pb-12",
+					)}
 				>
 					The IQ Ecosystem
 				</h2>

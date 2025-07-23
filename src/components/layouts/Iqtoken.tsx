@@ -1,6 +1,7 @@
 "use client";
 
 import { TokenBrief } from "@/app/_components/token-brief";
+import { cn } from "@/lib/utils";
 import { numFormatter } from "@/modules/helpers/numFormatter";
 import Image from "next/image";
 import React from "react";
@@ -20,11 +21,12 @@ export const StatsPointers = ({
 	return (
 		<InViewAnimateBottom className="flex-1">
 			<div className="border-l-2 border-pink-500 pl-4">
-				<div className={`flex flex-col ${className}`}>
+				<div className={cn("flex flex-col", className)}>
 					<h4
-						className={`text-foreground font-semibold ${
-							headerSize || "text-2xl xl:text-3xl"
-						}`}
+						className={cn(
+							"text-foreground font-semibold",
+							headerSize || "text-2xl xl:text-3xl",
+						)}
 					>
 						{title}
 					</h4>

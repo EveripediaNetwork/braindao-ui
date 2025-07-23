@@ -2,7 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "framer-motion";
-import { type FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import type { FC } from "react";
 import { useInView } from "react-intersection-observer";
 import type { TInViewAnimate } from "./InViewAnimateBottom";
 
