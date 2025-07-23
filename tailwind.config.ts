@@ -134,6 +134,7 @@ const config: Config = {
 					"linear-gradient(0deg, #000206 42%, rgba(0, 2, 6, 0.00) 97%)",
 				"video-gradient-top":
 					"linear-gradient(180deg, #000206 42%, rgba(0, 2, 6, 0.00) 97%)",
+				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 			},
 		},
 	},
