@@ -21,7 +21,7 @@ export function TokenCard({
 		<div className="backdrop-filter backdrop-blur-sm border border-border rounded-xl p-3 flex flex-row text-sm justify-between items-center w-full">
 			<div className="flex flex-col gap-2 text-sm text-card-foreground">
 				<h1 className="text-xs ">{title}</h1>
-				<div className="flex flex-col gap-1 5">
+				<div className="flex flex-col gap-1.5">
 					<h2 className="text-xl font-semibold ">{value ?? errorMessage}</h2>
 					<ChangePercentage
 						iqChange={change.iqChange ?? 0}

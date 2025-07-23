@@ -18,7 +18,7 @@ const Footer = () => {
 						href={"https://www.getdrip.com/forms/505929689/submissions/new"}
 						target="_blank"
 						className="flex justify-center w-[210px] text-white dark:bg-brand-800 bg-brand-500 py-3 rounded-md hover:bg-brand-700 transition-all ease-in-out duration-300"
-						rel="noreferrer"
+						rel="noopener noreferrer"
 					>
 						Subscribe
 					</a>

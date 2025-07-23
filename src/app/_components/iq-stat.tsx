@@ -55,7 +55,11 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 					})}
 					change={{
 						iqChange: sophiaStats?.changeIn24h ?? null,
-						formattedChange: sophiaStats?.changeIn24h?.toString() ?? null,
+						formattedChange: formatNumber(sophiaStats?.changeIn24h ?? null, {
+							signed: true,
+							minDecimals: 2,
+							maxDecimals: 2,
+						}),
 					}}
 					icon={
 						<FaDatabase

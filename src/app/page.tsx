@@ -1,7 +1,6 @@
 import Hero from "@/components/layouts/Hero";
 import Iqtoken from "@/components/layouts/Iqtoken";
 import Ecosystem from "@/components/layouts/ecosystem";
-import Iqwiki from "@/components/layouts/ecosystem/Iqwiki";
 import { fetchCoinMarketData } from "@/modules/fetchCoinMarketData";
 import { getLockOverview } from "@/modules/getLockOverview";
 import { getTvl } from "@/modules/getTVL";

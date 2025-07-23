@@ -14,6 +14,7 @@ export const FeatureList = ({
 	title,
 	description,
 	icon,
+	delay,
 }: {
 	title: string;
 	description: string;
@@ -36,8 +37,6 @@ export const FeatureList = ({
 };
 
 const Aiden = () => {
-	const imageUrl = "/images/aiden-dk.webp";
-
 	return (
 		<div
 			id="aiden"

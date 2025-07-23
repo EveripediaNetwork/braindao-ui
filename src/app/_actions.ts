@@ -9,11 +9,13 @@ import {
 } from "./_schema";
 
 const CACHE_DURATION_SECONDS_24_HR_IN_SECONDS = 24 * 60 * 60;
+const SOPHIA_STATS_API_URL =
+	"https://app.iqai.com/api/agents/stats?address=0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB";
 
 export const getIqStats = unstable_cache(
 	async () => {
 		try {
-			const [cmcData] = await Promise.all([fetchMarketCapData()]);
+			const cmcData = await fetchMarketCapData();
 
 			if (!cmcData) {
 				return {
@@ -78,9 +80,7 @@ export const getIqStats = unstable_cache(
 
 export async function getSophiaStats() {
 	try {
-		const response = await axios.get(
-			"https://app.iqai.com/api/agents/stats?address=0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB",
-		);
+		const response = await axios.get(SOPHIA_STATS_API_URL);
 
 		return sophiaStatsSchema.parse(response.data);
 	} catch (error) {
