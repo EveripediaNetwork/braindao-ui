@@ -1,38 +1,31 @@
 "use client";
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import useThemeImage from "@/hooks/useThemeImage";
+
+import { TokenBrief } from "@/app/_components/token-brief";
 import Image from "next/image";
 import React from "react";
-import { StatsPointers, TokenBrief } from "../Iqtoken";
+import { StatsPointers } from "../Iqtoken";
 
 const IqDashboard = () => {
-	const imageUrl = useThemeImage(
-		"/images/dashboard.webp",
-		"/images/dashboard-dark.webp",
-	);
+	const imageUrl = "/images/dashboard-dark.webp";
 
 	return (
-		<div className="max-w-[1536px] mx-auto flex flex-col gap-10 xl:gap-16 pt-[48px] sm:pt-[80px] 2xl:pt-24">
-			<div className="px-4 sm:px-10 xl:px-24 2xl:px-[120px]">
+		<div id="dashboard" className="bg-black text-muted-foreground">
+			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 pb-[48px] sm:pb-[80px] xl:pb-48">
 				<TokenBrief
 					title="IQ Dashboard"
 					description="Using the IQ Dashboard, you can stake your tokens, facilitate cross-blockchain bridging, vote on governance proposals, and engage in many other activities within the blockchain ecosystem."
 					action="https://iq.iqai.com/dashboard"
 					buttonText="Explore IQ Dashboard"
 				/>
+
 				<div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-6 py-3 mt-16 w-full">
 					<StatsPointers
 						title="Swap"
 						headerSize="text-xl"
 						content="Engage with the IQ ecosystem and effortlessly swap the IQ token across various exchange platforms"
 						className=" gap-4"
-					/>
-					<StatsPointers
-						title="Bridge"
-						headerSize="text-xl"
-						content="Transfer IQ from EOS to ETH and vice versa using the IQ bridge."
-						className="gap-4"
 					/>
 					<StatsPointers
 						title="Lock"
@@ -47,13 +40,14 @@ const IqDashboard = () => {
 						content="Stakers can vote on all governance proposals and create their own proposals."
 						className="gap-4"
 					/>
+					<StatsPointers
+						title="Monitor Protocol"
+						headerSize="text-xl"
+						content="Users get real-time insights into the IQ ecosystem’s growth and BrainDAO’s treasury health."
+						className="gap-4"
+					/>
 				</div>
 			</div>
-			<InViewAnimateBottom>
-				<div className="w-full relative h-[250px] min-[500px]:h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px] xl:h-[887px]">
-					{imageUrl && <Image src={imageUrl} alt="" fill sizes="100vw" />}
-				</div>
-			</InViewAnimateBottom>
 		</div>
 	);
 };
