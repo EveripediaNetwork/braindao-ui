@@ -31,15 +31,17 @@ const TeamCard = ({
 					/>
 				</div>
 
-				<div className="flex flex-col items-start font-mo">
+				<div className="flex flex-col items-start font-montserrat">
 					<p className="text-primary text-xs font-medium mb-2">{role || ""}</p>
-					<h4 className="text-white text-s font-semibold mb-3">{name || ""}</h4>
+					<h4 className="text-white text-sm font-semibold mb-3">
+						{name || ""}
+					</h4>
 					<div className="flex gap-3 items-center bg-neutral-900 border border-neutral-700 rounded-2xl py-2 px-3.5">
 						{twitterLink && (
 							<a
 								href={twitterLink}
 								target="_blank"
-								className="w-5 h-5 bg-no-repeat bg-contain dark:bg-twitter-dark bg-twitter opacity-70 hover:opacity-100 transition-opacity"
+								className="w-5 h-5 bg-no-repeat bg-contain bg-twitter opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
 								aria-label={`${name}'s Twitter profile`}
 							>
@@ -87,7 +89,7 @@ const BraindaoTeam = () => {
 				</div>
 				<div className="mt-2 xl:mt-0">
 					<InViewAnimateBottom>
-						<p className="flex-1 lg:text-lg text-muted-foreground xl: max-w-[650px] 2xl:max-w-[700px]">
+						<p className="flex-1 lg:text-lg text-muted-foreground xl:max-w-[650px] 2xl:max-w-[700px]">
 							BrainDAO is made up of a diverse team united by our mission,
 							hailing from various corners of the globe.
 						</p>
