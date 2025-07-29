@@ -167,4 +167,11 @@ export const braindaoTeam = [
 		linkedlnLink: "https://www.linkedin.com/in/sophia-ezeh-9884b6215/",
 		twitterLink: "https://twitter.com/sophix_ezeh",
 	},
+	{
+		name: "Oluwole Sayo",
+		role: "Software Engineer",
+		src: "/images/team/sayo.png",
+		linkedlnLink: "www.linkedin.com/in/sayo-oluwole-158646220",
+		twitterLink: "https://x.com/oluwolesay6942",
+	},
 ];
