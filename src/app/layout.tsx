@@ -1,5 +1,6 @@
 import "./globals.css";
 import ClientProviders from "@/components/layouts/ClientProviders";
+import Footer from "@/components/layouts/Footer";
 import type { Metadata } from "next";
 import { montserrat } from "./font";
 
@@ -55,7 +56,10 @@ export default function RootLayout({
 			</head>
 			<body>
 				<ClientProviders>
-					<div className="overflow-x-hidden">{children}</div>
+					<div className="overflow-x-hidden">
+						{children}
+						<Footer />
+					</div>
 				</ClientProviders>
 			</body>
 		</html>
