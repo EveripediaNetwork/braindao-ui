@@ -9,8 +9,7 @@ import {
 } from "./_schema";
 
 const CACHE_DURATION_SECONDS_24_HR_IN_SECONDS = 24 * 60 * 60;
-const SOPHIA_STATS_API_URL =
-	"https://app.iqai.com/api/agents/stats?address=0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB";
+const SOPHIA_STATS_API_URL = `https://app.iqai.com/api/agents/stats?address=${config.sophiaAgentAddress}`;
 
 export const getIqStats = unstable_cache(
 	async () => {
