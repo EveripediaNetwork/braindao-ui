@@ -21,7 +21,7 @@ const Iqwiki = () => {
 				/>
 			</div>
 
-			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 xl:pb-24">
+			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 xl:pb-12">
 				<div
 					className="border overflow-hidden rounded-xl mt-16 border-gray-700 bg-black grid md:grid-cols-3 relative"
 					style={{
@@ -31,7 +31,7 @@ const Iqwiki = () => {
 					}}
 				>
 					<div className="col-span-1 pb-3 sm:pb-0 pl-3 pt-4 lg:pl-6 lg:pt-8">
-						<p className="text-sm xl:text-lg font-medium text-white/80">
+						<p className="text-sm xl:text-lg font-medium text-muted-foreground">
 							Explore a diverse range of wikis designed to guide you through the
 							realms of cryptocurrency and blockchain.
 						</p>

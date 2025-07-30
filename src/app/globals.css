@@ -76,3 +76,32 @@ body {
 .braindao-hero-text-char {
 	transform: none !important;
 }
+
+.shimmer-glass {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shimmer-glass-move 4.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer-glass-move {
+  100% {
+    left: 125%;
+  }
+}
