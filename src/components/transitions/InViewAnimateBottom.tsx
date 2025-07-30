@@ -14,7 +14,7 @@ const InViewAnimateBottom: React.FC<TInViewAnimate> = ({
 	children,
 	className,
 }) => {
-	const { ref, inView } = useInView();
+	const { inView } = useInView();
 	const animation = useAnimation();
 	const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -22,7 +22,6 @@ const InViewAnimateBottom: React.FC<TInViewAnimate> = ({
 		if (inView && !hasAnimated) {
 			setHasAnimated(true);
 			animation.start({
-				// y: 0,
 				opacity: 1,
 				transition: {
 					type: "tween",
@@ -32,7 +31,6 @@ const InViewAnimateBottom: React.FC<TInViewAnimate> = ({
 		}
 		if (!inView && !hasAnimated) {
 			animation.start({
-				// y: '100px',
 				opacity: 0,
 			});
 		}
