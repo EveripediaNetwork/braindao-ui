@@ -1,5 +1,6 @@
 import Hero from "@/components/layouts/Hero";
 import Iqtoken from "@/components/layouts/Iqtoken";
+import BraindaoTeam from "@/components/layouts/braindao-team";
 import Ecosystem from "@/components/layouts/ecosystem";
 import { fetchCoinMarketData } from "@/modules/fetchCoinMarketData";
 import { getLockOverview } from "@/modules/getLockOverview";
@@ -29,6 +30,7 @@ export default async function Home() {
 				marketData={marketData}
 			/>
 			<Ecosystem />
+			<BraindaoTeam />
 		</div>
 	);
 }
