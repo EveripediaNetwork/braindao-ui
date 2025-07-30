@@ -1,5 +1,6 @@
 import { TokenBrief } from "@/app/_components/token-brief";
 import Image from "next/image";
+import BlogImage from "./images/blog/iq-blog.webp";
 
 const Blog = () => {
 	return (
@@ -17,7 +18,7 @@ const Blog = () => {
 				<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4">
 					<div className="w-full rounded-xl overflow-hidden">
 						<Image
-							src="/images/iq-blog.webp"
+							src={BlogImage}
 							alt="IQ Blog"
 							width={1200}
 							height={675}
