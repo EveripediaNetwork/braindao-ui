@@ -10,7 +10,6 @@ import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import NavBarButton from "./NavBarButton";
-import MobileThemeSwitcher from "./theme/MobileThemeSwitcher";
 
 const Navbar = () => {
 	return (
@@ -77,7 +76,7 @@ const Navbar = () => {
 					</div>
 					<div
 						id="mobile_nav_items"
-						className="hidden fixed left-0 dark:bg-gray800 bg-[#F9FAFB] w-full top-0 h-screen sm:h-[80vh] z-10"
+						className="hidden fixed left-0 bg-black w-full top-0 h-screen sm:h-[80vh] z-10"
 					>
 						<ul className="flex flex-col divide-y-[1px] text-muted-foreground w-full dark:divide-whiteAlpha-200">
 							<div className="flex justify-between sm:px-3 py-2">
@@ -113,7 +112,6 @@ const Navbar = () => {
 									</li>
 								))}
 							</div>
-							<MobileThemeSwitcher />
 							<li className="pt-3 px-5 md:hidden">
 								<a
 									href="https://iq.iqai.com"
