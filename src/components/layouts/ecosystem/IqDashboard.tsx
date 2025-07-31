@@ -1,13 +1,13 @@
 "use client";
 
 import { TokenBrief } from "@/app/_components/token-brief";
-import Image from "next/image";
 import React from "react";
 import { StatsPointers } from "../Iqtoken";
-import exchangesImage from "./images/iq-dashboard/exchanges.webp";
-import lockImage from "./images/iq-dashboard/lock.webp";
-import statsImage from "./images/iq-dashboard/stats.webp";
-import voteImage from "./images/iq-dashboard/vote.webp";
+import { DetailCard } from "./aiden";
+import exchangeImage from "./images/iq-dashboard/exchange1.svg";
+import lockImage from "./images/iq-dashboard/lock1.svg";
+import statImage from "./images/iq-dashboard/stat1.svg";
+import VotingImage from "./images/iq-dashboard/voting1.svg";
 
 const IqDashboard = () => {
 	return (
@@ -48,39 +48,35 @@ const IqDashboard = () => {
 				</div>
 
 				<div className="mt-16 grid gap-6">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div className="w-full rounded-xl overflow-hidden">
-							<Image
-								src={lockImage}
-								alt="IQ Dashboard Lock"
-								className="w-full h-auto object-cover"
-								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+					<div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+						<div className="md:col-span-3">
+							<DetailCard
+								image={VotingImage}
+								alt="IQ Dashboard Vote"
+								title="Vote"
 							/>
 						</div>
-						<div className="w-full rounded-xl overflow-hidden">
-							<Image
-								src={statsImage}
-								alt="IQ Dashboard Stats"
-								className="w-full h-auto object-cover"
-								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+						<div className="md:col-span-2">
+							<DetailCard
+								image={exchangeImage}
+								alt="IQ Dashboard Lock"
+								title="Lock"
 							/>
 						</div>
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div className="w-full rounded-xl overflow-hidden">
-							<Image
-								src={lockImage}
-								alt="IQ Dashboard Lock"
-								className="w-full h-auto object-cover"
-								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+						<div>
+							<DetailCard
+								image={lockImage}
+								alt="IQ Dashboard Exchanges"
+								title="Exchanges"
 							/>
 						</div>
-						<div className="w-full rounded-xl overflow-hidden">
-							<Image
-								src={statsImage}
+						<div>
+							<DetailCard
+								image={statImage}
 								alt="IQ Dashboard Stats"
-								className="w-full h-auto object-cover"
-								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+								title="Stats"
 							/>
 						</div>
 					</div>

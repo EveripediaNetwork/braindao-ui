@@ -4,7 +4,7 @@ import { raleway } from "@/app/font";
 import { appLinks, navLinks } from "@/data/Nav";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
 import { Button } from "../ui/button";
@@ -12,10 +12,32 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import NavBarButton from "./NavBarButton";
 
 const Navbar = () => {
+	const [isScrolled, setIsScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 10) {
+				setIsScrolled(true);
+			} else {
+				setIsScrolled(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
-		<div className="bg-transparent text-white shadow-sm fixed top-0 left-0 right-0 z-[60] w-full after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent backdrop-blur-md">
+		<div
+			className={cn(
+				"fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent backdrop-blur-md",
+				isScrolled ? "bg-black/70 backdrop-blur-md" : "bg-transparent",
+			)}
+		>
 			<div className="max-w-[1536px] mx-auto">
-				<header className=" flex flex-col z-50 lg:-mx-7 lg:px-14 p-3">
+				<header className="flex flex-col z-50 lg:-mx-7 lg:px-14 p-3">
 					<div className="flex justify-between items-center w-full">
 						<h1 className="flex gap-2 items-center text-lg font-medium">
 							<a href="/">

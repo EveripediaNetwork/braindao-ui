@@ -38,7 +38,7 @@ const SOPHIA = () => {
 						<div
 							className="relative h-[300px] lg:h-auto flex-1 bg-black border border-border rounded-2xl overflow-hidden"
 							style={{
-								backgroundImage: "url(/images/background.png)",
+								backgroundImage: "url(/images/background.svg)",
 								backgroundSize: "cover",
 								backgroundPosition: "center",
 							}}
@@ -66,7 +66,7 @@ const SOPHIA = () => {
 						<div
 							className="relative h-[300px] lg:h-auto flex-1 bg-black border border-border rounded-2xl overflow-hidden"
 							style={{
-								backgroundImage: "url(/images/background.png)",
+								backgroundImage: "url(/images/background.svg)",
 								backgroundSize: "cover",
 								backgroundPosition: "center",
 							}}
