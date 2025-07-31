@@ -7,7 +7,7 @@ type TTeam = {
 	name?: string;
 	role?: string;
 	twitterLink?: string;
-	linkedlnLink?: string;
+	linkedinLink?: string;
 	wikiLink?: string;
 };
 const TeamCard = ({
@@ -15,7 +15,7 @@ const TeamCard = ({
 	name,
 	role,
 	twitterLink,
-	linkedlnLink,
+	linkedinLink,
 	wikiLink,
 }: TTeam) => {
 	return (
@@ -59,9 +59,9 @@ const TeamCard = ({
 								<span className="sr-only">Wiki</span>
 							</a>
 						)}
-						{linkedlnLink && (
+						{linkedinLink && (
 							<a
-								href={linkedlnLink}
+								href={linkedinLink}
 								target="_blank"
 								className="w-5 h-5 bg-no-repeat bg-contain bg-linkedln opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
@@ -106,7 +106,7 @@ const BraindaoTeam = () => {
 							src={team.src}
 							name={team.name}
 							role={team.role}
-							linkedlnLink={team.linkedlnLink}
+							linkedinLink={team.linkedinLink}
 							twitterLink={team.twitterLink}
 							wikiLink={team.wikiLink}
 						/>
