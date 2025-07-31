@@ -71,7 +71,8 @@ html {
 }
 
 body {
-	@apply text-[#4A5568];
+  background: black;
+  @apply text-[#4A5568];
 }
 .braindao-hero-text-char {
 	transform: none !important;

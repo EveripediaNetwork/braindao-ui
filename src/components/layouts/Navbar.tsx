@@ -13,7 +13,7 @@ import NavBarButton from "./NavBarButton";
 
 const Navbar = () => {
 	return (
-		<div className="bg-transparent text-white">
+		<div className="bg-transparent text-white shadow-sm fixed top-0 left-0 right-0 z-[60] w-full after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent backdrop-blur-md">
 			<div className="max-w-[1536px] mx-auto">
 				<header className=" flex flex-col z-50 lg:-mx-7 lg:px-14 p-3">
 					<div className="flex justify-between items-center w-full">

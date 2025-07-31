@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 const Hero = () => {
 	return (
-		<div className="relative bg-black overflow-hidden pb-8">
+		<div className="relative overflow-hidden pb-8">
 			<div className="absolute top-0 left-0 right-0 h-80 z-10">
 				<img
 					src="/images/gradient-blur-bg.png"
@@ -15,13 +15,13 @@ const Hero = () => {
 				/>
 			</div>
 
-			<div className="relative z-20">
+			<div className="relative">
 				<div className="max-w-[1536px] mx-auto">
 					<Navbar />
-					<div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden min-h-[calc(40vh-65px)] md:min-h-[calc(60vh-65px)] lg:min-h-[calc(60vh-65px)] pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-16 xl:pb-20">
+					<div className="flex flex-col items-center w-full justify-center relative overflow-y-hidden min-h-[calc(40vh-65px)] md:min-h-[calc(60vh-65px)] lg:min-h-[calc(60vh-65px)] pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-16 xl:pb-72">
 						<div className="flex text-center md:text-left items-center flex-col justify-start mx-auto gap-1 sm:gap-5 w-full px-4 sm:px-0 max-w-6xl">
 							<InViewAnimateBottom>
-								<h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium text-white animate-fade-in !leading-tight text-center">
+								<h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium text-white animate-fade-in !leading-tight text-center mt-28">
 									<span className={cn(satoshi.className, "block")}>
 										Building A More
 									</span>
@@ -32,16 +32,16 @@ const Hero = () => {
 										the <span className="italic text-primary">IQ Token.</span>
 									</span>
 								</h1>
-								<div className="absolute bottom-4 left-0 right-0 h-1/2 opacity-80">
+								<div className="absolute inset-0 top-52 left-0 right-0 h-full">
 									<img
 										src="/images/mesh.png"
 										alt=""
-										className="w-full object-cover scale-20"
+										className="w-full object-cover scale-100 opacity-70"
 									/>
 								</div>
 							</InViewAnimateBottom>
 							<InViewAnimateBottom>
-								<p className="text-sm sm:text-lg max-w-[513px] lg:max-w-2xl text-center mx-auto lg:text-xl text-white mt-2">
+								<p className="text-sm sm:text-lg max-w-[513px] lg:max-w-2xl text-center mx-auto lg:text-xl text-white mt-2 mb-8">
 									Join our mission to expand the scope of human knowledge with
 									BrainDAO, the governing DAO powering the IQ ecosystem.
 								</p>

@@ -100,7 +100,7 @@ const BraindaoTeam = () => {
 				{braindaoTeam.map((team) => (
 					<div
 						key={team.name}
-						className="p-4 sm:p-6 lg:p-4 border-neutral-700 border-b sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 xl:[&:nth-child(3n)]:border-r xl:[&:nth-child(4n)]:border-r-0"
+						className="py-4 px-2 sm:py-6 sm:px-6 lg:px-4 lg:py-4 border-neutral-700 border-b sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 xl:[&:nth-child(3n)]:border-r xl:[&:nth-child(4n)]:border-r-0"
 					>
 						<TeamCard
 							src={team.src}
