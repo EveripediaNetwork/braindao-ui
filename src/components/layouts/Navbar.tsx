@@ -3,6 +3,7 @@
 import { raleway } from "@/app/font";
 import { appLinks, navLinks } from "@/data/Nav";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
@@ -16,7 +17,7 @@ const Navbar = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 10) {
+			if (window.scrollY > 50) {
 				setIsScrolled(true);
 			} else {
 				setIsScrolled(false);
@@ -30,44 +31,92 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div
+		<motion.div
 			className={cn(
 				"fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent backdrop-blur-md",
 				isScrolled ? "bg-black/70 backdrop-blur-md" : "bg-transparent",
 			)}
 		>
 			<div className="max-w-[1536px] mx-auto">
-				<header className="flex flex-col z-50 lg:-mx-7 lg:px-14 p-3">
-					<div className="flex justify-between items-center w-full">
-						<h1 className="flex gap-2 items-center text-lg font-medium">
+				<header
+					className={cn(
+						"flex flex-col z-50 lg:-mx-7 lg:px-14 p-3",
+						isScrolled && "lg:py-2 transition-all duration-300 ease-in-out",
+					)}
+				>
+					<div
+						className={cn(
+							"flex justify-between items-center w-full transition-all duration-300",
+							isScrolled ? "lg:justify-center lg:gap-16" : "",
+						)}
+					>
+						<motion.h1
+							className={cn(
+								"flex gap-2 items-center text-lg font-medium transition-all duration-300",
+								isScrolled && "lg:translate-x-8",
+							)}
+							initial={{ opacity: 0, y: 0 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.3 }}
+						>
 							<a href="/">
 								<BraindaoLogoDark />
 							</a>
-						</h1>
-						<nav className="hidden lg:flex gap-8 xl:gap-6 text-sm lg:text-base">
-							{navLinks.map((link) => (
-								<a
+						</motion.h1>
+						<motion.nav
+							initial="hidden"
+							animate="visible"
+							className="hidden lg:flex gap-8 xl:gap-6 text-sm lg:text-base"
+						>
+							{navLinks.map((link, index) => (
+								<motion.a
 									target={link.target}
 									href={link.href}
 									key={link.href}
 									className="hover:text-primary transition-colors duration-200"
+									variants={{
+										hidden: { opacity: 0, x: -20 },
+										visible: {
+											opacity: 1,
+											x: 0,
+											transition: {
+												delay: index * 0.1,
+												duration: 0.3,
+											},
+										},
+									}}
+									whileHover={{ scale: 1.05 }}
+									whileTap={{ scale: 0.95 }}
 								>
 									{link.title}
-								</a>
+								</motion.a>
 							))}
-						</nav>
-						<div className="flex gap-2 items-center">
+						</motion.nav>
+						<motion.div
+							className={cn(
+								"flex gap-2 items-center transition-all duration-300",
+								isScrolled && "lg:-translate-x-8",
+							)}
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 0.3, delay: 0.3 }}
+						>
 							<div className="hidden lg:block">
 								<Popover>
 									<PopoverTrigger asChild>
-										<Button
-											type="button"
-											size="sm"
-											className="text-xs md:text-sm"
+										<motion.div
+											whileHover={{ scale: 1.05 }}
+											whileTap={{ scale: 0.95 }}
 										>
-											<span>Launch App</span>
-											<ChevronDown className="h-4 w-4" />
-										</Button>
+											<Button
+												type="button"
+												size="sm"
+												className="text-xs md:text-sm"
+											>
+												<span>Launch App</span>
+												<ChevronDown className="h-4 w-4" />
+											</Button>
+										</motion.div>
 									</PopoverTrigger>
 									<PopoverContent
 										className="w-44 px-4 bg-black border-border rounded-2xl"
@@ -77,25 +126,27 @@ const Navbar = () => {
 									>
 										<div className="space-y-2">
 											{appLinks.map((link) => (
-												<a
+												<motion.a
 													key={link.href}
 													href={link.href}
 													target="_blank"
 													rel="noopener noreferrer"
 													className="w-full h-8 transition-colors cursor-pointer flex items-center justify-start group"
+													whileHover={{ x: 3 }}
 												>
 													<span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors duration-200">
 														{link.title}
 													</span>
-												</a>
+												</motion.a>
 											))}
 										</div>
 									</PopoverContent>
 								</Popover>
 							</div>
 							<NavBarButton />
-						</div>
+						</motion.div>
 					</div>
+
 					<div
 						id="mobile_nav_items"
 						className="hidden fixed left-0 bg-black w-full top-0 h-screen sm:h-[80vh] z-10"
@@ -151,7 +202,7 @@ const Navbar = () => {
 					</div>
 				</header>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
