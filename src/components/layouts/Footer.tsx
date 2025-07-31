@@ -19,7 +19,7 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className="bg-neutral-950">
+		<footer className="bg-neutral-950 mt-48">
 			<div className="xl:container xl:mx-auto px-4 md:px-10 xl:px-4 flex flex-col gap-6 py-12">
 				<div className="flex flex-col lg:flex-row gap-6 w-full">
 					<div className="flex flex-row w-full gap-6 md:gap-40 lg:gap-24 items-center">

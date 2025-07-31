@@ -55,7 +55,7 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<div className="relative bg-black overflow-hidden pb-8">
+		<div className="relative overflow-hidden pb-8">
 			<div className="absolute top-0 left-0 right-0 h-80 z-10">
 				<img
 					src="/images/gradient-blur-bg.png"
@@ -64,7 +64,7 @@ const Hero = () => {
 				/>
 			</div>
 
-			<div className="relative z-20">
+			<div className="relative">
 				<div className="max-w-[1536px] mx-auto">
 					<Navbar />
 					<div className="flex flex-col items-center w-full justify-center relative overflow-hidden min-h-[calc(40vh-65px)] md:min-h-[calc(60vh-65px)] lg:min-h-[calc(60vh-65px)] pt-32 md:pt-48 lg:pt-56 pb-8 md:pb-12 lg:pb-16 xl:pb-20">

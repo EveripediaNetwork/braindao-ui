@@ -56,7 +56,7 @@ const Iqtoken = ({
 	const imageUrl = "/images/aboutus-dark.png";
 
 	return (
-		<div id="iq-token" className="bg-black text-muted-foreground">
+		<div id="iq-token" className="text-muted-foreground">
 			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 py-[48px] sm:py-[80px] xl:py-24">
 				<TokenBrief
 					title="The IQ Token"
