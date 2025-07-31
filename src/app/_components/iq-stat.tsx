@@ -97,7 +97,7 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 function ExchangesCard() {
 	return (
 		<div
-			className="backdrop-filter backdrop-blur-sm border border-border rounded-xl p-3 flex flex-col gap-4 text-sm w-full"
+			className="bg-[#0A0A0A] backdrop-filter backdrop-blur-sm border border-border rounded-xl p-3 flex flex-col gap-4 text-sm w-full"
 			aria-labelledby="exchanges-title"
 		>
 			<h1 id="exchanges-title" className="text-xs text-card-foreground">
