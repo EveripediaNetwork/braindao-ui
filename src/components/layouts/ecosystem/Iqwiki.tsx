@@ -39,7 +39,7 @@ const Iqwiki = () => {
 						<div className="h-[220px] min-[500px]:h-[280px] sm:h-[400px] md:h-[280px] lg:h-[400px] 2xl:h-[450px] w-full relative">
 							<Image
 								src={IqWikiLanding}
-								alt=""
+								alt="IQ.wiki landing page interface"
 								fill
 								sizes="(max-width:500px) 100vw, 50vw"
 							/>
@@ -52,7 +52,7 @@ const Iqwiki = () => {
 						<div className="md:flex-1 rounded-xl relative overflow-hidden h-[300px] min-[500px]:h-[400px] sm:h-[550px] md:h-[300px] lg:h-[470px] xl:h-[440px] 2xl:h-[528px]">
 							<Image
 								src={WidgetImage}
-								alt=""
+								alt="IQ.wiki widgets and tools interface"
 								fill
 								sizes="(max-width:480px) 100vw, 50vw"
 							/>
@@ -61,7 +61,7 @@ const Iqwiki = () => {
 							<div className="w-full relative h-[280px] min-[500px]:h-[350px] sm:h-[450px] md:h-full rounded-xl ">
 								<Image
 									src={WikiRankImage}
-									alt=""
+									alt="IQ.wiki ranking showing details of cryptocurrencies and other blockchain projects"
 									fill
 									sizes="(max-width:480px) 100vw, 50vw"
 								/>
