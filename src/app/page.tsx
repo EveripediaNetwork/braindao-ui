@@ -21,7 +21,7 @@ export default async function Home() {
 	const { totalHiiqSupply } = lockOverview;
 
 	return (
-		<div className="min-h-screen">
+		<div className="max-w-7xl mx-auto">
 			<Hero />
 			<IQStats iqStatsData={iqStatsData} sophiaStats={sophiaStats} />
 			<Iqtoken
