@@ -55,7 +55,7 @@ const Navbar = () => {
 								"flex gap-2 items-center text-lg font-medium transition-all duration-300",
 								isScrolled && "lg:translate-x-8",
 							)}
-							initial={{ opacity: 0, y: 0 }}
+							initial={{ opacity: 0, y: -20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.3 }}
 						>
