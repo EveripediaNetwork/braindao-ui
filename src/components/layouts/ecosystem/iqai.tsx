@@ -1,6 +1,7 @@
 "use client";
 
 import { TokenBrief } from "@/app/_components/token-brief";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import Image from "next/image";
 import React from "react";
 import AILandingImage from "./images/iqai/iq-landing.png";
@@ -17,12 +18,26 @@ const IQAI = () => {
 				/>
 			</div>
 
-			<div className="w-full">
+			{/* <div className="w-full overflow-hidden">
+				<ContainerScroll titleComponent={""}>
+					<Image
+						src={AILandingImage}
+						alt="IQ AI"
+						width={750}
+						height={675}
+						className="w-full h-auto"
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+					/>
+				</ContainerScroll>
+			</div> */}
+
+			{/* <div className="w-full block lg:hidden"> */}
+			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4">
 				<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4">
 					<div className="w-full rounded-xl overflow-hidden">
 						<Image
 							src={AILandingImage}
-							alt="IQ AI"
+							alt="IQ Blog"
 							width={750}
 							height={675}
 							className="w-full h-auto"
