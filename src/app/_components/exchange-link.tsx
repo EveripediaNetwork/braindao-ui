@@ -22,7 +22,7 @@ export function ExchangeLink({
 			</Link>
 			{name !== "frax-finance" && (
 				<div
-					className="border-l border-border h-[24px] mx-2"
+					className="border-l border-neutral-700 h-[24px] mx-2"
 					aria-hidden="true"
 				/>
 			)}

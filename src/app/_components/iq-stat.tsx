@@ -34,10 +34,10 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 		formattedMCapChange,
 	} = iqStatsData;
 	return (
-		<section className="md:mb-0 top-[-40px] sm:top-[-60px] md:top-[-80px] lg:top-[-100px] xl:top-[-80px] relative container mx-auto">
+		<section className="relative mx-auto mt-[-480px] sm:mt-[-480px] md:mt-[-380px] lg:mt-[-490px] xl:mt-[-280px]">
 			<div className="p-4 text-foreground flex md:grid xl:grid-cols-4 flex-col md:grid-cols-2 gap-4 flex-wrap justify-center">
 				<TokenCard
-					title="IQ Price"
+					title="IQ Price ($)"
 					value={price}
 					change={{
 						iqChange: iqPriceChange,
@@ -97,7 +97,7 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 function ExchangesCard() {
 	return (
 		<div
-			className="bg-[#0A0A0A] backdrop-filter backdrop-blur-sm border border-border rounded-xl p-3 flex flex-col gap-4 text-sm w-full"
+			className="bg-neutral-950 backdrop-filter backdrop-blur-sm border border-neutral-700 rounded-xl p-3 flex flex-col gap-4 text-sm w-full"
 			aria-labelledby="exchanges-title"
 		>
 			<h1 id="exchanges-title" className="text-xs text-card-foreground">
