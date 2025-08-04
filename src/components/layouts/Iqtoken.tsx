@@ -53,11 +53,11 @@ const Iqtoken = ({
 		marketCap: number;
 	} | null;
 }) => {
-	const imageUrl = "/images/aboutus-dark.png";
+	const imageUrl = "/images/about-us.png";
 
 	return (
 		<div id="iq-token" className="text-muted-foreground">
-			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 py-[48px] sm:py-[80px] xl:py-24">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-40">
 				<TokenBrief
 					title="The IQ Token"
 					description="The IQ token is a cryptocurrency that powers a knowledge ecosystem
@@ -72,7 +72,7 @@ const Iqtoken = ({
 
 				<div className="flex flex-col-reverse lg:flex-row items-start mt-16">
 					<div className="lg:flex-1 w-full overflow-hidden">
-						<InViewAnimateBottom className="w-full md:w-[80%] xl:w-full h-[300px] sm:h-[450px] lg:h-[380px] xl:h-[500px] relative">
+						<InViewAnimateBottom className="w-full md:w-full xl:w-full h-[300px] sm:h-[450px] lg:h-[380px] xl:h-[500px] relative">
 							{imageUrl && (
 								<Image
 									src={imageUrl}
