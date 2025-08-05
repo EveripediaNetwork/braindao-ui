@@ -34,21 +34,14 @@ const Iqwiki = () => {
 								the realms of cryptocurrency and blockchain.
 							</p>
 						</div>
-
 						<div className="w-full relative pt-8 pl-3 sm:pl-16 xl:pl-8">
-							<div className="relative">
+							<div className="relative rounded-xl overflow-hidden shadow-custom">
 								<Image
 									src={IqWikiLandingAlt}
 									alt="IQ.wiki landing page interface"
 									className="w-full h-full object-cover"
 								/>
-								<div
-									className="absolute inset-0"
-									style={{
-										background:
-											"linear-gradient(359.56deg, #0A0A0A 5.2%, rgba(26, 27, 30, 0.1) 87.64%)",
-									}}
-								/>
+								<div className="absolute inset-0 gradient-dark-bg" />
 							</div>
 						</div>
 					</div>
@@ -77,22 +70,5 @@ const Iqwiki = () => {
 		</div>
 	);
 };
-<div className="w-full relative pt-8 pl-4 sm:pl-16 xl:pl-8 ">
-	<Image
-		src={IqWikiLandingAlt}
-		alt="IQ.wiki landing page interface"
-		className="w-full h-full object-cover"
-	/>
-	<div
-		className="absolute inset-0"
-		style={{
-			background:
-				"linear-gradient(359.56deg, #0A0A0A 5.2%, rgba(26, 27, 30, 0.1) 87.64%)",
-		}}
-	/>
-</div>;
 
 export default Iqwiki;
-
-// add an extra className to the DetailCard image section so i can add extra css class to reposition of the image
-// dont use DetailCard, use normal css so you can add h-1/2 to the left

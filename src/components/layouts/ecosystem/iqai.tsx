@@ -8,7 +8,7 @@ import AILandingImage from "./images/iqai/iq-landing.png";
 
 const IQAI = () => {
 	return (
-		<div>
+		<div id="iqai" className="bg-black text-muted-foreground">
 			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4  sm:pb-[10px] xl:pb-24">
 				<TokenBrief
 					title="IQ AI"

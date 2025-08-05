@@ -11,9 +11,9 @@ import {
 	RiQuestionAnswerLine,
 } from "react-icons/ri";
 
-import AidenLanding from "./images/aiden/AidenLanding.svg";
-import AidenChat from "./images/aiden/aiden-1.svg";
-import AidenKnowledge from "./images/aiden/aiden-2.svg";
+import AidenLanding from "./images/aiden/AidenLanding-2.svg";
+import AidenKnowledge from "./images/aiden/aiden-3.svg";
+import AidenChat from "./images/aiden/aiden-elite.svg";
 
 export const FeatureList = ({
 	title,
@@ -45,12 +45,18 @@ interface DetailCardProps {
 	image: StaticImageData;
 	alt: string;
 	title?: string;
+	className?: string;
 }
 
-export const DetailCard = ({ image, alt, title }: DetailCardProps) => {
+export const DetailCard = ({
+	image,
+	alt,
+	title,
+	className,
+}: DetailCardProps) => {
 	return (
 		<div
-			className="flex flex-col rounded-2xl h-full border border-border overflow-hidden"
+			className="flex flex-col rounded-2xl h-full border border-red-500 overflow-hidden"
 			style={{
 				backgroundImage: "url(/images/background.svg)",
 				backgroundSize: "cover",
@@ -69,7 +75,7 @@ export const DetailCard = ({ image, alt, title }: DetailCardProps) => {
 				<Image
 					src={image}
 					alt={alt}
-					className="w-full h-full object-contain"
+					className={`w-full h-full object-contain ${className || ""}`}
 					style={{ position: "static" }}
 				/>
 			</div>
@@ -119,27 +125,86 @@ const Aiden = () => {
 					/>
 				</div>
 
-				<div className="mt-12 lg:mt-16">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-						<div className="flex flex-col gap-6 h-full">
-							<div className="h-[300px] lg:h-[350px]">
-								<DetailCard image={AidenLanding} alt="AI Assistant" />
-							</div>
-							<div className="h-[300px] lg:h-[350px]">
-								<DetailCard
-									image={AidenKnowledge}
-									alt="Knowledge Base"
-									title="Train AIDEN on your project's documents and web pages and incorporate text and Q&A pairs to tailor the bot to the needs of your community."
-								/>
+				<div className="w-full flex flex-col lg:flex-row gap-4">
+					<div className="w-full lg:w-[40%] flex flex-col h-full lg:h-full md:h-[40vh] md:flex-row lg:flex-col gap-4 ">
+						<div className="w-full h-full lg:h-1/2">
+							<div
+								className="w-full h-full flex flex-col rounded-2xl border border-neutral-700 overflow-hidden justify-end"
+								style={{
+									backgroundImage: "url(/images/background.svg)",
+									backgroundSize: "cover",
+									backgroundPosition: "center",
+									height: "500px",
+								}}
+							>
+								<div className="flex items-center justify-center pt-4 px-8 ">
+									<Image
+										src={AidenLanding}
+										alt={"alt text"}
+										className="w-full h-full object-contain"
+									/>
+								</div>
 							</div>
 						</div>
 
-						<div className="h-[612px] lg:h-[712px]">
-							<DetailCard
-								image={AidenChat}
-								alt="AI Platform"
-								title="AIDEN can be integrated into different social platforms to deliver specialized, context-relevant information to meet the unique needs of each community."
-							/>
+						<div className="w-full h-full lg:h-1/2  ">
+							<div
+								className="flex flex-col rounded-xl h-full border border-neutral-700 justify-between "
+								style={{
+									backgroundImage: "url(/images/background.svg)",
+									backgroundSize: "cover",
+									backgroundPosition: "center",
+								}}
+							>
+								<div className="px-4 pt-4 pb-2">
+									<p className="text-foreground text-xs sm:text-sm md:text-sm font-medium max-w-xl">
+										Train AIDEN on your project documents and web pages and
+										incorporate text and Q&A pairs to tailor the bot to the
+										needs of your community.
+									</p>
+								</div>
+
+								<div className="flex  items-center justify-center  ">
+									<div className="relative rounded-xl overflow-hidden pt-4 pl:8 md:pl-8">
+										<Image
+											src={AidenKnowledge}
+											alt="IQ.wiki landing page interface"
+											className="w-full h-full object-contain "
+										/>
+										<div className="absolute inset-0 gradient-dark-bg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div className="w-full lg:w-[60%]  flex flex-row justify-between items-center ">
+						<div className="w-full  h-full">
+							<div
+								className="flex flex-col rounded-2xl h-full border border-border overflow-hidden"
+								style={{
+									backgroundImage: "url(/images/background.svg)",
+									backgroundSize: "cover",
+									backgroundPosition: "center",
+								}}
+							>
+								<div className="px-4 pt-4 pb-2 h-[20%]">
+									<p className="text-foreground text-xs sm:text-sm md:text-sm font-medium w-full ">
+										AIDEN can be integrated into different social platforms to
+										deliver specialized, context-relevant information to meet
+										the unique needs of each community.
+									</p>
+								</div>
+
+								<div className="flex items-center justify-center h-[80%]">
+									<Image
+										src={AidenChat}
+										alt="AI Platform"
+										className="w-full h-full object-cover"
+										style={{ position: "static" }}
+									/>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

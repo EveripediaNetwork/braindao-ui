@@ -3,16 +3,16 @@
 import { TokenBrief } from "@/app/_components/token-brief";
 import React from "react";
 import { StatsPointers } from "../Iqtoken";
-import { DetailCard } from "./aiden";
-import exchangeImage from "./images/iq-dashboard/exchange1.svg";
-import lockImage from "./images/iq-dashboard/lock1.svg";
-import statImage from "./images/iq-dashboard/stat1.svg";
-import VotingImage from "./images/iq-dashboard/voting1.svg";
+import DetailCard from "../detailed-card";
+import exchangeImage from "./images/iq-dashboard/exchange.svg";
+import lockImage from "./images/iq-dashboard/lock.svg";
+import statImage from "./images/iq-dashboard/stat.svg";
+import VotingImage from "./images/iq-dashboard/voting.svg";
 
 const IqDashboard = () => {
 	return (
 		<div id="dashboard" className="bg-black text-muted-foreground">
-			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 pb-[48px] sm:pb-[80px] xl:pb-24">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-0">
 				<TokenBrief
 					title="IQ Dashboard"
 					description="Using the IQ Dashboard, you can stake your tokens, facilitate cross-blockchain bridging, vote on governance proposals, and engage in many other activities within the blockchain ecosystem."
@@ -20,7 +20,7 @@ const IqDashboard = () => {
 					buttonText="Explore IQ Dashboard"
 				/>
 
-				<div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-6 py-3 mt-16 w-full">
+				<div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-6 py-24 sm:py-36 mt-16 w-full">
 					<StatsPointers
 						title="Swap"
 						headerSize="text-xl"
@@ -30,7 +30,7 @@ const IqDashboard = () => {
 					<StatsPointers
 						title="Lock"
 						headerSize="text-xl"
-						content="Lock IQ token over a period of time and earn IQ token rewards.\n"
+						content="Lock IQ token over a period of time and earn IQ token rewards."
 						className="gap-4"
 					/>
 					<StatsPointers
@@ -47,36 +47,58 @@ const IqDashboard = () => {
 					/>
 				</div>
 
-				<div className="mt-16 grid gap-6">
-					<div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-						<div className="md:col-span-3">
+				<div className="mt-16  w-full flex flex-col gap-6 md:gap-8">
+					<div className="flex flex-col sm:flex-row w-full justify-center gap-6 md:gap-6 h-[40vh] sm:h-[55vh]">
+						<div className="w-full sm:w-[60%] h-full">
 							<DetailCard
+								title="Vote"
 								image={VotingImage}
 								alt="IQ Dashboard Vote"
-								title="Vote"
+								className="w-full h-full"
+								containerClassName="h-full"
+								imageClassName="h-full w-full"
+								imageContainerPadding="px-2"
+								imageStyle={{ objectFit: "cover", maxHeight: "none" }}
 							/>
 						</div>
-						<div className="md:col-span-2">
+
+						<div className="w-full sm:w-[40%] h-full ">
 							<DetailCard
+								title="Exchanges"
 								image={exchangeImage}
-								alt="IQ Dashboard Lock"
-								title="Lock"
+								alt="IQ Dashboard Exchanges"
+								className="w-full h-full"
+								containerClassName="h-full"
+								imageClassName="h-full w-full object-right"
+								imageContainerPadding="pr-0"
+								imageStyle={{ objectFit: "cover", maxHeight: "none" }}
 							/>
 						</div>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div>
+
+					<div className="flex flex-col sm:flex-row w-full justify-center gap-6 md:gap-6 h-[40vh] sm:h-[55vh] 0">
+						<div className="w-full sm:w-[40%] h-full ">
 							<DetailCard
+								title="Lock"
 								image={lockImage}
-								alt="IQ Dashboard Exchanges"
-								title="Exchanges"
+								alt="IQ Dashboard Lock"
+								className="w-full h-full"
+								containerClassName="h-full"
+								imageClassName="h-full w-full"
+								imageStyle={{ objectFit: "cover", maxHeight: "none" }}
+								imageContainerPadding="px-0"
 							/>
 						</div>
-						<div>
+
+						<div className="w-full sm:w-[60%] h-full ">
 							<DetailCard
+								title="Stats"
 								image={statImage}
 								alt="IQ Dashboard Stats"
-								title="Stats"
+								className="w-full h-full"
+								containerClassName="h-full"
+								imageClassName=" h-full  object-right"
+								imageContainerPadding="px-0"
 							/>
 						</div>
 					</div>

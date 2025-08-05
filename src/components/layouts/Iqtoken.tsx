@@ -20,8 +20,8 @@ export const StatsPointers = ({
 }) => {
 	return (
 		<InViewAnimateBottom className="flex-1">
-			<div className="border-l-2 border-pink-500 pl-4">
-				<div className={cn("flex flex-col", className)}>
+			<div className="h-full flex border-l-2 border-pink-500 pl-4">
+				<div className={cn("flex flex-col h-full", className)}>
 					<h4
 						className={cn(
 							"text-foreground font-semibold",
