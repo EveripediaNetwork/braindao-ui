@@ -119,7 +119,7 @@ const Navbar = () => {
 										</motion.div>
 									</PopoverTrigger>
 									<PopoverContent
-										className="w-44 px-4 bg-black border-border rounded-2xl"
+										className="w-44 px-4 bg-black border-border rounded-xl"
 										align="start"
 										sideOffset={10}
 										alignOffset={-40}
