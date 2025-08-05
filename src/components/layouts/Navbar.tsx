@@ -163,7 +163,7 @@ const Navbar = () => {
 									<AnimatePresence>
 										{isMobileMenuOpen && (
 											<motion.div
-												className="fixed top-[74px] left-3 right-3 bg-neutral-900 border-border rounded-b-xl rounded-t-none shadow-lg z-50"
+												className="fixed top-[74px] right-3 bg-black border-neutral-700 rounded-b-xl rounded-t-none shadow-lg z-50"
 												initial={{ x: "-100%", opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
 												exit={{ x: "-100%", opacity: 0 }}
