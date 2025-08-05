@@ -51,3 +51,30 @@ export const appLinks = [
 		href: "https://chat.aiden.id",
 	},
 ];
+
+export const mobileNavLinks = [
+	{
+		title: "IQ.wiki",
+		href: "https://iq.wiki/",
+	},
+	{
+		title: "Sophia",
+		href: "https://sophia.iqai.com/",
+	},
+	{
+		title: "IQ AI",
+		href: "https://iqai.com/",
+	},
+	{
+		title: "IQ Dashboard",
+		href: "https://iq.iqai.com/",
+	},
+	{
+		title: "AIDEN",
+		href: "https://chat.aiden.id",
+	},
+	{
+		title: "IQ Blog",
+		href: "https://blog.iqai.com/",
+	},
+];
