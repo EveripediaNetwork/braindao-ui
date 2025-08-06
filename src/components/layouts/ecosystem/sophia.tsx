@@ -7,7 +7,7 @@ import SophiaLanding2 from "./images/sophia/sophia-landing.svg";
 const SOPHIA = () => {
 	return (
 		<div id="sophia" className="bg-black text-muted-foreground">
-			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:pb-24">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-20">
 				<TokenBrief
 					title="SOPHIA"
 					description="Sophia is a self-documenting AI trained on the IQ.wiki dataset, curating blockchain knowledge, providing valuable insights and maintaining up-to-date information across the IQ.wiki platform, building a career as an agent-influencer, journalist, and editor."

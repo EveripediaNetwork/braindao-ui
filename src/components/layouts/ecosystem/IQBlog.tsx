@@ -8,7 +8,7 @@ import BlogImage from "./images/blog/iq-blog.webp";
 const Blog = () => {
 	return (
 		<div id="blog" className="bg-black text-muted-foreground">
-			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-10">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-20">
 				<TokenBrief
 					title="IQ Blog"
 					description="Check out our blog to stay updated on all the exciting developments from BrainDAO and the IQ Ecosystem!"
