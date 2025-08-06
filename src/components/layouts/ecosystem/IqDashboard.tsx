@@ -20,7 +20,7 @@ const IqDashboard = () => {
 					buttonText="Explore IQ Dashboard"
 				/>
 
-				<div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-6 py-24 sm:py-36 mt-16 w-full">
+				<div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-6 mt-16 w-full">
 					<StatsPointers
 						title="Swap"
 						headerSize="text-xl"
@@ -48,57 +48,47 @@ const IqDashboard = () => {
 				</div>
 
 				<div className="mt-16  w-full flex flex-col gap-6 md:gap-8">
-					<div className="flex flex-col sm:flex-row w-full justify-center gap-6 md:gap-6 h-[40vh] sm:h-[55vh]">
-						<div className="w-full sm:w-[60%] h-full">
+					<div className="flex flex-col sm:flex-row w-full justify-center gap-6 md:gap-6">
+						<div className="w-full sm:w-[70%]">
 							<DetailCard
 								title="Vote"
 								image={VotingImage}
 								alt="IQ Dashboard Vote"
-								className="w-full h-full"
-								containerClassName="h-full"
-								imageClassName="h-full w-full"
-								imageContainerPadding="px-2"
-								imageStyle={{ objectFit: "cover", maxHeight: "none" }}
+								className="w-full"
+								containerClassName="px-6"
+								imageClassName=" w-full mt-2"
 							/>
 						</div>
 
-						<div className="w-full sm:w-[40%] h-full ">
+						<div className="w-full sm:w-[30%]">
 							<DetailCard
 								title="Exchanges"
 								image={exchangeImage}
 								alt="IQ Dashboard Exchanges"
-								className="w-full h-full"
-								containerClassName="h-full"
-								imageClassName="h-full w-full object-right"
-								imageContainerPadding="pr-0"
-								imageStyle={{ objectFit: "cover", maxHeight: "none" }}
+								className="w-full"
+								imageClassName="pl-4 pt-4"
+								imageContainerPadding="pl-0"
 							/>
 						</div>
 					</div>
 
-					<div className="flex flex-col sm:flex-row w-full justify-center gap-6 md:gap-6 h-[40vh] sm:h-[55vh] 0">
-						<div className="w-full sm:w-[40%] h-full ">
+					<div className="flex flex-col sm:flex-row w-full justify-center gap-6 md:gap-6">
+						<div className="w-full sm:w-[50%]">
 							<DetailCard
 								title="Lock"
 								image={lockImage}
 								alt="IQ Dashboard Lock"
-								className="w-full h-full"
-								containerClassName="h-full"
-								imageClassName="h-full w-full"
-								imageStyle={{ objectFit: "cover", maxHeight: "none" }}
-								imageContainerPadding="px-0"
+								className="w-full"
 							/>
 						</div>
 
-						<div className="w-full sm:w-[60%] h-full ">
+						<div className="w-full sm:w-[50%]">
 							<DetailCard
 								title="Stats"
 								image={statImage}
 								alt="IQ Dashboard Stats"
-								className="w-full h-full"
-								containerClassName="h-full"
-								imageClassName=" h-full  object-right"
-								imageContainerPadding="px-0"
+								className="w-full"
+								imageClassName="pl-4"
 							/>
 						</div>
 					</div>

@@ -30,7 +30,7 @@ const DetailCard: React.FC<DetailCardProps> = ({
 	return (
 		<div
 			className={cn(
-				"w-full flex flex-col justify-between h-full border border-neutral-700 rounded-xl overflow-hidden",
+				"w-full h-full flex flex-col justify-between border border-neutral-700 rounded-2xl overflow-hidden",
 				className,
 			)}
 			style={{
@@ -46,12 +46,7 @@ const DetailCard: React.FC<DetailCardProps> = ({
 					</p>
 				</div>
 			)}
-			<div
-				className={cn(
-					"flex-1 flex items-center justify-center w-full min-h-0 p-0",
-					containerClassName,
-				)}
-			>
+			<div className={cn(containerClassName)}>
 				<div
 					className={cn(
 						"relative w-full h-full flex items-center justify-center",
@@ -61,10 +56,10 @@ const DetailCard: React.FC<DetailCardProps> = ({
 					<Image
 						src={image}
 						alt={alt}
-						className={cn("w-full h-full object-contain", imageClassName)}
+						width={1200}
+						height={700}
+						className={cn("w-full h-full", imageClassName)}
 						style={{
-							maxWidth: "100%",
-							maxHeight: "100%",
 							...imageStyle,
 						}}
 					/>
