@@ -1,5 +1,7 @@
+import { satoshi } from "@/app/font";
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
 import { braindaoTeam } from "@/data/team";
+import { cn } from "@/lib/utils";
 import Image, { type ImageProps } from "next/image";
 
 type TTeam = {
@@ -21,7 +23,7 @@ const TeamCard = ({
 	return (
 		<InViewAnimateBottom className="w-full">
 			<div className="flex flex-col">
-				<div className="relative w-full aspect-square rounded-tl-xl rounded-tr-xl mb-4 overflow-hidden bg-black shadow-[0_-1.12px_0px_-0px_#FF5CAA]">
+				<div className="relative w-full aspect-square rounded-tl-xl rounded-tr-xl mb-4 overflow-hidden bg-black shadow-custom">
 					<Image
 						src={src || ""}
 						alt={`${name}'s profile picture`}
@@ -32,7 +34,14 @@ const TeamCard = ({
 				</div>
 
 				<div className="flex flex-col items-start font-montserrat">
-					<p className="text-primary text-xs font-medium mb-2">{role || ""}</p>
+					<p
+						className={cn(
+							satoshi.className,
+							"text-primary text-xs font-medium mb-2",
+						)}
+					>
+						{role || ""}
+					</p>
 					<h4 className="text-white text-sm font-semibold mb-3">
 						{name || ""}
 					</h4>
@@ -82,7 +91,12 @@ const BraindaoTeam = () => {
 			<div className="flex items-start flex-col lg:flex-row w-full justify-between">
 				<div className="xl:w-[400px] xl:flex-shrink-0">
 					<InViewAnimateBottom>
-						<h3 className="font-semibold text-2xl sm:text-3xl xl:text-4xl font-satoshi text-primary">
+						<h3
+							className={cn(
+								satoshi.className,
+								"font-semibold text-2xl sm:text-3xl xl:text-4xl font-satoshi text-primary",
+							)}
+						>
 							Meet the Team
 						</h3>
 					</InViewAnimateBottom>

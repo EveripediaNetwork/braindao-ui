@@ -35,7 +35,7 @@ const Iqwiki = () => {
 							</p>
 						</div>
 						<div className="w-full relative pt-8 pl-3 sm:pl-16 xl:pl-8">
-							<div className="relative rounded-xl overflow-hidden shadow-custom">
+							<div className="relative rounded-tl-xl overflow-hidden shadow-custom">
 								<Image
 									src={IqWikiLandingAlt}
 									alt="IQ.wiki landing page interface"
