@@ -24,12 +24,12 @@ const Footer = () => {
 		<footer className="bg-neutral-950 mt-48">
 			<div className="xl:container xl:mx-auto px-4 md:px-10 xl:px-4 flex flex-col gap-6 py-12">
 				<div className="flex flex-col lg:flex-row gap-6 w-full">
-					<div className="flex flex-row w-full gap-6 md:gap-40 lg:gap-24 items-center">
-						<div className="text-muted-foreground ">
+					<div className="flex flex-row w-full gap-6 md:gap-40 lg:gap-24 items-start">
+						<div className="text-muted-foreground">
 							<h2
 								className={cn(
 									satoshi.className,
-									"text-sm font-bold mb-3 font-satoshi",
+									"text-sm font-bold mb-3 font-satoshi ",
 								)}
 							>
 								Subscribe to our newsletter
@@ -58,7 +58,10 @@ const Footer = () => {
 							</h3>
 							<div className="space-y-2">
 								<p className="text-primary font-medium">Contact us</p>
-								<a className="text-muted-foreground" href="mailto:tara@iq.wiki">
+								<a
+									className="text-muted-foreground hover:underline"
+									href="mailto:tara@iq.wiki"
+								>
 									tara@iq.wiki
 								</a>
 							</div>
@@ -77,7 +80,7 @@ const Footer = () => {
 									<a
 										key={link.name}
 										href={link.href}
-										className="text-muted-foreground hover:text-white transition-colors"
+										className="text-muted-foreground hover:text-primary transition-colors"
 									>
 										{link.name}
 									</a>
@@ -91,7 +94,7 @@ const Footer = () => {
 						<h2 className="text-sm font-bold mb-0 font-satoshi text-white">
 							Company
 						</h2>
-						<div className="flex flex-row items-center gap-x-6 sm:gap-x-4 md:gap-x-6 lg:gap-x-5 gap-y-4 flex-wrap xl:max-w-[420px]">
+						<div className="flex flex-row items-center gap-x-6 sm:gap-x-4 md:gap-x-6 lg:gap-x-5 gap-y-2 flex-wrap xl:max-w-[420px]">
 							{products.map((link, linkIndex) => (
 								<React.Fragment key={link.name}>
 									<a
@@ -101,8 +104,12 @@ const Footer = () => {
 										<span className="relative z-10">{link.name}</span>
 										<div className="absolute bottom-0 left-0 w-full h-0 bg-[#FF5CAA66] transition-all duration-300 ease-out group-hover:h-[50%]" />
 									</a>
-									{linkIndex < products.length - 1 && (
-										<div className="h-8 border-[0.5px] border-neutral-700 rotate-45 transform" />
+									{linkIndex < products.length - 1 &&
+										(linkIndex + 1) % 3 !== 0 && (
+											<div className="h-8 border-[0.5px] border-neutral-700 rotate-45 transform" />
+										)}
+									{(linkIndex + 1) % 3 === 0 && (
+										<div className="hidden lg:block w-full" />
 									)}
 								</React.Fragment>
 							))}
@@ -138,7 +145,7 @@ const Footer = () => {
 					<div className="flex flex-row items-center justify-between sm:w-[50%] gap-9 sm:gap-0">
 						<a
 							href="https://iq.wiki/privacy"
-							className="hover:text-white transition-colors"
+							className="hover:text-primary transition-colors"
 						>
 							Privacy & Cookies policy
 						</a>
