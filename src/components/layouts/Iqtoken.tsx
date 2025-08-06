@@ -1,6 +1,7 @@
 "use client";
 
 import { TokenBrief } from "@/app/_components/token-brief";
+import { satoshi } from "@/app/font";
 import { cn } from "@/lib/utils";
 import { numFormatter } from "@/modules/helpers/numFormatter";
 import Image from "next/image";
@@ -24,6 +25,7 @@ export const StatsPointers = ({
 				<div className={cn("flex flex-col h-full", className)}>
 					<h4
 						className={cn(
+							satoshi.className,
 							"text-foreground font-semibold",
 							headerSize || "text-2xl xl:text-3xl",
 						)}
@@ -87,7 +89,12 @@ const Iqtoken = ({
 
 					<div className="flex-1">
 						<InViewAnimateBottom>
-							<h3 className="text-foreground text-3xl xl:text-4xl font-semibold">
+							<h3
+								className={cn(
+									satoshi.className,
+									"text-foreground text-3xl xl:text-4xl font-semibold",
+								)}
+							>
 								HiIQ
 							</h3>
 						</InViewAnimateBottom>

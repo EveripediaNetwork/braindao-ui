@@ -87,9 +87,10 @@ const Hero = () => {
 									)}
 								>
 									<span className="block">Building A More</span>
-									<span className="block">Intelligent Future Through</span>
+									<span className="block">Intelligent Future </span>
 									<span className="block">
-										the <span className="italic text-primary">IQ Token.</span>
+										Through the{" "}
+										<span className="italic text-primary">IQ Token.</span>
 									</span>
 								</h1>
 								<p

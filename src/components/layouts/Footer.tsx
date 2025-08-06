@@ -1,5 +1,7 @@
 "use client";
 
+import { satoshi } from "@/app/font";
+import { cn } from "@/lib/utils";
 import React from "react";
 import { RiArrowUpLine } from "react-icons/ri";
 
@@ -23,8 +25,13 @@ const Footer = () => {
 			<div className="xl:container xl:mx-auto px-4 md:px-10 xl:px-4 flex flex-col gap-6 py-12">
 				<div className="flex flex-col lg:flex-row gap-6 w-full">
 					<div className="flex flex-row w-full gap-6 md:gap-40 lg:gap-24 items-center">
-						<div className="text-muted-foreground">
-							<h2 className="text-sm font-bold mb-3 font-satoshi">
+						<div className="text-muted-foreground ">
+							<h2
+								className={cn(
+									satoshi.className,
+									"text-sm font-bold mb-3 font-satoshi",
+								)}
+							>
 								Subscribe to our newsletter
 							</h2>
 							<p className="text-xs">
@@ -41,7 +48,12 @@ const Footer = () => {
 					</div>
 					<div className="flex flex-row w-full justify-between text-sm gap-8 lg:gap-0">
 						<div>
-							<h3 className="font-bold mb-4 text-muted-foreground font-satoshi text-sm">
+							<h3
+								className={cn(
+									satoshi.className,
+									"font-bold mb-4 text-muted-foreground text-sm",
+								)}
+							>
 								For business Inquiries
 							</h3>
 							<div className="space-y-2">
@@ -52,7 +64,12 @@ const Footer = () => {
 							</div>
 						</div>
 						<div>
-							<h3 className="font-bold mb-4 text-muted-foreground font-satoshi">
+							<h3
+								className={cn(
+									satoshi.className,
+									"font-bold mb-4 text-muted-foreground",
+								)}
+							>
 								Follow us
 							</h3>
 							<div className="space-y-2 flex flex-col text-right text-foreground hover:text-white transition-colors">
@@ -94,7 +111,13 @@ const Footer = () => {
 					<div className="flex flex-row items-start sm:items-center text-muted-foreground gap-20 sm:gap-60 w-full">
 						<span className="flex-1 text-xs sm:text-sm">
 							BrainDAO is creating an intelligent future as the governing DAO
-							behind the IQ ecosystem, supported by Brainfund.
+							behind the IQ ecosystem, supported by
+							<a
+								href="https://www.brainfund.com/"
+								className="text-primary hover:underline ml-1"
+							>
+								Brainfund.
+							</a>
 						</span>
 						<button
 							type="button"
@@ -108,6 +131,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
+
 			<div className="bg-neutral-900">
 				<div className="flex flex-col md:flex-row items-center gap-5 md:gap-0 justify-between py-4 xl:container xl:mx-auto text-sm text-[#F3F4F6] px-4 md:px-10 xl:px-4 w-full">
 					<span>© 2025 — Powered by IQ and BrainDAO.</span>

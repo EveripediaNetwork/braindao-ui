@@ -1,7 +1,9 @@
 "use client";
 
 import { TokenBrief } from "@/app/_components/token-brief";
+import { satoshi } from "@/app/font";
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
+import { cn } from "@/lib/utils";
 import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import {
@@ -32,7 +34,12 @@ export const FeatureList = ({
 				{icon}
 			</div>
 			<div className="">
-				<h4 className="text-foreground font-semibold text-lg md:text-xl mb-1">
+				<h4
+					className={cn(
+						satoshi.className,
+						"text-foreground font-semibold text-lg md:text-xl mb-1",
+					)}
+				>
 					{title}
 				</h4>
 				<p className="text-sm lg:text-base">{description}</p>
