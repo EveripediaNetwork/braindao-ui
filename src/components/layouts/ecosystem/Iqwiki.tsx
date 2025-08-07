@@ -11,7 +11,7 @@ import WikiRankImage from "./images/iq-wiki/wiki-rank.webp";
 const Iqwiki = () => {
 	return (
 		<div id="iq-wiki" className="bg-black text-muted-foreground">
-			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-0">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 pb-12 sm:py-8 xl:py-0">
 				<TokenBrief
 					title="IQ.wiki"
 					description="IQ.wiki, the world's largest blockchain and cryptocurrency encyclopedia, is a Polygon-based platform, featuring thousands of pages, that uses IPFS for data storage and on-chain edits. IQ token stakers govern the platform, which offers a gasless experience for contributors and utilizes Sophia Agent for article summarization."

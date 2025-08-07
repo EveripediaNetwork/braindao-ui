@@ -30,7 +30,7 @@ const DetailCard: React.FC<DetailCardProps> = ({
 	return (
 		<div
 			className={cn(
-				"w-full h-full flex flex-col justify-between border border-neutral-700 rounded-2xl overflow-hidden",
+				"w-full h-full flex flex-col justify-between border border-neutral-700 rounded-xl overflow-hidden",
 				className,
 			)}
 			style={{

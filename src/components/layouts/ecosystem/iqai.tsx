@@ -9,7 +9,7 @@ import AILandingImage from "./images/iqai/iq-landing.png";
 const IQAI = () => {
 	return (
 		<div id="iqai" className="bg-black text-muted-foreground">
-			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4  sm:pb-[10px] xl:pb-0">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 pb-12 sm:py-8 xl:pb-0">
 				<TokenBrief
 					title="IQ AI"
 					description="IQ AI is building the foundation for mass blockchain adoption through the Agent Tokenization Platform (ATP). By enabling the creation of tokenized, autonomous on-chain agents, ATP is redefining decentralized ecosystems and unlocking new opportunities for collaboration, growth, and innovation.."

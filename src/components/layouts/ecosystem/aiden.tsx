@@ -93,7 +93,7 @@ export const DetailCard = ({
 const Aiden = () => {
 	return (
 		<div id="aiden" className="bg-black text-muted-foreground">
-			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 pb-[48px] sm:pb-[10px] xl:pb-0">
+			<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 pb-12 sm:pb-[10px] xl:pb-0">
 				<TokenBrief
 					title="AIDEN"
 					description={

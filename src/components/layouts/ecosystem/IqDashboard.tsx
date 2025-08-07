@@ -12,7 +12,7 @@ import VotingImage from "./images/iq-dashboard/voting.svg";
 const IqDashboard = () => {
 	return (
 		<div id="dashboard" className="bg-black text-muted-foreground">
-			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-20">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:py-32">
 				<TokenBrief
 					title="IQ Dashboard"
 					description="Using the IQ Dashboard, you can stake your tokens, facilitate cross-blockchain bridging, vote on governance proposals, and engage in many other activities within the blockchain ecosystem."
@@ -66,7 +66,7 @@ const IqDashboard = () => {
 								image={exchangeImage}
 								alt="IQ Dashboard Exchanges"
 								className="w-full"
-								imageClassName="pl-4 pt-4"
+								imageClassName="px-5 pr-12 pt-4"
 								imageContainerPadding="pl-0"
 							/>
 						</div>
