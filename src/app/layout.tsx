@@ -2,7 +2,7 @@ import "./globals.css";
 import ClientProviders from "@/components/layouts/ClientProviders";
 import Footer from "@/components/layouts/Footer";
 import type { Metadata } from "next";
-import { montserrat } from "./font";
+import { ibmPlexMono, montserrat } from "./font";
 
 export const metadata: Metadata = {
 	title: "BrainDAO - Building a more intelligent future through the IQ token.",
@@ -42,7 +42,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={montserrat.className}>
+		<html
+			lang="en"
+			className={`${montserrat.className} ${ibmPlexMono.variable}`}
+		>
 			<head>
 				<link rel="canonical" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />

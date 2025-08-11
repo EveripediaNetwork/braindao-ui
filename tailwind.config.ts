@@ -94,6 +94,7 @@ const config: Config = {
 			fontFamily: {
 				satoshi: ["var(--font-satoshi)", "sans-serif"],
 				"satoshi-light": ["var(--font-satoshi-light)", "sans-serif"],
+				"ibm-plex-mono": ["var(--font-ibm-plex-mono)", "monospace"],
 			},
 			animation: {
 				ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",

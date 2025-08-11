@@ -1,4 +1,4 @@
-import { Montserrat, Raleway, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Mono, Montserrat, Raleway } from "next/font/google";
 import localFont from "next/font/local";
 
 export const montserrat = Montserrat({
@@ -6,14 +6,11 @@ export const montserrat = Montserrat({
 	display: "swap",
 });
 
-export const raleway = Raleway({
+export const ibmPlexMono = IBM_Plex_Mono({
 	subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
 	display: "swap",
-});
-
-export const space_grotesk = Space_Grotesk({
-	subsets: ["latin"],
-	display: "swap",
+	variable: "--font-ibm-plex-mono",
 });
 
 export const satoshi = localFont({
