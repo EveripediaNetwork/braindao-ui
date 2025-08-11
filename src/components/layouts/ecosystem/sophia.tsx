@@ -1,8 +1,8 @@
 import { TokenBrief } from "@/app/_components/token-brief";
 import Image from "next/image";
 import AiAssistantImage from "./images/sophia/AiAssisted.svg";
-import UpdatesImage from "./images/sophia/Card.svg";
 import SophiaLanding2 from "./images/sophia/sophia-landing.svg";
+import UpdatesImage from "./images/sophia/updates.svg";
 
 const SOPHIA = () => {
 	return (
@@ -88,7 +88,7 @@ const SOPHIA = () => {
 							<Image
 								src={UpdatesImage}
 								alt="Lower Image"
-								className="w-[80%] object-contain object-left"
+								className="w-[80%] object-contain rounded-tr-xl border-t border-r  border-neutral-700"
 							/>
 						</div>
 					</div>
