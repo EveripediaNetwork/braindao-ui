@@ -121,6 +121,8 @@ const Footer = () => {
 							behind the IQ ecosystem, supported by
 							<a
 								href="https://www.brainfund.com/"
+								target="_blank"
+								rel="nopener noreferrer"
 								className="text-primary hover:underline ml-1"
 							>
 								Brainfund.
@@ -147,6 +149,8 @@ const Footer = () => {
 					<div className="flex flex-row items-center justify-between sm:w-[50%] gap-9 sm:gap-0">
 						<a
 							href="https://iq.wiki/privacy"
+							target="_blank"
+							rel="nopener noreferrer"
 							className="hover:text-primary transition-colors"
 						>
 							Privacy & Cookies policy
