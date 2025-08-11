@@ -59,7 +59,7 @@ const Iqtoken = ({
 
 	return (
 		<div id="iq-token" className="text-muted-foreground">
-			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-24 sm:py-20 xl:pb-20 xl:pt-40">
+			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-12 sm:py-20 xl:pb-20 xl:pt-20">
 				<TokenBrief
 					title="The IQ Token"
 					description="The IQ token is a cryptocurrency that powers a knowledge ecosystem

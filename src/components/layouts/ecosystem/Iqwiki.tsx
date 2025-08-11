@@ -29,7 +29,7 @@ const Iqwiki = () => {
 						}}
 					>
 						<div className="pl-3 pt-8">
-							<p className="text-sm lg:text-base max-w-xl font-medium text-muted-foreground">
+							<p className="text-xs md:text-sm lg:text-base max-w-xl font-medium text-muted-foreground">
 								Explore a diverse range of wikis designed to guide you through
 								the realms of cryptocurrency and blockchain.
 							</p>

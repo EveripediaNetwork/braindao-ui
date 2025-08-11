@@ -15,7 +15,7 @@ const Ecosystem = () => {
 				<h2
 					className={cn(
 						satoshi.className,
-						"text-center text-4xl xl:text-5xl text-white font-bold pt-[48px] sm:pt-[80px] xl:pt-24 pb-[24px] sm:pb-[40px] xl:pb-12",
+						"text-center text-4xl xl:text-5xl text-white font-bold sm:pt-0 xl:pt-24 pb-16 sm:pb-10 xl:pb-12",
 					)}
 				>
 					The IQ Ecosystem

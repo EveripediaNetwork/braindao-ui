@@ -87,7 +87,7 @@ const TeamCard = ({
 };
 const BraindaoTeam = () => {
 	return (
-		<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 py-[48px] sm:py-[80px] 2xl:py-24">
+		<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 py-12 sm:py-20 2xl:py-24">
 			<div className="flex items-start flex-col lg:flex-row w-full justify-between">
 				<div className="xl:w-[400px] xl:flex-shrink-0">
 					<InViewAnimateBottom>
