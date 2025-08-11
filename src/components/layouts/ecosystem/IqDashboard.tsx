@@ -55,19 +55,19 @@ const IqDashboard = () => {
 								image={VotingImage}
 								alt="IQ Dashboard Vote"
 								className="w-full"
-								containerClassName="px-6"
+								containerClassName="px-10"
 								imageClassName=" w-full mt-2"
 							/>
 						</div>
 
-						<div className="w-full sm:w-[30%]">
+						<div className="w-full sm:w-[35%]">
 							<DetailCard
 								title="Exchanges"
 								image={exchangeImage}
 								alt="IQ Dashboard Exchanges"
 								className="w-full"
-								imageClassName="px-5 pr-12 pt-4"
-								imageContainerPadding="pl-0"
+								imageClassName="pl-9"
+								imageContainerPadding="flex justify-end items-end"
 							/>
 						</div>
 					</div>
@@ -88,7 +88,8 @@ const IqDashboard = () => {
 								image={statImage}
 								alt="IQ Dashboard Stats"
 								className="w-full"
-								imageClassName="pl-4"
+								imageClassName="pl-11"
+								imageContainerPadding="flex justify-end"
 							/>
 						</div>
 					</div>

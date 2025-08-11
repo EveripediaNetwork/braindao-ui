@@ -45,5 +45,3 @@ const InViewAnimateSlideUp: FC<TInViewAnimate> = ({
 };
 
 export default InViewAnimateSlideUp;
-
-// Well, for the part I am working on: check the draft PR i created, the link is available there

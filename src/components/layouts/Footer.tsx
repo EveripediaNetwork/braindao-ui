@@ -75,7 +75,7 @@ const Footer = () => {
 							>
 								Follow us
 							</h3>
-							<div className="space-y-2 flex flex-col text-right text-foreground hover:text-white transition-colors">
+							<div className="space-y-2 flex flex-col text-left text-foreground hover:text-white transition-colors">
 								{socialLinks.map((link) => (
 									<a
 										key={link.name}
@@ -141,7 +141,9 @@ const Footer = () => {
 
 			<div className="bg-neutral-900">
 				<div className="flex flex-col md:flex-row items-center gap-5 md:gap-0 justify-between py-4 xl:container xl:mx-auto text-sm text-[#F3F4F6] px-4 md:px-10 xl:px-4 w-full">
-					<span>© 2025 — Powered by IQ and BrainDAO.</span>
+					<span>
+						© {new Date().getFullYear()} — Powered by IQ and BrainDAO.
+					</span>
 					<div className="flex flex-row items-center justify-between sm:w-[50%] gap-9 sm:gap-0">
 						<a
 							href="https://iq.wiki/privacy"

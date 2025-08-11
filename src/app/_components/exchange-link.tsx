@@ -14,7 +14,7 @@ export function ExchangeLink({
 			<Link
 				href={href}
 				target="_blank"
-				rel="noopener nofollow"
+				rel="noopener noreferrer"
 				data-ph-capture-attribute-exchange-link={name.toLowerCase()}
 				aria-label={`Trade on ${name}`}
 			>

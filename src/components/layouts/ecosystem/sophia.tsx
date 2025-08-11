@@ -1,7 +1,7 @@
 import { TokenBrief } from "@/app/_components/token-brief";
 import Image from "next/image";
+import AiAssistantImage from "./images/sophia/AiAssisted.svg";
 import UpdatesImage from "./images/sophia/Card.svg";
-import AiAssistantImage from "./images/sophia/Left_Card1.svg";
 import SophiaLanding2 from "./images/sophia/sophia-landing.svg";
 
 const SOPHIA = () => {
@@ -47,10 +47,10 @@ const SOPHIA = () => {
 								<Image
 									src={AiAssistantImage}
 									alt="Upper Image"
-									className="w-full h-full object-contain object-right rounded-tl-lg"
+									className="w-full h-full object-cover object-right rounded-bl-xl border-l border-b  border-neutral-700"
 								/>
 							</div>
-							<div className="px-4  space-y-1 sm:space-y-2 mt-auto">
+							<div className="px-4 py-4 space-y-1 sm:space-y-2 mt-auto">
 								<span className="inline-block px-2 sm:px-3 py-1 bg-transparent text-white text-xs font-semibold rounded-full border border-border shimmer-glass">
 									AI-assisted <span className="text-primary">Editing</span>
 								</span>
@@ -72,7 +72,7 @@ const SOPHIA = () => {
 								backgroundPosition: "center",
 							}}
 						>
-							<div className="space-y-1 p-2">
+							<div className="space-y-1 px-4 py-4 sm:space-y-2 ">
 								<span className="inline-block px-3 py-1 bg-transparent text-white text-xs font-semibold rounded-full border border-border shimmer-glass">
 									Exclusive <span className="text-primary">Updates</span>
 								</span>

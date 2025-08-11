@@ -57,10 +57,21 @@ const Hero = () => {
 	return (
 		<div className="relative overflow-hidden pb-8">
 			<div className="absolute top-0 left-0 right-0 h-[50vh] sm:[50vh] md:h-[90vh] z-90">
-				<img
+				<Image
 					src="/images/gradient-blur-bg.png"
 					alt="gradient blur"
+					fill
 					className="w-full h-full object-cover opacity-100"
+				/>
+			</div>
+
+			<div className="absolute bottom-0 left-0 right-0 h-1/2 sm:h-2/3 md:h-2/3 opacity-80 ">
+				<Image
+					src="/images/mesh.png"
+					alt=""
+					width={1200}
+					height={600}
+					className="w-full object-cover"
 				/>
 			</div>
 
@@ -69,15 +80,6 @@ const Hero = () => {
 					<Navbar />
 					<div className="flex flex-col items-center w-full h-[100vh] justify-center relative overflow-hidden min-h-[calc(40vh-65px)] md:min-h-[calc(60vh-65px)] lg:min-h-[calc(60vh-65px)] pt-0 md:pt-20 lg:pt-2 pb-72 sm:pb-80 md:pb-60 lg:pb-96 xl:pb-32 -mt-20 md:-mt-32 lg:-mt-0 xl:pt-0">
 						<div className="flex text-center md:text-left items-center flex-col justify-start mx-auto gap-1 sm:gap-5 w-full px-4 sm:px-0 max-w-6xl overflow-hidden">
-							<div className="absolute bottom-0 left-0 right-0 h-1/2 sm:h-2/3 md:h-2/3 opacity-80 ">
-								<Image
-									src="/images/mesh.png"
-									alt=""
-									width={1200}
-									height={600}
-									className="w-full object-cover"
-								/>
-							</div>
 							<div className="w-full flex flex-col gap-4 items-center justify-center ">
 								<h1
 									ref={headingRef}

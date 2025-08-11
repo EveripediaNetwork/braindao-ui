@@ -132,51 +132,50 @@ const Aiden = () => {
 					/>
 				</div>
 
-				<div className="w-full flex flex-col lg:flex-row gap-4">
-					<div className="w-full lg:w-[40%] flex flex-col h-full lg:h-full md:h-[40vh] md:flex-row lg:flex-col gap-4 ">
+				<div className="w-full  flex flex-col lg:flex-row gap-4">
+					<div className="w-full lg:w-[40%] flex flex-col h-full lg:h-full lg:flex-col gap-4">
 						<div className="w-full h-full lg:h-1/2">
 							<div
-								className="w-full h-full flex flex-col rounded-2xl border border-neutral-700 overflow-hidden justify-end"
+								className="w-full h-full flex flex-col rounded-2xl  overflow-hidden justify-end border border-neutral-700 "
 								style={{
 									backgroundImage: "url(/images/background.svg)",
 									backgroundSize: "cover",
 									backgroundPosition: "center",
-									height: "500px",
 								}}
 							>
-								<div className="flex items-center justify-center pt-4 px-8 ">
+								<div className="w-full h-full flex justify-center items-end pt-6 px-8 ">
 									<Image
 										src={AidenLanding}
-										alt={"alt text"}
-										className="w-full h-full object-contain"
+										alt="Landing page"
+										className="w-full h-full object-contain  "
 									/>
 								</div>
 							</div>
 						</div>
 
-						<div className="w-full h-full lg:h-1/2  ">
+						<div className="w-full h-full lg:h-1/2 ">
 							<div
-								className="flex flex-col rounded-xl h-full border border-neutral-700 justify-between "
+								className="w-full h-full flex flex-col rounded-2xl overflow-hidden justify-between border border-neutral-700 gap-3"
 								style={{
 									backgroundImage: "url(/images/background.svg)",
 									backgroundSize: "cover",
 									backgroundPosition: "center",
 								}}
 							>
-								<div className="px-4 pt-4 pb-2">
-									<p className="text-foreground text-xs sm:text-sm md:text-sm font-medium max-w-xl">
+								<div className="px-4 pt-4 pb-2 flex-shrink-0">
+									<p className="text-foreground text-[10px] md:text-sm lg:text-base w-[90%] font-medium">
 										Train AIDEN on your project documents and web pages and
 										incorporate text and Q&A pairs to tailor the bot to the
 										needs of your community.
 									</p>
 								</div>
 
-								<div className="flex  items-center justify-center  ">
-									<div className="relative rounded-xl overflow-hidden pt-4 pl:8 md:pl-8">
+								<div className="w-full flex-1 flex justify-end items-end">
+									<div className="w-[90%] h-full flex rounded-xl relative overflow-hidden">
 										<Image
 											src={AidenKnowledge}
 											alt="IQ.wiki landing page interface"
-											className="w-full h-full object-contain "
+											className="w-full h-full object-contain"
 										/>
 										<div className="absolute inset-0 gradient-dark-bg" />
 									</div>
@@ -185,10 +184,10 @@ const Aiden = () => {
 						</div>
 					</div>
 
-					<div className="w-full lg:w-[60%]  flex flex-row justify-between items-center ">
+					<div className="w-full lg:w-[60%] flex flex-row justify-between items-center">
 						<div className="w-full  h-full">
 							<div
-								className="flex flex-col rounded-2xl h-full border border-border overflow-hidden"
+								className="flex flex-col rounded-2xl h-full border border-neutral-700 overflow-hidden"
 								style={{
 									backgroundImage: "url(/images/background.svg)",
 									backgroundSize: "cover",
@@ -196,7 +195,7 @@ const Aiden = () => {
 								}}
 							>
 								<div className="px-4 pt-4 pb-2 h-[20%]">
-									<p className="text-foreground text-xs sm:text-sm md:text-sm font-medium w-full ">
+									<p className="text-foreground text-[10px] sm:text-sm md:text-base font-medium w-full">
 										AIDEN can be integrated into different social platforms to
 										deliver specialized, context-relevant information to meet
 										the unique needs of each community.
@@ -204,12 +203,14 @@ const Aiden = () => {
 								</div>
 
 								<div className="flex items-center justify-center h-[80%]">
-									<Image
-										src={AidenChat}
-										alt="AI Platform"
-										className="w-full h-full object-cover"
-										style={{ position: "static" }}
-									/>
+									<div className="relative overflow-hidden h-full">
+										<Image
+											src={AidenChat}
+											alt="AI Platform"
+											className="w-full h-full object-cover"
+										/>
+										<div className="absolute inset-0 gradient-dark-bg" />
+									</div>
 								</div>
 							</div>
 						</div>
