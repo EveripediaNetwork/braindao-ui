@@ -1,18 +1,19 @@
 "use client";
 
+import ExchangesMenubar from "@/app/_components/exchange-menu";
 import { appLinks, mobileNavLinks, navLinks } from "@/data/Nav";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, X, Menu } from "lucide-react";
+import { motion } from "framer-motion";
+import { ChevronDown, Menu } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
-import ExchangesMenubar from "@/app/_components/exchange-menu";
 
 const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isLaunchAppOpen, setIsLaunchAppOpen] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -46,13 +47,13 @@ const Navbar = () => {
 					<div
 						className={cn(
 							"flex justify-between items-center w-full transition-all duration-300",
-							isScrolled ? "lg:justify-center lg:gap-16" : "",
+							// isScrolled ? "xl:justify-center xl:gap-16" : "",
 						)}
 					>
 						<motion.h1
 							className={cn(
 								"flex gap-2 items-center text-lg font-medium transition-all duration-300",
-								isScrolled && "lg:translate-x-8",
+								// isScrolled && "xl:translate-x-16",
 							)}
 							initial={{ opacity: 0, y: -20 }}
 							animate={{ opacity: 1, y: 0 }}
@@ -66,7 +67,7 @@ const Navbar = () => {
 						<motion.nav
 							initial="hidden"
 							animate="visible"
-							className="hidden lg:flex gap-8 xl:gap-6 text-sm lg:text-base"
+							className="hidden xl:flex gap-8 xl:gap-6 text-sm lg:text-base"
 						>
 							{navLinks.map((link, index) => (
 								<motion.a
@@ -96,16 +97,18 @@ const Navbar = () => {
 						<motion.div
 							className={cn(
 								"flex gap-2 items-center transition-all duration-300",
-								isScrolled && "lg:-translate-x-8",
+								// isScrolled && "xl:-translate-x-8",
 							)}
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.3, delay: 0.3 }}
 						>
-							{/* Desktop/Tablet - ExchangesMenubar and Launch App */}
 							<div className="hidden lg:flex gap-2 items-center">
 								<ExchangesMenubar />
-								<Popover>
+								<Popover
+									open={isLaunchAppOpen}
+									onOpenChange={setIsLaunchAppOpen}
+								>
 									<PopoverTrigger asChild>
 										<motion.div
 											whileHover={{ scale: 1.05 }}
@@ -113,7 +116,7 @@ const Navbar = () => {
 										>
 											<Button
 												type="button"
-												size="sm"
+												size="lg"
 												className="text-xs md:text-sm"
 											>
 												<span>Launch App </span>
@@ -136,6 +139,7 @@ const Navbar = () => {
 													rel="noopener noreferrer"
 													className="w-full h-8 transition-colors cursor-pointer flex items-center justify-start group"
 													whileHover={{ x: 3 }}
+													onClick={() => setIsLaunchAppOpen(false)}
 												>
 													<span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors duration-200">
 														{link.title}
@@ -146,7 +150,6 @@ const Navbar = () => {
 									</PopoverContent>
 								</Popover>
 							</div>
-	
 
 							<div className="lg:hidden flex gap-2 items-center">
 								<ExchangesMenubar />
@@ -159,53 +162,40 @@ const Navbar = () => {
 											<Button
 												type="button"
 												size="sm"
-												className="rounded-full border border-white/20 bg-transparent hover:bg-white/10 p-2"
+												className="rounded-full border border-white/20 bg-transparent hover:bg-white/10 p-3"
 											>
-												<Menu className="h-5 w-5" />
+												<Menu className="h-10 w-10" />
 											</Button>
 										</motion.div>
 									</PopoverTrigger>
 
-									<AnimatePresence>
-										{isMobileMenuOpen && (
-											<motion.div
-												className="fixed top-[74px] right-3 bg-black border-neutral-700 rounded-b-xl rounded-t-none shadow-lg z-50 w-64"
-												initial={{ x: "-100%", opacity: 0 }}
-												animate={{ x: 0, opacity: 1 }}
-												exit={{ x: "-100%", opacity: 0 }}
-												transition={{
-													type: "tween",
-													ease: "easeInOut",
-													duration: 0.4,
-												}}
-											>
-												<div className="p-6 w-full h-full">
-													{/* App Links Section */}
-													<div className="space-y-2">
-														{mobileNavLinks.map((link, index) => (
-															<motion.a
-																key={link.href}
-																href={link.href}
-																target="_blank"
-																rel="noopener noreferrer"
-																className="block text-muted-foreground hover:text-primary transition-colors duration-200 text-sm py-2"
-																initial={{ opacity: 0, x: -10 }}
-																animate={{
-																	opacity: 1,
-																	x: 0,
-																	transition: { delay: index * 0.05 + 0.2 },
-																}}
-																whileTap={{ scale: 0.95 }}
-																onClick={() => setIsMobileMenuOpen(false)}
-															>
-																{link.title}
-															</motion.a>
-														))}
-													</div>
-												</div>
-											</motion.div>
-										)}
-									</AnimatePresence>
+									<PopoverContent
+										className="w-64 p-6 bg-black border-neutral-700 rounded-xl"
+										align="end"
+										sideOffset={10}
+									>
+										<div className="space-y-2">
+											{mobileNavLinks.map((link, index) => (
+												<motion.a
+													key={link.href}
+													href={link.href}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="block text-muted-foreground hover:text-primary transition-colors duration-200 text-sm py-2"
+													initial={{ opacity: 0, x: -10 }}
+													animate={{
+														opacity: 1,
+														x: 0,
+														transition: { delay: index * 0.05 + 0.2 },
+													}}
+													whileTap={{ scale: 0.95 }}
+													onClick={() => setIsMobileMenuOpen(false)}
+												>
+													{link.title}
+												</motion.a>
+											))}
+										</div>
+									</PopoverContent>
 								</Popover>
 							</div>
 						</motion.div>
