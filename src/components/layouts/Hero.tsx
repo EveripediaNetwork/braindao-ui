@@ -79,7 +79,7 @@ const Hero = () => {
 			<div className="relative">
 				<div className="max-w-[1536px] mx-auto">
 					<Navbar />
-					<div className="flex flex-col items-center w-full h-[100vh] justify-center relative overflow-hidden min-h-[calc(40vh-65px)] md:min-h-[calc(60vh-65px)] lg:min-h-[calc(60vh-65px)] pt-0 md:pt-20 lg:pt-2 pb-72 sm:pb-80 md:pb-60 lg:pb-[32rem] xl:pb-32 -mt-20 md:-mt-32  xl:pt-0 xl:-mt-16">
+					<div className="flex flex-col items-center w-full h-[100vh] justify-center relative overflow-hidden min-h-[calc(40vh-65px)] md:min-h-[calc(60vh-65px)] lg:min-h-[calc(60vh-65px)] pt-0 md:pt-20 lg:pt-2 pb-72 sm:pb-80 md:pb-[24rem] lg:pb-[32rem] xl:pb-32 -mt-20 md:-mt-32  xl:pt-0 xl:-mt-16">
 						<div className="flex text-center md:text-left items-center flex-col justify-start mx-auto gap-1 sm:gap-5 w-full px-4 sm:px-0 max-w-6xl overflow-hidden">
 							<div className="w-full flex flex-col gap-4 items-center justify-center ">
 								<h1

@@ -34,7 +34,7 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 		formattedMCapChange,
 	} = iqStatsData;
 	return (
-		<section className="relative mx-auto mt-[-470px] sm:mt-[-530px] md:mt-[-420px] lg:mt-[-800px] xl:mt-[-330px]">
+		<section className="relative mx-auto mt-[-470px] sm:mt-[-530px] md:mt-[-560px] lg:mt-[-800px] xl:mt-[-330px]">
 			<div className="p-4 text-foreground flex md:grid xl:grid-cols-4 flex-col md:grid-cols-2 gap-4 flex-wrap justify-center">
 				<TokenCard
 					title="IQ Price ($)"
