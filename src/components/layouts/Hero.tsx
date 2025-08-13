@@ -65,7 +65,16 @@ const Hero = () => {
 				/>
 			</div>
 
-			<div className="absolute bottom-0 left-0 inset-0 z-0 hero-grid-bg" />
+			{/* <div className="absolute bottom-0 left-0 inset-0 z-0 hero-grid-bg" /> */}
+			<div className="absolute bottom-0 left-0 right-0 h-1/2 sm:h-2/3 md:h-2/3 opacity-80 ">
+				<Image
+					src="/images/mesh.png"
+					alt=""
+					width={1200}
+					height={600}
+					className="w-full object-cover"
+				/>
+			</div>
 
 			<div className="relative">
 				<div className="max-w-[1536px] mx-auto">
