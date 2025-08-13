@@ -3,11 +3,12 @@
 import { appLinks, mobileNavLinks, navLinks } from "@/data/Nav";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, X } from "lucide-react";
+import { ChevronDown, X, Menu } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import ExchangesMenubar from "@/app/_components/exchange-menu";
 
 const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -61,6 +62,7 @@ const Navbar = () => {
 								<BraindaoLogoDark />
 							</a>
 						</motion.h1>
+
 						<motion.nav
 							initial="hidden"
 							animate="visible"
@@ -90,6 +92,7 @@ const Navbar = () => {
 								</motion.a>
 							))}
 						</motion.nav>
+
 						<motion.div
 							className={cn(
 								"flex gap-2 items-center transition-all duration-300",
@@ -99,7 +102,9 @@ const Navbar = () => {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.3, delay: 0.3 }}
 						>
-							<div className="hidden lg:block">
+							{/* Desktop/Tablet - ExchangesMenubar and Launch App */}
+							<div className="hidden lg:flex gap-2 items-center">
+								<ExchangesMenubar />
 								<Popover>
 									<PopoverTrigger asChild>
 										<motion.div
@@ -111,7 +116,7 @@ const Navbar = () => {
 												size="sm"
 												className="text-xs md:text-sm"
 											>
-												<span>Launch App</span>
+												<span>Launch App </span>
 												<ChevronDown className="h-4 w-4" />
 											</Button>
 										</motion.div>
@@ -141,8 +146,10 @@ const Navbar = () => {
 									</PopoverContent>
 								</Popover>
 							</div>
+	
 
-							<div className="lg:hidden">
+							<div className="lg:hidden flex gap-2 items-center">
+								<ExchangesMenubar />
 								<Popover
 									open={isMobileMenuOpen}
 									onOpenChange={setIsMobileMenuOpen}
@@ -152,10 +159,9 @@ const Navbar = () => {
 											<Button
 												type="button"
 												size="sm"
-												className="text-xs md:text-sm"
+												className="rounded-full border border-white/20 bg-transparent hover:bg-white/10 p-2"
 											>
-												<span>Launch App</span>
-												<ChevronDown className="h-4 w-4" />
+												<Menu className="h-5 w-5" />
 											</Button>
 										</motion.div>
 									</PopoverTrigger>
@@ -163,7 +169,7 @@ const Navbar = () => {
 									<AnimatePresence>
 										{isMobileMenuOpen && (
 											<motion.div
-												className="fixed top-[74px] right-3 bg-black border-neutral-700 rounded-b-xl rounded-t-none shadow-lg z-50"
+												className="fixed top-[74px] right-3 bg-black border-neutral-700 rounded-b-xl rounded-t-none shadow-lg z-50 w-64"
 												initial={{ x: "-100%", opacity: 0 }}
 												animate={{ x: 0, opacity: 1 }}
 												exit={{ x: "-100%", opacity: 0 }}
@@ -174,6 +180,7 @@ const Navbar = () => {
 												}}
 											>
 												<div className="p-6 w-full h-full">
+													{/* App Links Section */}
 													<div className="space-y-2">
 														{mobileNavLinks.map((link, index) => (
 															<motion.a
@@ -181,7 +188,7 @@ const Navbar = () => {
 																href={link.href}
 																target="_blank"
 																rel="noopener noreferrer"
-																className="block text-muted-foreground hover:text-primary transition-colors duration-200 text-lg py-2"
+																className="block text-muted-foreground hover:text-primary transition-colors duration-200 text-sm py-2"
 																initial={{ opacity: 0, x: -10 }}
 																animate={{
 																	opacity: 1,
