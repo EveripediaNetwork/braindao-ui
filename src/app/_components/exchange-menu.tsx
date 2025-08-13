@@ -10,8 +10,8 @@ import { IoClose } from "react-icons/io5";
 
 function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 	return (
-		<div className="space-y-3">
-			<div className="flex items-center justify-between">
+		<div className="space-y-3 w-full max-w-full">
+			<div className="flex items-center justify-between w-full">
 				<h3 className="text-base font-semibold text-muted-foreground">
 					Get the IQ token
 				</h3>
@@ -19,7 +19,7 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 					<button
 						type="button"
 						onClick={onClose}
-						className="p-1 rounded-full  hover:bg-neutral-700 transition-colors"
+						className="p-1 rounded-full hover:bg-neutral-700 transition-colors flex items-center justify-center"
 						aria-label="Close modal"
 					>
 						<IoClose className="w-5 h-5 text-foreground" />
@@ -27,12 +27,12 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 				)}
 			</div>
 
-			<p className="text-muted-foreground text-sm font-medium w-full">
+			<p className="text-muted-foreground text-sm font-medium w-full text-center sm:text-left">
 				Get involved in the IQ Ecosystem and swap the IQ token easily across
 				different exchange platforms.
 			</p>
 
-			<div className="border-t border-neutral-700" />
+			<div className="border-t border-neutral-700 w-full" />
 
 			<div className="grid md:grid-cols-2 gap-6">
 				<div className="flex flex-col">
@@ -132,13 +132,13 @@ const ExchangesMenubar = () => {
 	};
 
 	return (
-		<div className="lg:-translate-y-2 md:-translate-x-2">
+		<div className="flex items-center justify-center">
 			<Menubar.Root>
 				<Menubar.Menu>
 					<Menubar.Trigger
 						asChild
 						onClick={() => setIsMenuOpen(true)}
-						className="cursor-pointer border-none hover:bg-none md:pt-3"
+						className="cursor-pointer border-none hover:bg-none flex items-center justify-center"
 						data-ph-capture-attribute-host-info="iq_wiki"
 					>
 						<div className="flex items-center justify-center h-10 w-10">
@@ -147,6 +147,7 @@ const ExchangesMenubar = () => {
 								alt="IQ Logo"
 								width={40}
 								height={40}
+								className="object-contain"
 							/>
 						</div>
 					</Menubar.Trigger>
@@ -154,13 +155,13 @@ const ExchangesMenubar = () => {
 					{isMenuOpen && (
 						<Menubar.Portal>
 							<Menubar.Content
-								align="end"
+								align="center"
 								side="bottom"
 								sideOffset={20}
-								alignOffset={-70}
+								alignOffset={0}
 								className="z-50 w-[calc(100vw-2rem)] max-w-[600px] lg:w-[600px] rounded-xl bg-neutral-900 shadow-lg border border-neutral-700"
 							>
-								<div className="px-4 lg:px-6 py-6">
+								<div className="px-4 lg:px-6 py-6 flex flex-col items-center justify-center">
 									<GetIQModalContent onClose={handleMenuClose} />
 								</div>
 							</Menubar.Content>

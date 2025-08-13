@@ -4,8 +4,9 @@ import ExchangesMenubar from "@/app/_components/exchange-menu";
 import { appLinks, mobileNavLinks, navLinks } from "@/data/Nav";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { RiMenu3Line } from "react-icons/ri";
 import { BraindaoLogoDark } from "../svgs/BraindaoLogoDark";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
@@ -103,7 +104,7 @@ const Navbar = () => {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.3, delay: 0.3 }}
 						>
-							<div className="hidden lg:flex gap-2 items-center">
+							<div className="hidden lg:flex gap-6 items-center">
 								<ExchangesMenubar />
 								<Popover
 									open={isLaunchAppOpen}
@@ -161,10 +162,10 @@ const Navbar = () => {
 										<motion.div whileTap={{ scale: 0.95 }}>
 											<Button
 												type="button"
-												size="sm"
+												size="lg"
 												className="rounded-full border border-white/20 bg-transparent hover:bg-white/10 p-3"
 											>
-												<Menu className="h-10 w-10" />
+												<RiMenu3Line className="h-10 w-10" />
 											</Button>
 										</motion.div>
 									</PopoverTrigger>
