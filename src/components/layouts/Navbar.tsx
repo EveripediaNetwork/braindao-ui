@@ -41,7 +41,7 @@ const Navbar = () => {
 				<header
 					className={cn(
 						"flex flex-col z-50 lg:-mx-7 lg:px-14 p-3",
-						isScrolled && "lg:py-2 transition-all duration-300 ease-in-out",
+						// isScrolled && "lg:py-2 transition-all duration-300 ease-in-out",
 					)}
 				>
 					<div

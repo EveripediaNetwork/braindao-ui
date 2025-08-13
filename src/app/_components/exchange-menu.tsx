@@ -45,13 +45,13 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 							return (
 								<Menubar.Item
 									key={exchange.name}
-									className="hover:outline-none border border-neutral-700 rounded-xl"
+									className="hover:outline-none border border-neutral-700 rounded-xl overflow-hidden"
 								>
 									<Link
 										href={exchange.link}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="flex items-center justify-between p-2 rounded-lg hover:bg-neutral-700 transition-colors w-full"
+										className="flex items-center justify-between p-2 hover:bg-neutral-700 transition-colors w-full"
 										data-ph-capture-attribute-exchange-clicked={exchange.name.toLowerCase()}
 									>
 										<div className="flex items-center gap-2">
@@ -96,7 +96,7 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 							return (
 								<Menubar.Item
 									key={exchange.name}
-									className="hover:outline-none border border-neutral-700 rounded-xl"
+									className="hover:outline-none border border-neutral-700 rounded-xl overflow-hidden"
 								>
 									<Link
 										href={exchange.link}
