@@ -1,7 +1,5 @@
 "use client";
 
-import { satoshi } from "@/app/font";
-import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
@@ -84,10 +82,7 @@ const Hero = () => {
 							<div className="w-full flex flex-col gap-4 items-center justify-center ">
 								<h1
 									ref={headingRef}
-									className={cn(
-										satoshi.className,
-										"text-[32px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium text-white !leading-tight text-center overflow-hidden",
-									)}
+									className="text-[32px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium text-white !leading-tight text-center overflow-hidden font-satoshi"
 								>
 									<span className="block">Building A More</span>
 									<span className="block">Intelligent Future </span>
