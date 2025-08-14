@@ -20,9 +20,9 @@ const Ecosystem = () => {
 				>
 					The IQ Ecosystem
 				</h2>
+				<IQAI />
 				<Iqwiki />
 				<SOPHIA />
-				<IQAI />
 				<Aiden />
 				<IqDashboard />
 				<Blog />
