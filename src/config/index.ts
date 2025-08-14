@@ -14,7 +14,7 @@ const config = {
 	posthogApiKey: process.env.NEXT_PUBLIC_POSTHOG_KEY || "",
 	iqGatewayUrl: process.env.NEXT_PUBLIC_IQ_GATEWAY_URL || "",
 	iqGatewayKey: process.env.NEXT_PUBLIC_IQ_GATEWAY_KEY || "",
-	sophiaAgentAddress: String(process.env.NEXT_PUBLIC_SOPHIA_AGENT_ADDRESS),
+	sophiaAgentAddress: process.env.NEXT_PUBLIC_SOPHIA_AGENT_ADDRESS || "",
 };
 
 export default config;
