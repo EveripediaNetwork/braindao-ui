@@ -100,9 +100,9 @@ function ExchangesCard() {
 			className="bg-neutral-950 backdrop-filter backdrop-blur-sm border border-neutral-700 rounded-xl p-3 flex flex-col gap-4 text-sm w-full"
 			aria-labelledby="exchanges-title"
 		>
-			<h1 id="exchanges-title" className="text-xs text-card-foreground">
+			<p id="exchanges-title" className="text-xs text-card-foreground">
 				Exchanges
-			</h1>
+			</p>
 			<div className="flex items-center justify-between">
 				<ExchangeLink
 					href="https://www.binance.com/en/trade/IQ_USDT?theme=dark&type=spot"

@@ -1,30 +1,28 @@
 "use client";
 
 import { centralizedExchanges, decentralizedExchanges } from "@/data/exchanges";
-import * as Menubar from "@radix-ui/react-menubar";
+import * as Popover from "@radix-ui/react-popover";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
-function GetIQModalContent({ onClose }: { onClose?: () => void }) {
+function GetIQModalContent() {
 	return (
 		<div className="space-y-3 w-full max-w-full">
 			<div className="flex items-center justify-between w-full">
 				<h3 className="text-base font-semibold text-muted-foreground">
 					Get the IQ token
 				</h3>
-				{onClose && (
+				<Popover.Close asChild>
 					<button
 						type="button"
-						onClick={onClose}
 						className="p-1 rounded-full hover:bg-neutral-700 transition-colors flex items-center justify-center"
 						aria-label="Close modal"
 					>
 						<IoClose className="w-5 h-5 text-foreground" />
 					</button>
-				)}
+				</Popover.Close>
 			</div>
 
 			<p className="text-muted-foreground text-sm font-medium w-full text-center sm:text-left">
@@ -43,9 +41,9 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 						{centralizedExchanges.map((exchange) => {
 							const LogoComponent = exchange.logo;
 							return (
-								<Menubar.Item
+								<div
 									key={exchange.name}
-									className="hover:outline-none border border-neutral-700 rounded-xl overflow-hidden"
+									className="border border-neutral-700 rounded-xl overflow-hidden"
 								>
 									<Link
 										href={exchange.link}
@@ -64,25 +62,23 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 											{exchange.pair}
 										</span>
 									</Link>
-								</Menubar.Item>
+								</div>
 							);
 						})}
 					</div>
 
 					<div className="text-center pt-6 mt-auto">
-						<Menubar.Item className="hover:outline-none">
-							<Link
-								href="https://iq.iqai.com/dashboard/swap"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex items-center gap-2 justify-center text-muted-foreground hover:text-muted-foreground hover:underline transition-colors text-sm"
-							>
-								<span className="text-muted-foreground  text-sm hover:underline">
-									See more
-								</span>
-								<FaArrowUpRightFromSquare className="w-5 h-5 text-muted-foreground" />
-							</Link>
-						</Menubar.Item>
+						<Link
+							href="https://iq.iqai.com/dashboard/swap"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center gap-2 justify-center text-muted-foreground hover:text-muted-foreground hover:underline transition-colors text-sm"
+						>
+							<span className="text-muted-foreground text-sm hover:underline">
+								See more
+							</span>
+							<FaArrowUpRightFromSquare className="w-5 h-5 text-muted-foreground" />
+						</Link>
 					</div>
 				</div>
 
@@ -94,9 +90,9 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 						{decentralizedExchanges.map((exchange) => {
 							const LogoComponent = exchange.logo;
 							return (
-								<Menubar.Item
+								<div
 									key={exchange.name}
-									className="hover:outline-none border border-neutral-700 rounded-xl overflow-hidden"
+									className="border border-neutral-700 rounded-xl overflow-hidden"
 								>
 									<Link
 										href={exchange.link}
@@ -115,7 +111,7 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 											{exchange.pair}
 										</span>
 									</Link>
-								</Menubar.Item>
+								</div>
 							);
 						})}
 					</div>
@@ -125,50 +121,39 @@ function GetIQModalContent({ onClose }: { onClose?: () => void }) {
 	);
 }
 const ExchangesMenubar = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-	const handleMenuClose = () => {
-		setIsMenuOpen(false);
-	};
-
 	return (
 		<div className="flex items-center justify-center">
-			<Menubar.Root>
-				<Menubar.Menu>
-					<Menubar.Trigger
-						asChild
-						onClick={() => setIsMenuOpen(true)}
-						className="cursor-pointer border-none hover:bg-none flex items-center justify-center"
-						data-ph-capture-attribute-host-info="iq_wiki"
-					>
-						<div className="flex items-center justify-center h-10 w-10">
-							<Image
-								src="/images/GetIQ.svg"
-								alt="IQ Logo"
-								width={40}
-								height={40}
-								className="object-contain"
-							/>
-						</div>
-					</Menubar.Trigger>
+			<Popover.Root>
+				<Popover.Trigger
+					asChild
+					className="cursor-pointer border-none hover:bg-none flex items-center justify-center"
+					data-ph-capture-attribute-host-info="iq_wiki"
+				>
+					<div className="flex items-center justify-center h-10 w-10">
+						<Image
+							src="/images/GetIQ.svg"
+							alt="IQ Logo"
+							width={40}
+							height={40}
+							className="object-contain"
+						/>
+					</div>
+				</Popover.Trigger>
 
-					{isMenuOpen && (
-						<Menubar.Portal>
-							<Menubar.Content
-								align="center"
-								side="bottom"
-								sideOffset={20}
-								alignOffset={0}
-								className="z-50 w-[calc(100vw-2rem)] max-w-[600px] lg:w-[600px] rounded-xl bg-neutral-900 shadow-lg border border-neutral-700"
-							>
-								<div className="px-4 lg:px-6 py-6 flex flex-col items-center justify-center">
-									<GetIQModalContent onClose={handleMenuClose} />
-								</div>
-							</Menubar.Content>
-						</Menubar.Portal>
-					)}
-				</Menubar.Menu>
-			</Menubar.Root>
+				<Popover.Portal>
+					<Popover.Content
+						align="center"
+						side="bottom"
+						sideOffset={20}
+						alignOffset={0}
+						className="z-50 w-[calc(100vw-2rem)] max-w-[600px] lg:w-[600px] rounded-xl bg-neutral-900 shadow-lg border border-neutral-700"
+					>
+						<div className="px-4 lg:px-6 py-6 flex flex-col items-center justify-center">
+							<GetIQModalContent />
+						</div>
+					</Popover.Content>
+				</Popover.Portal>
+			</Popover.Root>
 		</div>
 	);
 };
