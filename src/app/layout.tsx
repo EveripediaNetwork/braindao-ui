@@ -2,7 +2,7 @@ import "./globals.css";
 import ClientProviders from "@/components/layouts/ClientProviders";
 import Footer from "@/components/layouts/Footer";
 import type { Metadata } from "next";
-import { ibmPlexMono, montserrat } from "./font";
+import { ibmPlexMono, montserrat, satoshi } from "./font";
 
 export const metadata: Metadata = {
 	title: "BrainDAO - Building a more intelligent future through the IQ token.",
@@ -44,7 +44,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${montserrat.className} ${ibmPlexMono.variable}`}
+			className={`${montserrat.className} ${ibmPlexMono.variable} ${satoshi.variable}`}
 		>
 			<head>
 				<link rel="canonical" />

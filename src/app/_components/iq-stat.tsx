@@ -34,7 +34,7 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 		formattedMCapChange,
 	} = iqStatsData;
 	return (
-		<section className="relative mx-auto mt-[-470px] sm:mt-[-530px] md:mt-[-420px] lg:mt-[-530px] xl:mt-[-330px]">
+		<section className="relative mx-auto mt-[-470px] sm:mt-[-530px] md:mt-[-560px] lg:mt-[-800px] xl:mt-[-380px]">
 			<div className="p-4 text-foreground flex md:grid xl:grid-cols-4 flex-col md:grid-cols-2 gap-4 flex-wrap justify-center">
 				<TokenCard
 					title="IQ Price ($)"
@@ -100,9 +100,9 @@ function ExchangesCard() {
 			className="bg-neutral-950 backdrop-filter backdrop-blur-sm border border-neutral-700 rounded-xl p-3 flex flex-col gap-4 text-sm w-full"
 			aria-labelledby="exchanges-title"
 		>
-			<h1 id="exchanges-title" className="text-xs text-card-foreground">
+			<p id="exchanges-title" className="text-xs text-card-foreground">
 				Exchanges
-			</h1>
+			</p>
 			<div className="flex items-center justify-between">
 				<ExchangeLink
 					href="https://www.binance.com/en/trade/IQ_USDT?theme=dark&type=spot"
@@ -128,3 +128,6 @@ function ExchangesCard() {
 		</div>
 	);
 }
+
+
+

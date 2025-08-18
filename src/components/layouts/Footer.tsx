@@ -1,15 +1,13 @@
 "use client";
 
-import { satoshi } from "@/app/font";
-import { cn } from "@/lib/utils";
 import React from "react";
 import { RiArrowUpLine } from "react-icons/ri";
 
 const Footer = () => {
 	const products = [
+		{ name: "IQ AI", href: "https://iqai.com/" },
 		{ name: "IQ.wiki", href: "https://iq.wiki/" },
 		{ name: "Sophia", href: "https://sophia.iqai.com/" },
-		{ name: "IQ AI", href: "https://iqai.com/" },
 		{ name: "AIDEN", href: "https://aiden.id/" },
 		{ name: "IQ Dashboard", href: "https://iq.iqai.com/dashboard" },
 		{ name: "IQ Blog", href: "https://blog.iqai.com/" },
@@ -21,17 +19,12 @@ const Footer = () => {
 	];
 
 	return (
-		<footer className="bg-neutral-950 mt-48">
+		<footer className="bg-neutral-950 mt-12 lg:mt-48 shadow-custom">
 			<div className="xl:container xl:mx-auto px-4 md:px-10 xl:px-4 flex flex-col gap-6 py-12">
 				<div className="flex flex-col lg:flex-row gap-6 w-full">
 					<div className="flex flex-row w-full gap-6 md:gap-40 lg:gap-24 items-start">
 						<div className="text-muted-foreground">
-							<h2
-								className={cn(
-									satoshi.className,
-									"text-sm font-bold mb-3 font-satoshi ",
-								)}
-							>
+							<h2 className="text-sm font-bold mb-3 font-satoshi">
 								Subscribe to our newsletter
 							</h2>
 							<p className="text-xs">
@@ -48,12 +41,7 @@ const Footer = () => {
 					</div>
 					<div className="flex flex-row w-full justify-between text-sm gap-8 lg:gap-0">
 						<div>
-							<h3
-								className={cn(
-									satoshi.className,
-									"font-bold mb-4 text-muted-foreground text-sm",
-								)}
-							>
+							<h3 className="font-bold mb-4 text-muted-foreground text-sm">
 								For business Inquiries
 							</h3>
 							<div className="space-y-2">
@@ -67,12 +55,7 @@ const Footer = () => {
 							</div>
 						</div>
 						<div>
-							<h3
-								className={cn(
-									satoshi.className,
-									"font-bold mb-4 text-muted-foreground",
-								)}
-							>
+							<h3 className="font-bold mb-4 text-muted-foreground font-satoshi">
 								Follow us
 							</h3>
 							<div className="space-y-2 flex flex-col text-left text-foreground hover:text-white transition-colors">

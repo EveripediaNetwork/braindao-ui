@@ -1,4 +1,4 @@
-import { IBM_Plex_Mono, Montserrat, Raleway } from "next/font/google";
+import { IBM_Plex_Mono, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 
 export const montserrat = Montserrat({

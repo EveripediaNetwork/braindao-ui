@@ -1,10 +1,8 @@
 "use client";
 
 import { TokenBrief } from "@/app/_components/token-brief";
-import { satoshi } from "@/app/font";
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
-import { cn } from "@/lib/utils";
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import {
 	RiDatabaseLine,
@@ -13,9 +11,9 @@ import {
 	RiQuestionAnswerLine,
 } from "react-icons/ri";
 
-import AidenLanding from "./images/aiden/AidenLanding-2.svg";
-import AidenKnowledge from "./images/aiden/aiden-3.svg";
-import AidenChat from "./images/aiden/aiden-elite.svg";
+import AidenChat from "./images/aiden/aiden-chat.svg";
+import AidenKnowledge from "./images/aiden/aiden-knowledge.svg";
+import AidenLanding from "./images/aiden/aiden-landing.svg";
 
 export const FeatureList = ({
 	title,
@@ -34,59 +32,12 @@ export const FeatureList = ({
 				{icon}
 			</div>
 			<div className="">
-				<h4
-					className={cn(
-						satoshi.className,
-						"text-foreground font-semibold text-lg md:text-xl mb-1",
-					)}
-				>
+				<h4 className="font-satoshi text-foreground font-semibold text-lg md:text-xl mb-1">
 					{title}
 				</h4>
 				<p className="text-sm lg:text-base">{description}</p>
 			</div>
 		</InViewAnimateBottom>
-	);
-};
-
-interface DetailCardProps {
-	image: StaticImageData;
-	alt: string;
-	title?: string;
-	className?: string;
-}
-
-export const DetailCard = ({
-	image,
-	alt,
-	title,
-	className,
-}: DetailCardProps) => {
-	return (
-		<div
-			className="flex flex-col rounded-2xl h-full border border-red-500 overflow-hidden"
-			style={{
-				backgroundImage: "url(/images/background.svg)",
-				backgroundSize: "cover",
-				backgroundPosition: "center",
-			}}
-		>
-			{title && (
-				<div className="px-4 pt-4 pb-2 relative z-10">
-					<p className="text-foreground text-xs sm:text-sm md:text-sm font-medium max-w-xl">
-						{title}
-					</p>
-				</div>
-			)}
-
-			<div className="flex-1 flex items-center justify-center">
-				<Image
-					src={image}
-					alt={alt}
-					className={`w-full h-full object-contain ${className || ""}`}
-					style={{ position: "static" }}
-				/>
-			</div>
-		</div>
 	);
 };
 

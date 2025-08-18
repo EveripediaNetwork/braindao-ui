@@ -32,7 +32,7 @@ export function TokenCard({
 			<Link
 				href={link}
 				target="_blank"
-				rel="noopener nofollow"
+				rel="noopener noreferrer"
 				aria-label={`View ${title} on dashboard`}
 				className="rounded-full p-1 border border-border"
 			>
