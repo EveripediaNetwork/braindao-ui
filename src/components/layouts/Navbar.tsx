@@ -68,7 +68,7 @@ const Navbar = () => {
 					<motion.nav
 						initial="hidden"
 						animate="visible"
-						className="hidden xl:flex gap-8 xl:gap-6 text-sm lg:text-base"
+						className="hidden lg:flex gap-8 xl:gap-6 text-sm lg:text-base"
 					>
 						{navLinks.map((link, index) => (
 							<motion.a

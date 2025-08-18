@@ -63,7 +63,6 @@ const Hero = () => {
 				/>
 			</div>
 
-			{/* <div className="absolute bottom-0 left-0 inset-0 z-0 hero-grid-bg" /> */}
 			<div className="absolute bottom-0 left-0 right-0 h-1/2 sm:h-2/3 md:h-2/3 opacity-80 ">
 				<Image
 					src="/images/mesh.png"
@@ -85,12 +84,12 @@ const Hero = () => {
 							<div className="w-full flex flex-col gap-4 items-center justify-center ">
 								<h1
 									ref={headingRef}
-									className="text-[32px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium text-white !leading-tight text-center overflow-hidden font-satoshi"
+									className="text-[32px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium text-white !leading-[1.08] tracking-[-0.02em] text-center font-satoshi"
 								>
 									<span className="block">Building A More</span>
 									<span className="block">Intelligent Future </span>
 									<span className="block">
-										Through the{" "}
+										Through The{" "}
 										<span className="italic text-primary">IQ Token.</span>
 									</span>
 								</h1>

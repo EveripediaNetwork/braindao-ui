@@ -44,7 +44,7 @@ const TeamCard = ({
 							<a
 								href={twitterLink}
 								target="_blank"
-								className="w-5 h-5 bg-no-repeat bg-contain bg-twitter opacity-70 hover:opacity-100 transition-opacity"
+								className="w-5 h-5 bg-no-repeat bg-contain bg-center bg-twitter opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
 								aria-label={`${name}'s Twitter profile`}
 							>
@@ -55,7 +55,7 @@ const TeamCard = ({
 							<a
 								href={wikiLink}
 								target="_blank"
-								className="w-7 h-5 bg-no-repeat bg-contain bg-everipedia opacity-70 hover:opacity-100 transition-opacity"
+								className="w-7 h-5 bg-no-repeat bg-contain bg-center bg-everipedia opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
 								aria-label={`${name}'s Wiki page`}
 							>
@@ -66,7 +66,7 @@ const TeamCard = ({
 							<a
 								href={linkedinLink}
 								target="_blank"
-								className="w-5 h-5 bg-no-repeat bg-contain bg-linkedln opacity-70 hover:opacity-100 transition-opacity"
+								className="w-5 h-5 bg-no-repeat bg-contain bg-center bg-linkedln opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
 								aria-label={`${name}'s LinkedIn profile`}
 							>
@@ -85,7 +85,7 @@ const BraindaoTeam = () => {
 			<div className="flex items-start flex-col lg:flex-row w-full justify-between">
 				<div className="xl:w-[400px] xl:flex-shrink-0">
 					<InViewAnimateBottom>
-						<h3 className="font-satoshi font-semibold text-2xl sm:text-3xl xl:text-4xl font-satoshi text-primary">
+						<h3 className="font-satoshi font-semibold text-2xl sm:text-3xl xl:text-4xl text-primary">
 							Meet the Team
 						</h3>
 					</InViewAnimateBottom>
