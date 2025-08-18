@@ -2,6 +2,7 @@
 
 import ExchangesMenubar from "@/app/_components/exchange-menu";
 import { appLinks, mobileNavLinks, navLinks } from "@/data/Nav";
+import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -16,6 +17,7 @@ const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isLaunchAppOpen, setIsLaunchAppOpen] = useState(false);
+	const activeSection = useActiveSection();
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -70,29 +72,37 @@ const Navbar = () => {
 						animate="visible"
 						className="hidden lg:flex gap-8 xl:gap-6 text-sm lg:text-base"
 					>
-						{navLinks.map((link, index) => (
-							<motion.a
-								target={link.target}
-								href={link.href}
-								key={link.href}
-								className="hover:text-primary transition-colors duration-200"
-								variants={{
-									hidden: { opacity: 0, x: -20 },
-									visible: {
-										opacity: 1,
-										x: 0,
-										transition: {
-											delay: index * 0.1,
-											duration: 0.3,
+						{navLinks.map((link, index) => {
+							const activeHref = activeSection ? `#${activeSection}` : null;
+							const isActive = activeHref === link.href;
+
+							return (
+								<motion.a
+									target={link.target}
+									href={link.href}
+									key={link.href}
+									className={cn(
+										"transition-colors duration-200",
+										isActive ? "text-primary" : "hover:text-primary",
+									)}
+									variants={{
+										hidden: { opacity: 0, x: -20 },
+										visible: {
+											opacity: 1,
+											x: 0,
+											transition: {
+												delay: index * 0.1,
+												duration: 0.3,
+											},
 										},
-									},
-								}}
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}
-							>
-								{link.title}
-							</motion.a>
-						))}
+									}}
+									whileHover={{ scale: 1.05 }}
+									whileTap={{ scale: 0.95 }}
+								>
+									{link.title}
+								</motion.a>
+							);
+						})}
 					</motion.nav>
 
 					<motion.div

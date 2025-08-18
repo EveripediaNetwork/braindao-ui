@@ -1,21 +1,21 @@
 "use client";
 
+import { navLinks } from "@/data/Nav";
 import { useEffect, useState } from "react";
 
 export const useActiveSection = () => {
 	const [activeSection, setActiveSection] = useState<string>("");
 
 	useEffect(() => {
+		const sections = navLinks
+			.filter(
+				(link) => typeof link.href === "string" && link.href.startsWith("#"),
+			)
+			.map((link) => link.href.slice(1));
+
 		const handleScroll = () => {
-			const sections = [
-				"iqai",
-				"iq-wiki",
-				"sophia",
-				"aiden",
-				"dashboard",
-				"blog",
-			];
 			const scrollPosition = window.scrollY + 150;
+			let foundActiveSection = "";
 
 			for (const sectionId of sections) {
 				const element = document.getElementById(sectionId);
@@ -25,10 +25,14 @@ export const useActiveSection = () => {
 						scrollPosition >= offsetTop &&
 						scrollPosition < offsetTop + offsetHeight
 					) {
-						setActiveSection(sectionId);
+						foundActiveSection = sectionId;
 						break;
 					}
 				}
+			}
+
+			if (foundActiveSection !== activeSection) {
+				setActiveSection(foundActiveSection);
 			}
 		};
 
@@ -36,7 +40,7 @@ export const useActiveSection = () => {
 		handleScroll();
 
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	}, [activeSection]);
 
 	return activeSection;
 };
