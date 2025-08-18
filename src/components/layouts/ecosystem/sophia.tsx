@@ -11,7 +11,7 @@ const SOPHIA = () => {
 				<TokenBrief
 					title="SOPHIA"
 					description="Sophia is a self-documenting AI trained on the IQ.wiki dataset, curating blockchain knowledge, providing valuable insights and maintaining up-to-date information across the IQ.wiki platform, building a career as an agent-influencer, journalist, and editor."
-					action="https://sophia.braindao.org"
+					action="https://sophia.iqai.com"
 					buttonText="Explore Sophia"
 				/>
 				<div className="flex flex-col md:flex-row w-full justify-between mt-12 gap-4">

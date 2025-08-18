@@ -5,11 +5,11 @@ import { RiArrowUpLine } from "react-icons/ri";
 
 const Footer = () => {
 	const products = [
-		{ name: "IQ AI", href: "https://iqai.com/" },
+		{ name: "IQ AI", href: "https://iqai.app/" },
 		{ name: "IQ.wiki", href: "https://iq.wiki/" },
 		{ name: "Sophia", href: "https://sophia.iqai.com/" },
 		{ name: "AIDEN", href: "https://aiden.id/" },
-		{ name: "IQ Dashboard", href: "https://iq.iqai.com/dashboard" },
+		{ name: "IQ Dashboard", href: "https://iq.iqai.com/dashboard/" },
 		{ name: "IQ Blog", href: "https://blog.iqai.com/" },
 	];
 	const socialLinks = [

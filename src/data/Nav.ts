@@ -39,7 +39,15 @@ export const navLinks = [
 export const appLinks = [
 	{
 		title: "IQ AI",
-		href: "https://iqai.com/",
+		href: "https://iqai.app",
+	},
+	{
+		title: "IQ.wiki",
+		href: "https://iq.wiki/",
+	},
+	{
+		title: "Sophia",
+		href: "https://sophia.iqai.com/",
 	},
 	{
 		title: "IQ Dashboard",
@@ -54,7 +62,7 @@ export const appLinks = [
 export const mobileNavLinks = [
 	{
 		title: "IQ AI",
-		href: "https://iqai.com/",
+		href: "https://iqai.app/",
 	},
 	{
 		title: "IQ.wiki",
@@ -66,7 +74,7 @@ export const mobileNavLinks = [
 	},
 	{
 		title: "AIDEN",
-		href: "https://chat.aiden.id",
+		href: "https://chat.aiden.id/",
 	},
 	{
 		title: "IQ Dashboard",

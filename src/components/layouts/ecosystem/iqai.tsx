@@ -12,7 +12,7 @@ const IQAI = () => {
 				<TokenBrief
 					title="IQ AI"
 					description="IQ AI is building the foundation for mass blockchain adoption through the Agent Tokenization Platform (ATP). By enabling the creation of tokenized, autonomous on-chain agents, ATP is redefining decentralized ecosystems and unlocking new opportunities for collaboration, growth, and innovation.."
-					action="https://sophia.braindao.org"
+					action="https://iqai.app"
 					buttonText="Explore IQ AI"
 				/>
 				<div className="w-full rounded-xl overflow-hidden py-12">
