@@ -115,27 +115,9 @@ const config: Config = {
 				},
 			},
 			backgroundImage: {
-				"about-us": "url('/images/aboutus.png')",
-				coingecko: "url('/svgs/coingecko.svg')",
-				eth: "url('/svgs/eth.svg')",
-				graph: "url('/svgs/graph.svg')",
-				magic: "url('/svgs/magic.svg')",
 				twitter: "url('/svgs/twitter.svg')",
-				"twitter-dark": "url('/svgs/twitter-dark.svg')",
 				linkedln: "url('/svgs/linkedln.svg')",
-				"linkedln-dark": "url('/svgs/linkedln-dark.svg')",
 				everipedia: "url('/svgs/everipedia.svg')",
-				"everipedia-dark": "url('/svgs/everipedia-dark.svg')",
-				"magic-white": "url('/svgs/magic-white.svg')",
-				"gradient-linear":
-					"linear-gradient(360deg, #1A202C 46.49%, rgba(26, 32, 44, 0.00) 86.97%)",
-				"gradient-linear-light":
-					"linear-gradient(3deg, #F9FAFB 46.15%, rgba(255, 255, 255, 0.00) 97.82%)",
-				"video-gradient":
-					"linear-gradient(0deg, #000206 42%, rgba(0, 2, 6, 0.00) 97%)",
-				"video-gradient-top":
-					"linear-gradient(180deg, #000206 42%, rgba(0, 2, 6, 0.00) 97%)",
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 			},
 		},
 	},

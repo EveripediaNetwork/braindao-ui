@@ -11,9 +11,9 @@ import {
 	RiQuestionAnswerLine,
 } from "react-icons/ri";
 
-import AidenLanding from "./images/aiden/AidenLanding-2.svg";
-import AidenKnowledge from "./images/aiden/aiden-3.svg";
-import AidenChat from "./images/aiden/aiden-elite.svg";
+import AidenChat from "./images/aiden/aiden-chat.svg";
+import AidenKnowledge from "./images/aiden/aiden-knowledge.svg";
+import AidenLanding from "./images/aiden/aiden-landing.svg";
 
 export const FeatureList = ({
 	title,
