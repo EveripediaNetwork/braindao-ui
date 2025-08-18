@@ -69,6 +69,13 @@
 html {
 	@apply scroll-smooth;
 }
+#iqai, #iq-wiki, #aiden {
+  scroll-margin-top: 120px;
+}
+
+#blog {
+  scroll-margin-top: 100px;
+}
 
 body {
   background: black;
