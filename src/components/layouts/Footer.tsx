@@ -32,12 +32,14 @@ const Footer = () => {
 								you sign up to our email newsletter.
 							</p>
 						</div>
-						<button
-							type="button"
-							className="bg-primary hover:bg-primary/50 text-white px-4 sm:px-8 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors whitespace-nowrap self-center lg:mb-10"
+						<a
+							href="https://www.getdrip.com/forms/505929689/submissions/new"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="bg-primary hover:bg-primary/50 text-white px-4 sm:px-8 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors whitespace-nowrap self-center lg:mb-10 inline-block text-center no-underline"
 						>
 							Subscribe
-						</button>
+						</a>
 					</div>
 					<div className="flex flex-row w-full justify-between text-sm gap-8 lg:gap-0">
 						<div>
