@@ -2,7 +2,6 @@
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
 import { Button } from "@/components/ui/button";
-import { textToSlug } from "@/modules/helpers/textToSlug";
 
 export const TokenBrief = ({
 	title,
@@ -38,9 +37,7 @@ export const TokenBrief = ({
 						type="button"
 						size={"sm"}
 						onClick={() => window.open(action, "_blank", "noopener,noreferrer")}
-						data-ph-capture-attribute-product-link-clicked={textToSlug(
-							action,
-						).toLowerCase()}
+						data-ph-capture-attribute-product-link-clicked={action.toLowerCase()}
 						className="py-3 xl:py-4 mt-4 xl:mt-8  text-xs md:text-sm transition-all ease-in-out duration-300"
 					>
 						{buttonText}

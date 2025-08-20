@@ -1,6 +1,5 @@
 "use client";
 
-import { textToSlug } from "@/modules/helpers/textToSlug";
 import React from "react";
 import { RiArrowUpLine } from "react-icons/ri";
 
@@ -84,9 +83,7 @@ const Footer = () => {
 									<a
 										href={link.href}
 										className="block text-white hover:text-gray-300 transition-colors text-sm sm:text-lg lg:text-2xl font-light whitespace-nowrap flex-shrink-0 relative overflow-hidden group"
-										data-ph-capture-attribute-product-link-clicked={textToSlug(
-											link.name,
-										).toLowerCase()}
+										data-ph-capture-attribute-product-link-clicked={link.name.toLowerCase()}
 									>
 										<span className="relative z-10">{link.name}</span>
 										<div className="absolute bottom-0 left-0 w-full h-0 bg-[#FF5CAA66] transition-all duration-300 ease-out group-hover:h-[50%]" />
