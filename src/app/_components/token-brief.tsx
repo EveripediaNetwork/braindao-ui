@@ -2,6 +2,7 @@
 
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
 import { Button } from "@/components/ui/button";
+import { textToSlug } from "@/modules/helpers/textToSlug";
 
 export const TokenBrief = ({
 	title,
@@ -20,8 +21,7 @@ export const TokenBrief = ({
 		<div className="flex items-start flex-col xl:flex-row">
 			<div className="xl:w-[400px] xl:flex-shrink-0">
 				<InViewAnimateBottom>
-					<h3
-						className="font-semibold text-foreground text-2xl sm:text-3xl xl:text-4xl font-satoshi">
+					<h3 className="font-semibold text-foreground text-2xl sm:text-3xl xl:text-4xl font-satoshi">
 						{title}
 					</h3>
 				</InViewAnimateBottom>
@@ -38,6 +38,9 @@ export const TokenBrief = ({
 						type="button"
 						size={"sm"}
 						onClick={() => window.open(action, "_blank", "noopener,noreferrer")}
+						data-ph-capture-attribute-product-link-clicked={textToSlug(
+							action,
+						).toLowerCase()}
 						className="py-3 xl:py-4 mt-4 xl:mt-8  text-xs md:text-sm transition-all ease-in-out duration-300"
 					>
 						{buttonText}
