@@ -62,7 +62,7 @@ const Hero = () => {
 				/>
 			</div>
 
-			<div className="absolute inset-0 top-60  w-full lg:h-[800px] opacity-80 z-0">
+            <div className="absolute inset-0 top-60 w-full lg:h-[800px] opacity-80 z-0">
 				<Image
 					src="/images/mesh.png"
 					alt=""
