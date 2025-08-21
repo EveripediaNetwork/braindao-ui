@@ -77,7 +77,7 @@ const Hero = () => {
 						<div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-center space-y-4 md:space-y-4 transition-all duration-700 transform opacity-100 translate-y-0">
 							<h1
 								ref={headingRef}
-								className="text-[32px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium font-satoshi !leading-[1.08] tracking-[-0.02em]  text-white text-foreground"
+                                className="text-[32px] sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-medium font-satoshi !leading-[1.08] tracking-[-0.02em] text-foreground"
 							>
 								<span className="block">Building A More</span>
 								<span className="block">Intelligent Future</span>
