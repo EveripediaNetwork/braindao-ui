@@ -1,6 +1,7 @@
 import "./globals.css";
 import ClientProviders from "@/components/layouts/ClientProviders";
 import Footer from "@/components/layouts/Footer";
+import Navbar from "@/components/layouts/Navbar";
 import type { Metadata } from "next";
 import { ibmPlexMono, montserrat, satoshi } from "./font";
 
@@ -60,6 +61,7 @@ export default function RootLayout({
 			<body>
 				<ClientProviders>
 					<div>
+						<Navbar />
 						{children}
 						<Footer />
 					</div>

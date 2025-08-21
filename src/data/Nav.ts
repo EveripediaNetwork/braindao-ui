@@ -50,12 +50,12 @@ export const appLinks = [
 		href: "https://sophia.iqai.com/",
 	},
 	{
-		title: "IQ Dashboard",
-		href: "https://iq.iqai.com/",
-	},
-	{
 		title: "AIDEN Chat",
 		href: "https://chat.aiden.id",
+	},
+	{
+		title: "IQ Dashboard",
+		href: "https://iq.iqai.com/",
 	},
 ];
 
