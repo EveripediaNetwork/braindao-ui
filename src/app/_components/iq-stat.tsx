@@ -34,61 +34,63 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 		formattedMCapChange,
 	} = iqStatsData;
 	return (
-		<section className="relative mx-auto mt-[-470px] sm:mt-[-530px] md:mt-[-560px] lg:mt-[-800px] xl:mt-[-350px]">
-			<div className="p-4 text-foreground flex md:grid xl:grid-cols-4 flex-col md:grid-cols-2 gap-4 flex-wrap justify-center">
-				<TokenCard
-					title="IQ Price ($)"
-					value={price}
-					change={{
-						iqChange: iqPriceChange,
-						formattedChange: formattedPriceChange,
-					}}
-					icon={<IqWikiIcon className="w-6 h-6" aria-hidden="true" />}
-					link="https://iq.iqai.com/dashboard"
-					errorMessage="Error fetching IQ price"
-				/>
+		<section className="relative w-full -mt-8 md:-mt-12 lg:-mt-16 py-4 md:py-6 lg:py-4">
+			<div className="relative z-10 max-w-7xl mx-auto p-4">
+				<div className="flex flex-col md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 text-foreground">
+					<TokenCard
+						title="IQ Price ($)"
+						value={price}
+						change={{
+							iqChange: iqPriceChange,
+							formattedChange: formattedPriceChange,
+						}}
+						icon={<IqWikiIcon className="w-6 h-6" aria-hidden="true" />}
+						link="https://iq.iqai.com/dashboard"
+						errorMessage="Error fetching IQ price"
+					/>
 
-				<TokenCard
-					title="SOPHIA ($)"
-					value={formatNumber(sophiaStats?.currentPriceInUSD ?? null, {
-						maxDecimals: 3,
-					})}
-					change={{
-						iqChange: sophiaStats?.changeIn24h ?? null,
-						formattedChange: formatNumber(sophiaStats?.changeIn24h ?? null, {
-							signed: true,
-							minDecimals: 2,
-							maxDecimals: 2,
-						}),
-					}}
-					icon={
-						<FaDatabase
-							size="1.5em"
-							className="text-primary"
-							aria-hidden="true"
-						/>
-					}
-					link="https://iq.iqai.com/dashboard"
-					errorMessage="Error fetching Sophia price"
-				/>
-				<TokenCard
-					title="Market Cap ($)"
-					value={mcap}
-					change={{
-						iqChange: iqMCapChange ?? null,
-						formattedChange: formattedMCapChange ?? null,
-					}}
-					icon={
-						<RiGlobalLine
-							size="1.5em"
-							className="text-primary"
-							aria-hidden="true"
-						/>
-					}
-					link="https://iq.iqai.com/dashboard"
-					errorMessage="Error fetching IQ price"
-				/>
-				<ExchangesCard />
+					<TokenCard
+						title="SOPHIA ($)"
+						value={formatNumber(sophiaStats?.currentPriceInUSD ?? null, {
+							maxDecimals: 3,
+						})}
+						change={{
+							iqChange: sophiaStats?.changeIn24h ?? null,
+							formattedChange: formatNumber(sophiaStats?.changeIn24h ?? null, {
+								signed: true,
+								minDecimals: 2,
+								maxDecimals: 2,
+							}),
+						}}
+						icon={
+							<FaDatabase
+								size="1.5em"
+								className="text-primary"
+								aria-hidden="true"
+							/>
+						}
+						link="https://iq.iqai.com/dashboard"
+						errorMessage="Error fetching Sophia price"
+					/>
+					<TokenCard
+						title="Market Cap ($)"
+						value={mcap}
+						change={{
+							iqChange: iqMCapChange ?? null,
+							formattedChange: formattedMCapChange ?? null,
+						}}
+						icon={
+							<RiGlobalLine
+								size="1.5em"
+								className="text-primary"
+								aria-hidden="true"
+							/>
+						}
+						link="https://iq.iqai.com/dashboard"
+						errorMessage="Error fetching IQ price"
+					/>
+					<ExchangesCard />
+				</div>
 			</div>
 		</section>
 	);
