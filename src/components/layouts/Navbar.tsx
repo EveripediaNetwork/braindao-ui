@@ -17,9 +17,12 @@ const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isLaunchAppOpen, setIsLaunchAppOpen] = useState(false);
+	const [isLoaded, setIsLoaded] = useState(false);
 	const activeSection = useActiveSection();
 
 	useEffect(() => {
+		setIsLoaded(true);
+
 		const handleScroll = () => {
 			if (window.scrollY > 50) {
 				setIsScrolled(true);
@@ -42,8 +45,15 @@ const Navbar = () => {
 					? "bg-black/40 backdrop-blur-md max-w-5xl mt-0 md:mt-2 lg:mt-5 md:rounded-full"
 					: "bg-transparent",
 			)}
+			initial={false}
+			animate={isLoaded ? "visible" : "hidden"}
+			variants={{
+				hidden: { opacity: 0 },
+				visible: { opacity: 1 },
+			}}
+			transition={{ duration: 0.3 }}
 		>
-			<header className={cn("flex flex-col z-50 lg:px-4 p-3")}>
+			<header className="flex flex-col z-50 lg:px-4 p-3">
 				<div
 					className={cn(
 						"flex justify-between items-center w-full transition-all duration-300",
@@ -53,9 +63,9 @@ const Navbar = () => {
 						className={cn(
 							"flex gap-2 items-center text-lg font-medium transition-all duration-300 w-fit",
 						)}
-						initial={{ opacity: 0, y: -20 }}
+						initial={false}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.3 }}
+						transition={{ duration: 0.3, delay: 0.1 }}
 					>
 						<Link href="/" className="w-fit">
 							<Image
@@ -109,7 +119,7 @@ const Navbar = () => {
 						className={cn(
 							"flex gap-2 items-center transition-all duration-300",
 						)}
-						initial={{ opacity: 0 }}
+						initial={false}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.3, delay: 0.3 }}
 					>
