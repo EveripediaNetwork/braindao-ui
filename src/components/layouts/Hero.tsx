@@ -3,7 +3,6 @@
 import gsap from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import Navbar from "./Navbar";
 
 const Hero = () => {
 	const headingRef = useRef<HTMLHeadingElement>(null);
@@ -74,7 +73,6 @@ const Hero = () => {
 			</div>
 			<div className="relative">
 				<div className="max-w-[1536px] mx-auto">
-					<Navbar />
 					<div className="relative w-full pt-24 md:pt-32 lg:pt-36 pb-8 md:pb-12 lg:pb-16 flex flex-col items-center justify-center">
 						<div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 text-center space-y-4 md:space-y-4 transition-all duration-700 transform opacity-100 translate-y-0">
 							<h1
