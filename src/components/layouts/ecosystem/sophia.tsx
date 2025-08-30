@@ -1,4 +1,4 @@
-import { TokenBrief } from "@/app/_components/token-brief";
+import { TokenBrief } from "@/app/[locale]/_components/token-brief";
 import Image from "next/image";
 import AiAssistantImage from "./images/sophia/AiAssisted.svg";
 import SophiaLanding2 from "./images/sophia/sophia-landing.svg";

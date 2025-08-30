@@ -1,6 +1,6 @@
 "use client";
 
-import { TokenBrief } from "@/app/_components/token-brief";
+import { TokenBrief } from "@/app/[locale]/_components/token-brief";
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
 import Image from "next/image";
 import React from "react";

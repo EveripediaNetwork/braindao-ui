@@ -1,6 +1,6 @@
 "use client";
 
-import ExchangesMenubar from "@/app/_components/exchange-menu";
+import ExchangesMenubar from "@/app/[locale]/_components/exchange-menu";
 import { appLinks, mobileNavLinks, navLinks } from "@/data/Nav";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
