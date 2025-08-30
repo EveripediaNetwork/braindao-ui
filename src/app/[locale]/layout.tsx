@@ -1,15 +1,15 @@
-import "./globals.css";
+import "../globals.css";
 import ClientProviders from "@/components/layouts/ClientProviders";
 import Footer from "@/components/layouts/Footer";
 import Navbar from "@/components/layouts/Navbar";
-import type { Metadata } from "next";
-import { ibmPlexMono, montserrat, satoshi } from "./font";
+import type { Metadata, Viewport } from "next";
+import { getLocale } from "next-intl/server";
+import { ibmPlexMono, montserrat, satoshi } from "../font";
 
 export const metadata: Metadata = {
 	title: "BrainDAO - Building a more intelligent future through the IQ token.",
 	description:
 		"Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
-	viewport: "",
 	metadataBase: new URL("https://braindao.org"),
 	openGraph: {
 		title:
@@ -37,19 +37,25 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
+export const viewport: Viewport = {
+	width: "device-width",
+	initialScale: 1.0,
+};
+
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const locale = await getLocale();
+
 	return (
 		<html
-			lang="en"
+			lang={locale}
 			className={`${montserrat.className} ${ibmPlexMono.variable} ${satoshi.variable}`}
 		>
 			<head>
 				<link rel="canonical" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link

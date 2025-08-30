@@ -1,6 +1,6 @@
 "use client";
 
-import { TokenBrief } from "@/app/_components/token-brief";
+import { TokenBrief } from "@/app/[locale]/_components/token-brief";
 import React from "react";
 import { StatsPointers } from "../Iqtoken";
 import DetailCard from "../detailed-card";

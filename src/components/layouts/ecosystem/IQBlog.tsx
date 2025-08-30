@@ -1,6 +1,6 @@
 "use client";
 
-import { TokenBrief } from "@/app/_components/token-brief";
+import { TokenBrief } from "@/app/[locale]/_components/token-brief";
 
 import Image from "next/image";
 import BlogImage from "./images/blog/iq-blog.webp";
