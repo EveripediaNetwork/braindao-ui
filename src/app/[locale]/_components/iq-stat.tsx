@@ -6,22 +6,16 @@ import UpbitIcon from "@/components/icons/upbit";
 import { formatNumber } from "@/modules/helpers/numFormatter";
 import { FaDatabase } from "react-icons/fa";
 import { RiGlobalLine } from "react-icons/ri";
+import type { getIqStats, getSophiaStats } from "../_actions";
 import { ExchangeLink } from "./exchange-link";
 import { TokenCard } from "./token-metric";
 
+type IQStatsData = Awaited<ReturnType<typeof getIqStats>>;
+type SophiaStats = Awaited<ReturnType<typeof getSophiaStats>>;
+
 interface IQStatsProps {
-	iqStatsData: {
-		price: string | null;
-		iqPriceChange: number | null;
-		mcap: string | null;
-		iqMCapChange: number | null;
-		formattedPriceChange: string | null;
-		formattedMCapChange: string | null;
-	};
-	sophiaStats: {
-		currentPriceInUSD: number;
-		changeIn24h: number;
-	} | null;
+	iqStatsData: IQStatsData;
+	sophiaStats: SophiaStats;
 }
 
 export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
@@ -33,6 +27,9 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 		formattedPriceChange,
 		formattedMCapChange,
 	} = iqStatsData;
+
+	const { currentPriceInUSD = 0, changeIn24h = 0 } = sophiaStats ?? {};
+
 	return (
 		<section className="relative w-full -mt-8 md:-mt-12 lg:-mt-16 py-4 md:py-6 lg:py-4">
 			<div className="relative z-10 max-w-7xl mx-auto p-4">
@@ -51,12 +48,10 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 
 					<TokenCard
 						title="SOPHIA ($)"
-						value={formatNumber(sophiaStats?.currentPriceInUSD ?? null, {
-							maxDecimals: 3,
-						})}
+						value={formatNumber(currentPriceInUSD, { maxDecimals: 3 })}
 						change={{
-							iqChange: sophiaStats?.changeIn24h ?? null,
-							formattedChange: formatNumber(sophiaStats?.changeIn24h ?? null, {
+							iqChange: changeIn24h,
+							formattedChange: formatNumber(changeIn24h, {
 								signed: true,
 								minDecimals: 2,
 								maxDecimals: 2,
@@ -72,6 +67,7 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 						link="https://iq.iqai.com/dashboard"
 						errorMessage="Error fetching Sophia price"
 					/>
+
 					<TokenCard
 						title="Market Cap ($)"
 						value={mcap}
@@ -89,6 +85,7 @@ export function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 						link="https://iq.iqai.com/dashboard"
 						errorMessage="Error fetching IQ price"
 					/>
+
 					<ExchangesCard />
 				</div>
 			</div>
