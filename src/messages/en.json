@@ -1,8 +1,12 @@
 {
 	"introduction": {
-		"title": "Building A More Intelligent Future Through The IQ Token.",
+		"title": "<line>Building A More</line><line>Intelligent Future</line><line>Through The <highlight>IQ Token.</highlight></line>",
 		"description": "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",
 
-		"stats": {}
+		"stats": {
+			"iq-price-title": "IQ Price ($)",
+			"sophia-price-title": "SOPHIA Price ($)",
+			"market-cap-title": "Market Cap ($)"
+		}
 	}
 }

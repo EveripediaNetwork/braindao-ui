@@ -1,4 +1,4 @@
-import Hero from "@/components/layouts/Hero";
+import { Hero } from "@/components/layouts/Hero";
 import Iqtoken from "@/components/layouts/Iqtoken";
 import BraindaoTeam from "@/components/layouts/braindao-team";
 import Ecosystem from "@/components/layouts/ecosystem";

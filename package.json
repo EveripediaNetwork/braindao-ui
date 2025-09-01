@@ -24,9 +24,6 @@
 		"@radix-ui/react-slot": "^1.2.3",
 		"@react-three/drei": "^9.86.3",
 		"@react-three/fiber": "^8.14.4",
-		"@types/node": "18.14.6",
-		"@types/react": "18.0.28",
-		"@types/react-dom": "18.0.11",
 		"axios": "^1.5.1",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
@@ -46,18 +43,21 @@
 		"tailwind-merge": "^3.3.1",
 		"tailwindcss-animate": "^1.0.7",
 		"three": "^0.157.0",
-		"typescript": "5.0.4",
 		"zod": "^4.0.5"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@types/three": "^0.156.0",
 		"autoprefixer": "10.4.13",
 		"husky": "^9.1.7",
 		"lint-staged": "^15.4.3",
 		"postcss": "8.4.21",
 		"prettier": "^2.7.1",
-		"tailwindcss": "^3.3.3"
+		"tailwindcss": "^3.3.3",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@types/three": "^0.156.0",
+		"typescript": "^5.0.4"
 	},
 	"lint-staged": {
 		"*.{js,mjs,jsx,ts,tsx,json}": [
