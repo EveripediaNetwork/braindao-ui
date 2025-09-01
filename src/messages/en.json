@@ -8,5 +8,20 @@
 			"sophia-price-title": "SOPHIA Price ($)",
 			"market-cap-title": "Market Cap ($)"
 		}
+	},
+	"ecosystem": {
+		"token": {
+			"title": "The IQ Token",
+			"description": "The IQ token is a cryptocurrency that powers a knowledge ecosystem that includes the world's largest cryptocurrency and blockchain encyclopedia, IQ.wiki. IQ token holders can stake their tokens to participate in governance and get access to additional features. They can vote on governance decisions and govern BrainDAO, the native DAO and treasury of the IQ ecosystem.",
+			"learn-more": "Learn More"
+		},
+		"hiiq": {
+			"title": "HiIQ",
+			"description": "HiIQ, launched to incentivize long-term engagement and governance participation, allows users to lock up IQ tokens, increasing HiIQ balance for voting power and earning IQ token rewards, with 3 million tokens generated daily.",
+			"circulating-supply": "Circulating supply",
+			"market-cap": "Market cap",
+			"total-supply": "Total HiIQ",
+			"total-volume-locked": "Total volume locked"
+		}
 	}
 }
