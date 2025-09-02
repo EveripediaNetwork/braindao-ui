@@ -1,16 +1,21 @@
 import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
 import { braindaoTeam } from "@/data/team";
+import { getTranslations } from "next-intl/server";
 import Image, { type ImageProps } from "next/image";
+import type { Messages } from "../../../../global";
+
+type RoleKey = keyof Messages["team"]["roles"];
 
 type TTeam = {
 	src?: ImageProps["src"];
 	name?: string;
-	role?: string;
+	role?: RoleKey;
 	twitterLink?: string;
 	linkedinLink?: string;
 	wikiLink?: string;
 };
-const TeamCard = ({
+
+const TeamCard = async ({
 	src,
 	name,
 	role,
@@ -18,6 +23,8 @@ const TeamCard = ({
 	linkedinLink,
 	wikiLink,
 }: TTeam) => {
+	const t = await getTranslations("team");
+
 	return (
 		<InViewAnimateBottom className="w-full">
 			<div className="flex flex-col">
@@ -32,9 +39,8 @@ const TeamCard = ({
 				</div>
 
 				<div className="flex flex-col items-start font-montserrat">
-					<p
-						className="text-primary text-xs font-medium mb-2 font-satoshi">
-						{role || ""}
+					<p className="text-primary text-xs font-medium mb-2 font-satoshi">
+						{role ? t(`roles.${role}`) : ""}
 					</p>
 					<h4 className="text-white text-sm font-semibold mb-3">
 						{name || ""}
@@ -46,9 +52,9 @@ const TeamCard = ({
 								target="_blank"
 								className="w-5 h-5 bg-no-repeat bg-contain bg-center bg-twitter opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
-								aria-label={`${name}'s Twitter profile`}
+								aria-label={`${name} ${t("social.twitter")}`}
 							>
-								<span className="sr-only">Twitter</span>
+								<span className="sr-only">{t("social.twitter")}</span>
 							</a>
 						)}
 						{wikiLink && (
@@ -57,9 +63,9 @@ const TeamCard = ({
 								target="_blank"
 								className="w-7 h-5 bg-no-repeat bg-contain bg-center bg-everipedia opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
-								aria-label={`${name}'s Wiki page`}
+								aria-label={`${name} ${t("social.wiki")}`}
 							>
-								<span className="sr-only">Wiki</span>
+								<span className="sr-only">{t("social.wiki")}</span>
 							</a>
 						)}
 						{linkedinLink && (
@@ -68,9 +74,9 @@ const TeamCard = ({
 								target="_blank"
 								className="w-5 h-5 bg-no-repeat bg-contain bg-center bg-linkedln opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
-								aria-label={`${name}'s LinkedIn profile`}
+								aria-label={`${name} ${t("social.linkedin")}`}
 							>
-								<span className="sr-only">LinkedIn</span>
+								<span className="sr-only">{t("social.linkedin")}</span>
 							</a>
 						)}
 					</div>
@@ -79,22 +85,24 @@ const TeamCard = ({
 		</InViewAnimateBottom>
 	);
 };
-const BraindaoTeam = () => {
+
+const BraindaoTeam = async () => {
+	const t = await getTranslations("team");
+
 	return (
 		<div className="px-4 md:px-10 xl:container xl:mx-auto xl:px-4 py-12 sm:py-20 2xl:py-24">
 			<div className="flex items-start flex-col lg:flex-row w-full justify-between">
 				<div className="xl:w-[400px] xl:flex-shrink-0">
 					<InViewAnimateBottom>
 						<h3 className="font-satoshi font-semibold text-2xl sm:text-3xl xl:text-4xl text-primary">
-							Meet the Team
+							{t("title")}
 						</h3>
 					</InViewAnimateBottom>
 				</div>
 				<div className="mt-2 xl:mt-0">
 					<InViewAnimateBottom>
 						<p className="flex-1 lg:text-lg text-muted-foreground xl:max-w-[650px] 2xl:max-w-[700px]">
-							BrainDAO is made up of a diverse team united by our mission,
-							hailing from various corners of the globe.
+							{t("description")}
 						</p>
 					</InViewAnimateBottom>
 				</div>
@@ -108,7 +116,7 @@ const BraindaoTeam = () => {
 						<TeamCard
 							src={team.src}
 							name={team.name}
-							role={team.role}
+							role={team.role as RoleKey}
 							linkedinLink={team.linkedinLink}
 							twitterLink={team.twitterLink}
 							wikiLink={team.wikiLink}

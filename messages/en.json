@@ -129,5 +129,29 @@
 			"description": "Check out our blog to stay updated on all the exciting developments from BrainDAO and the IQ Ecosystem!",
 			"button": "Visit Blog"
 		}
+	},
+	"team": {
+		"title": "Meet the Team",
+		"description": "BrainDAO is made up of a diverse team united by our mission, hailing from various corners of the globe.",
+		"social": {
+			"twitter": "Twitter",
+			"linkedin": "LinkedIn",
+			"wiki": "Wiki"
+		},
+		"roles": {
+			"galaxyBrain": "Galaxy Brain",
+			"chiefTinkererOfficer": "Chief Tinkerer Officer",
+			"chiefOperatingOfficer": "Chief Operating Officer",
+			"contentGuru": "Content Guru",
+			"leadProductDesigner": "Lead Product Designer",
+			"technicalProductManager": "Technical Product Manager",
+			"backendEngineer": "Backend Engineer",
+			"fullStackEngineer": "Full-Stack Engineer",
+			"softwareEngineer": "Software Engineer",
+			"productDesigner": "Product Designer",
+			"productManager": "Product Manager",
+			"businessDevelopmentManager": "Business Development Manager",
+			"executiveEditor": "Executive Editor"
+		}
 	}
 }
