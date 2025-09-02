@@ -1,5 +1,5 @@
-import { localeSchema } from "@/messages/_schema";
 import { getRequestConfig } from "next-intl/server";
+import { localeSchema } from "../messages/_schema";
 import { routing } from "./routing";
 
 export default getRequestConfig(async ({ requestLocale }) => {

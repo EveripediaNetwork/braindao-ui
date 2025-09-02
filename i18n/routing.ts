@@ -1,6 +1,6 @@
-import { localeSchema } from "@/messages/_schema";
 import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
+import { localeSchema } from "../messages/_schema";
 
 export const routing = defineRouting({
 	locales: localeSchema.options,
