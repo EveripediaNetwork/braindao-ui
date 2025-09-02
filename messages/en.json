@@ -149,7 +149,41 @@
 			"communityManager": "Community Manager",
 			"productManager": "Product Manager",
 			"advisor": "Advisor",
-			"executiveEditor": "Executive Editor"
+			"executiveEditor": "Executive Editor",
+			"softwareEngineer": "Software Engineer",
+			"backendEngineer": "Backend Engineer",
+			"fullStackEngineer": "Full Stack Engineer",
+			"productDesigner": "Product Designer",
+			"leadProductDesigner": "Lead Product Designer",
+			"technicalProductManager": "Technical Product Manager",
+			"businessDevelopmentManager": "Business Development Manager"
 		}
+	},
+	"footer": {
+		"newsletter": {
+			"title": "Subscribe to our newsletter",
+			"description": "Never miss any of the most popular and trending articles when you sign up to our email newsletter.",
+			"button": "Subscribe"
+		},
+		"business": {
+			"title": "For business Inquiries",
+			"contact": "Contact us",
+			"email": "tara@iq.wiki"
+		},
+		"social": {
+			"title": "Follow us"
+		},
+		"company": {
+			"title": "Company"
+		},
+		"about": {
+			"text": "BrainDAO is creating an intelligent future as the governing DAO behind the IQ ecosystem, supported by <link>BrainFund</link>."
+		},
+		"legal": {
+			"privacy": "Privacy & Cookies policy",
+			"rights": "All rights reserved"
+		},
+		"powered": "© {year} — Powered by IQ and BrainDAO.",
+		"scrollTop": "Scroll to top"
 	}
 }

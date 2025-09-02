@@ -1,5 +1,3 @@
-"use client";
-
 import { TokenBrief } from "@/app/[locale]/_components/token-brief";
 import { cn } from "@/lib/utils";
 import { numFormatter } from "@/modules/helpers/numFormatter";

@@ -8,62 +8,55 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 
 const Navbar = () => {
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const [isLaunchAppOpen, setIsLaunchAppOpen] = useState(false);
-	const [isLoaded, setIsLoaded] = useState(false);
+	const [state, setState] = useState({
+		isScrolled: false,
+		isMobileMenuOpen: false,
+		isLaunchAppOpen: false,
+	});
 	const activeSection = useActiveSection();
+	const scrollHandlerRef = useRef<(() => void) | null>(null);
+
+	const handleScroll = React.useCallback(() => {
+		setState((prev) => ({ ...prev, isScrolled: window.scrollY > 50 }));
+	}, []);
 
 	useEffect(() => {
-		setIsLoaded(true);
+		scrollHandlerRef.current = handleScroll;
+		window.addEventListener("scroll", handleScroll);
 
-		const handleScroll = () => {
-			if (window.scrollY > 50) {
-				setIsScrolled(true);
-			} else {
-				setIsScrolled(false);
+		handleScroll();
+
+		return () => {
+			if (scrollHandlerRef.current) {
+				window.removeEventListener("scroll", scrollHandlerRef.current);
 			}
 		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+	}, [handleScroll]);
 
 	return (
 		<motion.div
 			className={cn(
 				"fixed top-0 left-0 right-0 w-full mx-auto max-w-[1440px] z-50 transition-all duration-300 text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent backdrop-blur-md",
-				isScrolled
+				state.isScrolled
 					? "bg-black/40 backdrop-blur-md max-w-5xl mt-0 md:mt-2 lg:mt-5 md:rounded-full"
 					: "bg-transparent",
 			)}
-			initial={false}
-			animate={isLoaded ? "visible" : "hidden"}
-			variants={{
-				hidden: { opacity: 0 },
-				visible: { opacity: 1 },
-			}}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
 			transition={{ duration: 0.3 }}
 		>
 			<header className="flex flex-col z-50 lg:px-4 p-3">
-				<div
-					className={cn(
-						"flex justify-between items-center w-full transition-all duration-300",
-					)}
-				>
+				<div className="flex justify-between items-center w-full transition-all duration-300">
+					{/* Logo */}
 					<motion.div
-						className={cn(
-							"flex gap-2 items-center text-lg font-medium transition-all duration-300 w-fit",
-						)}
-						initial={false}
+						className="flex gap-2 items-center text-lg font-medium w-fit"
+						initial={{ opacity: 0, y: -10 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.3, delay: 0.1 }}
 					>
@@ -77,6 +70,7 @@ const Navbar = () => {
 						</Link>
 					</motion.div>
 
+					{/* Desktop Nav */}
 					<motion.nav
 						initial="hidden"
 						animate="visible"
@@ -88,9 +82,9 @@ const Navbar = () => {
 
 							return (
 								<motion.a
-									target={link.target}
-									href={link.href}
 									key={link.href}
+									href={link.href}
+									target={link.target}
 									className={cn(
 										"transition-colors duration-200",
 										isActive ? "text-primary" : "hover:text-primary",
@@ -100,10 +94,7 @@ const Navbar = () => {
 										visible: {
 											opacity: 1,
 											x: 0,
-											transition: {
-												delay: index * 0.1,
-												duration: 0.3,
-											},
+											transition: { delay: index * 0.1, duration: 0.3 },
 										},
 									}}
 									whileHover={{ scale: 1.05 }}
@@ -115,17 +106,22 @@ const Navbar = () => {
 						})}
 					</motion.nav>
 
+					{/* Actions */}
 					<motion.div
-						className={cn(
-							"flex gap-2 items-center transition-all duration-300",
-						)}
-						initial={false}
+						className="flex gap-2 items-center"
+						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.3, delay: 0.3 }}
 					>
+						{/* Desktop actions */}
 						<div className="hidden lg:flex gap-2 items-center">
 							<ExchangesMenubar />
-							<Popover open={isLaunchAppOpen} onOpenChange={setIsLaunchAppOpen}>
+							<Popover
+								open={state.isLaunchAppOpen}
+								onOpenChange={(open) =>
+									setState((prev) => ({ ...prev, isLaunchAppOpen: open }))
+								}
+							>
 								<PopoverTrigger asChild>
 									<motion.div
 										whileHover={{ scale: 1.05 }}
@@ -154,13 +150,16 @@ const Navbar = () => {
 												href={link.href}
 												target="_blank"
 												rel="noopener noreferrer"
-												className="w-full h-8 transition-colors cursor-pointer flex items-center justify-start group"
+												className="w-full h-8 flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 group"
 												whileHover={{ x: 3 }}
-												onClick={() => setIsLaunchAppOpen(false)}
+												onClick={() =>
+													setState((prev) => ({
+														...prev,
+														isLaunchAppOpen: false,
+													}))
+												}
 											>
-												<span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors duration-200">
-													{link.title}
-												</span>
+												{link.title}
 											</motion.a>
 										))}
 									</div>
@@ -168,11 +167,14 @@ const Navbar = () => {
 							</Popover>
 						</div>
 
+						{/* Mobile menu */}
 						<div className="lg:hidden flex gap-2 items-center">
 							<ExchangesMenubar />
 							<Popover
-								open={isMobileMenuOpen}
-								onOpenChange={setIsMobileMenuOpen}
+								open={state.isMobileMenuOpen}
+								onOpenChange={(open) =>
+									setState((prev) => ({ ...prev, isMobileMenuOpen: open }))
+								}
 							>
 								<PopoverTrigger asChild>
 									<motion.div whileTap={{ scale: 0.95 }}>
@@ -198,7 +200,7 @@ const Navbar = () => {
 												href={link.href}
 												target="_blank"
 												rel="noopener noreferrer"
-												className="block text-muted-foreground hover:text-primary transition-colors duration-200 text-sm py-2"
+												className="block text-muted-foreground hover:text-primary text-sm py-2 transition-colors duration-200"
 												initial={{ opacity: 0, x: -10 }}
 												animate={{
 													opacity: 1,
@@ -206,7 +208,12 @@ const Navbar = () => {
 													transition: { delay: index * 0.05 + 0.2 },
 												}}
 												whileTap={{ scale: 0.95 }}
-												onClick={() => setIsMobileMenuOpen(false)}
+												onClick={() =>
+													setState((prev) => ({
+														...prev,
+														isMobileMenuOpen: false,
+													}))
+												}
 											>
 												{link.title}
 											</motion.a>
