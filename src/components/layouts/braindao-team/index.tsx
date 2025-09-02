@@ -31,7 +31,7 @@ const TeamCard = async ({
 				<div className="relative w-full aspect-square rounded-tl-xl rounded-tr-xl mb-4 overflow-hidden bg-black shadow-custom">
 					<Image
 						src={src || ""}
-						alt={`${name}'s profile picture`}
+						alt={t("alt", { name })}
 						fill
 						sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 20vw"
 						className="object-cover object-top rounded-tl-xl rounded-tr-xl"
@@ -52,9 +52,9 @@ const TeamCard = async ({
 								target="_blank"
 								className="w-5 h-5 bg-no-repeat bg-contain bg-center bg-twitter opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
-								aria-label={`${name} ${t("social.twitter")}`}
+								aria-label={t("social.twitter", { name })}
 							>
-								<span className="sr-only">{t("social.twitter")}</span>
+								<span className="sr-only">{t("social.twitter", { name })}</span>
 							</a>
 						)}
 						{wikiLink && (
@@ -63,9 +63,9 @@ const TeamCard = async ({
 								target="_blank"
 								className="w-7 h-5 bg-no-repeat bg-contain bg-center bg-everipedia opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
-								aria-label={`${name} ${t("social.wiki")}`}
+								aria-label={t("social.wiki", { name })}
 							>
-								<span className="sr-only">{t("social.wiki")}</span>
+								<span className="sr-only">{t("social.wiki", { name })}</span>
 							</a>
 						)}
 						{linkedinLink && (
@@ -74,9 +74,11 @@ const TeamCard = async ({
 								target="_blank"
 								className="w-5 h-5 bg-no-repeat bg-contain bg-center bg-linkedln opacity-70 hover:opacity-100 transition-opacity"
 								rel="noreferrer"
-								aria-label={`${name} ${t("social.linkedin")}`}
+								aria-label={t("social.linkedin", { name })}
 							>
-								<span className="sr-only">{t("social.linkedin")}</span>
+								<span className="sr-only">
+									{t("social.linkedin", { name })}
+								</span>
 							</a>
 						)}
 					</div>

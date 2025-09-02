@@ -133,24 +133,22 @@
 	"team": {
 		"title": "Meet the Team",
 		"description": "BrainDAO is made up of a diverse team united by our mission, hailing from various corners of the globe.",
+		"alt": "Profile picture of {name}",
 		"social": {
-			"twitter": "Twitter",
-			"linkedin": "LinkedIn",
-			"wiki": "Wiki"
+			"twitter": "Twitter profile of {name}",
+			"linkedin": "LinkedIn profile of {name}",
+			"wiki": "Wiki page of {name}"
 		},
 		"roles": {
 			"galaxyBrain": "Galaxy Brain",
 			"chiefTinkererOfficer": "Chief Tinkerer Officer",
 			"chiefOperatingOfficer": "Chief Operating Officer",
 			"contentGuru": "Content Guru",
-			"leadProductDesigner": "Lead Product Designer",
-			"technicalProductManager": "Technical Product Manager",
-			"backendEngineer": "Backend Engineer",
-			"fullStackEngineer": "Full-Stack Engineer",
-			"softwareEngineer": "Software Engineer",
-			"productDesigner": "Product Designer",
+			"developer": "Developer",
+			"designer": "Designer",
+			"communityManager": "Community Manager",
 			"productManager": "Product Manager",
-			"businessDevelopmentManager": "Business Development Manager",
+			"advisor": "Advisor",
 			"executiveEditor": "Executive Editor"
 		}
 	}
