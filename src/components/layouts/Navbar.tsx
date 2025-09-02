@@ -4,7 +4,7 @@ import ExchangesMenubar from "@/app/[locale]/_components/exchange-menu";
 import { appLinks, mobileNavLinks, navLinks } from "@/data/Nav";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -13,6 +13,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import LocaleSwitcher from "./locale-switcher";
 
 const Navbar = () => {
 	const [state, setState] = useState({
@@ -20,6 +21,7 @@ const Navbar = () => {
 		isMobileMenuOpen: false,
 		isLaunchAppOpen: false,
 	});
+
 	const activeSection = useActiveSection();
 	const scrollHandlerRef = useRef<(() => void) | null>(null);
 	const t = useTranslations("navbar");
@@ -31,9 +33,7 @@ const Navbar = () => {
 	useEffect(() => {
 		scrollHandlerRef.current = handleScroll;
 		window.addEventListener("scroll", handleScroll);
-
 		handleScroll();
-
 		return () => {
 			if (scrollHandlerRef.current) {
 				window.removeEventListener("scroll", scrollHandlerRef.current);
@@ -71,6 +71,7 @@ const Navbar = () => {
 						</Link>
 					</motion.div>
 
+					{/* Desktop nav */}
 					<motion.nav
 						initial="hidden"
 						animate="visible"
@@ -113,6 +114,9 @@ const Navbar = () => {
 						transition={{ duration: 0.3, delay: 0.3 }}
 					>
 						<div className="hidden lg:flex gap-2 items-center">
+							<AnimatePresence>
+								{!state.isScrolled && <LocaleSwitcher key="locale-desktop" />}
+							</AnimatePresence>
 							<ExchangesMenubar />
 							<Popover
 								open={state.isLaunchAppOpen}
@@ -166,6 +170,7 @@ const Navbar = () => {
 						</div>
 
 						<div className="lg:hidden flex gap-2 items-center">
+							{!state.isScrolled && <LocaleSwitcher key="locale-mobile" />}
 							<ExchangesMenubar />
 							<Popover
 								open={state.isMobileMenuOpen}

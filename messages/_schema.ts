@@ -40,7 +40,7 @@ export const locales = [
 		name: "Japanese",
 		currency: "jpy",
 		localization: "ja-JP",
-		icon: "/JP.svg",
+		icon: "/JA.svg",
 		isHidden: false,
 	},
 ] as const;
