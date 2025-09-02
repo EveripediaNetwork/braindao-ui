@@ -6,6 +6,7 @@ import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -21,6 +22,7 @@ const Navbar = () => {
 	});
 	const activeSection = useActiveSection();
 	const scrollHandlerRef = useRef<(() => void) | null>(null);
+	const t = useTranslations("navbar");
 
 	const handleScroll = React.useCallback(() => {
 		setState((prev) => ({ ...prev, isScrolled: window.scrollY > 50 }));
@@ -53,7 +55,6 @@ const Navbar = () => {
 		>
 			<header className="flex flex-col z-50 lg:px-4 p-3">
 				<div className="flex justify-between items-center w-full transition-all duration-300">
-					{/* Logo */}
 					<motion.div
 						className="flex gap-2 items-center text-lg font-medium w-fit"
 						initial={{ opacity: 0, y: -10 }}
@@ -70,7 +71,6 @@ const Navbar = () => {
 						</Link>
 					</motion.div>
 
-					{/* Desktop Nav */}
 					<motion.nav
 						initial="hidden"
 						animate="visible"
@@ -106,14 +106,12 @@ const Navbar = () => {
 						})}
 					</motion.nav>
 
-					{/* Actions */}
 					<motion.div
 						className="flex gap-2 items-center"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.3, delay: 0.3 }}
 					>
-						{/* Desktop actions */}
 						<div className="hidden lg:flex gap-2 items-center">
 							<ExchangesMenubar />
 							<Popover
@@ -132,7 +130,7 @@ const Navbar = () => {
 											size="lg"
 											className="text-xs md:text-sm"
 										>
-											<span>Launch App </span>
+											<span>{t("launch-app")}</span>
 											<ChevronDown className="h-4 w-4" />
 										</Button>
 									</motion.div>
@@ -167,7 +165,6 @@ const Navbar = () => {
 							</Popover>
 						</div>
 
-						{/* Mobile menu */}
 						<div className="lg:hidden flex gap-2 items-center">
 							<ExchangesMenubar />
 							<Popover

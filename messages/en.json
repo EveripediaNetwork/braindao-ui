@@ -1,4 +1,15 @@
 {
+	"navbar": {
+		"launch-app": "Launch App",
+		"exchanges": {
+			"title": "Get the IQ token",
+			"description": "Get involved in the IQ Ecosystem and swap the IQ token easily across different exchange platforms.",
+			"centralized": "Centralized Exchanges",
+			"decentralized": "Decentralized Exchanges",
+			"seeMore": "See more",
+			"closeAria": "Close modal"
+		}
+	},
 	"introduction": {
 		"title": "<line>Building A More</line><line>Intelligent Future</line><line>Through The <highlight>IQ Token.</highlight></line>",
 		"description": "Join our mission to expand the scope of human knowledge with BrainDAO, the governing DAO powering the IQ ecosystem.",

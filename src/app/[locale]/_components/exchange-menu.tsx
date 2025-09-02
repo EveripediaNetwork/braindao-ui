@@ -2,23 +2,26 @@
 
 import { centralizedExchanges, decentralizedExchanges } from "@/data/exchanges";
 import * as Popover from "@radix-ui/react-popover";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
 function GetIQModalContent() {
+	const t = useTranslations("navbar.exchanges");
+
 	return (
 		<div className="space-y-3 w-full max-w-full">
 			<div className="flex items-center justify-between w-full">
 				<h3 className="text-base font-semibold text-muted-foreground">
-					Get the IQ token
+					{t("title")}
 				</h3>
 				<Popover.Close asChild>
 					<button
 						type="button"
 						className="p-1 rounded-full hover:bg-neutral-700 transition-colors flex items-center justify-center"
-						aria-label="Close modal"
+						aria-label={t("closeAria")}
 					>
 						<IoClose className="w-5 h-5 text-foreground" />
 					</button>
@@ -26,8 +29,7 @@ function GetIQModalContent() {
 			</div>
 
 			<p className="text-muted-foreground text-sm font-medium w-full text-center sm:text-left">
-				Get involved in the IQ Ecosystem and swap the IQ token easily across
-				different exchange platforms.
+				{t("description")}
 			</p>
 
 			<div className="border-t border-neutral-700 w-full" />
@@ -35,7 +37,7 @@ function GetIQModalContent() {
 			<div className="grid md:grid-cols-2 gap-6">
 				<div className="flex flex-col">
 					<h4 className="font-semibold mb-3 text-sm text-muted-foreground">
-						Centralized Exchanges
+						{t("centralized")}
 					</h4>
 					<div className="space-y-2 flex-1">
 						{centralizedExchanges.map((exchange) => {
@@ -75,7 +77,7 @@ function GetIQModalContent() {
 							className="flex items-center gap-2 justify-center text-muted-foreground hover:text-muted-foreground hover:underline transition-colors text-sm"
 						>
 							<span className="text-muted-foreground text-sm hover:underline">
-								See more
+								{t("seeMore")}
 							</span>
 							<FaArrowUpRightFromSquare className="w-5 h-5 text-muted-foreground" />
 						</Link>
@@ -84,7 +86,7 @@ function GetIQModalContent() {
 
 				<div className="md:border-l md:border-neutral-700 md:pl-6">
 					<h4 className="font-semibold mb-3 text-sm text-muted-foreground">
-						Decentralized Exchanges
+						{t("decentralized")}
 					</h4>
 					<div className="space-y-2">
 						{decentralizedExchanges.map((exchange) => {
@@ -120,6 +122,7 @@ function GetIQModalContent() {
 		</div>
 	);
 }
+
 const ExchangesMenubar = () => {
 	return (
 		<div className="flex items-center justify-center">
@@ -157,4 +160,5 @@ const ExchangesMenubar = () => {
 		</div>
 	);
 };
+
 export default ExchangesMenubar;
