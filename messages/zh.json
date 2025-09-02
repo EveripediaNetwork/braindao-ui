@@ -1,0 +1,200 @@
+{
+	"navbar": {
+		"launch-app": "启动应用",
+		"exchanges": {
+			"title": "获取 IQ 代币",
+			"description": "加入 IQ 生态系统，轻松在不同交易平台上兑换 IQ 代币。",
+			"centralized": "中心化交易所",
+			"decentralized": "去中心化交易所",
+			"seeMore": "查看更多",
+			"closeAria": "关闭弹窗"
+		}
+	},
+	"introduction": {
+		"title": "<line>建设更</line><line>智能的未来</line><line>通过 <highlight>IQ 代币。</highlight></line>",
+		"description": "加入我们的使命，通过 BrainDAO 扩展人类知识的范围，BrainDAO 是 IQ 生态系统的治理 DAO。",
+		"stats": {
+			"iq-price-title": "IQ 价格 ($)",
+			"sophia-price-title": "SOPHIA 价格 ($)",
+			"market-cap-title": "市值 ($)",
+			"errors": {
+				"iq-price": "获取 IQ 价格出错",
+				"sophia-price": "获取 SOPHIA 价格出错",
+				"market-cap": "获取市值出错"
+			}
+		},
+		"exchanges": {
+			"title": "交易所",
+			"binance": "币安",
+			"one-inch": "1inch",
+			"upbit": "Upbit",
+			"frax": "Frax Finance",
+			"trade-on": "在 {name} 交易"
+		}
+	},
+	"ecosystem": {
+		"title": "IQ 生态系统",
+		"token": {
+			"title": "IQ 代币",
+			"description": "IQ 代币是一种加密货币，驱动一个知识生态系统，包括世界上最大的加密货币和区块链百科全书 IQ.wiki。IQ 代币持有者可以质押代币参与治理并获得额外功能权限。他们可以对治理决策进行投票，并管理 IQ 生态系统的原生 DAO 和资金库 BrainDAO。",
+			"learn-more": "了解更多"
+		},
+		"hiiq": {
+			"title": "HiIQ",
+			"description": "HiIQ 为激励长期参与和治理参与而推出，允许用户锁定 IQ 代币，从而增加 HiIQ 余额以提升投票权和获得 IQ 代币奖励，每天生成 300 万代币。",
+			"circulating-supply": "流通量",
+			"market-cap": "市值",
+			"total-supply": "HiIQ 总量",
+			"total-volume-locked": "锁定总量"
+		},
+		"iqai": {
+			"title": "IQ AI",
+			"description": "IQ AI 正在通过代理代币化平台（ATP）为区块链的大规模采用奠定基础。ATP 允许创建代币化、自主的链上代理，重新定义去中心化生态系统，并开启协作、成长和创新的新机遇。",
+			"button": "探索 IQ AI"
+		},
+		"iqwiki": {
+			"title": "IQ.wiki",
+			"description": "IQ.wiki 是世界上最大的区块链和加密货币百科全书，拥有数千页内容。IQ.wiki 由 IQ 代币提供支持，平台上的所有编辑都通过 Polygon 和 IPFS 链上记录。",
+			"button": "探索 IQ.wiki",
+			"sections": {
+				"intro-text": "探索各种维基，帮助您了解加密货币和区块链的世界。"
+			}
+		},
+		"sophia": {
+			"title": "SOPHIA",
+			"description": "Sophia 是一款自我文档化 AI，基于 IQ.wiki 数据集训练，整理区块链知识，提供有价值的见解，并维护 IQ.wiki 平台的最新信息，打造作为代理-影响者、记者和编辑的职业生涯。",
+			"button": "探索 Sophia",
+			"cards": {
+				"ai-editing": {
+					"badge": "AI 辅助<highlight>编辑</highlight>",
+					"title": "影响编辑重点",
+					"description": "投票决定 SOPHIA 在研究和编辑过程中应优先关注的主题。"
+				},
+				"exclusive-updates": {
+					"badge": "独家<highlight>更新</highlight>",
+					"title": "每周独家洞察",
+					"description": "访问每周限制内容，包括洞察帖子、报告及幕后信息。"
+				},
+				"transparency": "SOPHIA 保持其编辑工作的透明记录，并使用可信来源分析区块链项目。此外，她会更新关于最新加密信息和趋势的维基条目。"
+			}
+		},
+		"aiden": {
+			"title": "AIDEN",
+			"description": "AIDEN 是一款高级 AI 助手，可与区块链技术交互，为用户提供深入见解，并为初学者和经验丰富的加密爱好者提供无缝上手指导。",
+			"extraDescription": "AIDEN 由 IQ 代币驱动，使 IQ 持有者能够参与治理并获得额外功能。",
+			"button": "探索 AIDEN",
+			"features": {
+				"realtime-data": {
+					"title": "实时数据访问",
+					"description": "访问实时价格数据、交易量和市值。"
+				},
+				"ai-answers": {
+					"title": "AI 生成的答案",
+					"description": "获取 AI 生成的加密货币问题答案。"
+				},
+				"news-trends": {
+					"title": "新闻与趋势更新",
+					"description": "利用实时市场数据、新闻和趋势进行 AI 驱动的市场分析，获取最新信息。"
+				},
+				"plugins": {
+					"title": "插件",
+					"description": "访问各种插件以选择适合您的查询的数据源。"
+				}
+			},
+			"sections": {
+				"knowledge": "使用您的项目文档和网页训练 AIDEN，并整合文本和问答对，使机器人适应您社区的需求。",
+				"social": "AIDEN 可集成到不同社交平台，为每个社区提供专业且与上下文相关的信息。"
+			}
+		},
+		"dashboard": {
+			"title": "IQ 仪表盘",
+			"description": "通过 IQ 仪表盘，您可以质押代币、进行跨链桥接、投票治理提案，并参与区块链生态系统中的多项活动。",
+			"button": "探索 IQ 仪表盘",
+			"stats": {
+				"swap": {
+					"title": "兑换",
+					"description": "在 IQ 生态系统中轻松在各交易平台上兑换 IQ 代币。"
+				},
+				"lock": {
+					"title": "锁仓",
+					"description": "锁定 IQ 代币一段时间以获得奖励。"
+				},
+				"vote": {
+					"title": "投票",
+					"description": "质押者可以对所有治理提案投票，并创建自己的提案。"
+				},
+				"monitor": {
+					"title": "监控协议",
+					"description": "实时洞察 IQ 生态系统的成长及 BrainDAO 的资金状况。"
+				}
+			},
+			"cards": {
+				"vote": "投票",
+				"exchanges": "交易所",
+				"lock": "锁仓",
+				"stats": "统计"
+			}
+		},
+		"blog": {
+			"title": "IQ 博客",
+			"description": "查看我们的博客，获取 BrainDAO 和 IQ 生态系统的最新动态！",
+			"button": "访问博客"
+		}
+	},
+	"team": {
+		"title": "团队介绍",
+		"description": "BrainDAO 由来自世界各地的多元化团队组成，共同致力于我们的使命。",
+		"alt": "{name} 的头像",
+		"social": {
+			"twitter": "{name} 的 Twitter 资料",
+			"linkedin": "{name} 的 LinkedIn 资料",
+			"wiki": "{name} 的 Wiki 页面"
+		},
+		"roles": {
+			"galaxyBrain": "银河大脑",
+			"chiefTinkererOfficer": "首席实验官",
+			"chiefOperatingOfficer": "首席运营官",
+			"contentGuru": "内容大师",
+			"developer": "开发者",
+			"designer": "设计师",
+			"communityManager": "社区经理",
+			"productManager": "产品经理",
+			"advisor": "顾问",
+			"executiveEditor": "执行编辑",
+			"softwareEngineer": "软件工程师",
+			"backendEngineer": "后端工程师",
+			"fullStackEngineer": "全栈工程师",
+			"productDesigner": "产品设计师",
+			"leadProductDesigner": "首席产品设计师",
+			"technicalProductManager": "技术产品经理",
+			"businessDevelopmentManager": "业务拓展经理"
+		}
+	},
+	"footer": {
+		"newsletter": {
+			"title": "订阅我们的新闻邮件",
+			"description": "注册电子邮件新闻邮件，永不错过最受欢迎和热门的文章。",
+			"button": "订阅"
+		},
+		"business": {
+			"title": "商务咨询",
+			"contact": "联系我们",
+			"email": "tara@iq.wiki"
+		},
+		"social": {
+			"title": "关注我们"
+		},
+		"company": {
+			"title": "公司信息"
+		},
+		"about": {
+			"text": "BrainDAO 正在创建智能未来，作为 IQ 生态系统背后的治理 DAO，并获得 <link>BrainFund</link> 支持。"
+		},
+		"legal": {
+			"privacy": "隐私与 Cookie 政策",
+			"rights": "版权所有"
+		},
+		"powered": "© {year} — 由 IQ 和 BrainDAO 提供。",
+		"scrollTop": "滚动到顶部"
+	}
+}

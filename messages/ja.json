@@ -1,0 +1,200 @@
+{
+	"navbar": {
+		"launch-app": "アプリを起動",
+		"exchanges": {
+			"title": "IQトークンを入手",
+			"description": "IQエコシステムに参加し、さまざまな取引所でIQトークンを簡単に交換しましょう。",
+			"centralized": "中央集権型取引所",
+			"decentralized": "分散型取引所",
+			"seeMore": "もっと見る",
+			"closeAria": "モーダルを閉じる"
+		}
+	},
+	"introduction": {
+		"title": "<line>より</line><line>知的な未来を</line><line><highlight>IQトークン</highlight>で築く</line>",
+		"description": "BrainDAOと共に人類の知識の範囲を広げるミッションに参加しましょう。BrainDAOはIQエコシステムを運営するDAOです。",
+		"stats": {
+			"iq-price-title": "IQ価格 ($)",
+			"sophia-price-title": "SOPHIA価格 ($)",
+			"market-cap-title": "時価総額 ($)",
+			"errors": {
+				"iq-price": "IQ価格の取得エラー",
+				"sophia-price": "SOPHIA価格の取得エラー",
+				"market-cap": "時価総額の取得エラー"
+			}
+		},
+		"exchanges": {
+			"title": "取引所",
+			"binance": "バイナンス",
+			"one-inch": "1インチ",
+			"upbit": "アップビット",
+			"frax": "フラックスファイナンス",
+			"trade-on": "{name}で取引"
+		}
+	},
+	"ecosystem": {
+		"title": "IQエコシステム",
+		"token": {
+			"title": "IQトークン",
+			"description": "IQトークンは知識エコシステムを支える暗号通貨で、世界最大の暗号通貨・ブロックチェーン百科事典であるIQ.wikiを含みます。IQトークン保有者はトークンをステーキングしてガバナンスに参加したり、追加機能を利用できます。ガバナンス決定に投票し、IQエコシステムのネイティブDAOであるBrainDAOを運営することができます。",
+			"learn-more": "詳細はこちら"
+		},
+		"hiiq": {
+			"title": "HiIQ",
+			"description": "HiIQは長期的な関与とガバナンス参加を奨励するために導入され、ユーザーはIQトークンをロックすることで、投票権とIQトークン報酬を増やすことができます。1日あたり300万トークンが生成されます。",
+			"circulating-supply": "流通供給量",
+			"market-cap": "時価総額",
+			"total-supply": "総HiIQ",
+			"total-volume-locked": "ロックされた総量"
+		},
+		"iqai": {
+			"title": "IQ AI",
+			"description": "IQ AIはエージェント・トークン化プラットフォーム（ATP）を通じて、ブロックチェーンの大規模普及の基盤を構築しています。ATPにより、トークン化された自律型オンチェーンエージェントの作成が可能になり、分散型エコシステムを再定義し、協力、成長、革新の新たな機会を解き放ちます。",
+			"button": "IQ AIを探索"
+		},
+		"iqwiki": {
+			"title": "IQ.wiki",
+			"description": "IQ.wikiは世界最大のブロックチェーン・暗号通貨百科事典で、数千ページを誇ります。IQ.wikiはIQトークンにより運営され、プラットフォーム上のすべての編集はPolygonとIPFSを通じてオンチェーンで記録されます。",
+			"button": "IQ.wikiを探索",
+			"sections": {
+				"intro-text": "暗号通貨とブロックチェーンの世界を案内する、多彩なウィキを探索してください。"
+			}
+		},
+		"sophia": {
+			"title": "SOPHIA",
+			"description": "SophiaはIQ.wikiのデータセットで学習した自己文書化AIで、ブロックチェーン知識を整理し、価値ある洞察を提供し、IQ.wiki上の最新情報を維持します。エージェント・インフルエンサー、ジャーナリスト、編集者としてのキャリアを築きます。",
+			"button": "Sophiaを探索",
+			"cards": {
+				"ai-editing": {
+					"badge": "AI支援<highlight>編集</highlight>",
+					"title": "編集の重点を影響",
+					"description": "Sophiaが研究と編集プロセスで優先すべきトピックに投票してください。"
+				},
+				"exclusive-updates": {
+					"badge": "限定<highlight>更新</highlight>",
+					"title": "週刊独占インサイト",
+					"description": "洞察スレッド、レポート、舞台裏を含む毎週の限定コンテンツにアクセスできます。"
+				},
+				"transparency": "SOPHIAは編集作業の透明性を維持し、信頼できる情報源でブロックチェーンプロジェクトを分析します。さらに、最新の暗号通貨情報とトレンドでウィキ項目を更新します。"
+			}
+		},
+		"aiden": {
+			"title": "AIDEN",
+			"description": "AIDENは高度なAIアシスタントで、ブロックチェーン技術と連携し、暗号通貨の世界をナビゲートし、初心者から経験者までスムーズな導入と深い洞察を提供します。",
+			"extraDescription": "AIDENはIQトークンにより駆動され、IQ保有者はガバナンスに参加し、追加機能にアクセスできます。",
+			"button": "AIDENを探索",
+			"features": {
+				"realtime-data": {
+					"title": "リアルタイムデータにアクセス",
+					"description": "リアルタイムの価格データ、取引量、時価総額にアクセスできます。"
+				},
+				"ai-answers": {
+					"title": "AI生成の回答",
+					"description": "暗号通貨に関するすべての質問にAI生成の回答を受け取れます。"
+				},
+				"news-trends": {
+					"title": "ニュースとトレンドの更新",
+					"description": "リアルタイム市場データ、ニュース、トレンドを使用したAIによる市場分析で情報を入手できます。"
+				},
+				"plugins": {
+					"title": "プラグイン",
+					"description": "さまざまなプラグインを使って、質問に必要なデータソースを選択できます。"
+				}
+			},
+			"sections": {
+				"knowledge": "AIDENをプロジェクトの文書やウェブページでトレーニングし、テキストやQ&Aペアを組み込んで、コミュニティに合わせてカスタマイズします。",
+				"social": "AIDENはさまざまなソーシャルプラットフォームに統合でき、各コミュニティの特定のニーズに応じた専門的でコンテキストに適した情報を提供できます。"
+			}
+		},
+		"dashboard": {
+			"title": "IQダッシュボード",
+			"description": "IQダッシュボードを使用すると、トークンのステーキング、クロスチェーンブリッジ、ガバナンス提案への投票など、ブロックチェーンエコシステム内で多くの活動が可能です。",
+			"button": "IQダッシュボードを探索",
+			"stats": {
+				"swap": {
+					"title": "スワップ",
+					"description": "IQエコシステムでIQトークンをさまざまな取引所で簡単に交換できます。"
+				},
+				"lock": {
+					"title": "ロック",
+					"description": "一定期間IQトークンをロックして報酬を得ることができます。"
+				},
+				"vote": {
+					"title": "投票",
+					"description": "ステーキングしたユーザーは、すべてのガバナンス提案に投票したり、自分の提案を作成できます。"
+				},
+				"monitor": {
+					"title": "プロトコルの監視",
+					"description": "IQエコシステムの成長やBrainDAOの財務状況をリアルタイムで把握できます。"
+				}
+			},
+			"cards": {
+				"vote": "投票",
+				"exchanges": "取引所",
+				"lock": "ロック",
+				"stats": "統計"
+			}
+		},
+		"blog": {
+			"title": "IQブログ",
+			"description": "BrainDAOとIQエコシステムの最新情報をブログでチェックしましょう！",
+			"button": "ブログを訪問"
+		}
+	},
+	"team": {
+		"title": "チーム紹介",
+		"description": "BrainDAOは、世界各地から集まった多様なチームによって構成され、共通のミッションに向かって活動しています。",
+		"alt": "{name}のプロフィール写真",
+		"social": {
+			"twitter": "{name}のTwitterプロフィール",
+			"linkedin": "{name}のLinkedInプロフィール",
+			"wiki": "{name}のWikiページ"
+		},
+		"roles": {
+			"galaxyBrain": "ギャラクシーブレイン",
+			"chiefTinkererOfficer": "チーフ・ティンカラー・オフィサー",
+			"chiefOperatingOfficer": "最高執行責任者",
+			"contentGuru": "コンテンツグル",
+			"developer": "開発者",
+			"designer": "デザイナー",
+			"communityManager": "コミュニティマネージャー",
+			"productManager": "プロダクトマネージャー",
+			"advisor": "アドバイザー",
+			"executiveEditor": "エグゼクティブ編集者",
+			"softwareEngineer": "ソフトウェアエンジニア",
+			"backendEngineer": "バックエンドエンジニア",
+			"fullStackEngineer": "フルスタックエンジニア",
+			"productDesigner": "プロダクトデザイナー",
+			"leadProductDesigner": "リードプロダクトデザイナー",
+			"technicalProductManager": "テクニカルプロダクトマネージャー",
+			"businessDevelopmentManager": "事業開発マネージャー"
+		}
+	},
+	"footer": {
+		"newsletter": {
+			"title": "ニュースレターに登録",
+			"description": "メールニュースレターに登録して、人気記事やトレンド記事を見逃さないようにしましょう。",
+			"button": "登録"
+		},
+		"business": {
+			"title": "ビジネスのお問い合わせ",
+			"contact": "お問い合わせ",
+			"email": "tara@iq.wiki"
+		},
+		"social": {
+			"title": "フォローする"
+		},
+		"company": {
+			"title": "会社情報"
+		},
+		"about": {
+			"text": "BrainDAOは、IQエコシステムを運営するDAOとして知的未来を創造しており、<link>BrainFund</link>のサポートを受けています。"
+		},
+		"legal": {
+			"privacy": "プライバシー＆クッキーポリシー",
+			"rights": "全著作権所有"
+		},
+		"powered": "© {year} — IQおよびBrainDAOによる提供。",
+		"scrollTop": "トップへスクロール"
+	}
+}
