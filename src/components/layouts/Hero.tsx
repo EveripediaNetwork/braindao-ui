@@ -19,7 +19,7 @@ export async function Hero() {
 			<div className="absolute inset-0 top-60 w-full lg:h-[800px] opacity-80 z-[-1]">
 				<Image
 					src="/images/mesh.png"
-					alt=""
+					alt="mesh background"
 					width={1200}
 					height={600}
 					className="w-full object-cover"
