@@ -46,7 +46,7 @@ const Navbar = () => {
 			className={cn(
 				"fixed top-0 left-0 right-0 w-full mx-auto max-w-[1440px] z-50 transition-all duration-300 text-white after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-white/20 after:to-transparent backdrop-blur-md",
 				state.isScrolled
-					? "bg-black/40 backdrop-blur-md max-w-5xl mt-0 md:mt-2 lg:mt-5 md:rounded-full"
+					? "bg-black/40 backdrop-blur-md max-w-6xl mt-0 md:mt-2 lg:mt-5 md:rounded-full"
 					: "bg-transparent",
 			)}
 			initial={{ opacity: 0 }}
@@ -55,7 +55,6 @@ const Navbar = () => {
 		>
 			<header className="flex flex-col z-50 lg:px-4 p-3">
 				<div className="flex justify-between items-center w-full transition-all duration-300">
-					{/* Logo */}
 					<motion.div
 						className="flex gap-2 items-center text-lg font-medium w-fit"
 						initial={{ opacity: 0, y: -10 }}
@@ -72,7 +71,6 @@ const Navbar = () => {
 						</Link>
 					</motion.div>
 
-					{/* Desktop nav */}
 					<motion.nav
 						initial="hidden"
 						animate="visible"
@@ -108,21 +106,14 @@ const Navbar = () => {
 						})}
 					</motion.nav>
 
-					{/* Right side actions */}
 					<motion.div
 						className="flex gap-2 items-center"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.3, delay: 0.3 }}
 					>
-						{/* xl and up */}
 						<div className="hidden xl:flex gap-2 items-center">
-							<LocaleSwitcher
-								className={cn(
-									"transition-all duration-200",
-									state.isScrolled ? "scale-90" : "scale-100",
-								)}
-							/>
+							<LocaleSwitcher className="transition-all duration-200" />
 							<ExchangesMenubar />
 							<Popover
 								open={state.isLaunchAppOpen}
@@ -132,16 +123,23 @@ const Navbar = () => {
 							>
 								<PopoverTrigger asChild>
 									<motion.div
-										whileHover={{ scale: 1.05 }}
-										whileTap={{ scale: 0.95 }}
+										whileHover={{ scale: 1.03 }}
+										whileTap={{ scale: 0.97 }}
 									>
 										<Button
 											type="button"
-											size="lg"
-											className="text-xs md:text-sm"
+											size={state.isScrolled ? "sm" : "lg"}
+											className={cn(
+												"uppercase",
+												state.isScrolled
+													? "text-xs px-3 h-9"
+													: "text-sm px-4 h-11",
+											)}
 										>
 											<span>{t("launch-app")}</span>
-											<ChevronDown className="h-4 w-4" />
+											<ChevronDown
+												className={cn(state.isScrolled ? "h-3 w-3" : "h-4 w-4")}
+											/>
 										</Button>
 									</motion.div>
 								</PopoverTrigger>
@@ -175,14 +173,8 @@ const Navbar = () => {
 							</Popover>
 						</div>
 
-						{/* <xl: Mobile / tablet */}
 						<div className="xl:hidden flex gap-2 items-center">
-							<LocaleSwitcher
-								className={cn(
-									"transition-all duration-200",
-									state.isScrolled ? "scale-90" : "scale-100",
-								)}
-							/>
+							<LocaleSwitcher className="transition-all duration-200" />
 							<ExchangesMenubar />
 							<Popover
 								open={state.isMobileMenuOpen}
