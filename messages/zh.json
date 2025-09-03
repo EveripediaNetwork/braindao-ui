@@ -14,9 +14,9 @@
 		"title": "<line>建设更智能的未来</line><line>通过 <highlight>IQ 代币。</highlight></line>",
 		"description": "加入我们的使命，通过 BrainDAO 扩展人类知识的范围，BrainDAO 是 IQ 生态系统的治理 DAO。",
 		"stats": {
-			"iq-price-title": "IQ 价格 ($)",
-			"sophia-price-title": "SOPHIA 价格 ($)",
-			"market-cap-title": "市值 ($)",
+			"iq-price-title": "IQ 价格 (USD)",
+			"sophia-price-title": "SOPHIA 价格 (USD)",
+			"market-cap-title": "市值 (USD)",
 			"errors": {
 				"iq-price": "获取 IQ 价格出错",
 				"sophia-price": "获取 SOPHIA 价格出错",
