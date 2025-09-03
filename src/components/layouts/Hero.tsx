@@ -58,7 +58,7 @@ const Hero = () => {
 					src="/images/gradient-blur-bg.png"
 					alt="gradient blur"
 					fill
-					className="w-full h-full"
+					className="w-full h-full object-fill"
 				/>
 			</div>
 
