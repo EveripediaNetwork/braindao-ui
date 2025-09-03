@@ -14,7 +14,11 @@ import {
 	DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 
-const LocaleSwitcher = () => {
+interface LocaleSwitcherProps {
+	className?: string;
+}
+
+const LocaleSwitcher = ({ className }: LocaleSwitcherProps) => {
 	const pathname = usePathname();
 	const locale = useLocale();
 
@@ -36,8 +40,8 @@ const LocaleSwitcher = () => {
 					variant="ghost"
 					size="sm"
 					className={cn(
-						"flex items-center gap-1 sm:gap-2 hover:bg-white/10 border border-white/20 rounded-full uppercase text-xs md:text-sm font-satoshi",
-						"transition-colors duration-200",
+						"flex items-center gap-1 sm:gap-2 hover:bg-white/10 border border-white/20 rounded-full uppercase text-xs md:text-sm font-satoshi transition-colors duration-200",
+						className,
 					)}
 				>
 					<Globe className="h-3 w-3 md:h-4 md:w-4" />

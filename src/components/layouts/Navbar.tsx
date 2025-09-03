@@ -4,7 +4,7 @@ import ExchangesMenubar from "@/app/[locale]/_components/exchange-menu";
 import { appLinks, mobileNavLinks, navLinks } from "@/data/Nav";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -55,6 +55,7 @@ const Navbar = () => {
 		>
 			<header className="flex flex-col z-50 lg:px-4 p-3">
 				<div className="flex justify-between items-center w-full transition-all duration-300">
+					{/* Logo */}
 					<motion.div
 						className="flex gap-2 items-center text-lg font-medium w-fit"
 						initial={{ opacity: 0, y: -10 }}
@@ -75,7 +76,7 @@ const Navbar = () => {
 					<motion.nav
 						initial="hidden"
 						animate="visible"
-						className="hidden lg:flex gap-8 xl:gap-6 text-sm lg:text-base"
+						className="hidden xl:flex gap-8 xl:gap-6 text-sm lg:text-base"
 					>
 						{navLinks.map((link, index) => {
 							const activeHref = activeSection ? `#${activeSection}` : null;
@@ -107,16 +108,21 @@ const Navbar = () => {
 						})}
 					</motion.nav>
 
+					{/* Right side actions */}
 					<motion.div
 						className="flex gap-2 items-center"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ duration: 0.3, delay: 0.3 }}
 					>
-						<div className="hidden lg:flex gap-2 items-center">
-							<AnimatePresence>
-								{!state.isScrolled && <LocaleSwitcher key="locale-desktop" />}
-							</AnimatePresence>
+						{/* xl and up */}
+						<div className="hidden xl:flex gap-2 items-center">
+							<LocaleSwitcher
+								className={cn(
+									"transition-all duration-200",
+									state.isScrolled ? "scale-90" : "scale-100",
+								)}
+							/>
 							<ExchangesMenubar />
 							<Popover
 								open={state.isLaunchAppOpen}
@@ -169,8 +175,14 @@ const Navbar = () => {
 							</Popover>
 						</div>
 
-						<div className="lg:hidden flex gap-2 items-center">
-							{!state.isScrolled && <LocaleSwitcher key="locale-mobile" />}
+						{/* <xl: Mobile / tablet */}
+						<div className="xl:hidden flex gap-2 items-center">
+							<LocaleSwitcher
+								className={cn(
+									"transition-all duration-200",
+									state.isScrolled ? "scale-90" : "scale-100",
+								)}
+							/>
 							<ExchangesMenubar />
 							<Popover
 								open={state.isMobileMenuOpen}
