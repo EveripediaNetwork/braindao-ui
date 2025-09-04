@@ -35,14 +35,6 @@ export const locales = [
 		icon: "/ZH.svg",
 		isHidden: false,
 	},
-	{
-		locale: "ja",
-		name: "Japanese",
-		currency: "jpy",
-		localization: "ja-JP",
-		icon: "/JA.svg",
-		isHidden: false,
-	},
 ] as const;
 
 export const localeSchema = zodEnumFromValues(locales, "locale");
