@@ -130,7 +130,7 @@ const Navbar = () => {
 											type="button"
 											size={state.isScrolled ? "sm" : "lg"}
 											className={cn(
-												"uppercase",
+												"capitalize",
 												state.isScrolled
 													? "text-xs px-3 h-9"
 													: "text-sm px-4 h-11",
