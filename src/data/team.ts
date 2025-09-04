@@ -1,7 +1,7 @@
 export const braindaoTeam = [
 	{
 		name: "Navin Vethanayagam",
-		role: "Galaxy Brain",
+		role: "galaxyBrain",
 		src: "/images/team/navin-2.png",
 		linkedinLink: "https://www.linkedin.com/in/navinveth/",
 		twitterLink: "https://twitter.com/NavV96",
@@ -9,7 +9,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Cesar Rodriguez",
-		role: "Chief Tinkerer Officer",
+		role: "chiefTinkererOfficer",
 		src: "/images/team/kesar.png",
 		linkedinLink: "https://www.linkedin.com/in/kesarito/",
 		twitterLink: "https://twitter.com/kesarito",
@@ -17,7 +17,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Andy Cho",
-		role: "Chief Operating Officer",
+		role: "chiefOperatingOfficer",
 		src: "/images/team/cho-new.png",
 		linkedinLink: "https://www.linkedin.com/in/andycho-ep/",
 		twitterLink: "https://twitter.com/ETHuncho",
@@ -25,7 +25,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Violeta Ziborova",
-		role: "Content Guru",
+		role: "contentGuru",
 		src: "/images/team/violeta.png",
 		linkedinLink: "https://www.linkedin.com/in/violettaziborova/",
 		twitterLink: "https://twitter.com/vzbrv",
@@ -33,7 +33,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Ajayi Feyikemi Mabel",
-		role: "Lead Product Designer",
+		role: "leadProductDesigner",
 		src: "/images/team/mabel.png",
 		linkedinLink: "https://www.linkedin.com/in/feyikemi/",
 		twitterLink: "https://twitter.com/simplypheyie",
@@ -41,7 +41,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Stephen Annozie Ogbaje",
-		role: "Technical Product Manager",
+		role: "technicalProductManager",
 		src: "/images/team/sir-steve.png",
 		linkedinLink: "https://www.linkedin.com/in/stephen-ogbaje/",
 		twitterLink: "https://twitter.com/iamsirsteve",
@@ -49,7 +49,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Ashaka Egerega",
-		role: "Backend Engineer",
+		role: "backendEngineer",
 		src: "/images/team/asaka.png",
 		linkedinLink: "https://linkedin.com/in/ashakae",
 		twitterLink: "https://twitter.com/shaqzee_",
@@ -57,7 +57,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Srujan Gurram",
-		role: "Full-Stack Engineer",
+		role: "fullStackEngineer",
 		src: "/images/team/srujan.png",
 		linkedinLink: "https://linkedin.com/in/srujangurram",
 		twitterLink: "https://twitter.com/urban_lobster",
@@ -65,7 +65,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Adebesin Tolulope",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/lope.png",
 		linkedinLink: "https://www.linkedin.com/in/adebesin-tolulope/",
 		twitterLink: "https://twitter.com/I_am_Lope",
@@ -73,7 +73,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Aliu Salaudeen",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/new-aliu.png",
 		linkedinLink: "https://www.linkedin.com/in/aliu-salaudeen",
 		twitterLink: "https://x.com/_Aliu_Salaudeen?t=qZkUDgshSf2qnPdeI6QnyQ&s=09",
@@ -81,7 +81,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Adewale Adeniyi",
-		role: "Product Designer",
+		role: "productDesigner",
 		src: "/images/team/wale.png",
 		linkedinLink: "https://www.linkedin.com/in/adewale-adeniyi-8a52b8231",
 		twitterLink: "https://twitter.com/ProficientWale",
@@ -89,51 +89,50 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Sidharth Kapoor",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/sid.png",
 		linkedinLink: "https://www.linkedin.com/in/SidharthK2",
 		twitterLink: "https://twitter.com/coding_sid",
 		wikiLink: "https://iq.wiki/wiki/sidharth-kapoor",
 	},
-
 	{
 		name: "Damola Olutoke",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/damola.png",
 		linkedinLink: "https://www.linkedin.com/in/damolaolutoke",
 		twitterLink: "https://twitter.com/damolaolutoke",
 	},
 	{
 		name: "Kelechi Okeke",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/kelechi.png",
 		linkedinLink: "https://www.linkedin.com/in/kelechi-okeke",
 		twitterLink: "https://twitter.com/reyokeke",
 	},
 	{
 		name: "Jaewon Cho",
-		role: "Product Manager",
+		role: "productManager",
 		src: "/images/team/jaewon.png",
 		twitterLink: "https://twitter.com/CHOJAEWON44907",
 		wikiLink: "https://iq.wiki/wiki/jaewon-cho",
 	},
 	{
 		name: "Marvel Nwachukwu",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/marvel.webp",
 		linkedinLink: "https://www.linkedin.com/in/marvel-codes/",
 		twitterLink: "https://x.com/marvel_codes",
 	},
 	{
 		name: "Gurram Prudhvi Suraaj",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/gurram.webp",
 		twitterLink: "https://x.com/PrudhviSuraaj",
 		linkedinLink: "https://www.linkedin.com/in/prudhvi-suraaj-461155227/",
 	},
 	{
 		name: "Tara Wickart",
-		role: "Business Development Manager",
+		role: "businessDevelopmentManager",
 		src: "/images/team/tara.png",
 		twitterLink: "https://x.com/WckTara9990",
 		linkedinLink:
@@ -141,7 +140,7 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Zainab Balogun",
-		role: "Executive Editor",
+		role: "executiveEditor",
 		src: "/images/team/zainab.png",
 		linkedinLink: "https://www.linkedin.com/in/zainab-balogun",
 		twitterLink: "http://www.twitter.com/zayne_ovaa_",
@@ -149,27 +148,27 @@ export const braindaoTeam = [
 	},
 	{
 		name: "Jalen Durham",
-		role: "Executive Editor",
+		role: "executiveEditor",
 		src: "/images/team/jalen.png",
 		linkedinLink: "https://www.linkedin.com/in/jalen-durham/",
 	},
 	{
 		name: "Lucas Serpa",
-		role: "Executive Editor",
+		role: "executiveEditor",
 		src: "/images/team/lucas.png",
 		twitterLink: "https://x.com/devmaxflip",
 		linkedinLink: "https://www.linkedin.com/in/devmaxflip/",
 	},
 	{
 		name: "Sophia Ezeh",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/sophia.png",
 		linkedinLink: "https://www.linkedin.com/in/sophia-ezeh-9884b6215/",
 		twitterLink: "https://twitter.com/sophix_ezeh",
 	},
 	{
 		name: "Oluwole Sayo",
-		role: "Software Engineer",
+		role: "softwareEngineer",
 		src: "/images/team/sayo.png",
 		linkedinLink: "https://www.linkedin.com/in/sayo-oluwole-158646220",
 		twitterLink: "https://x.com/oluwolesay6942",

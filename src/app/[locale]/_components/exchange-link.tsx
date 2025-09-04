@@ -3,11 +3,13 @@ import Link from "next/link";
 export function ExchangeLink({
 	href,
 	icon,
-	name,
+	label,
+	showDivider,
 }: {
 	href: string;
 	icon: React.ReactNode;
-	name: string;
+	label: string;
+	showDivider: boolean;
 }) {
 	return (
 		<>
@@ -15,12 +17,12 @@ export function ExchangeLink({
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				data-ph-capture-attribute-exchange-link={name.toLowerCase()}
-				aria-label={`Trade on ${name}`}
+				aria-label={label}
+				data-ph-capture-attribute-exchange-link={label.toLowerCase()}
 			>
 				{icon}
 			</Link>
-			{name !== "frax-finance" && (
+			{showDivider && (
 				<div
 					className="border-l border-neutral-700 h-6 mx-2"
 					aria-hidden="true"

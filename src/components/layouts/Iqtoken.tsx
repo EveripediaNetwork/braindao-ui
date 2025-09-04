@@ -1,8 +1,7 @@
-"use client";
-
-import { TokenBrief } from "@/app/_components/token-brief";
+import { TokenBrief } from "@/app/[locale]/_components/token-brief";
 import { cn } from "@/lib/utils";
 import { numFormatter } from "@/modules/helpers/numFormatter";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import React from "react";
 import InViewAnimateBottom from "../transitions/InViewAnimateBottom";
@@ -41,7 +40,7 @@ export const StatsPointers = ({
 	);
 };
 
-const Iqtoken = ({
+const Iqtoken = async ({
 	marketData,
 	tvl,
 	totalHiiqSupply,
@@ -53,21 +52,17 @@ const Iqtoken = ({
 		marketCap: number;
 	} | null;
 }) => {
+	const t = await getTranslations("ecosystem");
 	const imageUrl = "/images/about-us.png";
 
 	return (
 		<div id="iq-token" className="text-muted-foreground">
 			<div className="px-4 xl:container xl:mx-auto xl:px-4 py-12 sm:py-20  xl:pb-20 xl:pt-40">
 				<TokenBrief
-					title="The IQ Token"
-					description="The IQ token is a cryptocurrency that powers a knowledge ecosystem
-							that includes the world's largest cryptocurrency and
-							blockchain encyclopedia, IQ.wiki. IQ token holders can stake their
-							tokens to participate in governance and get access to additional
-							features. They can vote on governance decisions and govern
-							BrainDAO, the native DAO and treasury of the IQ ecosystem."
+					title={t("token.title")}
+					description={t("token.description")}
 					action="https://iq.wiki"
-					buttonText="Learn more"
+					buttonText={t("token.learn-more")}
 				/>
 
 				<div className="flex flex-col-reverse lg:flex-row items-start mt-16">
@@ -88,15 +83,12 @@ const Iqtoken = ({
 					<div className="flex-1">
 						<InViewAnimateBottom>
 							<h3 className="text-foreground text-3xl xl:text-4xl font-semibold font-satoshi">
-								HiIQ
+								{t("hiiq.title")}
 							</h3>
 						</InViewAnimateBottom>
 						<InViewAnimateBottom>
 							<p className="text-sm xl:text-lg text-muted-foreground mt-4">
-								HiIQ, launched to incentivize long-term engagement and
-								governance participation, allows users to lock up IQ tokens,
-								increasing HiIQ balance for voting power and earning IQ token
-								rewards, with 3 million tokens generated daily.
+								{t("hiiq.description")}
 							</p>
 						</InViewAnimateBottom>
 						<div className="pt-8">
@@ -106,24 +98,24 @@ const Iqtoken = ({
 										title={`${numFormatter(
 											marketData?.circulatingSupply || 0,
 										)} IQ`}
-										content="Circulating supply"
+										content={t("hiiq.circulating-supply")}
 										className="h-[80px] xl:h-[95px] justify-between"
 									/>
 									<StatsPointers
 										title={`$${numFormatter(marketData?.marketCap || 0)}`}
-										content="Market cap"
+										content={t("hiiq.market-cap")}
 										className="h-[80px] xl:h-[95px] justify-between"
 									/>
 								</div>
 								<div className="flex justify-between">
 									<StatsPointers
 										title={`$${numFormatter(tvl)}+`}
-										content="Total HiIQ"
+										content={t("hiiq.total-supply")}
 										className="h-[80px] xl:h-[95px] justify-between"
 									/>
 									<StatsPointers
 										title={`${numFormatter(totalHiiqSupply)} IQ+`}
-										content="Total volume locked"
+										content={t("hiiq.total-volume-locked")}
 										className="h-[80px] xl:h-[95px] justify-between"
 									/>
 								</div>

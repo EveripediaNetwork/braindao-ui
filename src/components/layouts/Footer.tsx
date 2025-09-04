@@ -1,22 +1,24 @@
-"use client";
-
+import { getTranslations } from "next-intl/server";
 import React from "react";
-import { RiArrowUpLine } from "react-icons/ri";
+import ScrollToTopButton from "./scroll-to-top";
 
-const Footer = () => {
-	const products = [
-		{ name: "IQ AI", href: "https://iqai.app/" },
-		{ name: "IQ.wiki", href: "https://iq.wiki/" },
-		{ name: "Sophia", href: "https://sophia.iqai.com/" },
-		{ name: "AIDEN", href: "https://aiden.id/" },
-		{ name: "IQ Dashboard", href: "https://iq.iqai.com/dashboard/" },
-		{ name: "IQ Blog", href: "https://blog.iqai.com/" },
-	];
-	const socialLinks = [
-		{ name: "Twitter", href: "https://twitter.com/IQWIKI" },
-		{ name: "Discord", href: "https://discord.com/invite/x9EWvTcPXt" },
-		{ name: "Telegram", href: "https://t.me/everipedia" },
-	];
+const products = [
+	{ name: "IQ AI", href: "https://iqai.app/" },
+	{ name: "IQ.wiki", href: "https://iq.wiki/" },
+	{ name: "Sophia", href: "https://sophia.iqai.com/" },
+	{ name: "AIDEN", href: "https://aiden.id/" },
+	{ name: "IQ Dashboard", href: "https://iq.iqai.com/dashboard/" },
+	{ name: "IQ Blog", href: "https://blog.iqai.com/" },
+];
+
+const socialLinks = [
+	{ name: "Twitter", href: "https://twitter.com/IQWIKI" },
+	{ name: "Discord", href: "https://discord.com/invite/x9EWvTcPXt" },
+	{ name: "Telegram", href: "https://t.me/everipedia" },
+];
+
+const Footer = async () => {
+	const t = await getTranslations("footer");
 
 	return (
 		<footer className="bg-neutral-950 mt-12 lg:mt-48 shadow-custom">
@@ -25,12 +27,9 @@ const Footer = () => {
 					<div className="flex flex-row w-full gap-6 md:gap-40 lg:gap-24 items-start">
 						<div className="text-muted-foreground">
 							<h2 className="text-sm font-bold mb-3 font-satoshi">
-								Subscribe to our newsletter
+								{t("newsletter.title")}
 							</h2>
-							<p className="text-xs">
-								Never miss any of the most popular and trending articles when
-								you sign up to our email newsletter.
-							</p>
+							<p className="text-xs">{t("newsletter.description")}</p>
 						</div>
 						<a
 							href="https://www.getdrip.com/forms/505929689/submissions/new"
@@ -38,27 +37,29 @@ const Footer = () => {
 							rel="noopener noreferrer"
 							className="bg-primary hover:bg-primary/50 text-white px-4 sm:px-8 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors whitespace-nowrap self-center lg:mb-10 inline-block text-center no-underline"
 						>
-							Subscribe
+							{t("newsletter.button")}
 						</a>
 					</div>
 					<div className="flex flex-row w-full justify-between text-sm gap-8 lg:gap-0">
 						<div>
 							<h3 className="font-bold mb-4 text-muted-foreground text-sm">
-								For business Inquiries
+								{t("business.title")}
 							</h3>
 							<div className="space-y-2">
-								<p className="text-primary font-medium">Contact us</p>
+								<p className="text-primary font-medium">
+									{t("business.contact")}
+								</p>
 								<a
 									className="text-muted-foreground hover:underline"
-									href="mailto:tara@iq.wiki"
+									href={`mailto:${t("business.email")}`}
 								>
-									tara@iq.wiki
+									{t("business.email")}
 								</a>
 							</div>
 						</div>
 						<div>
 							<h3 className="font-bold mb-4 text-muted-foreground font-satoshi">
-								Follow us
+								{t("social.title")}
 							</h3>
 							<div className="space-y-2 flex flex-col text-left text-foreground hover:text-white transition-colors">
 								{socialLinks.map((link) => (
@@ -77,7 +78,7 @@ const Footer = () => {
 				<div className="flex flex-col lg:flex-row gap-6 w-full">
 					<div className="flex flex-col gap-6 w-full">
 						<h2 className="text-sm font-bold mb-0 font-satoshi text-white">
-							Company
+							{t("company.title")}
 						</h2>
 						<div className="flex flex-row items-center gap-x-6 sm:gap-x-4 md:gap-x-6 lg:gap-x-5 gap-y-2 flex-wrap xl:max-w-[420px]">
 							{products.map((link, linkIndex) => (
@@ -102,46 +103,38 @@ const Footer = () => {
 						</div>
 					</div>
 					<div className="flex flex-row items-start sm:items-center text-muted-foreground gap-20 sm:gap-60 w-full">
-						<span className="flex-1 text-xs sm:text-sm">
-							BrainDAO is creating an intelligent future as the governing DAO
-							behind the IQ ecosystem, supported by
-							<a
-								href="https://www.brainfund.com/"
-								target="_blank"
-								rel="nopener noreferrer"
-								className="text-primary hover:underline ml-1"
-							>
-								Brainfund.
-							</a>
-						</span>
-						<button
-							type="button"
-							className="text-primary self-start sm:self-center"
-							onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-							title="Scroll to top"
-							aria-label="Scroll to top"
-						>
-							<RiArrowUpLine className="w-6 h-6" />
-						</button>
+						<p className="flex-1 text-xs sm:text-sm">
+							{t.rich("about.text", {
+								link: (chunks) => (
+									<a
+										href="https://www.brainfund.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-primary hover:underline"
+									>
+										{chunks}
+									</a>
+								),
+							})}
+						</p>
+
+						<ScrollToTopButton label={t("scrollTop")} />
 					</div>
 				</div>
 			</div>
-
 			<div className="bg-neutral-900">
 				<div className="flex flex-col md:flex-row items-center gap-5 md:gap-0 justify-between py-4 xl:container xl:mx-auto text-sm text-[#F3F4F6] px-4 md:px-10 xl:px-4 w-full">
-					<span>
-						© {new Date().getFullYear()} — Powered by IQ and BrainDAO.
-					</span>
+					<span>{t("powered", { year: new Date().getFullYear() })}</span>
 					<div className="flex flex-row items-center justify-between sm:w-[50%] gap-9 sm:gap-0">
 						<a
 							href="https://iq.wiki/privacy"
 							target="_blank"
-							rel="nopener noreferrer"
+							rel="noopener noreferrer"
 							className="hover:text-primary transition-colors"
 						>
-							Privacy & Cookies policy
+							{t("legal.privacy")}
 						</a>
-						<span>All rights reserved</span>
+						<span>{t("legal.rights")}</span>
 					</div>
 				</div>
 			</div>
