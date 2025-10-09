@@ -58,7 +58,9 @@
 			"button": "Explore IQ.wiki",
 			"sections": {
 				"intro-text": "Explore a diverse range of wikis designed to guide you through the realms of cryptocurrency and blockchain."
-			}
+			},
+			"widgets": "Widgets",
+			"wikiRank": "Wikis Ranked by Marketcap"
 		},
 		"sophia": {
 			"title": "SOPHIA",

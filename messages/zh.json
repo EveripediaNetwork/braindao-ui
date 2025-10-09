@@ -58,7 +58,9 @@
 			"button": "探索 IQ.wiki",
 			"sections": {
 				"intro-text": "探索各种维基，帮助您了解加密货币和区块链的世界。"
-			}
+			},
+			"widgets": "小工具",
+			"wikiRank": "按市值排名的维基"
 		},
 		"sophia": {
 			"title": "SOPHIA",
