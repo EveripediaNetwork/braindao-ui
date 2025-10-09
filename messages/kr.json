@@ -58,7 +58,9 @@
 			"button": "IQ.wiki 탐색",
 			"sections": {
 				"intro-text": "암호화폐와 블록체인 세계를 안내하는 다양한 위키를 탐색해보세요."
-			}
+			},
+			"widgets": "위젯",
+			"wikiRank": "시가총액 기준 위키 순위"
 		},
 		"sophia": {
 			"title": "SOPHIA",

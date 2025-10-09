@@ -1,10 +1,8 @@
 import { TokenBrief } from "@/app/[locale]/_components/token-brief";
-import InViewAnimateBottom from "@/components/transitions/InViewAnimateBottom";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import WidgetSection from "./WidgetSection";
 import IqWikiLandingAlt from "./images/iq-wiki/IQ.wiki.svg";
-import WidgetImage from "./images/iq-wiki/widgets.webp";
-import WikiRankImage from "./images/iq-wiki/wiki-rank.webp";
 
 export default async function Iqwiki() {
 	const t = await getTranslations("ecosystem.iqwiki");
@@ -44,26 +42,7 @@ export default async function Iqwiki() {
 							</div>
 						</div>
 					</div>
-
-					<InViewAnimateBottom>
-						<div className="w-full flex flex-col justify-between items-center md:flex-row gap-6">
-							<div className="w-full md:w-1/2">
-								<Image
-									src={WidgetImage}
-									alt="IQ.wiki widgets and tools interface"
-									className="w-full h-auto object-contain"
-								/>
-							</div>
-
-							<div className="w-full md:w-1/2">
-								<Image
-									src={WikiRankImage}
-									alt="IQ.wiki ranking showing details of cryptocurrencies and other blockchain projects"
-									className="w-full h-auto object-contain"
-								/>
-							</div>
-						</div>
-					</InViewAnimateBottom>
+					<WidgetSection />
 				</div>
 			</div>
 		</div>
