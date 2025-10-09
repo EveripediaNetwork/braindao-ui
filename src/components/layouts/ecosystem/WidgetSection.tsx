@@ -23,20 +23,10 @@ const WidgetBox: React.FC<WidgetBoxProps> = ({
 	widgetImage,
 	title,
 }) => (
-	<div
-		className="relative py-4 rounded-3xl overflow-hidden xl:h-[480px] border border-neutral-700"
-		style={{
-			boxShadow: "inset 0px 2.93px 73.37px 13px #FF1A881A",
-		}}
-	>
+	<div className="relative py-4 rounded-3xl overflow-hidden xl:h-[480px] border border-neutral-700 shadow-[inset_0px_2.93px_73.37px_13px_#FF1A881A]">
 		<Image src={gridImage} alt="" fill className="object-cover" />
-		<div
-			className="absolute inset-0 z-30"
-			style={{
-				background: "linear-gradient(to top, #000000CC, #1A1B1E1A)",
-			}}
-		/>
-		<InViewAnimateBottom>
+		<div className="absolute inset-0 z-30 bg-gradient-to-t from-[#000000CC] to-[#1A1B1E1A]" />
+		<InViewAnimateBottom className="h-full">
 			<div className="relative flex flex-col items-center h-full justify-center">
 				<Image
 					src={widgetImage}
