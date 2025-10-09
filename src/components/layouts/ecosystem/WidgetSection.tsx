@@ -45,12 +45,12 @@ const widgets: WidgetData[] = [
 	{
 		gridImage: Grid,
 		widgetImage: WidgetImage,
-		titleKey: "ecosystem.iqwiki.widgets" as const,
+		titleKey: "ecosystem.iqwiki.widgets",
 	},
 	{
 		gridImage: Grid,
 		widgetImage: WikiRankImage,
-		titleKey: "ecosystem.iqwiki.wikiRank" as const,
+		titleKey: "ecosystem.iqwiki.wikiRank",
 	},
 ];
 
