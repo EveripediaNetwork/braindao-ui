@@ -329,10 +329,6 @@ export function Snowflake({ size, variant = 1 }: SnowflakeProps) {
 			? variant
 			: VALID_VARIANT_RANGE.min;
 
-	const renderSnowflake = () => {
-		return snowflakeVariants[validatedVariant - 1] ?? null;
-	};
-
 	return (
 		<svg
 			aria-hidden="true"
@@ -342,7 +338,7 @@ export function Snowflake({ size, variant = 1 }: SnowflakeProps) {
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			{renderSnowflake()}
+			{snowflakeVariants[validatedVariant - 1] ?? null}
 		</svg>
 	);
 }
