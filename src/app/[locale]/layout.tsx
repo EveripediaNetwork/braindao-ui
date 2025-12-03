@@ -2,6 +2,8 @@ import "../globals.css";
 import ClientProviders from "@/components/layouts/ClientProviders";
 import Footer from "@/components/layouts/Footer";
 import Navbar from "@/components/layouts/Navbar";
+import ThemeWinterSnow from "@/components/themes/theme-winter-snow";
+import { Theme, isTheme } from "@/lib/helpers/theme";
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
@@ -71,6 +73,7 @@ export default async function RootLayout({
 						<div>
 							<Navbar />
 							{children}
+							{isTheme(Theme.enum.christmas) && <ThemeWinterSnow />}
 							<Footer />
 						</div>
 					</ClientProviders>
