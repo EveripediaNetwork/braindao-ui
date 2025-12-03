@@ -2,6 +2,8 @@ import "../globals.css";
 import ClientProviders from "@/components/layouts/ClientProviders";
 import Footer from "@/components/layouts/Footer";
 import Navbar from "@/components/layouts/Navbar";
+import ThemeWinterSnow from "@/components/themes/theme-winter-snow";
+import { Theme, isTheme } from "@/lib/helpers/theme";
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
@@ -50,6 +52,8 @@ export default async function RootLayout({
 }>) {
 	const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
 
+	const isChristmasTheme = isTheme(Theme.enum.christmas);
+
 	return (
 		<html
 			lang={locale}
@@ -69,8 +73,9 @@ export default async function RootLayout({
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<ClientProviders>
 						<div>
-							<Navbar />
+							<Navbar isChristmasTheme={isChristmasTheme} />
 							{children}
+							{isChristmasTheme && <ThemeWinterSnow />}
 							<Footer />
 						</div>
 					</ClientProviders>
