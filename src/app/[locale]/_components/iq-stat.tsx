@@ -50,7 +50,7 @@ export async function IQStats({ iqStatsData, sophiaStats }: IQStatsProps) {
 
 					<TokenCard
 						title={t("stats.sophia-price-title")}
-						value={formatNumber(currentPriceInUSD, { maxDecimals: 3 })}
+						value={formatNumber(currentPriceInUSD, { maxDecimals: 4 })}
 						change={{
 							iqChange: changeIn24h,
 							formattedChange: formatNumber(changeIn24h, {

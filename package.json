@@ -11,8 +11,8 @@
 		"lint": "lint-staged --allow-empty",
 		"prepare": "husky install",
 		"test": "echo \"Next-app tests\"",
-		"env:prod": "vercel env pull --environment=Production",
-		"env:dev": "vercel env pull --environment=Development",
+		"env:prod": "vercel env pull --environment=production",
+		"env:dev": "vercel env pull --environment=development",
 		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
