@@ -52,6 +52,8 @@ export default async function RootLayout({
 }>) {
 	const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
 
+	const isChristmasTheme = isTheme(Theme.enum.christmas);
+
 	return (
 		<html
 			lang={locale}
@@ -71,7 +73,7 @@ export default async function RootLayout({
 				<NextIntlClientProvider locale={locale} messages={messages}>
 					<ClientProviders>
 						<div>
-							<Navbar />
+							<Navbar isChristmasTheme={isChristmasTheme} />
 							{children}
 							{isTheme(Theme.enum.christmas) && <ThemeWinterSnow />}
 							<Footer />

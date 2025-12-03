@@ -15,7 +15,7 @@ import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import LocaleSwitcher from "./locale-switcher";
 
-const Navbar = () => {
+const Navbar = ({ isChristmasTheme }: { isChristmasTheme: boolean }) => {
 	const [state, setState] = useState({
 		isScrolled: false,
 		isMobileMenuOpen: false,
@@ -62,12 +62,24 @@ const Navbar = () => {
 						transition={{ duration: 0.3, delay: 0.1 }}
 					>
 						<Link href="/" className="w-fit">
-							<Image
-								src="/svgs/Braindao-logo.svg"
-								alt="BrainDAO Logo"
-								width={144}
-								height={144}
-							/>
+							{isChristmasTheme ? (
+								<Image
+									src="/svgs/Braindao-logo-christmas.svg"
+									alt="BrainDAO Logo"
+									width={144}
+									height={144}
+									objectPosition="top"
+									objectFit="contain"
+									className="pb-6"
+								/>
+							) : (
+								<Image
+									src="/svgs/Braindao-logo.svg"
+									alt="BrainDAO Logo"
+									width={144}
+									height={144}
+								/>
+							)}
 						</Link>
 					</motion.div>
 
