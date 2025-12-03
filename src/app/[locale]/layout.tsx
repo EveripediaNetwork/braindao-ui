@@ -75,7 +75,7 @@ export default async function RootLayout({
 						<div>
 							<Navbar isChristmasTheme={isChristmasTheme} />
 							{children}
-							{isTheme(Theme.enum.christmas) && <ThemeWinterSnow />}
+							{isChristmasTheme && <ThemeWinterSnow />}
 							<Footer />
 						</div>
 					</ClientProviders>
