@@ -53,7 +53,7 @@ const Navbar = ({ isChristmasTheme }: { isChristmasTheme: boolean }) => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.3 }}
 		>
-			<header className="flex flex-col z-50 lg:px-4 p-3">
+			<header className="flex flex-col z-50 lg:px-4 px-3 py-1">
 				<div className="flex justify-between items-center w-full transition-all duration-300">
 					<motion.div
 						className="flex gap-2 items-center text-lg font-medium w-fit"
@@ -70,7 +70,7 @@ const Navbar = ({ isChristmasTheme }: { isChristmasTheme: boolean }) => {
 									height={144}
 									objectPosition="top"
 									objectFit="contain"
-									className="pb-6"
+									className="pb-2"
 								/>
 							) : (
 								<Image
