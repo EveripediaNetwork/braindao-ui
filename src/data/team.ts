@@ -80,14 +80,6 @@ export const braindaoTeam = [
 		wikiLink: "https://iq.wiki/wiki/aliu-salaudeen",
 	},
 	{
-		name: "Adewale Adeniyi",
-		role: "productDesigner",
-		src: "/images/team/wale.png",
-		linkedinLink: "https://www.linkedin.com/in/adewale-adeniyi-8a52b8231",
-		twitterLink: "https://twitter.com/ProficientWale",
-		wikiLink: "https://iq.wiki/wiki/adewale-adeniyi",
-	},
-	{
 		name: "Sidharth Kapoor",
 		role: "softwareEngineer",
 		src: "/images/team/sid.png",
@@ -124,13 +116,6 @@ export const braindaoTeam = [
 		twitterLink: "https://x.com/marvel_codes",
 	},
 	{
-		name: "Gurram Prudhvi Suraaj",
-		role: "softwareEngineer",
-		src: "/images/team/gurram.webp",
-		twitterLink: "https://x.com/PrudhviSuraaj",
-		linkedinLink: "https://www.linkedin.com/in/prudhvi-suraaj-461155227/",
-	},
-	{
 		name: "Tara Wickart",
 		role: "businessDevelopmentManager",
 		src: "/images/team/tara.png",
@@ -158,13 +143,6 @@ export const braindaoTeam = [
 		src: "/images/team/lucas.png",
 		twitterLink: "https://x.com/devmaxflip",
 		linkedinLink: "https://www.linkedin.com/in/devmaxflip/",
-	},
-	{
-		name: "Sophia Ezeh",
-		role: "softwareEngineer",
-		src: "/images/team/sophia.png",
-		linkedinLink: "https://www.linkedin.com/in/sophia-ezeh-9884b6215/",
-		twitterLink: "https://twitter.com/sophix_ezeh",
 	},
 	{
 		name: "Oluwole Sayo",
