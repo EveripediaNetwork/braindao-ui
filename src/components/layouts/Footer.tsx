@@ -12,7 +12,7 @@ const products = [
 ];
 
 const socialLinks = [
-	{ name: "Twitter", href: "https://twitter.com/IQWIKI" },
+	{ name: "X", href: "https://x.com/IQAICOM" },
 	{ name: "Discord", href: "https://discord.com/invite/x9EWvTcPXt" },
 	{ name: "Telegram", href: "https://t.me/everipedia" },
 ];
