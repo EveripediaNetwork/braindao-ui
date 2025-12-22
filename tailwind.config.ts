@@ -115,7 +115,7 @@ const config: Config = {
 				},
 			},
 			backgroundImage: {
-				twitter: "url('/svgs/twitter.svg')",
+				twitter: "url('/svgs/twitter-x-line.svg')",
 				linkedln: "url('/svgs/linkedln.svg')",
 				everipedia: "url('/svgs/everipedia.svg')",
 			},
