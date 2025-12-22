@@ -4,7 +4,7 @@ export const braindaoTeam = [
 		role: "galaxyBrain",
 		src: "/images/team/navin-2.png",
 		linkedinLink: "https://www.linkedin.com/in/navinveth/",
-		twitterLink: "https://twitter.com/NavV96",
+		twitterLink: "https://x.com/NavV96",
 		wikiLink: "https://iq.wiki/wiki/navin-vethanayagam",
 	},
 	{
@@ -12,7 +12,7 @@ export const braindaoTeam = [
 		role: "chiefTinkererOfficer",
 		src: "/images/team/kesar.png",
 		linkedinLink: "https://www.linkedin.com/in/kesarito/",
-		twitterLink: "https://twitter.com/kesarito",
+		twitterLink: "https://x.com/kesarito",
 		wikiLink: "https://iq.wiki/wiki/cesar-rodriguez",
 	},
 	{
@@ -20,7 +20,7 @@ export const braindaoTeam = [
 		role: "chiefOperatingOfficer",
 		src: "/images/team/cho-new.png",
 		linkedinLink: "https://www.linkedin.com/in/andycho-ep/",
-		twitterLink: "https://twitter.com/ETHuncho",
+		twitterLink: "https://x.com/ETHuncho",
 		wikiLink: "https://iq.wiki/wiki/andy-cho",
 	},
 	{
@@ -28,7 +28,7 @@ export const braindaoTeam = [
 		role: "contentGuru",
 		src: "/images/team/violeta.png",
 		linkedinLink: "https://www.linkedin.com/in/violetaziborova/",
-		twitterLink: "https://twitter.com/vzbrv",
+		twitterLink: "https://x.com/vzbrv",
 		wikiLink: "https://iq.wiki/wiki/violetta-ziborova",
 	},
 	{
@@ -36,7 +36,7 @@ export const braindaoTeam = [
 		role: "leadProductDesigner",
 		src: "/images/team/mabel.png",
 		linkedinLink: "https://www.linkedin.com/in/feyikemi/",
-		twitterLink: "https://twitter.com/simplypheyie",
+		twitterLink: "https://x.com/simplypheyie",
 		wikiLink: "https://iq.wiki/wiki/ajayi-feyikemi-mabel",
 	},
 	{
@@ -52,7 +52,7 @@ export const braindaoTeam = [
 		role: "backendEngineer",
 		src: "/images/team/asaka.png",
 		linkedinLink: "https://linkedin.com/in/ashakae",
-		twitterLink: "https://twitter.com/shaqzee_",
+		twitterLink: "https://x.com/shaqzee_",
 		wikiLink: "https://iq.wiki/wiki/ashaka-egerega",
 	},
 	{
@@ -60,7 +60,7 @@ export const braindaoTeam = [
 		role: "fullStackEngineer",
 		src: "/images/team/srujan.png",
 		linkedinLink: "https://linkedin.com/in/srujangurram",
-		twitterLink: "https://twitter.com/urban_lobster",
+		twitterLink: "https://x.com/urban_lobster",
 		wikiLink: "https://iq.wiki/wiki/srujan-gurram",
 	},
 	{
@@ -68,7 +68,7 @@ export const braindaoTeam = [
 		role: "softwareEngineer",
 		src: "/images/team/lope.png",
 		linkedinLink: "https://www.linkedin.com/in/adebesin-tolulope/",
-		twitterLink: "https://twitter.com/I_am_Lope",
+		twitterLink: "https://x.com/I_am_Lope",
 		wikiLink: "https://iq.wiki/wiki/adebesin-tolulope",
 	},
 	{
@@ -84,7 +84,7 @@ export const braindaoTeam = [
 		role: "softwareEngineer",
 		src: "/images/team/sid.png",
 		linkedinLink: "https://www.linkedin.com/in/SidharthK2",
-		twitterLink: "https://twitter.com/coding_sid",
+		twitterLink: "https://x.com/coding_sid",
 		wikiLink: "https://iq.wiki/wiki/sidharth-kapoor",
 	},
 	{
@@ -92,20 +92,20 @@ export const braindaoTeam = [
 		role: "softwareEngineer",
 		src: "/images/team/damola.png",
 		linkedinLink: "https://www.linkedin.com/in/damolaolutoke",
-		twitterLink: "https://twitter.com/damolaolutoke",
+		twitterLink: "https://x.com/damolaolutoke",
 	},
 	{
 		name: "Kelechi Okeke",
 		role: "softwareEngineer",
 		src: "/images/team/kelechi.png",
 		linkedinLink: "https://www.linkedin.com/in/kelechi-okeke",
-		twitterLink: "https://twitter.com/reyokeke",
+		twitterLink: "https://x.com/reyokeke",
 	},
 	{
 		name: "Jaewon Cho",
 		role: "productManager",
 		src: "/images/team/jaewon.png",
-		twitterLink: "https://twitter.com/CHOJAEWON44907",
+		twitterLink: "https://x.com/CHOJAEWON44907",
 		wikiLink: "https://iq.wiki/wiki/jaewon-cho",
 	},
 	{
@@ -140,7 +140,6 @@ export const braindaoTeam = [
 		name: "Lucas Serpa",
 		role: "executiveEditor",
 		src: "/images/team/lucas.png",
-		twitterLink: "https://www.linkedin.com/in/serpaxyz/",
 		linkedinLink: "https://www.linkedin.com/in/devmaxflip/",
 	},
 	{
@@ -155,7 +154,7 @@ export const braindaoTeam = [
 		role: "developerRelationsEngineer",
 		src: "/images/team/timonwa.png",
 		linkedinLink: "https://www.linkedin.com/in/timonwa/",
-		twitterLink: "https://twitter.com/timonwa_",
+		twitterLink: "https://x.com/timonwa_",
 	},
 	{
 		name: "Olivia MacDonell",
