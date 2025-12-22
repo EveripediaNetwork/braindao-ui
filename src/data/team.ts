@@ -27,7 +27,7 @@ export const braindaoTeam = [
 		name: "Violeta Ziborova",
 		role: "contentGuru",
 		src: "/images/team/violeta.png",
-		linkedinLink: "https://www.linkedin.com/in/violettaziborova/",
+		linkedinLink: "https://www.linkedin.com/in/violetaziborova/",
 		twitterLink: "https://twitter.com/vzbrv",
 		wikiLink: "https://iq.wiki/wiki/violetta-ziborova",
 	},
@@ -44,7 +44,7 @@ export const braindaoTeam = [
 		role: "technicalProductManager",
 		src: "/images/team/sir-steve.png",
 		linkedinLink: "https://www.linkedin.com/in/stephen-ogbaje/",
-		twitterLink: "https://twitter.com/iamsirsteve",
+		twitterLink: "https://x.com/iamsirsteve20",
 		wikiLink: "https://iq.wiki/wiki/stephen-annozie-ogbaje",
 	},
 	{
@@ -53,7 +53,7 @@ export const braindaoTeam = [
 		src: "/images/team/asaka.png",
 		linkedinLink: "https://linkedin.com/in/ashakae",
 		twitterLink: "https://twitter.com/shaqzee_",
-		wikiLink: "https://iq.wiki/wiki/ashaka-egereg",
+		wikiLink: "https://iq.wiki/wiki/ashaka-egerega",
 	},
 	{
 		name: "Srujan Gurram",
@@ -119,7 +119,7 @@ export const braindaoTeam = [
 		name: "Tara Wickart",
 		role: "businessDevelopmentManager",
 		src: "/images/team/tara.png",
-		twitterLink: "https://x.com/WckTara9990",
+		twitterLink: "https://x.com/wcktara",
 		linkedinLink:
 			"https://www.linkedin.com/in/tara-victoria-wickart-6553a6234/",
 	},
@@ -128,7 +128,6 @@ export const braindaoTeam = [
 		role: "executiveEditor",
 		src: "/images/team/zainab.png",
 		linkedinLink: "https://www.linkedin.com/in/zainab-balogun",
-		twitterLink: "http://www.twitter.com/zayne_ovaa_",
 		wikiLink: "https://iq.wiki/wiki/zainab-balogun",
 	},
 	{
@@ -141,7 +140,7 @@ export const braindaoTeam = [
 		name: "Lucas Serpa",
 		role: "executiveEditor",
 		src: "/images/team/lucas.png",
-		twitterLink: "https://x.com/devmaxflip",
+		twitterLink: "https://www.linkedin.com/in/serpaxyz/",
 		linkedinLink: "https://www.linkedin.com/in/devmaxflip/",
 	},
 	{
@@ -150,5 +149,26 @@ export const braindaoTeam = [
 		src: "/images/team/sayo.png",
 		linkedinLink: "https://www.linkedin.com/in/sayo-oluwole-158646220",
 		twitterLink: "https://x.com/oluwolesay6942",
+	},
+	{
+		name: "Timonwa Akintokun",
+		role: "developerRelationsEngineer",
+		src: "/images/team/timonwa.png",
+		linkedinLink: "https://www.linkedin.com/in/timonwa/",
+		twitterLink: "https://twitter.com/timonwa_",
+	},
+	{
+		name: "Olivia MacDonell",
+		role: "executiveEditor",
+		src: "/images/team/olivia.png",
+		linkedinLink:
+			"https://www.linkedin.com/in/olivia-lagarde-macdonell-171abb326/",
+	},
+	{
+		name: "Pelumi Aderinto",
+		role: "softwareEngineer",
+		src: "/images/team/pelumi.png",
+		linkedinLink: "https://www.linkedin.com/in/pelumiaderinto/",
+		twitterLink: "https://x.com/Pelvic_7",
 	},
 ];
