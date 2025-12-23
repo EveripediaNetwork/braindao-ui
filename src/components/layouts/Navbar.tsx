@@ -66,11 +66,11 @@ const Navbar = ({ isChristmasTheme }: { isChristmasTheme: boolean }) => {
 								<Image
 									src="/svgs/Braindao-logo-christmas.svg"
 									alt="BrainDAO Logo"
-									width={144}
-									height={144}
+									width={120}
+									height={120}
 									objectPosition="top"
 									objectFit="contain"
-									className="pb-2"
+									className="pb-4"
 								/>
 							) : (
 								<Image
