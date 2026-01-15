@@ -61,7 +61,7 @@ const Iqtoken = async ({
 				<TokenBrief
 					title={t("token.title")}
 					description={t("token.description")}
-					action="https://iq.wiki/wiki/iq"
+					action="https://learn.iq.wiki/iq/"
 					buttonText={t("token.learn-more")}
 				/>
 
