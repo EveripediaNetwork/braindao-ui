@@ -93,6 +93,7 @@ export const braindaoTeam = [
 		src: "/images/team/damola.png",
 		linkedinLink: "https://www.linkedin.com/in/damolaolutoke",
 		twitterLink: "https://x.com/damolaolutoke",
+		wikiLink: "https://iq.wiki/wiki/damola-olutoke",
 	},
 	{
 		name: "Kelechi Okeke",
@@ -169,5 +170,26 @@ export const braindaoTeam = [
 		src: "/images/team/pelumi.png",
 		linkedinLink: "https://www.linkedin.com/in/pelumiaderinto/",
 		twitterLink: "https://x.com/Pelvic_7",
+	},
+	{
+		name: "Samuel Tyler",
+		role: "juniorBusinessDeveloper",
+		src: "/images/team/tyler.png",
+		linkedinLink: "https://www.linkedin.com/in/samuel-tyler-15b529352/",
+		twitterLink: "https://x.com/Echex01",
+	},
+	{
+		name: "Anthony Chijindu",
+		role: "juniorBusinessDeveloper",
+		src: "/images/team/anthony.png",
+		linkedinLink: "https://www.linkedin.com/in/anthony-chijindu-994baa35a",
+		twitterLink: "https://x.com/tonychijindu",
+	},
+	{
+		name: "Kanu Wilson",
+		role: "juniorBusinessDeveloper",
+		src: "/images/team/kanu.png",
+		linkedinLink: "https://www.linkedin.com/in/kanu-wilson-0528a9278/",
+		twitterLink: "https://x.com/TheF1nalBoss",
 	},
 ];
