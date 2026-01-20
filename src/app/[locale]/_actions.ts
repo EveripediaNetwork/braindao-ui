@@ -51,11 +51,6 @@ export async function getIqStats() {
 			signed: true,
 		});
 
-		console.log("iqPriceChange", iqPriceChange);
-		console.log("formattedPriceChange", formattedPriceChange);
-		console.log("iqMCapChange", iqMCapChange);
-		console.log("formattedMCapChange", formattedMCapChange);
-
 		return {
 			price,
 			mcap,
@@ -99,12 +94,6 @@ async function fetchMarketCapData(): Promise<CMCTokenData> {
 				cacheDuration: CACHE_DURATION_SECONDS_5_MIN_IN_SECONDS,
 			},
 		});
-
-		console.log("response.data", response.data);
-		console.log(
-			"response.data parsed",
-			cmcTokenDataSchema.parse(response.data[0]),
-		);
 
 		return cmcTokenDataSchema.parse(response.data[0]);
 	} catch (error) {
