@@ -7,7 +7,7 @@ import {
 	sophiaStatsSchema,
 } from "./_schema";
 
-const CACHE_DURATION_SECONDS_5_MIN_IN_SECONDS = 5 * 60;
+const CACHE_DURATION_SECONDS_12_HR_IN_SECONDS = 12 * 60 * 60;
 const SOPHIA_STATS_API_URL = `https://app.iqai.com/api/agents/stats?address=${config.sophiaAgentAddress}`;
 
 export async function getIqStats() {
@@ -91,7 +91,7 @@ async function fetchMarketCapData(): Promise<CMCTokenData> {
 			},
 			params: {
 				url: "https://pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=everipedia",
-				cacheDuration: CACHE_DURATION_SECONDS_5_MIN_IN_SECONDS,
+				cacheDuration: CACHE_DURATION_SECONDS_12_HR_IN_SECONDS,
 			},
 		});
 
