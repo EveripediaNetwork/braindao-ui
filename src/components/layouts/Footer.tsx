@@ -12,7 +12,8 @@ const products = [
 ];
 
 const socialLinks = [
-	{ name: "X", href: "https://x.com/IQofficial" },
+	{ name: "X (IQ)", href: "https://x.com/IQofficial" },
+	{ name: "X (IQ AI)", href: "https://x.com/IQAICOM" },
 	{ name: "Discord", href: "https://discord.com/invite/x9EWvTcPXt" },
 	{ name: "Telegram", href: "https://t.me/everipedia" },
 ];
