@@ -1,20 +1,11 @@
 const config = {
-	iqAddress:
-		process.env.NEXT_PUBLIC_IQ_ADDRESS ||
-		"0x0552D756a3E92Aa874EF60F61b7a29030373e869",
-	hiiqAddress:
-		process.env.NEXT_PUBLIC_HIIQ_ADDRESS ||
-		"0xC03bCACC5377b7cc6634537650A7a1D14711c1A3",
+	iqAddress: "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
+	hiiqAddress: "0x1bf5457ecaa14ff63cc89efd560e251e814e16ba",
+	sophiaAgentAddress: "0x4dBcC239b265295500D2Fe2d0900629BDcBBD0fB",
+	iqGatewayUrl: "https://gateway.braindao.org",
 	alchemyApiKey: String(process.env.NEXT_PUBLIC_ALCHEMY_API_KEY),
-	alchemyChain: process.env.NEXT_PUBLIC_ALCHEMY_CHAIN || "goerli",
-	chainId: process.env.NEXT_PUBLIC_CHAIN_ID || "5",
-	walletConnectProjectId:
-		process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID ||
-		"e6567b95-7acb-4954-8673-76d34981e18f",
-	posthogApiKey: process.env.NEXT_PUBLIC_POSTHOG_KEY || "",
-	iqGatewayUrl: process.env.NEXT_PUBLIC_IQ_GATEWAY_URL || "",
 	iqGatewayKey: process.env.NEXT_PUBLIC_IQ_GATEWAY_KEY || "",
-	sophiaAgentAddress: process.env.NEXT_PUBLIC_SOPHIA_AGENT_ADDRESS || "",
+	posthogApiKey: process.env.NEXT_PUBLIC_POSTHOG_KEY || "",
 };
 
 export default config;
