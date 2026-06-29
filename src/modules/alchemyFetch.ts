@@ -13,7 +13,7 @@ type RPCParams = [EthCallParams, string] | unknown[];
 
 export const alchemyFetch = async (method: string, params: RPCParams) => {
 	const response = await fetch(
-		`https://eth-mainnet.alchemyapi.io/v2/${env.NEXT_PUBLIC_ALCHEMY_API_KEY}`,
+		`https://eth-mainnet.alchemyapi.io/v2/${env.alchemyApiKey}`,
 		{
 			method: "POST",
 			headers: {
