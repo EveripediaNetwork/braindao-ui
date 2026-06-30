@@ -1,4 +1,4 @@
-import config from "@/config";
+import { env } from "@/env";
 import { formatNumber } from "@/modules/helpers/numFormatter";
 import axios, { AxiosError } from "axios";
 import {
@@ -8,7 +8,7 @@ import {
 } from "./_schema";
 
 const CACHE_DURATION_SECONDS_12_HR_IN_SECONDS = 12 * 60 * 60;
-const SOPHIA_STATS_API_URL = `https://app.iqai.com/api/agents/stats?address=${config.sophiaAgentAddress}`;
+const SOPHIA_STATS_API_URL = `https://app.iqai.com/api/agents/stats?address=${env.NEXT_PUBLIC_SOPHIA_AGENT_ADDRESS}`;
 
 export async function getIqStats() {
 	try {
@@ -85,9 +85,9 @@ export async function getSophiaStats() {
 
 async function fetchMarketCapData(): Promise<CMCTokenData> {
 	try {
-		const response = await axios.get(`${config.iqGatewayUrl}`, {
+		const response = await axios.get(`${env.NEXT_PUBLIC_IQ_GATEWAY_URL}`, {
 			headers: {
-				"x-api-key": config.iqGatewayKey,
+				"x-api-key": env.NEXT_PUBLIC_IQ_GATEWAY_KEY,
 			},
 			params: {
 				url: "https://pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=everipedia",
