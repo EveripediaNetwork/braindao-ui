@@ -1,7 +1,7 @@
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
-const isProd = process.env.NEXT_PUBLIC_IS_PROD === "true";
+const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
 
 export const env = createEnv({
 	client: {
