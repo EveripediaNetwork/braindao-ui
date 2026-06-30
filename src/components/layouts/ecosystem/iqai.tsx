@@ -12,7 +12,7 @@ export default async function IQAI() {
 				<TokenBrief
 					title={t("title")}
 					description={t("description")}
-					action="https://iqai.app"
+					action="https://iqai.com"
 					buttonText={t("button")}
 				/>
 				<div className="w-full rounded-xl overflow-hidden py-12">

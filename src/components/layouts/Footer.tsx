@@ -3,7 +3,7 @@ import React from "react";
 import ScrollToTopButton from "./scroll-to-top";
 
 const products = [
-	{ name: "IQ AI", href: "https://iqai.app/" },
+	{ name: "IQ AI", href: "https://iqai.com/" },
 	{ name: "IQ.wiki", href: "https://iq.wiki/" },
 	{ name: "Sophia", href: "https://sophia.iqai.com/" },
 	{ name: "AIDEN", href: "https://aiden.id/" },

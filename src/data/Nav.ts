@@ -39,7 +39,7 @@ export const navLinks = [
 export const appLinks = [
 	{
 		title: "IQ AI",
-		href: "https://iqai.app",
+		href: "https://iqai.com",
 	},
 	{
 		title: "IQ.wiki",
@@ -62,7 +62,7 @@ export const appLinks = [
 export const mobileNavLinks = [
 	{
 		title: "IQ AI",
-		href: "https://iqai.app/",
+		href: "https://iqai.com/",
 	},
 	{
 		title: "IQ.wiki",
